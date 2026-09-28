@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+{{ ui.breadcrumb(page.breadcrumb) }}
+
+<section class="page-hero page-hero--simple">
+  <div class="container">
+    <div class="page-hero__copy" style="max-width:48rem">
+      <h1 class="h1">Mentions légales</h1>
+      <p class="lead">Informations relatives à l’éditeur du site www.digital-buro.be, conformément au Code de droit économique belge.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="prose">
+      <h2 id="editeur">Éditeur du site</h2>
+      <p><strong>Digital-Buro SRL</strong>, société à responsabilité limitée de droit belge<br>
+      Siège&nbsp;: {{ site.street }}, {{ site.postal }} {{ site.city }} (Bruxelles), Belgique<br>
+      Numéro d’entreprise (BCE) et de TVA&nbsp;: {{ site.vat }}<br>
+      Téléphone&nbsp;: <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a> · Fax&nbsp;: {{ site.fax }}<br>
+      E-mail&nbsp;: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+
+      <h2 id="hebergement">Hébergement</h2>
+      <p>OVH SAS, 2 rue Kellermann, 59100 Roubaix, France.</p>
+      {%- if site.credit %}
+      <h2 id="realisation">Conception et réalisation</h2>
+      <p>{{ site.credit }}</p>
+      {%- endif %}
+
+      <h2 id="propriete">Propriété intellectuelle</h2>
+      <p>L’ensemble des contenus de ce site (textes, illustrations, logo, photographies, mise en page) est la propriété de Digital-Buro SRL, sauf mention contraire. Toute reproduction, même partielle, sans autorisation écrite préalable est interdite.</p>
+      <p>Le site utilise la police de caractères Inter, distribuée sous licence SIL Open Font License 1.1.</p>
+
+      <h2 id="marques">Marques citées</h2>
+      <p>Les noms de marques cités sur ce site (notamment HP, Canon, Epson, Brother, OKI, Xerox, Ricoh, Kyocera, Lexmark, Samsung, Dell, Lenovo, Apple, Microsoft et Windows) appartiennent à leurs propriétaires respectifs. Ils sont mentionnés uniquement pour désigner les produits que nous réparons, entretenons ou vendons. Digital-Buro est un réparateur indépendant, sans lien d’affiliation avec ces fabricants.</p>
+
+      <h2 id="responsabilite">Responsabilité</h2>
+      <p>Les informations publiées sur ce site sont fournies à titre indicatif et régulièrement mises à jour. Les horaires peuvent varier lors des jours fériés et des congés&nbsp;: en cas de doute, contactez-nous avant de vous déplacer. Digital-Buro ne saurait être tenue responsable du contenu des sites externes vers lesquels ce site renvoie, comme Google Maps.</p>
+
+      <h2 id="donnees">Données personnelles</h2>
+      <p>Le traitement des données transmises via ce site est décrit dans notre <a href="/confidentialite/">politique de confidentialité</a>.</p>
+
+      <h2 id="droit">Droit applicable</h2>
+      <p>Le présent site et ses mentions légales sont soumis au droit belge. Tout litige relève de la compétence des tribunaux de l’arrondissement judiciaire de Bruxelles.</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+{{ ui.service_hero(
+  "MacBook Air · MacBook Pro · iMac · Mac mini",
+  "Réparation de Mac, MacBook et iMac à Saint-Gilles",
+  "Diagnostic, réparation et mise à niveau de votre Mac, au magasin à Saint-Gilles. Une alternative de proximité, avec un conseil honnête sur ce qui vaut la peine d’être réparé et sur ce qui ne l’est pas.",
+  "ill-mac.svg",
+  "/contact/?sujet=reparation&appareil=Mac#formulaire",
+  ["Diagnostic précis", "Conseil honnête", "Devis avant réparation"]
+) }}
+
+<section class="section section--fog" aria-labelledby="pannes-titre">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <h2 class="h2" id="pannes-titre">Ce que nous faisons pour votre Mac</h2>
+      <p class="lead">Matériel ou macOS, nous commençons toujours par un diagnostic complet, pour réparer la bonne pièce et vous éviter les dépenses inutiles.</p>
+    </div>
+    <div class="grid grid--4">
+      {{ ui.feature("laptop", "Écran de MacBook", "Écran fissuré, taches, lignes ou rétroéclairage défaillant : diagnostic et remplacement de l’écran.") }}
+      {{ ui.feature("battery", "Batterie", "Autonomie en chute libre ou message « Réparation recommandée » dans les réglages de la batterie : remplacement.") }}
+      {{ ui.feature("keyboard", "Clavier et trackpad", "Touches qui se bloquent ou se répètent, trackpad qui ne clique plus : réparation ou remplacement.") }}
+      {{ ui.feature("gauge", "Mac lent", "Stockage saturé, démarrage interminable, programmes qui se lancent seuls : nettoyage et optimisation, SSD sur les modèles compatibles.") }}
+      {{ ui.feature("refresh", "macOS et démarrage", "Mac qui ne démarre plus, dossier avec point d’interrogation, mise à jour bloquée : réparation ou réinstallation de macOS.") }}
+      {{ ui.feature("drive", "Sauvegarde et migration", "Mise en place de Time Machine, récupération de fichiers, transfert complet vers un nouveau Mac.") }}
+      {{ ui.feature("thermometer", "Surchauffe et ventilation", "Ventilateur bruyant, Mac brûlant au toucher : nettoyage interne et contrôle du système de refroidissement.") }}
+      {{ ui.feature("droplet", "Liquide renversé", "Éteignez-le immédiatement et apportez-le au plus vite : nous évaluons les dégâts et ce qui peut être sauvé.") }}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="recents-titre">
+  <div class="container split">
+    <div class="stack-lg sticky">
+      <h2 class="h2" id="recents-titre">Mac récents, Mac anciens&nbsp;: ce qu’il faut savoir.</h2>
+      <p class="lead">Tous les Mac ne se réparent pas de la même manière. Nous préférons vous l’expliquer clairement avant d’intervenir.</p>
+    </div>
+    <ol class="reasons" role="list">
+      <li>
+        <span class="reasons__num">01</span>
+        <div><h3 class="reasons__title">Mac avec puce Apple (M1, M2, M3…)</h3><p class="reasons__text">Sur ces modèles, la mémoire et le stockage sont soudés à la carte mère&nbsp;: ils ne s’augmentent pas après l’achat. L’écran, la batterie, le clavier ou macOS restent en revanche réparables&nbsp;: nous vous disons précisément ce qui est possible et à quel coût.</p></div>
+      </li>
+      <li>
+        <span class="reasons__num">02</span>
+        <div><h3 class="reasons__title">Mac à processeur Intel</h3><p class="reasons__text">Sur de nombreux MacBook et iMac plus anciens, remplacer le disque par un SSD transforme littéralement la machine. Nous vérifions si votre modèle s’y prête.</p></div>
+      </li>
+      <li>
+        <span class="reasons__num">03</span>
+        <div><h3 class="reasons__title">Mac encore sous garantie</h3><p class="reasons__text">Si votre Mac est couvert par la garantie Apple ou AppleCare, faites-la jouer en priorité. Nous restons à votre disposition pour tout le reste&nbsp;: conseil, sauvegarde, installation de logiciels et d’imprimantes.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--fog" aria-labelledby="logiciels-titre">
+  <div class="container split split--center">
+    <div class="stack">
+      <h2 class="h3" id="logiciels-titre">Et tout ce qui entoure votre Mac</h2>
+      <p class="text">Installation de Microsoft Office pour Mac, configuration de votre imprimante ou de votre scanner, Wi-Fi, messagerie, transfert depuis un PC Windows&nbsp;: nous vous livrons un Mac prêt à travailler.</p>
+    </div>
+    <ul class="checklist" role="list">
+      <li>{{ ui.icon('check') }}<span>Imprimantes et scanners sur macOS, toutes marques</span></li>
+      <li>{{ ui.icon('check') }}<span>Microsoft Office pour Mac et logiciels courants</span></li>
+      <li>{{ ui.icon('check') }}<span>Migration d’un PC Windows vers un Mac</span></li>
+      <li>{{ ui.icon('check') }}<span>Sauvegardes automatiques avec Time Machine</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="methode-titre">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <h2 class="h2" id="methode-titre">Comment se passe la réparation&nbsp;?</h2>
+      <p class="lead">Apportez votre Mac avec son chargeur. Nous vous recommandons une sauvegarde avant l’intervention&nbsp;: nous pouvons la réaliser pour vous si nécessaire.</p>
+    </div>
+    {{ ui.process() }}
+  </div>
+</section>
+
+<section class="section section--fog" aria-labelledby="faq-titre">
+  <div class="container split">
+    <div class="sticky stack">
+      <h2 class="faq-title" id="faq-titre">Questions fréquentes sur la réparation de Mac</h2>
+    </div>
+    {{ ui.faq([
+      ("Réparez-vous les MacBook avec puce Apple (M1, M2, M3…) ?",
+       "<p>Oui, nous établissons un diagnostic sur tous les Mac. Sur les modèles récents, certains composants comme la mémoire et le stockage sont soudés : nous vous expliquons clairement ce qui est réparable et à quel prix avant toute intervention.</p>"),
+      ("Mon Mac est encore sous garantie, que faire ?",
+       "<p>Faites d’abord jouer la garantie Apple ou votre contrat AppleCare. Pour tout ce qui n’est pas couvert (conseil, sauvegarde, logiciels, imprimantes), nous restons à votre disposition.</p>"),
+      ("Mon Mac est devenu lent, faut-il le remplacer ?",
+       "<p>Pas toujours. Un stockage saturé, des programmes au démarrage ou un vieux disque dur suffisent souvent à expliquer la lenteur. Après diagnostic, nous vous disons si un nettoyage, un SSD ou une réinstallation de macOS peut lui redonner de l’allure.</p>"),
+      ("Mes données sont-elles en sécurité pendant la réparation ?",
+       "<p>Nous vous recommandons toujours une sauvegarde avant l’intervention, et nous pouvons la réaliser pour vous. Vos fichiers restent strictement confidentiels.</p>"),
+      ("Êtes-vous un centre agréé Apple ?",
+       "<p>Non : Digital-Buro est un réparateur indépendant, sans lien avec Apple. Mac, MacBook, iMac et macOS sont des marques d’Apple Inc.</p>")
+    ]) }}
+  </div>
+</section>
+
+{{ ui.cta_band("Votre Mac a besoin d’un spécialiste ?", "Apportez-le au magasin à Saint-Gilles ou appelez-nous pour décrire le problème : diagnostic et devis avant toute réparation.") }}
+
+{{ ui.related(['ordinateur', 'gsm', 'vente'], "Pour aller plus loin") }}
+
+<div class="container"><p class="notice" style="padding-bottom:32px">Digital-Buro est un réparateur indépendant, non affilié à Apple Inc. Mac, MacBook, iMac, Mac mini et macOS sont des marques d’Apple Inc.</p></div>
+
+{% endblock %}

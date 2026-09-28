@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+{{ ui.breadcrumb(page.breadcrumb) }}
+
+<section class="page-hero page-hero--simple">
+  <div class="container">
+    <div class="page-hero__copy" style="max-width:48rem">
+      <span class="tag">Saint-Gilles · Bruxelles</span>
+      <h1 class="h1">Contact, horaires et accès</h1>
+      <p class="lead">Passez au magasin, appelez-nous ou décrivez votre demande ci-dessous&nbsp;: nous vous répondons pendant les heures d’ouverture.</p>
+    </div>
+    <div class="contact-cards" style="margin-top:40px">
+      <a class="contact-card" href="tel:{{ site.phone_intl }}" data-track="call">
+        {{ ui.icon('phone') }}
+        <span class="contact-card__label">Téléphone</span>
+        <span class="contact-card__value tnum">{{ site.phone }}</span>
+        <span class="contact-card__hint">Du lundi au samedi</span>
+      </a>
+      <a class="contact-card" href="mailto:{{ site.email }}" data-track="email">
+        {{ ui.icon('mail') }}
+        <span class="contact-card__label">E-mail</span>
+        <span class="contact-card__value">{{ site.email }}</span>
+        <span class="contact-card__hint">Réponse pendant les heures d’ouverture</span>
+      </a>
+      <a class="contact-card" href="{{ site.google.directions_url }}" target="_blank" rel="noopener" data-track="directions">
+        {{ ui.icon('pin') }}
+        <span class="contact-card__label">Adresse</span>
+        <span class="contact-card__value">{{ site.street }}</span>
+        <span class="contact-card__hint">{{ site.postal }} {{ site.city }} · Itinéraire&nbsp;↗</span>
+      </a>
+      <div class="contact-card">
+        {{ ui.icon('fax') }}
+        <span class="contact-card__label">Fax</span>
+        <span class="contact-card__value tnum">{{ site.fax }}</span>
+        <span class="contact-card__hint">TVA {{ site.vat }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--fog" id="formulaire" aria-labelledby="form-titre">
+  <div class="container split">
+    <div class="form-card">
+      <h2 class="h3" id="form-titre">Demande de devis ou d’information</h2>
+      <p class="text" style="margin-top:8px">Décrivez votre appareil et la panne le plus précisément possible (marque, modèle, symptômes)&nbsp;: nous vous répondrons plus vite.</p>
+      <form class="form" style="margin-top:28px" action="/api/contact.php" method="post" data-contact-form>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label class="field__label" for="f-nom">Nom</label>
+            <input class="field__input" id="f-nom" name="nom" type="text" autocomplete="name" required maxlength="120">
+          </div>
+          <div class="field">
+            <label class="field__label" for="f-email">E-mail</label>
+            <input class="field__input" id="f-email" name="email" type="email" autocomplete="email" required maxlength="180">
+          </div>
+        </div>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label class="field__label" for="f-tel">Téléphone <small>(facultatif)</small></label>
+            <input class="field__input" id="f-tel" name="telephone" type="tel" autocomplete="tel" maxlength="40">
+          </div>
+          <div class="field">
+            <label class="field__label" for="f-sujet">Sujet</label>
+            <select class="field__input" id="f-sujet" name="sujet">
+              <option value="reparation">Réparation / devis</option>
+              <option value="cartouches">Cartouches &amp; toners</option>
+              <option value="achat">Achat de matériel</option>
+              <option value="entreprise">Entreprise / intervention sur site</option>
+              <option value="sav">Service après-vente / réclamation</option>
+              <option value="autre">Autre demande</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-appareil">Appareil <small>(marque et modèle, facultatif)</small></label>
+          <input class="field__input" id="f-appareil" name="appareil" type="text" maxlength="160" placeholder="Ex. : HP LaserJet Pro M404, MacBook Air 2020…">
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-message">Votre message</label>
+          <textarea class="field__input" id="f-message" name="message" required maxlength="5000" placeholder="Décrivez la panne, la référence de cartouche recherchée ou votre projet…"></textarea>
+        </div>
+        <div class="form__hp" aria-hidden="true">
+          <label for="f-site">Ne pas remplir ce champ</label>
+          <input id="f-site" name="site_web" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" name="ts" value="">
+        <p class="form__legal">Vos données servent uniquement à répondre à votre demande et ne sont jamais transmises à des tiers. <a href="/confidentialite/">Politique de confidentialité</a>.</p>
+        <div class="form__status" data-form-status aria-live="polite"></div>
+        <div><button class="btn btn--primary btn--lg" type="submit">Envoyer la demande</button></div>
+      </form>
+    </div>
+
+    <div class="stack-lg">
+      <div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:8px">
+          <h2 class="h4">Horaires d’ouverture</h2>
+          <span class="status" data-status data-state="unknown"><span class="status__dot" aria-hidden="true"></span><span class="text-sm muted" data-status-text></span></span>
+        </div>
+        {{ ui.hours_table() }}
+        <p class="notice" style="margin-top:12px">Jours fériés et congés&nbsp;: un doute&nbsp;? Appelez-nous avant de vous déplacer.</p>
+      </div>
+      <ul class="info-list" role="list">
+        <li>{{ ui.icon('pin') }}<div><span class="info-list__label">Adresse</span><span class="info-list__value">{{ site.street }}, {{ site.postal }} {{ site.city }}</span><span class="text-sm muted">Quartier Ma Campagne, Bruxelles</span></div></li>
+        <li>{{ ui.icon('tram') }}<div><span class="info-list__label">Transports en commun</span><span class="info-list__value">{{ site.transport }}</span></div></li>
+        <li>{{ ui.icon('globe') }}<div><span class="info-list__label">Nous accueillons des clients de</span><span class="info-list__value" style="font-weight:500">{{ site.areas|join(', ') }} et de tout Bruxelles</span></div></li>
+      </ul>
+      {{ ui.map_facade() }}
+      {{ ui.directions_btn(label="Itinéraire vers le magasin", cls="btn--primary btn--block") }}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sav" aria-labelledby="sav-titre">
+  <div class="container split split--center">
+    <div class="stack">
+      <h2 class="h2" id="sav-titre">Service après-vente et réclamations</h2>
+      <p class="lead">Un souci après une réparation ou un achat&nbsp;? Nous voulons le savoir, et le régler avec vous.</p>
+    </div>
+    <div class="stack">
+      <p class="text">Choisissez «&nbsp;Service après-vente / réclamation&nbsp;» dans le <a href="/contact/?sujet=sav#formulaire">formulaire</a> en précisant la date de votre passage et l’appareil concerné, ou appelez-nous au <a href="tel:{{ site.phone_intl }}" data-track="call">{{ site.phone }}</a>. Nous reprenons votre dossier avec vous pour trouver une solution.</p>
+      <p class="text">Vous êtes satisfait&nbsp;? Un avis sur Google nous aide énormément&nbsp;: <a href="{{ site.google.review_url or site.google.maps_url }}" target="_blank" rel="noopener">laisser un avis</a>.</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

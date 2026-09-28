@@ -1,0 +1,308 @@
+[
+  {
+    "template": "index.html",
+    "path": "/",
+    "lang": "fr",
+    "type": "home",
+    "nav": "home",
+    "title": "Réparation imprimante, PC & Mac à Saint-Gilles | Digital-Buro",
+    "og_title": "Digital-Buro — Réparation d’imprimantes, PC & Mac à Saint-Gilles",
+    "description": "Réparation d’imprimantes, PC, Mac et GSM toutes marques à Saint-Gilles, Bruxelles. Plus de 30 ans d’expérience, cartouches et toners. 4,7/5 sur Google.",
+    "alternates": {
+      "fr": "/",
+      "nl": "/nl/",
+      "en": "/en/"
+    }
+  },
+  {
+    "template": "reparation-imprimante.html",
+    "path": "/reparation-imprimante/",
+    "lang": "fr",
+    "type": "service",
+    "nav": "imprimante",
+    "service_name": "Réparation d’imprimantes et de photocopieurs",
+    "title": "Réparation imprimante à Saint-Gilles, Bruxelles | Digital-Buro",
+    "description": "Imprimante qui bourre, fait des traces ou affiche une erreur ? Réparation d’imprimantes et photocopieurs toutes marques à Saint-Gilles, en atelier ou sur site.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "Réparation d’imprimantes",
+        "/reparation-imprimante/"
+      ]
+    ]
+  },
+  {
+    "template": "reparation-ordinateur.html",
+    "path": "/reparation-ordinateur/",
+    "lang": "fr",
+    "type": "service",
+    "nav": "ordinateur",
+    "service_name": "Réparation d’ordinateurs et de PC portables",
+    "title": "Réparation ordinateur et PC portable à Saint-Gilles | Digital-Buro",
+    "description": "PC lent, écran cassé, batterie, virus, Windows 11, SSD : réparation d’ordinateurs fixes et portables toutes marques à Saint-Gilles. Diagnostic et devis clair.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "Réparation d’ordinateurs",
+        "/reparation-ordinateur/"
+      ]
+    ]
+  },
+  {
+    "template": "reparation-mac.html",
+    "path": "/reparation-mac/",
+    "lang": "fr",
+    "type": "service",
+    "nav": "mac",
+    "service_name": "Réparation de Mac, MacBook et iMac",
+    "title": "Réparation Mac et MacBook à Saint-Gilles | Digital-Buro",
+    "description": "Réparation de MacBook, iMac et Mac mini à Saint-Gilles : écran, batterie, clavier, macOS, sauvegarde. Réparateur indépendant, plus de 30 ans d’expérience.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "Réparation Mac",
+        "/reparation-mac/"
+      ]
+    ]
+  },
+  {
+    "template": "reparation-gsm-tablette.html",
+    "path": "/reparation-gsm-tablette/",
+    "lang": "fr",
+    "type": "service",
+    "nav": "gsm",
+    "service_name": "Réparation de GSM, smartphones et tablettes",
+    "title": "Réparation GSM et smartphone à Saint-Gilles | Digital-Buro",
+    "description": "Écran cassé, batterie, connecteur de charge : réparation de GSM, smartphones et tablettes à Saint-Gilles (Bruxelles). Devis avant réparation, toutes marques.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "Réparation GSM & tablettes",
+        "/reparation-gsm-tablette/"
+      ]
+    ]
+  },
+  {
+    "template": "cartouches-toners.html",
+    "path": "/cartouches-toners/",
+    "lang": "fr",
+    "type": "service",
+    "nav": "cartouches",
+    "service_name": "Vente de cartouches d’encre, toners et consommables",
+    "title": "Cartouches d’encre et toners à Saint-Gilles | Digital-Buro",
+    "description": "Grand stock de cartouches d’encre, toners, tambours et rubans toutes marques à Saint-Gilles : HP, Canon, Epson, Brother, OKI… Même pour les anciens modèles.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "Cartouches & toners",
+        "/cartouches-toners/"
+      ]
+    ]
+  },
+  {
+    "template": "vente-materiel.html",
+    "path": "/vente-materiel/",
+    "lang": "fr",
+    "type": "service",
+    "nav": "vente",
+    "service_name": "Vente et installation de matériel bureautique et informatique",
+    "title": "Vente imprimantes & photocopieurs Saint-Gilles | Digital-Buro",
+    "description": "Imprimantes, photocopieurs, scanners, PC et fournitures de bureau à Saint-Gilles. Conseil honnête, livraison, installation et configuration de votre matériel.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "Vente de matériel",
+        "/vente-materiel/"
+      ]
+    ]
+  },
+  {
+    "template": "entreprises.html",
+    "path": "/entreprises/",
+    "lang": "fr",
+    "type": "service",
+    "nav": "entreprises",
+    "service_name": "Dépannage et maintenance informatique et bureautique pour entreprises",
+    "title": "Dépannage informatique entreprises Bruxelles | Digital-Buro",
+    "description": "Intervention sur site à Bruxelles, entretien d’imprimantes et de photocopieurs, réseau et Wi-Fi, livraison de consommables pour indépendants et PME.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "Entreprises",
+        "/entreprises/"
+      ]
+    ]
+  },
+  {
+    "template": "a-propos.html",
+    "path": "/a-propos/",
+    "lang": "fr",
+    "type": "about",
+    "nav": "a-propos",
+    "title": "À propos : 30 ans d’expérience en bureautique | Digital-Buro",
+    "description": "De la machine à écrire au MacBook : découvrez Digital-Buro, votre magasin de bureautique et d’informatique à Saint-Gilles, fort de plus de 30 ans d’expérience.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "À propos",
+        "/a-propos/"
+      ]
+    ]
+  },
+  {
+    "template": "contact.html",
+    "path": "/contact/",
+    "lang": "fr",
+    "type": "contact",
+    "nav": "contact",
+    "title": "Contact, horaires et accès | Digital-Buro Saint-Gilles",
+    "description": "Digital-Buro, Chaussée de Charleroi 257, 1060 Saint-Gilles. Ouvert du lundi au vendredi de 10h30 à 18h et le samedi de 11h à 17h. Tél. 02 534 47 02.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "Contact",
+        "/contact/"
+      ]
+    ]
+  },
+  {
+    "template": "guide-impression.html",
+    "path": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+    "lang": "fr",
+    "type": "article",
+    "nav": "imprimante",
+    "published": "2026-09-28",
+    "title": "Imprimante laser et jet d’encre : comment ça marche ?",
+    "description": "Tambour, toner, unité de fusion, tête d’impression : le principe d’impression laser et jet d’encre expliqué par un réparateur, et ce qu’il révèle de vos pannes.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "Réparation d’imprimantes",
+        "/reparation-imprimante/"
+      ],
+      [
+        "Comment fonctionne une imprimante",
+        "/conseils/fonctionnement-imprimante-laser-jet-encre/"
+      ]
+    ]
+  },
+  {
+    "template": "mentions-legales.html",
+    "path": "/mentions-legales/",
+    "lang": "fr",
+    "type": "webpage",
+    "nav": "",
+    "title": "Mentions légales | Digital-Buro",
+    "description": "Mentions légales du site de Digital-Buro SRL, Chaussée de Charleroi 257, 1060 Saint-Gilles (Bruxelles). TVA BE 0874.004.642.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "Mentions légales",
+        "/mentions-legales/"
+      ]
+    ]
+  },
+  {
+    "template": "confidentialite.html",
+    "path": "/confidentialite/",
+    "lang": "fr",
+    "type": "webpage",
+    "nav": "",
+    "title": "Politique de confidentialité et cookies | Digital-Buro",
+    "description": "Comment Digital-Buro traite les données transmises via le formulaire de contact, et comment le site utilise (ou non) les cookies.",
+    "breadcrumb": [
+      [
+        "Accueil",
+        "/"
+      ],
+      [
+        "Confidentialité",
+        "/confidentialite/"
+      ]
+    ]
+  },
+  {
+    "template": "merci.html",
+    "path": "/merci/",
+    "lang": "fr",
+    "type": "webpage",
+    "nav": "",
+    "noindex": true,
+    "title": "Merci, votre demande est envoyée | Digital-Buro",
+    "description": "Votre demande a bien été envoyée à Digital-Buro."
+  },
+  {
+    "template": "404.html",
+    "path": "/404.html",
+    "output": "404.html",
+    "lang": "fr",
+    "type": "webpage",
+    "nav": "",
+    "noindex": true,
+    "title": "Page introuvable | Digital-Buro",
+    "description": "Cette page n’existe pas ou a été déplacée."
+  },
+  {
+    "template": "nl.html",
+    "path": "/nl/",
+    "lang": "nl",
+    "type": "home",
+    "nav": "home",
+    "title": "Herstelling printer, pc en Mac in Sint-Gillis | Digital-Buro",
+    "og_title": "Digital-Buro — Herstelling van printers, pc’s en Macs in Sint-Gillis",
+    "description": "Herstelling van printers, kopieerapparaten, pc’s, Macs en gsm’s in Sint-Gillis (Brussel). Meer dan 30 jaar ervaring, inktpatronen en toners. 4,7/5 op Google.",
+    "alternates": {
+      "fr": "/",
+      "nl": "/nl/",
+      "en": "/en/"
+    }
+  },
+  {
+    "template": "en.html",
+    "path": "/en/",
+    "lang": "en",
+    "type": "home",
+    "nav": "home",
+    "title": "Printer, PC & Mac repair Saint-Gilles, Brussels | Digital-Buro",
+    "og_title": "Digital-Buro — Printer, PC & Mac repair in Saint-Gilles, Brussels",
+    "description": "Printer, copier, PC, Mac and phone repair in Saint-Gilles, Brussels. Over 30 years of experience, ink cartridges and toners in stock. Rated 4.7/5 on Google.",
+    "alternates": {
+      "fr": "/",
+      "nl": "/nl/",
+      "en": "/en/"
+    }
+  }
+]

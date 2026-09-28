@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+{{ ui.breadcrumb(page.breadcrumb) }}
+
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div class="page-hero__copy">
+      <span class="tag">À propos de Digital-Buro</span>
+      <h1 class="h1">Plus de 30 ans d’expérience au service de votre bureautique</h1>
+      <p class="lead">De la machine à écrire au MacBook, Digital-Buro accompagne les particuliers et les entreprises de Bruxelles dans chaque évolution de la bureautique et de l’informatique. Toujours avec la même idée&nbsp;: réparer, conseiller et servir, plutôt que simplement vendre.</p>
+      <div class="hero__proof">{{ ui.rating() }}</div>
+    </div>
+    <aside class="xp-card" aria-label="Plus de 30 ans d’expérience">
+      <div class="xp-card__top">
+        <span class="tag tag--line">Depuis plus de 30 ans</span>
+      </div>
+      <p class="xp-card__num">30<span>+</span></p>
+      <p class="xp-card__label">ans d’expérience en bureautique et en informatique.</p>
+      <div class="timeline">
+        <ol class="timeline__track" role="list">
+          {%- for sym, label in [('tl-typewriter', 'Machine à écrire'), ('tl-fax', 'Fax'), ('tl-matrix', 'Matricielle'), ('tl-laser', 'Laser'), ('tl-desktop', 'PC'), ('tl-laptop', 'Mac')] %}
+          <li class="timeline__item">{{ ui.icon(sym) }}<span class="timeline__dot" aria-hidden="true"></span><span class="timeline__label">{{ label }}</span></li>
+          {%- endfor %}
+        </ol>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section section--fog" aria-labelledby="histoire-titre">
+  <div class="container split">
+    <div class="stack-lg sticky">
+      <h2 class="h2" id="histoire-titre">Notre histoire</h2>
+      <figure class="media">
+        <img src="/assets/img/vitrine-digital-buro-saint-gilles.webp" srcset="/assets/img/vitrine-digital-buro-saint-gilles-600.webp 600w, /assets/img/vitrine-digital-buro-saint-gilles.webp 900w" sizes="(min-width: 1024px) 560px, 100vw" width="900" height="334" loading="lazy" decoding="async" alt="Façade du magasin Digital-Buro à Saint-Gilles : enseigne « Bureautique & informatique toutes marques »">
+        <figcaption>Notre magasin, Chaussée de Charleroi 257, quartier Ma Campagne à Saint-Gilles.</figcaption>
+      </figure>
+    </div>
+    <div class="prose">
+      <p class="lead">La société Digital-Buro s’inscrit dans l’évolution technologique, digitale et bureautique qu’a connue le monde à partir des années 90&nbsp;: les machines à écrire, les fax et les photocopieurs ont laissé la place aux ordinateurs, aux imprimantes laser puis au tout-numérique.</p>
+      <p>Enrichie de l’expérience et du professionnalisme de son dirigeant, actif dans ces métiers depuis plus de 30 ans, Digital-Buro s’est donné pour mission d’offrir à ses clients et à ses partenaires des <strong>solutions intégrées pour les accompagner dans leur digitalisation</strong>.</p>
+      <p>Digital-Buro compte parmi les premières sociétés à avoir investi dans le service pour exercer ce métier en véritable professionnel. C’est la qualité de ses prestations qui lui a permis de se distinguer et de se forger une place solide face à la concurrence.</p>
+      <p>Aujourd’hui encore, le magasin de la chaussée de Charleroi accueille chaque jour des particuliers, des indépendants et des entreprises venus de tout Bruxelles, pour une cartouche introuvable, une imprimante à remettre en route, un ordinateur à sauver ou un conseil avant d’acheter.</p>
+      <blockquote class="callout" style="margin-top:32px">«&nbsp;L’ensemble de nos services de vente et de réparation est pensé pour mieux vous satisfaire. L’équipe s’impose de travailler dans le respect et la compréhension de nos clients.&nbsp;»<br><span class="muted" style="font-size:14px">— L’équipe Digital-Buro</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="generations-titre">
+  <div class="container split">
+    <div class="stack-lg sticky">
+      <h2 class="h2" id="generations-titre">Chaque génération de machines, une compétence en plus.</h2>
+      <p class="lead">Notre expérience s’est construite au rythme de la bureautique. Et chaque époque nous a laissé un savoir-faire que nous mettons encore à votre service.</p>
+    </div>
+    <ol class="reasons" role="list">
+      <li><span class="reasons__num">01</span><div><h3 class="reasons__title">Machines à écrire, fax et photocopieurs</h3><p class="reasons__text">Les fondations du métier&nbsp;: la mécanique de précision, l’entretien des machines de bureau et le soin du détail.</p></div></li>
+      <li><span class="reasons__num">02</span><div><h3 class="reasons__title">Imprimantes matricielles et laser</h3><p class="reasons__text">L’impression informatique&nbsp;: rubans, tambours, toners et unités de fusion n’ont plus de secret pour nous.</p></div></li>
+      <li><span class="reasons__num">03</span><div><h3 class="reasons__title">PC, réseaux et Internet</h3><p class="reasons__text">L’ordinateur entre dans chaque bureau&nbsp;: installation, réseau, sécurité et logiciels.</p></div></li>
+      <li><span class="reasons__num">04</span><div><h3 class="reasons__title">Portables, Mac et multifonctions</h3><p class="reasons__text">Mobilité et appareils tout-en-un&nbsp;: écrans, batteries, systèmes et configurations.</p></div></li>
+      <li><span class="reasons__num">05</span><div><h3 class="reasons__title">Aujourd’hui</h3><p class="reasons__text">Wi-Fi, smartphones, passage à Windows 11&nbsp;: toujours le même service, adapté à vos outils d’aujourd’hui.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--fog" aria-labelledby="offre-titre">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <h2 class="h2" id="offre-titre">Ce que Digital-Buro vous propose</h2>
+      <p class="lead">Un magasin, un atelier et des techniciens mobiles&nbsp;: tout ce qu’il faut pour que vos machines de bureau fonctionnent, et continuent de fonctionner.</p>
+    </div>
+    <div class="grid grid--4">
+      {{ ui.feature("package", "Un service de vente", "Photocopieurs, fax, imprimantes, scanners, ordinateurs de bureau et portables, cartouches d’encre et toners pour toutes les marques.") }}
+      {{ ui.feature("wrench", "Un service technique", "De vrais spécialistes qui assurent l’entretien et la réparation de toutes vos machines de bureau.") }}
+      {{ ui.feature("building", "Des techniciens mobiles", "Une équipe qui intervient en atelier ou dans vos locaux, sur les machines de bureau comme sur les portables.") }}
+      {{ ui.feature("truck", "Un service de livraison", "Nous livrons vos consommables, installons et configurons vos appareils de bureau.") }}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="valeurs-titre">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <h2 class="h2" id="valeurs-titre">Nos engagements</h2>
+    </div>
+    <div class="stats stats--4">
+      <div class="stat"><p class="h4">Le respect</p><p class="stat__label">Chaque client est écouté et compris, qu’il vienne pour une cartouche ou pour équiper tout un bureau.</p></div>
+      <div class="stat"><p class="h4">L’honnêteté</p><p class="stat__label">Un diagnostic précis et un devis clair. Si une réparation n’en vaut pas la peine, nous le disons.</p></div>
+      <div class="stat"><p class="h4">La qualité</p><p class="stat__label">Des prestations soignées, qui ont construit notre réputation depuis plus de 30 ans.</p></div>
+      <div class="stat"><p class="h4">La proximité</p><p class="stat__label">Un vrai magasin de quartier à Saint-Gilles, ouvert six jours sur sept.</p></div>
+    </div>
+  </div>
+</section>
+
+{{ ui.cta_band("Au plaisir de vous accueillir au magasin.", "Passez nous voir Chaussée de Charleroi 257, appelez-nous ou écrivez-nous : l’équipe Digital-Buro vous souhaite la bienvenue.") }}
+
+{{ ui.related(['imprimante', 'ordinateur', 'cartouches'], "Nos services") }}
+
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+{{ ui.breadcrumb(page.breadcrumb) }}
+
+<article>
+  <header class="page-hero page-hero--simple">
+    <div class="container">
+      <div class="page-hero__copy" style="max-width:52rem">
+        <span class="tag">Le guide du réparateur</span>
+        <h1 class="h1">Comment fonctionne une imprimante laser ou jet d’encre&nbsp;?</h1>
+        <p class="lead">Tambour, toner, unité de fusion, micro-buses&nbsp;: comprendre le principe d’impression aide à choisir ses consommables, à entretenir sa machine… et à reconnaître l’origine d’une panne.</p>
+        <p class="caption">Par l’atelier Digital-Buro, Saint-Gilles · Lecture&nbsp;: 6&nbsp;minutes · Mis à jour le <time datetime="{{ page.published }}">28 septembre 2026</time></p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container article-grid">
+    <div class="prose">
+      <h2 id="laser">L’imprimante laser en bref</h2>
+      <p>Le processus d’impression commence par la génération d’un rayon laser au moyen d’une <strong>diode laser</strong>. Le rayon est dirigé par des miroirs et des lentilles de focalisation vers la surface d’un cylindre, le <strong>tambour</strong> (ou «&nbsp;drum&nbsp;»). La zone balayée devient une image électrique, invisible à l’œil nu.</p>
+      <p>Le laser s’allume et s’éteint alternativement lorsqu’il balaie le tambour. Sa fréquence se mesure en points par pouce (<abbr title="dots per inch">dpi</abbr>)&nbsp;: c’est elle qui détermine la résolution de l’imprimante, par exemple 600 ou 1&nbsp;200&nbsp;dpi.</p>
+
+      <h2 id="etapes">Les six étapes de l’impression laser</h2>
+      <p>La formation de l’image dans une imprimante laser se déroule en six étapes, répétées à chaque rotation du tambour&nbsp;:</p>
+      <ol>
+        <li><strong>Le nettoyage du tambour.</strong> Une lame racle le toner resté de la page précédente et les charges résiduelles sont effacées&nbsp;: le tambour repart d’une surface propre.</li>
+        <li><strong>Le conditionnement.</strong> Un rouleau de charge dépose une charge électrique uniforme sur toute la surface du tambour.</li>
+        <li><strong>L’écriture.</strong> Le laser balaie le tambour ligne par ligne. Partout où il le touche, la charge est neutralisée&nbsp;: c’est l’image électrique de votre page.</li>
+        <li><strong>Le développement.</strong> Le toner, lui aussi chargé, n’adhère qu’aux zones touchées par le laser&nbsp;: l’image devient visible sur le tambour.</li>
+        <li><strong>Le transfert.</strong> Un rouleau de transfert, placé sous la feuille, attire le toner du tambour vers le papier.</li>
+        <li><strong>La fusion, ou fixation.</strong> La feuille traverse l’unité de fusion, le «&nbsp;four&nbsp;»&nbsp;: la chaleur et la pression font fondre le toner, qui s’ancre dans les fibres du papier. C’est pour cela que les pages sortent chaudes.</li>
+      </ol>
+
+      <h2 id="toner">Le toner&nbsp;: de la poudre, pas de l’encre</h2>
+      <p>Contrairement à l’encre liquide des jet d’encre, le toner est une poudre très fine. Sa conception de base est un <strong>mélange de résine, de carbone (le pigment) et de poudre d’oxyde de fer</strong>. La résine fond lors de la fusion et fixe l’image sur la feuille&nbsp;; le pigment donne la couleur.</p>
+      <p>Une imprimante laser couleur utilise quatre toners, cyan, magenta, jaune et noir, qui se superposent pour reproduire toutes les teintes.</p>
+
+      <h2 id="tambour">Le tambour, cœur de l’imprimante laser</h2>
+      <p>Le tambour est un cylindre en aluminium recouvert d’un film photoconducteur organique. Ce film est photosensible&nbsp;: exposé au rayon du laser, il devient conducteur. Le tambour est composé de quatre couches, chacune avec sa fonction&nbsp;:</p>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th scope="col">Couche</th><th scope="col">Épaisseur</th><th scope="col">Rôle</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Substrat d’aluminium</th><td>Diamètre et longueur variables selon le modèle</td><td>Le support du tambour.</td></tr>
+            <tr><th scope="row">Couche de base (oxyde d’aluminium)</th><td>Environ 0,2&nbsp;micron</td><td>La couche intermédiaire entre le métal et les couches actives.</td></tr>
+            <tr><th scope="row">Couche génératrice de charge</th><td>0,2 à 0,5&nbsp;micron</td><td>Contient le pigment photoconducteur, qui réagit à la lumière du laser.</td></tr>
+            <tr><th scope="row">Couche de transport de charge</th><td>18 à 40&nbsp;microns</td><td>Transporte la décharge négative des électrons vers la masse, et permet au tambour de maintenir sa charge.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Le tambour s’use à chaque page. Selon les imprimantes, il est intégré à la cartouche de toner ou vendu séparément sous forme de «&nbsp;drum kit&nbsp;», qui se remplace moins souvent que le toner.</p>
+
+      <h2 id="pannes">Ce que cela change pour vos pannes</h2>
+      <p>Connaître le trajet de l’image permet de relier un défaut d’impression à la pièce en cause. Voici les correspondances les plus fréquentes à l’atelier&nbsp;:</p>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th scope="col">Symptôme sur la page</th><th scope="col">Cause probable</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Trait vertical toujours au même endroit</th><td>Tambour rayé ou lame de nettoyage usée.</td></tr>
+            <tr><th scope="row">Défaut qui se répète à intervalle régulier</th><td>Un rouleau ou le tambour&nbsp;: l’écart entre deux marques correspond à la circonférence de la pièce fautive.</td></tr>
+            <tr><th scope="row">Impression pâle ou irrégulière</th><td>Toner presque vide, ou tambour en fin de vie.</td></tr>
+            <tr><th scope="row">Voile gris sur toute la page</th><td>Tambour usé ou problème de charge.</td></tr>
+            <tr><th scope="row">Toner qui s’efface au doigt</th><td>Unité de fusion défaillante&nbsp;: le toner n’est plus fixé.</td></tr>
+            <tr><th scope="row">Papier froissé ou plissé</th><td>Unité de fusion, rouleaux d’entraînement, ou papier humide.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="callout"><strong>Le bon réflexe&nbsp;:</strong> apportez une page imprimée qui montre le problème. Pour un technicien, c’est le meilleur des diagnostics. <a href="/reparation-imprimante/">Voir la réparation d’imprimantes</a>.</p>
+
+      <h2 id="jet-encre">L’imprimante jet d’encre</h2>
+      <p>Dans la plupart des imprimantes jet d’encre, l’encre est chauffée et éjectée sous forme de bulles par la <strong>tête d’impression</strong>, à travers des micro-buses. Certaines marques, comme Epson, utilisent une technologie piézoélectrique&nbsp;: un cristal se déforme sous l’impulsion électrique et projette la goutte sans chauffer l’encre.</p>
+      <p>La tête d’impression est composée de plusieurs rangées de micro-buses, en fonction de la résolution de l’imprimante. L’éjection de l’encre est commandée par des impulsions électriques, pilotées par une carte électronique. L’amorçage de l’encre dans la tête se fait par une mini-pompe, qui entre en action plusieurs fois par jour pour éviter que l’encre ne sèche et ne se cristallise dans les micro-buses.</p>
+
+      <h3 id="buses">Pourquoi les buses se bouchent, et comment l’éviter</h3>
+      <ul>
+        <li><strong>Imprimez régulièrement</strong>, idéalement au moins une page en couleur par semaine.</li>
+        <li><strong>Éteignez l’imprimante avec son bouton</strong>, pas à la multiprise&nbsp;: elle doit pouvoir ranger et protéger ses têtes avant de s’arrêter.</li>
+        <li><strong>Ne laissez pas une cartouche vide en place</strong> trop longtemps.</li>
+        <li><strong>Au premier signe de stries</strong>, lancez un nettoyage des têtes depuis le menu d’entretien, mais pas dix d’affilée&nbsp;: chaque cycle consomme de l’encre. Si rien ne change, apportez-la nous.</li>
+      </ul>
+
+      <h2 id="choisir">Laser ou jet d’encre&nbsp;: laquelle choisir&nbsp;?</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th scope="col">Critère</th><th scope="col">Laser</th><th scope="col">Jet d’encre</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Documents texte</th><td>Très nets, impression rapide</td><td>Bons</td></tr>
+            <tr><th scope="row">Photos</th><td>Correctes</td><td>Excellentes</td></tr>
+            <tr><th scope="row">Usage occasionnel</th><td>Idéale&nbsp;: le toner ne sèche pas</td><td>Risque de buses bouchées</td></tr>
+            <tr><th scope="row">Gros volumes</th><td>Coût par page bas</td><td>Plus cher à la page, sauf modèles à réservoirs</td></tr>
+            <tr><th scope="row">Encombrement</th><td>Plus volumineuse</td><td>Compacte</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Un doute&nbsp;? Passez au magasin&nbsp;: nous faisons le calcul avec vous en fonction de ce que vous imprimez vraiment. <a href="/vente-materiel/">Voir la vente de matériel</a> et <a href="/cartouches-toners/">les cartouches et toners</a>.</p>
+    </div>
+
+    <aside class="article-aside">
+      <nav class="toc" aria-label="Sommaire">
+        <p class="toc__title">Sommaire</p>
+        <ol>
+          <li><a href="#laser">L’imprimante laser en bref</a></li>
+          <li><a href="#etapes">Les six étapes de l’impression</a></li>
+          <li><a href="#toner">Le toner</a></li>
+          <li><a href="#tambour">Le tambour</a></li>
+          <li><a href="#pannes">Ce que cela change pour vos pannes</a></li>
+          <li><a href="#jet-encre">L’imprimante jet d’encre</a></li>
+          <li><a href="#choisir">Laser ou jet d’encre&nbsp;?</a></li>
+        </ol>
+      </nav>
+      <div class="toc" style="margin-top:12px">
+        <p class="toc__title">Une panne&nbsp;?</p>
+        <p class="text-sm muted" style="margin-bottom:14px">Nos techniciens réparent toutes les marques d’imprimantes depuis plus de 30 ans.</p>
+        {{ ui.call_btn(label=site.phone, cls="btn--primary btn--block") }}
+      </div>
+    </aside>
+  </div>
+</article>
+
+{{ ui.cta_band("Votre imprimante a un de ces symptômes ?", "Apportez-la au magasin avec une page imprimée, ou appelez-nous : nous identifions la pièce en cause et vous faisons un devis.") }}
+
+{{ ui.related(['imprimante', 'cartouches', 'vente'], "Nos services autour de l’impression") }}
+
+{% endblock %}

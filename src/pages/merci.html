@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+<section class="section" data-conversion="form">
+  <div class="container">
+    <div class="stack-lg" style="max-width:44rem">
+      <span class="tag"><span class="tag__dot"></span>Demande envoyée</span>
+      <h1 class="h1">Merci, votre demande est bien envoyée.</h1>
+      <p class="lead">Nous vous répondons au plus vite pendant les heures d’ouverture, du lundi au vendredi de 10h30 à 18h et le samedi de 11h à 17h. Pour une demande urgente, le plus rapide reste de nous appeler.</p>
+      <div class="btn-row">
+        {{ ui.call_btn(cls="btn--primary btn--lg") }}
+        <a class="btn btn--outline btn--lg" href="/">Retour à l’accueil{{ ui.icon('arrow-right') }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ ui.related(['imprimante', 'ordinateur', 'cartouches'], "En attendant, nos services") }}
+
+{% endblock %}

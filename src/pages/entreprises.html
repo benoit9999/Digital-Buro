@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+{{ ui.service_hero(
+  "Indépendants · PME · Professions libérales",
+  "Dépannage informatique et bureautique pour les entreprises à Bruxelles",
+  "Un seul partenaire pour vos imprimantes, photocopieurs, ordinateurs et réseau. Nos techniciens interviennent dans vos locaux à Bruxelles ou en atelier à Saint-Gilles, avec plus de 30 ans d’expérience des machines de bureau.",
+  "ill-network.svg",
+  "/contact/?sujet=entreprise#formulaire",
+  ["Intervention sur site", "Toutes marques", "Factures avec TVA"]
+) }}
+
+<section class="section section--fog" aria-labelledby="services-titre">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <h2 class="h2" id="services-titre">Ce que nous faisons pour votre bureau</h2>
+      <p class="lead">Nos techniciens analysent les pannes et les besoins, établissent un devis et proposent les solutions techniques les mieux adaptées à votre activité.</p>
+    </div>
+    <div class="grid grid--3">
+      {{ ui.feature("wrench", "Intervention sur site", "Imprimante réseau, photocopieur, poste de travail ou connexion en panne : nous intervenons dans vos locaux pour remettre votre bureau en marche.") }}
+      {{ ui.feature("settings", "Entretien et maintenance", "Entretien régulier de vos imprimantes et photocopieurs : nettoyage, pièces d’usure, réglages. Moins de pannes, des machines qui durent.") }}
+      {{ ui.feature("wifi", "Réseau et Wi-Fi", "Résolution de problèmes et administration réseau : Wi-Fi qui décroche, partage de fichiers et d’imprimantes, routeurs et switchs.") }}
+      {{ ui.feature("monitor", "Installation et configuration", "Nouveaux postes, imprimantes réseau, scan vers e-mail, messagerie et logiciels : tout est installé et configuré.") }}
+      {{ ui.feature("truck", "Livraison de consommables", "Cartouches, toners et papier livrés dans vos bureaux, pour toutes les marques de votre parc.") }}
+      {{ ui.feature("handshake", "Conseil et équipement", "Analyse de vos besoins et devis pour l’achat de matériel adapté : imprimantes, photocopieurs, PC, réseau.") }}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="pourquoi-titre">
+  <div class="container split">
+    <div class="stack-lg sticky">
+      <h2 class="h2" id="pourquoi-titre">Pourquoi un partenaire de proximité&nbsp;?</h2>
+      <p class="lead">Quand l’imprimante de l’accueil tombe en panne un lundi matin, un interlocuteur qui connaît vos machines et qui se trouve à quelques minutes fait toute la différence.</p>
+    </div>
+    <ol class="reasons" role="list">
+      <li>
+        <span class="reasons__num">01</span>
+        <div><h3 class="reasons__title">Un seul interlocuteur</h3><p class="reasons__text">Imprimantes, photocopieurs, ordinateurs, réseau et consommables&nbsp;: un seul numéro à appeler, quelle que soit la panne.</p></div>
+      </li>
+      <li>
+        <span class="reasons__num">02</span>
+        <div><h3 class="reasons__title">Toutes marques, sans parti pris</h3><p class="reasons__text">Nous ne dépendons d’aucun fabricant&nbsp;: nous entretenons le parc que vous avez déjà et vous conseillons en toute indépendance.</p></div>
+      </li>
+      <li>
+        <span class="reasons__num">03</span>
+        <div><h3 class="reasons__title">Plus de 30 ans d’expérience</h3><p class="reasons__text">Nous avons vu passer toutes les générations de machines de bureau. Le diagnostic est plus rapide, la solution plus juste.</p></div>
+      </li>
+      <li>
+        <span class="reasons__num">04</span>
+        <div><h3 class="reasons__title">Un magasin à Saint-Gilles</h3><p class="reasons__text">Un comptoir où déposer un appareil, trouver un toner le jour même ou voir une machine avant de l’acheter.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--fog" aria-labelledby="pour-qui-titre">
+  <div class="container split split--center">
+    <div class="stack">
+      <h2 class="h3" id="pour-qui-titre">Pour qui&nbsp;?</h2>
+      <p class="text">De l’indépendant qui travaille seul au bureau d’une vingtaine de personnes, à Saint-Gilles, Ixelles, Forest, Uccle, Anderlecht et dans tout Bruxelles.</p>
+    </div>
+    {{ ui.chips(["Indépendants", "Bureaux et PME", "Professions libérales", "Cabinets médicaux", "Commerces", "Écoles", "Associations et ASBL"]) }}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="methode-titre">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <h2 class="h2" id="methode-titre">Comment nous travaillons ensemble</h2>
+      <p class="lead">Un fonctionnement simple, sans engagement superflu, pensé pour les petites structures qui n’ont pas de service informatique.</p>
+    </div>
+    <ol class="steps" role="list">
+      <li class="step"><span class="step__num">01</span><h3 class="step__title">Vous nous contactez</h3><p class="step__text">Par téléphone ou via le formulaire&nbsp;: décrivez la panne ou votre projet d’équipement.</p></li>
+      <li class="step"><span class="step__num">02</span><h3 class="step__title">Analyse et devis</h3><p class="step__text">Nous analysons la situation, sur place si nécessaire, et vous remettons un devis clair.</p></li>
+      <li class="step"><span class="step__num">03</span><h3 class="step__title">Intervention</h3><p class="step__text">Réparation, installation ou configuration, dans vos locaux ou dans notre atelier.</p></li>
+      <li class="step"><span class="step__num">04</span><h3 class="step__title">Suivi</h3><p class="step__text">Entretien, consommables, évolutions&nbsp;: nous restons votre interlocuteur dans la durée.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--fog" aria-labelledby="faq-titre">
+  <div class="container split">
+    <div class="sticky stack">
+      <h2 class="faq-title" id="faq-titre">Questions fréquentes des professionnels</h2>
+    </div>
+    {{ ui.faq([
+      ("Intervenez-vous dans toute la région bruxelloise ?",
+       "<p>Nous intervenons dans vos locaux à Bruxelles, en particulier à Saint-Gilles et dans les communes voisines : Ixelles, Forest, Uccle, Anderlecht, Bruxelles-Ville. Pour une autre localisation, contactez-nous.</p>"),
+      ("Établissez-vous des factures avec TVA ?",
+       "<p>Oui, Digital-Buro SRL (TVA BE 0874.004.642) établit des factures en bonne et due forme pour les professionnels.</p>"),
+      ("Proposez-vous un entretien régulier de nos imprimantes ?",
+       "<p>Oui, sur demande, nous organisons l’entretien périodique de vos imprimantes et photocopieurs pour limiter les pannes et prolonger leur durée de vie.</p>"),
+      ("Pouvez-vous installer ou dépanner notre réseau Wi-Fi ?",
+       "<p>Oui : diagnostic des coupures, installation et configuration de routeurs, de switchs et de points d’accès, partage de fichiers et d’imprimantes au bureau.</p>"),
+      ("Nous avons des machines de marques différentes, est-ce un problème ?",
+       "<p>Au contraire : nous intervenons sur toutes les marques, ce qui vous permet de n’avoir qu’un seul interlocuteur pour l’ensemble de votre parc.</p>")
+    ]) }}
+  </div>
+</section>
+
+{{ ui.cta_band("Un bureau à remettre en marche ?", "Appelez-nous ou décrivez votre besoin : nous vous proposons une intervention adaptée, sur site ou en atelier.") }}
+
+{{ ui.related(['imprimante', 'cartouches', 'vente'], "Nos services les plus demandés") }}
+
+{% endblock %}

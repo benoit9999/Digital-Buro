@@ -1,0 +1,61 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="{{ t.home_url }}"><img src="/assets/img/logo-white.svg" alt="Digital-Buro" width="139" height="26" loading="lazy"></a>
+        <p class="footer__tagline">{{ t.tagline }}</p>
+        <address class="footer__nap">
+          Digital-Buro<br>
+          {{ site.street if page.lang != 'nl' else site.street_nl }}<br>
+          {{ site.postal }} {{ site.city if page.lang != 'nl' else site.city_nl }} ({{ t.brussels }})<br>
+          <a href="tel:{{ site.phone_intl }}" data-track="call">{{ site.phone }}</a><br>
+          <a href="mailto:{{ site.email }}" data-track="email">{{ site.email }}</a>
+        </address>
+      </div>
+      <div>
+        <h2 class="footer__title">{{ t.f_repairs }}</h2>
+        <ul class="footer__links" role="list">
+          {%- for k in ['imprimante', 'ordinateur', 'mac', 'gsm'] %}{% set s = services[k] %}
+          <li><a href="{{ s.url }}"{% if page.lang != 'fr' %} hreflang="fr"{% endif %}>{{ s.link if page.lang == 'fr' else t.svc_names[k] }}</a></li>
+          {%- endfor %}
+          <li><a href="/conseils/fonctionnement-imprimante-laser-jet-encre/"{% if page.lang != 'fr' %} hreflang="fr"{% endif %}>{{ t.f_guide }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer__title">{{ t.f_shop }}</h2>
+        <ul class="footer__links" role="list">
+          {%- for label, href in t.f_shop_links %}
+          <li><a href="{{ href }}">{{ label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer__title">{{ t.hours_title }}</h2>
+        <div class="footer__hours">
+          <div><span>{{ t.f_weekdays }}</span><span>{{ '10:30'|hfmt(page.lang) }} – {{ '18:00'|hfmt(page.lang) }}</span></div>
+          <div><span>{{ site.hours[5]['day' if page.lang == 'fr' else 'day_' ~ page.lang] }}</span><span>{{ '11:00'|hfmt(page.lang) }} – {{ '17:00'|hfmt(page.lang) }}</span></div>
+          <div><span>{{ site.hours[6]['day' if page.lang == 'fr' else 'day_' ~ page.lang] }}</span><span>{{ t.closed }}</span></div>
+        </div>
+        <p style="margin-top:16px">{{ t.transport }}</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© {{ year }} Digital-Buro SRL · {{ t.vat }} {{ site.vat }}</p>
+      <nav aria-label="{{ t.legal_nav }}">
+        <a href="/mentions-legales/">{{ t.legal }}</a>
+        <a href="/confidentialite/">{{ t.privacy }}</a>
+        {%- if tracking_enabled %}
+        <button type="button" data-consent-open>{{ t.cookies_manage }}</button>
+        {%- endif %}
+        <span class="lang-switch">
+          <a href="/" hreflang="fr" lang="fr"{% if page.lang == 'fr' %} aria-current="true"{% endif %}>FR</a>
+          <a href="/nl/" hreflang="nl" lang="nl"{% if page.lang == 'nl' %} aria-current="true"{% endif %}>NL</a>
+          <a href="/en/" hreflang="en" lang="en"{% if page.lang == 'en' %} aria-current="true"{% endif %}>EN</a>
+        </span>
+      </nav>
+    </div>
+    {%- if site.credit %}
+    <p class="caption" style="margin-top:16px;color:var(--steel)">{{ site.credit }}</p>
+    {%- endif %}
+  </div>
+</footer>

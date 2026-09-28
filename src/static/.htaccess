@@ -1,0 +1,86 @@
+# =====================================================================
+#  Digital-Buro — configuration Apache (hébergement mutualisé OVH)
+# =====================================================================
+
+Options -Indexes
+DirectoryIndex index.html index.php
+AddDefaultCharset utf-8
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1) Adresse unique : https://www.digital-buro.be (évite le contenu dupliqué www / sans www)
+  RewriteCond %{HTTP_HOST} digital-buro\.be$ [NC]
+  RewriteCond %{SERVER_PORT} ^80$ [OR]
+  RewriteCond %{HTTP_HOST} !^www\.digital-buro\.be$ [NC]
+  RewriteRule ^(.*)$ https://www.digital-buro.be/$1 [R=301,L]
+
+  # 2) Anciennes pages du site → nouvelles pages (redirections permanentes : le référencement est conservé)
+  RewriteCond %{THE_REQUEST} \s/+index\.(html|php)[\s?] [NC]
+  RewriteRule ^index\.(html|php)$ / [R=301,L,NC]
+  RewriteRule ^Presentation\.html$ /a-propos/ [R=301,L,NC]
+  RewriteRule ^Principe-impression\.html$ /conseils/fonctionnement-imprimante-laser-jet-encre/ [R=301,L,NC]
+  RewriteRule ^Reclamation\.php$ /contact/?sujet=sav#formulaire [R=301,L,NC,NE]
+  RewriteRule ^contact\.php$ /contact/ [R=301,L,NC]
+
+  # 3) Ressources de l'ancien gabarit (css, js, images…) : définitivement supprimées
+  RewriteRule ^(css|js|images|fonts)/ - [G,L,NC]
+</IfModule>
+
+# Types de fichiers
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/svg+xml .svg
+  AddType image/webp .webp
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/javascript text/javascript application/json image/svg+xml application/manifest+json
+</IfModule>
+
+# Cache navigateur (CSS, JS et icônes sont versionnés dans les pages : ?v=…)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 week"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType application/manifest+json "access plus 1 week"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/xml "access plus 1 day"
+  ExpiresByType text/plain "access plus 1 day"
+</IfModule>
+
+# En-têtes de sécurité
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  Header always set Strict-Transport-Security "max-age=15552000"
+  <FilesMatch "\.(css|js|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# Fichiers qui n'ont rien à faire en ligne
+<FilesMatch "(^\.|\.(md|py|json|lock|log|ini|sh)$)">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+<Files "site.webmanifest">
+  <IfModule mod_authz_core.c>
+    Require all granted
+  </IfModule>
+</Files>

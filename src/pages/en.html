@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <span class="tag">All brands repaired · Saint-Gilles, Brussels</span>
+      <h1 class="display">Printer, PC &amp; Mac repair in Saint-Gilles, Brussels.</h1>
+      <p class="lead hero__lead">Printers, copiers, computers, Macs and phones: all brands, in our shop or at your office. A thorough diagnosis, a clear quote and over 30 years of experience, from typewriters to MacBooks.</p>
+      <div class="btn-row">
+        {{ ui.call_btn(cls="btn--primary btn--lg") }}
+        {{ ui.directions_btn(cls="btn--outline btn--lg") }}
+      </div>
+      <div class="hero__proof">
+        {{ ui.rating() }}
+        <ul class="trust" role="list">
+          <li>{{ ui.icon('check') }}All brands</li>
+          <li>{{ ui.icon('check') }}In store or on site</li>
+          <li>{{ ui.icon('check') }}Quote before repair</li>
+        </ul>
+      </div>
+    </div>
+    <aside class="xp-card" aria-label="Over 30 years of experience">
+      <div class="xp-card__top">
+        <span class="tag tag--line">Experience</span>
+        <span class="caption">Office &amp; IT</span>
+      </div>
+      <p class="xp-card__num">30<span>+</span></p>
+      <p class="xp-card__label">years repairing the machines that keep your office running.</p>
+      <div class="timeline">
+        <ol class="timeline__track" role="list">
+          {%- for sym, label in [('tl-typewriter', 'Typewriter'), ('tl-fax', 'Fax'), ('tl-matrix', 'Dot matrix'), ('tl-laser', 'Laser'), ('tl-desktop', 'PC'), ('tl-laptop', 'Mac')] %}
+          <li class="timeline__item">{{ ui.icon(sym) }}<span class="timeline__dot" aria-hidden="true"></span><span class="timeline__label">{{ label }}</span></li>
+          {%- endfor %}
+        </ol>
+        <p class="timeline__caption">From typewriters to MacBooks: we know every generation of machines.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section section--fog" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <h2 class="h2" id="services-title">One address for all your machines.</h2>
+      <p class="lead">Repairs, maintenance, supplies and new equipment: individuals, freelancers and businesses get a single point of contact. Detailed pages are available in French.</p>
+    </div>
+    <div class="grid grid--3">
+      {{ ui.feature_link("printer", "Printer repair", "Laser, inkjet, multifunction and dot matrix printers, and copiers: paper jams, streaks, error codes, clogged print heads.", "/reparation-imprimante/", "More info (FR)", hreflang="fr") }}
+      {{ ui.feature_link("laptop", "PC & laptop repair", "Screens, keyboards, batteries, slow or infected PCs, Windows 11 upgrades, SSD and memory upgrades, data recovery.", "/reparation-ordinateur/", "More info (FR)", hreflang="fr") }}
+      {{ ui.feature_link("monitor", "Mac repair", "MacBook, iMac and Mac mini: diagnosis, screens, batteries, keyboards, macOS, backups and migration to a new Mac.", "/reparation-mac/", "More info (FR)", hreflang="fr") }}
+      {{ ui.feature_link("smartphone", "Phones & tablets", "Cracked screens, tired batteries, faulty charging ports: smartphones and tablets repaired close to home.", "/reparation-gsm-tablette/", "More info (FR)", hreflang="fr") }}
+      {{ ui.feature_link("building", "For businesses", "On-site support in Brussels, printer and copier maintenance, network and Wi-Fi, delivery of office supplies.", "/entreprises/", "More info (FR)", hreflang="fr") }}
+      {{ ui.feature_link("package", "Sales & installation", "Printers, copiers, scanners, PCs, networking, software and office supplies: advised, delivered and set up.", "/vente-materiel/", "More info (FR)", hreflang="fr") }}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ink-toner" aria-labelledby="ink-title">
+  <div class="container split split--center">
+    <div class="stack-lg">
+      <h2 class="h2" id="ink-title">Ink cartridges and toner for every brand.</h2>
+      <p class="lead">A large stock of ink cartridges, toner, drums and ribbons for printers, fax machines, copiers and typewriters, including older models that are hard to find anywhere else.</p>
+      <p class="text">Bring your old cartridge or note the reference on its label, and you will leave with the right product. Businesses can have their supplies delivered.</p>
+    </div>
+    {{ ui.chips(site.brands.printers) }}
+  </div>
+</section>
+
+<section class="section section--fog" id="about" aria-labelledby="about-title">
+  <div class="container split">
+    <div class="stack-lg">
+      <h2 class="h2" id="about-title">Over 30 years of experience.</h2>
+      <p class="lead">Digital-Buro grew out of the digital revolution that transformed office equipment from the 1990s onwards. Backed by its manager’s 30+ years in the trade, the shop was among the first to invest in a genuine technical service: repairing, maintaining and advising rather than simply selling.</p>
+      <div class="stats">
+        <div class="stat"><p class="stat__num">30<span>+</span></p><p class="stat__label">years of experience</p></div>
+        <div class="stat"><p class="stat__num">{{ site.google.rating_en }}</p><p class="stat__label">average Google rating out of 5</p></div>
+      </div>
+    </div>
+    <figure class="media">
+      <img src="/assets/img/vitrine-digital-buro-saint-gilles.webp" srcset="/assets/img/vitrine-digital-buro-saint-gilles-600.webp 600w, /assets/img/vitrine-digital-buro-saint-gilles.webp 900w" sizes="(min-width: 1024px) 560px, 100vw" width="900" height="334" loading="lazy" decoding="async" alt="The Digital-Buro shop front, Chaussée de Charleroi 257 in Saint-Gilles, Brussels">
+      <figcaption>Our shop, Chaussée de Charleroi 257, Ma Campagne district.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <h2 class="h2" id="contact-title">Contact and opening hours</h2>
+      <p class="lead">Drop by the shop, call us or email us with the brand, the model and a short description of the problem.</p>
+    </div>
+    <div class="split">
+      <div class="stack-lg">
+        <ul class="info-list" role="list">
+          <li>{{ ui.icon('pin') }}<div><span class="info-list__label">Address</span><span class="info-list__value">{{ site.street }}, {{ site.postal }} {{ site.city }} (Brussels)</span></div></li>
+          <li>{{ ui.icon('tram') }}<div><span class="info-list__label">Public transport</span><span class="info-list__value">Tram 92, Ma Campagne stop</span></div></li>
+          <li>{{ ui.icon('phone') }}<div><span class="info-list__label">Phone</span><a class="info-list__value tnum" href="tel:{{ site.phone_intl }}" data-track="call">{{ site.phone_display_intl }}</a></div></li>
+          <li>{{ ui.icon('mail') }}<div><span class="info-list__label">Email</span><a class="info-list__value" href="mailto:{{ site.email }}" data-track="email">{{ site.email }}</a></div></li>
+        </ul>
+        <div class="btn-row">
+          {{ ui.call_btn(cls="btn--primary") }}
+          <a class="btn btn--outline" href="mailto:{{ site.email }}" data-track="email">{{ ui.icon('mail') }}Email us</a>
+        </div>
+      </div>
+      <div class="stack-lg">
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:8px">
+            <h3 class="h4">Opening hours</h3>
+            <span class="status" data-status data-state="unknown"><span class="status__dot" aria-hidden="true"></span><span class="text-sm muted" data-status-text></span></span>
+          </div>
+          {{ ui.hours_table() }}
+        </div>
+        {{ ui.map_facade() }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--fog" aria-labelledby="faq-title">
+  <div class="container split">
+    <div class="sticky stack">
+      <h2 class="faq-title" id="faq-title">Frequently asked questions</h2>
+    </div>
+    {{ ui.faq([
+      ("Do you repair all brands?",
+       "<p>Yes. HP, Canon, Epson, Brother, OKI, Xerox, Ricoh, Kyocera and Lexmark printers, HP, Dell, Lenovo, Acer and Asus computers, and Macs. We also service older machines such as dot matrix printers, fax machines and typewriters.</p>"),
+      ("Do I need an appointment?",
+       "<p>You can simply drop by the shop during opening hours: Monday to Friday from 10:30 to 18:00 and Saturday from 11:00 to 17:00. For on-site support, call us on 02 534 47 02.</p>"),
+      ("Do you offer on-site support?",
+       "<p>Yes, our technicians visit offices in Brussels, especially for office printers, copiers and networks.</p>"),
+      ("Do you stock cartridges for older printers?",
+       "<p>It is one of our specialities: we keep a large stock of cartridges, toner, drums and ribbons, including for models you will not find in big-box stores anymore.</p>")
+    ]) }}
+  </div>
+</section>
+
+{% endblock %}

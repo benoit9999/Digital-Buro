@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+{{ ui.breadcrumb(page.breadcrumb) }}
+
+<section class="page-hero page-hero--simple">
+  <div class="container">
+    <div class="page-hero__copy" style="max-width:48rem">
+      <h1 class="h1">Politique de confidentialité et cookies</h1>
+      <p class="lead">Nous collectons le strict minimum, uniquement pour répondre à vos demandes. Voici comment, et quels sont vos droits.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="prose">
+      <h2 id="responsable">Responsable du traitement</h2>
+      <p>Digital-Buro SRL, {{ site.street }}, {{ site.postal }} {{ site.city }}, Belgique · TVA {{ site.vat }} · <a href="mailto:{{ site.email }}">{{ site.email }}</a> · {{ site.phone }}.</p>
+
+      <h2 id="donnees">Données collectées</h2>
+      <p>Lorsque vous utilisez le formulaire de contact, nous recevons les informations que vous y saisissez&nbsp;: votre nom, votre adresse e-mail, votre numéro de téléphone s’il est indiqué, l’appareil concerné et votre message. Le serveur conserve également, pour des raisons de sécurité et de lutte contre le spam, l’adresse IP d’envoi.</p>
+      <p>Lorsque vous nous appelez ou nous écrivez directement, nous traitons les informations que vous choisissez de nous communiquer.</p>
+
+      <h2 id="finalites">Finalités et base légale</h2>
+      <ul>
+        <li>Répondre à votre demande (devis, information, disponibilité d’un produit, service après-vente)&nbsp;: mesures précontractuelles prises à votre demande (article 6.1.b du RGPD).</li>
+        <li>Assurer le suivi de la relation commerciale et prévenir les abus du formulaire&nbsp;: intérêt légitime de Digital-Buro (article 6.1.f du RGPD).</li>
+      </ul>
+      <p>Vos données ne sont jamais vendues, louées ni utilisées à des fins de prospection par des tiers.</p>
+
+      <h2 id="destinataires">Destinataires</h2>
+      <p>Les messages envoyés via le formulaire sont transmis par e-mail à Digital-Buro. Seule notre équipe y a accès, ainsi que notre hébergeur (OVH) en tant que prestataire technique.</p>
+
+      <h2 id="conservation">Durée de conservation</h2>
+      <p>Les demandes sans suite sont conservées au maximum trois ans après le dernier contact. Les données liées à une facture sont conservées pendant la durée imposée par la législation comptable et fiscale belge.</p>
+
+      <h2 id="droits">Vos droits</h2>
+      <p>Vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation, d’opposition et de portabilité sur vos données. Pour les exercer, écrivez-nous à <a href="mailto:{{ site.email }}">{{ site.email }}</a>. Vous pouvez également introduire une réclamation auprès de l’Autorité de protection des données, rue de la Presse 35, 1000 Bruxelles (<a href="https://www.autoriteprotectiondonnees.be" rel="noopener" target="_blank">autoriteprotectiondonnees.be</a>).</p>
+
+      <h2 id="cookies">Cookies</h2>
+      <p>Par défaut, ce site ne dépose <strong>aucun cookie publicitaire ni de mesure d’audience</strong>.</p>
+      <ul>
+        <li><strong>Carte Google Maps&nbsp;:</strong> la carte n’est chargée que si vous cliquez sur «&nbsp;Afficher la carte&nbsp;». Google peut alors déposer ses propres cookies, selon sa <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">politique de confidentialité</a>.</li>
+        <li><strong>Mesure des annonces&nbsp;:</strong> si la mesure Google Ads ou Google Analytics est activée sur le site, elle n’est chargée qu’après votre accord explicite via la bannière prévue à cet effet. Vous pouvez modifier votre choix à tout moment grâce au lien «&nbsp;Gérer les cookies&nbsp;» en bas de page.</li>
+        <li><strong>Stockage local&nbsp;:</strong> votre choix concernant les cookies est mémorisé dans votre navigateur, sans aucune autre donnée.</li>
+      </ul>
+
+      <h2 id="securite">Sécurité</h2>
+      <p>Le site est servi exclusivement en HTTPS&nbsp;: les informations saisies dans le formulaire sont chiffrées lors de leur transmission.</p>
+
+      <p class="caption">Dernière mise à jour&nbsp;: 28 septembre 2026.</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

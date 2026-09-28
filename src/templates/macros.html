@@ -1,0 +1,206 @@
+{#- =====================================================================
+    Composants réutilisables (Jinja2)
+    ===================================================================== -#}
+
+{% macro icon(name, cls="") -%}
+<svg class="icon{{ ' ' ~ cls if cls }}" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v={{ v.icons }}#{{ name }}"></use></svg>
+{%- endmacro %}
+
+{% macro call_btn(label=None, cls="btn--primary") -%}
+<a class="btn {{ cls }}" href="tel:{{ site.phone_intl }}" data-track="call">{{ icon('phone') }}<span>{{ label or t.call_full }}</span></a>
+{%- endmacro %}
+
+{% macro quote_btn(label=None, cls="btn--outline", href=None) -%}
+<a class="btn {{ cls }}" href="{{ href or t.quote_url }}">{{ label or t.cta }}{{ icon('arrow-right') }}</a>
+{%- endmacro %}
+
+{#- En-tête de page de service : fil d'Ariane + titre + accroche + boutons + illustration -#}
+{% macro service_hero(tag, h1, lead, art, quote_href, checks) -%}
+{{ breadcrumb(page.breadcrumb) }}
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div class="page-hero__copy">
+      <span class="tag">{{ tag }}</span>
+      <h1 class="h1">{{ h1 }}</h1>
+      <p class="lead">{{ lead }}</p>
+      <div class="btn-row">
+        {{ call_btn(cls="btn--primary btn--lg") }}
+        {{ quote_btn(cls="btn--outline btn--lg", href=quote_href) }}
+      </div>
+      <div class="hero__proof">
+        {{ rating() }}
+        <ul class="trust" role="list">
+          {%- for c in checks %}
+          <li>{{ icon('check') }}{{ c }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="page-hero__art"><img src="/assets/img/{{ art }}" alt="" width="320" height="200" fetchpriority="low"></div>
+  </div>
+</section>
+{%- endmacro %}
+
+{% macro directions_btn(label=None, cls="btn--outline") -%}
+<a class="btn {{ cls }}" href="{{ site.google.directions_url }}" target="_blank" rel="noopener" data-track="directions">{{ icon('pin') }}{{ label or t.directions }}</a>
+{%- endmacro %}
+
+{% macro stars() -%}
+<span class="rating__stars" aria-hidden="true">{% for i in range(5) %}{{ icon('star') }}{% endfor %}</span>
+{%- endmacro %}
+
+{% macro rating(label=None) -%}
+<a class="rating" href="{{ site.google.maps_url }}" target="_blank" rel="noopener">{{ stars() }}<span><strong>{{ site.google.rating if page.lang != 'en' else site.google.rating_en }}/5</strong> · {{ label or t.reviews_label }}</span></a>
+{%- endmacro %}
+
+{% macro breadcrumb(items) -%}
+<nav class="breadcrumb container" aria-label="{{ t.breadcrumb }}">
+  <ol>
+  {%- for label, href in items %}
+    {%- if loop.last %}
+    <li><span aria-current="page">{{ label }}</span></li>
+    {%- else %}
+    <li><a href="{{ href }}">{{ label }}</a></li>
+    {%- endif %}
+  {%- endfor %}
+  </ol>
+</nav>
+{%- endmacro %}
+
+{#- FAQ : items = [(question, réponse_html), ...] — le JSON-LD FAQPage est généré automatiquement au build -#}
+{% macro faq(items, open_first=False) -%}
+<div class="faq">
+{%- for q, a in items %}
+  <details class="faq__item" data-faq{{ ' open' if open_first and loop.first }}>
+    <summary class="faq__q">{{ q }}{{ icon('plus') }}</summary>
+    <div class="faq__a">{{ a }}</div>
+  </details>
+{%- endfor %}
+</div>
+{%- endmacro %}
+
+{% macro service_card(s, heading="h3") -%}
+<a class="svc-card" href="{{ s.url }}">
+  <div class="svc-card__body">
+    <{{ heading }} class="svc-card__title">{{ s.name }}</{{ heading }}>
+    <p class="svc-card__text">{{ s.teaser }}</p>
+    <span class="link-arrow svc-card__link">{{ s.link }}{{ icon('arrow-right') }}</span>
+  </div>
+  <div class="svc-card__art"><img src="/assets/img/{{ s.art }}" alt="" width="320" height="200" loading="lazy" decoding="async"></div>
+</a>
+{%- endmacro %}
+
+{% macro service_grid(keys, heading="h3") -%}
+<div class="grid grid--3">
+{%- for k in keys %}{% set s = services[k] %}
+  {{ service_card(s, heading) }}
+{%- endfor %}
+</div>
+{%- endmacro %}
+
+{% macro feature(icon_name, title, text, heading="h3") -%}
+<div class="feature">
+  <span class="feature__icon">{{ icon(icon_name) }}</span>
+  <{{ heading }} class="feature__title">{{ title }}</{{ heading }}>
+  <p class="feature__text">{{ text }}</p>
+</div>
+{%- endmacro %}
+
+{% macro feature_link(icon_name, title, text, href, link_label, heading="h3", hreflang=None) -%}
+<a class="feature feature--link" href="{{ href }}"{% if hreflang %} hreflang="{{ hreflang }}"{% endif %}>
+  <span class="feature__icon">{{ icon(icon_name) }}</span>
+  <{{ heading }} class="feature__title">{{ title }}</{{ heading }}>
+  <p class="feature__text">{{ text }}</p>
+  <span class="link-arrow" style="margin-top:4px">{{ link_label }}{{ icon('arrow-right') }}</span>
+</a>
+{%- endmacro %}
+
+{% macro chips(list) -%}
+<ul class="chips" role="list">{% for b in list %}<li>{{ b }}</li>{% endfor %}</ul>
+{%- endmacro %}
+
+{% macro hours_table() -%}
+<table class="hours" data-hours-table>
+  <caption class="visually-hidden">{{ t.hours_title }}</caption>
+  <tbody>
+  {%- for h in site.hours %}
+    <tr data-day="{{ loop.index0 }}">
+      <th scope="row">{{ h['day' if page.lang == 'fr' else 'day_' ~ page.lang] }}</th>
+      {%- if h.open %}
+      <td>{{ h.open|hfmt(page.lang) }} – {{ h.close|hfmt(page.lang) }}</td>
+      {%- else %}
+      <td class="closed">{{ t.closed }}</td>
+      {%- endif %}
+    </tr>
+  {%- endfor %}
+  </tbody>
+</table>
+{%- endmacro %}
+
+{% macro map_facade() -%}
+<div class="map-facade" data-map="{{ site.google.embed_url }}" data-map-title="{{ t.map_title }}">
+  <div class="map-facade__inner">
+    <span class="map-facade__pin">{{ icon('pin') }}</span>
+    <p class="map-facade__addr">{{ site.street if page.lang != 'nl' else site.street_nl }}<br>{{ site.postal }} {{ site.city if page.lang != 'nl' else site.city_nl }}</p>
+    <button class="btn btn--outline" type="button" data-map-load>{{ icon('map') }}{{ t.map_show }}</button>
+    <p class="map-facade__note">{{ t.map_note }}</p>
+  </div>
+</div>
+{%- endmacro %}
+
+{% macro process() -%}
+<ol class="steps" role="list">
+  <li class="step">
+    <span class="step__num">01</span>
+    <h3 class="step__title">Vous passez au magasin</h3>
+    <p class="step__text">Apportez votre appareil aux heures d’ouverture. Pour les professionnels et le matériel lourd, nos techniciens se déplacent.</p>
+  </li>
+  <li class="step">
+    <span class="step__num">02</span>
+    <h3 class="step__title">Diagnostic de la panne</h3>
+    <p class="step__text">Nos techniciens analysent la panne pour identifier précisément la pièce, le réglage ou le logiciel en cause.</p>
+  </li>
+  <li class="step">
+    <span class="step__num">03</span>
+    <h3 class="step__title">Un devis clair</h3>
+    <p class="step__text">Vous recevez un devis et la solution la mieux adaptée. Si la réparation n’en vaut pas la peine, on vous le dit.</p>
+  </li>
+  <li class="step">
+    <span class="step__num">04</span>
+    <h3 class="step__title">Réparé, prêt à l’emploi</h3>
+    <p class="step__text">Vous récupérez votre machine au magasin. Pour les entreprises : livraison, installation et configuration sur place.</p>
+  </li>
+</ol>
+{%- endmacro %}
+
+{% macro cta_band(title, text) -%}
+<section class="section section--flush">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2 class="h3">{{ title }}</h2>
+        <p class="lead" style="margin-top:12px">{{ text }}</p>
+        <div class="cta-band__meta">
+          <span>{{ icon('pin') }}{{ t.addr_full }}</span>
+          <span>{{ icon('clock') }}{{ t.hours_short }}</span>
+        </div>
+      </div>
+      <div class="btn-row">
+        {{ call_btn(cls="btn--primary btn--lg") }}
+        {{ quote_btn(cls="btn--outline btn--lg") }}
+      </div>
+    </div>
+  </div>
+</section>
+{%- endmacro %}
+
+{% macro related(keys, title="Nos autres services") -%}
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h3">{{ title }}</h2>
+    </div>
+    {{ service_grid(keys) }}
+  </div>
+</section>
+{%- endmacro %}

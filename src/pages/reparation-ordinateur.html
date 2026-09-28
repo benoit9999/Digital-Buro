@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+{{ ui.service_hero(
+  "PC fixes · Ordinateurs portables · Windows",
+  "Réparation d’ordinateurs et de PC portables à Saint-Gilles",
+  "PC fixe ou portable, toutes marques : nos techniciens réparent, nettoient, accélèrent et sécurisent votre ordinateur, au magasin à Saint-Gilles ou dans vos locaux à Bruxelles. Un diagnostic précis et un devis clair avant toute intervention.",
+  "ill-laptop.svg",
+  "/contact/?sujet=reparation&appareil=Ordinateur#formulaire",
+  ["Toutes marques", "Passage à Windows 11", "Devis avant réparation"]
+) }}
+
+<section class="section section--fog" aria-labelledby="pannes-titre">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <h2 class="h2" id="pannes-titre">Ce que nous réparons sur votre ordinateur</h2>
+      <p class="lead">Du portable tombé par terre au PC qui rame depuis des mois&nbsp;: matériel ou logiciel, nous trouvons la cause et la solution la plus raisonnable.</p>
+    </div>
+    <div class="grid grid--4">
+      {{ ui.feature("laptop", "Écran cassé ou défectueux", "Dalle fissurée, lignes, écran noir ou rétroéclairage faible : remplacement de l’écran de votre ordinateur portable.") }}
+      {{ ui.feature("keyboard", "Clavier, touchpad, charnières", "Touches qui ne répondent plus, liquide renversé, charnière cassée : réparation ou remplacement des pièces.") }}
+      {{ ui.feature("battery", "Batterie et charge", "Batterie qui ne tient plus, portable qui ne charge pas : batterie, connecteur de charge ou chargeur.") }}
+      {{ ui.feature("gauge", "PC lent ou qui chauffe", "Nettoyage interne, ventilation, pâte thermique, programmes inutiles : votre ordinateur retrouve sa vitesse.") }}
+      {{ ui.feature("bug", "Virus et logiciels malveillants", "Désinfection, suppression des publicités intrusives et installation d’un antivirus fiable (Kaspersky, Bitdefender, Norton…).") }}
+      {{ ui.feature("refresh", "Windows ne démarre plus", "Écran bleu, redémarrages en boucle, mises à jour bloquées : réparation du système ou réinstallation propre.") }}
+      {{ ui.feature("memory", "SSD et mémoire (RAM)", "Remplacer le disque dur par un SSD et ajouter de la mémoire : souvent une seconde jeunesse pour un PC de quelques années.") }}
+      {{ ui.feature("drive", "Récupération et transfert de données", "Photos et documents sauvegardés ou transférés vers un nouvel ordinateur, même si l’ancien ne démarre plus.") }}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="windows-titre">
+  <div class="container split split--center">
+    <div class="stack-lg">
+      <span class="tag">Windows 10 → Windows 11</span>
+      <h2 class="h2" id="windows-titre">Windows 10 n’est plus pris en charge&nbsp;: que faire de votre PC&nbsp;?</h2>
+      <p class="lead">Le support de Windows 10 par Microsoft a pris fin le 14 octobre 2025, et les mises à jour de sécurité étendues proposées aux particuliers ne durent qu’un temps. Un ordinateur qui reste sous Windows 10 devient de plus en plus vulnérable.</p>
+    </div>
+    <ul class="reasons" role="list">
+      <li>
+        <span class="reasons__num">01</span>
+        <div><h3 class="reasons__title">On vérifie la compatibilité</h3><p class="reasons__text">Windows 11 exige un processeur assez récent et une puce de sécurité TPM 2.0. Nous contrôlons votre PC et vous disons ce qui est possible.</p></div>
+      </li>
+      <li>
+        <span class="reasons__num">02</span>
+        <div><h3 class="reasons__title">On met à niveau sans rien perdre</h3><p class="reasons__text">Sauvegarde préalable, passage à Windows 11, puis vérification de vos logiciels, de votre imprimante et de votre messagerie.</p></div>
+      </li>
+      <li>
+        <span class="reasons__num">03</span>
+        <div><h3 class="reasons__title">Ou on migre vers un nouveau PC</h3><p class="reasons__text">Si votre ordinateur n’est pas compatible, nous transférons vos données et réinstallons vos outils sur une machine neuve, prête à l’emploi.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--fog" aria-labelledby="seconde-vie-titre">
+  <div class="container split split--center">
+    <div class="stack-lg">
+      <h2 class="h2" id="seconde-vie-titre">Une seconde vie plutôt qu’un nouveau PC.</h2>
+      <p class="lead">Un ordinateur de quelques années n’est pas forcément bon à jeter. Avec un SSD, un peu de mémoire et un système propre, il redevient souvent plus rapide qu’au premier jour, pour une fraction du prix d’une machine neuve. C’est bon pour votre budget, et pour la planète.</p>
+      <p class="text">Nous vous disons honnêtement si votre machine vaut cet investissement. Si ce n’est pas le cas, nous vous conseillons un ordinateur adapté à votre usage et nous y transférons vos données. <a href="/vente-materiel/">Voir la vente de matériel</a>.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><p class="stat__num">SSD</p><p class="stat__label">démarrage et ouverture des programmes nettement plus rapides qu’avec un disque dur classique</p></div>
+      <div class="stat"><p class="stat__num">RAM</p><p class="stat__label">plus de mémoire pour travailler avec plusieurs onglets et logiciels ouverts</p></div>
+      <div class="stat"><p class="stat__num">OS</p><p class="stat__label">un système propre, à jour et sécurisé, sans programmes parasites</p></div>
+      <div class="stat"><p class="stat__num">W11</p><p class="stat__label">passage à Windows 11 quand votre PC est compatible</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="marques-pc-titre">
+  <div class="container split split--center">
+    <div class="stack">
+      <h2 class="h3" id="marques-pc-titre">Marques d’ordinateurs que nous réparons</h2>
+      <p class="text">PC fixes, portables et écrans&nbsp;: nous intervenons sur toutes les marques, récentes ou plus anciennes. Vous avez un Mac&nbsp;? <a href="/reparation-mac/">Voir la réparation Mac</a>.</p>
+    </div>
+    {{ ui.chips(site.brands.computers) }}
+  </div>
+</section>
+
+<section class="section section--fog" aria-labelledby="methode-titre">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <h2 class="h2" id="methode-titre">Comment se passe la réparation&nbsp;?</h2>
+      <p class="lead">Pensez à emporter votre chargeur et, si possible, à noter vos mots de passe importants&nbsp;: cela nous permet de tester l’ordinateur de bout en bout.</p>
+    </div>
+    {{ ui.process() }}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-titre">
+  <div class="container split">
+    <div class="sticky stack">
+      <h2 class="faq-title" id="faq-titre">Questions fréquentes sur la réparation d’ordinateurs</h2>
+    </div>
+    {{ ui.faq([
+      ("Mon PC portable est très lent : faut-il le remplacer ?",
+       "<p>Pas forcément. Dans beaucoup de cas, un nettoyage, le passage à un SSD et un peu de mémoire supplémentaire suffisent à retrouver un ordinateur rapide, pour bien moins cher qu’un neuf. Nous vous disons honnêtement si votre machine en vaut la peine.</p>"),
+      ("Pouvez-vous récupérer mes fichiers si mon ordinateur ne démarre plus ?",
+       "<p>Dans la plupart des cas, oui : si le disque n’est pas physiquement endommagé, nous récupérons vos documents et vos photos et nous les transférons sur un support externe ou sur un nouvel ordinateur.</p>"),
+      ("Mon PC est-il compatible avec Windows 11 ?",
+       "<p>Windows 11 demande un processeur assez récent et une puce de sécurité TPM 2.0. Apportez votre ordinateur : nous vérifions sa compatibilité et vous conseillons la meilleure solution, mise à niveau ou migration.</p>"),
+      ("Remplacez-vous les écrans d’ordinateurs portables ?",
+       "<p>Oui, pour la plupart des modèles. Le prix dépend de la dalle exacte de votre portable : nous l’identifions lors du diagnostic et vous faisons un devis avant de commander la pièce.</p>"),
+      ("J’ai renversé du liquide sur mon portable, que faire ?",
+       "<p>Éteignez-le immédiatement, débranchez le chargeur et ne le rallumez pas pour « tester ». Retournez-le clavier vers le bas et apportez-le au magasin au plus vite : plus l’intervention est rapide, plus les chances de sauver la carte mère sont grandes.</p>"),
+      ("Vendez-vous aussi des ordinateurs neufs ?",
+       "<p>Oui : PC fixes, portables, écrans et accessoires, livrés et configurés, avec transfert de vos données. <a href=\"/vente-materiel/\">Voir la vente de matériel</a>.</p>")
+    ]) }}
+  </div>
+</section>
+
+{{ ui.cta_band("Votre ordinateur fait des siennes ?", "Déposez-le au magasin avec son chargeur, ou appelez-nous pour décrire la panne : diagnostic précis et devis clair avant toute réparation.") }}
+
+{{ ui.related(['mac', 'entreprises', 'vente'], "Pour aller plus loin") }}
+
+{% endblock %}

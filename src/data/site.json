@@ -1,0 +1,153 @@
+{
+  "url": "https://www.digital-buro.be",
+  "name": "Digital-Buro",
+  "legal_name": "Digital-Buro SRL",
+  "vat": "BE 0874.004.642",
+  "vat_compact": "BE0874004642",
+  "tagline": "Votre meilleur partenaire bureautique & digital",
+  "experience_years": "30",
+
+  "phone": "02 534 47 02",
+  "phone_intl": "+3225344702",
+  "phone_display_intl": "+32 2 534 47 02",
+  "fax": "02 534 53 51",
+  "fax_intl": "+3225345351",
+  "email": "digital-buro@skynet.be",
+
+  "street": "Chaussée de Charleroi 257",
+  "street_nl": "Charleroise Steenweg 257",
+  "postal": "1060",
+  "city": "Saint-Gilles",
+  "city_nl": "Sint-Gillis",
+  "district": "Ma Campagne",
+  "region": "Bruxelles-Capitale",
+  "country": "BE",
+  "lat": 50.8240646,
+  "lng": 4.3539242,
+  "plus_code": "R9F3+JH Saint-Gilles",
+  "transport": "Tram 92, arrêt Ma Campagne",
+
+  "google": {
+    "rating": "4,7",
+    "rating_en": "4.7",
+    "reviews_label": "plus de 440 avis Google",
+    "reviews_label_nl": "meer dan 440 Google-reviews",
+    "reviews_label_en": "440+ Google reviews",
+    "maps_url": "https://www.google.com/maps/place/Digital-Buro/@50.8240646,4.3539242,17z/data=!4m6!3m5!1s0x47c3c467aaaaab01:0x3f667ea5a1fd6371!8m2!3d50.8240646!4d4.3539242!16s%2Fg%2F1w97tkhb",
+    "cid_url": "https://www.google.com/maps?cid=4568478121866388337",
+    "directions_url": "https://www.google.com/maps/dir/?api=1&destination=Digital-Buro%2C%20Chauss%C3%A9e%20de%20Charleroi%20257%2C%201060%20Saint-Gilles",
+    "embed_url": "https://www.google.com/maps?q=Digital-Buro,+Chauss%C3%A9e+de+Charleroi+257,+1060+Saint-Gilles&hl=fr&z=16&output=embed",
+    "review_url": ""
+  },
+
+  "hours": [
+    {"day": "Lundi", "day_nl": "Maandag", "day_en": "Monday", "code": "Mo", "schema": "Monday", "open": "10:30", "close": "18:00"},
+    {"day": "Mardi", "day_nl": "Dinsdag", "day_en": "Tuesday", "code": "Tu", "schema": "Tuesday", "open": "10:30", "close": "18:00"},
+    {"day": "Mercredi", "day_nl": "Woensdag", "day_en": "Wednesday", "code": "We", "schema": "Wednesday", "open": "10:30", "close": "18:00"},
+    {"day": "Jeudi", "day_nl": "Donderdag", "day_en": "Thursday", "code": "Th", "schema": "Thursday", "open": "10:30", "close": "18:00"},
+    {"day": "Vendredi", "day_nl": "Vrijdag", "day_en": "Friday", "code": "Fr", "schema": "Friday", "open": "10:30", "close": "18:00"},
+    {"day": "Samedi", "day_nl": "Zaterdag", "day_en": "Saturday", "code": "Sa", "schema": "Saturday", "open": "11:00", "close": "17:00"},
+    {"day": "Dimanche", "day_nl": "Zondag", "day_en": "Sunday", "code": "Su", "schema": "Sunday", "open": "", "close": ""}
+  ],
+
+  "areas": ["Saint-Gilles", "Ixelles", "Forest", "Uccle", "Anderlecht", "Bruxelles-Ville", "Etterbeek"],
+
+  "services": [
+    {
+      "key": "imprimante",
+      "name": "Imprimantes & photocopieurs",
+      "nav": "Imprimantes & photocopieurs",
+      "nav_desc": "Laser, jet d’encre, multifonctions",
+      "url": "/reparation-imprimante/",
+      "icon": "printer",
+      "art": "ill-printer.svg",
+      "teaser": "Laser, jet d’encre, multifonctions, matricielles et photocopieurs : bourrages, traces, erreurs, tête d’impression bouchée…",
+      "link": "Réparation d’imprimantes"
+    },
+    {
+      "key": "ordinateur",
+      "name": "PC & ordinateurs portables",
+      "nav": "PC & portables",
+      "nav_desc": "Windows, toutes marques",
+      "url": "/reparation-ordinateur/",
+      "icon": "laptop",
+      "art": "ill-laptop.svg",
+      "teaser": "Écran, clavier, batterie, PC lent ou infecté, passage à Windows 11, SSD et mémoire, récupération de données.",
+      "link": "Réparation d’ordinateurs"
+    },
+    {
+      "key": "mac",
+      "name": "Mac, MacBook & iMac",
+      "nav": "Mac & MacBook",
+      "nav_desc": "MacBook, iMac, Mac mini",
+      "url": "/reparation-mac/",
+      "icon": "monitor",
+      "art": "ill-mac.svg",
+      "teaser": "Diagnostic, écran, batterie, clavier, macOS, sauvegarde et migration : votre Mac entre de bonnes mains.",
+      "link": "Réparation Mac"
+    },
+    {
+      "key": "gsm",
+      "name": "GSM & tablettes",
+      "nav": "GSM & tablettes",
+      "nav_desc": "Écran, batterie, connecteur",
+      "url": "/reparation-gsm-tablette/",
+      "icon": "smartphone",
+      "art": "ill-phone.svg",
+      "teaser": "Écran cassé, batterie fatiguée, connecteur de charge : smartphones et tablettes réparés près de chez vous.",
+      "link": "Réparation GSM & tablettes"
+    },
+    {
+      "key": "cartouches",
+      "name": "Cartouches & toners",
+      "nav": "Cartouches & toners",
+      "nav_desc": "Grand stock, toutes marques",
+      "url": "/cartouches-toners/",
+      "icon": "droplet",
+      "art": "ill-cartridges.svg",
+      "teaser": "Un grand stock d’encre, de toners, de tambours et de rubans pour toutes les marques, y compris les anciens modèles.",
+      "link": "Cartouches & toners"
+    },
+    {
+      "key": "entreprises",
+      "name": "Entreprises & réseaux",
+      "nav": "Entreprises",
+      "nav_desc": "Sur site, maintenance, réseau",
+      "url": "/entreprises/",
+      "icon": "building",
+      "art": "ill-network.svg",
+      "teaser": "Intervention dans vos locaux, entretien du parc, réseau et Wi-Fi, installation et livraison de consommables.",
+      "link": "Services aux entreprises"
+    },
+    {
+      "key": "vente",
+      "name": "Vente de matériel",
+      "nav": "Vente de matériel",
+      "nav_desc": "Imprimantes, copieurs, PC",
+      "url": "/vente-materiel/",
+      "icon": "package",
+      "art": "ill-copier.svg",
+      "teaser": "Imprimantes, photocopieurs, scanners, PC, réseau, logiciels et fournitures : conseillés, installés et configurés.",
+      "link": "Vente de matériel"
+    }
+  ],
+
+  "brands": {
+    "home": ["HP", "Canon", "Epson", "Brother", "OKI", "Xerox", "Ricoh", "Kyocera", "Lexmark", "Samsung", "Konica Minolta", "Olivetti", "Dell", "Lenovo", "Acer", "Asus", "Toshiba", "Apple"],
+    "printers": ["HP", "Canon", "Epson", "Brother", "OKI", "Xerox", "Ricoh", "Kyocera", "Lexmark", "Samsung", "Konica Minolta", "Panasonic", "Olivetti", "Dell", "Philips", "Tektronix", "IBM", "Olympia"],
+    "computers": ["HP", "Dell", "Lenovo", "Acer", "Asus", "Toshiba", "Fujitsu Siemens", "Compaq", "Samsung", "Sony Vaio", "Microsoft"],
+    "network": ["TP-Link", "D-Link", "Linksys", "US Robotics", "Belkin"],
+    "accessories": ["Logitech", "Kingston", "Iomega", "Belkin"],
+    "software": ["Windows", "Microsoft Office", "Kaspersky", "Bitdefender", "Norton", "McAfee"]
+  },
+
+  "tracking": {
+    "_comment": "Laisser vide pour désactiver tout suivi (et la bannière cookies). Renseigner l'ID Google Ads (AW-XXXXXXXXX) et/ou GA4 (G-XXXXXXXXXX) pour activer la bannière de consentement et le suivi des conversions.",
+    "google_ads_id": "",
+    "ga4_id": "",
+    "conversion_label_call": "",
+    "conversion_label_form": ""
+  },
+
+  "credit": ""
+}

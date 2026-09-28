@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+<section class="section">
+  <div class="container">
+    <div class="stack-lg" style="max-width:44rem">
+      <p class="error-code" aria-hidden="true">4<span>0</span>4</p>
+      <h1 class="h1">Cette page n’existe pas, ou plus.</h1>
+      <p class="lead">Notre site a fait peau neuve&nbsp;: la page que vous cherchez a peut-être changé d’adresse. Voici les plus consultées.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary btn--lg" href="/">Retour à l’accueil{{ ui.icon('arrow-right') }}</a>
+        {{ ui.call_btn(cls="btn--outline btn--lg") }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ui.service_grid(['imprimante', 'ordinateur', 'mac', 'gsm', 'cartouches', 'entreprises'], heading="h2") }}
+  </div>
+</section>
+
+{% endblock %}

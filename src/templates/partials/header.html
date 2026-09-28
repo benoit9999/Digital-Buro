@@ -1,0 +1,70 @@
+{%- set repair_keys = ['imprimante', 'ordinateur', 'mac', 'gsm'] -%}
+<header class="site-header" data-header>
+  <div class="container nav">
+    <a class="nav__logo" href="{{ t.home_url }}">
+      <img src="/assets/img/logo.svg" alt="Digital-Buro — {{ t.home }}" width="139" height="26">
+    </a>
+    {%- if page.lang == 'fr' %}
+    <nav class="nav__menu" aria-label="Navigation principale">
+      <div class="nav__item{{ ' is-active' if page.nav in repair_keys }}" data-dropdown>
+        <button class="nav__link" type="button" aria-expanded="false" aria-controls="dd-reparations">Réparations{{ ui.icon('chevron-down') }}</button>
+        <div class="dropdown" id="dd-reparations">
+          {%- for k in repair_keys %}{% set s = services[k] %}
+          <a class="dropdown__link" href="{{ s.url }}"{% if page.nav == k and page.type == 'service' %} aria-current="page"{% endif %}>
+            <span class="dropdown__icon">{{ ui.icon(s.icon) }}</span>
+            <span><span class="dropdown__title">{{ s.nav }}</span><span class="dropdown__desc">{{ s.nav_desc }}</span></span>
+          </a>
+          {%- endfor %}
+        </div>
+      </div>
+      {%- for key, label, href in [('cartouches', 'Cartouches & toners', '/cartouches-toners/'), ('vente', 'Vente', '/vente-materiel/'), ('entreprises', 'Entreprises', '/entreprises/'), ('a-propos', 'À propos', '/a-propos/'), ('contact', 'Contact', '/contact/')] %}
+      <a class="nav__link" href="{{ href }}"{% if page.nav == key %} aria-current="page"{% endif %}>{{ label }}</a>
+      {%- endfor %}
+    </nav>
+    {%- else %}
+    <nav class="nav__menu" aria-label="{{ t.nav_label }}">
+      {%- for label, href in t.nav_anchors %}
+      <a class="nav__link" href="{{ href }}">{{ label }}</a>
+      {%- endfor %}
+      <a class="nav__link" href="/" hreflang="fr" lang="fr">Français</a>
+    </nav>
+    {%- endif %}
+    <div class="nav__actions">
+      <a class="btn btn--ghost nav__phone" href="tel:{{ site.phone_intl }}" data-track="call">{{ ui.icon('phone') }}<span class="tnum">{{ site.phone }}</span></a>
+      <a class="btn btn--primary nav__cta" href="{{ t.quote_url }}">{{ t.cta }}</a>
+      <a class="nav__icon-btn nav__call" href="tel:{{ site.phone_intl }}" aria-label="{{ t.call }} {{ site.phone }}" data-track="call">{{ ui.icon('phone') }}</a>
+      <button class="nav__icon-btn nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="{{ t.menu_open }}" data-label-open="{{ t.menu_open }}" data-label-close="{{ t.menu_close }}" data-menu-toggle>{{ ui.icon('menu') }}</button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+  <div class="container">
+    {%- if page.lang == 'fr' %}
+    <div class="mobile-menu__group">
+      <p class="mobile-menu__label">Réparations</p>
+      {%- for k in repair_keys %}{% set s = services[k] %}
+      <a class="mobile-menu__link" href="{{ s.url }}">{{ s.nav }}{{ ui.icon('arrow-right') }}</a>
+      {%- endfor %}
+    </div>
+    <div class="mobile-menu__group">
+      <p class="mobile-menu__label">Magasin</p>
+      <a class="mobile-menu__link" href="/cartouches-toners/">Cartouches & toners{{ ui.icon('arrow-right') }}</a>
+      <a class="mobile-menu__link" href="/vente-materiel/">Vente de matériel{{ ui.icon('arrow-right') }}</a>
+      <a class="mobile-menu__link" href="/entreprises/">Entreprises{{ ui.icon('arrow-right') }}</a>
+      <a class="mobile-menu__link" href="/a-propos/">À propos{{ ui.icon('arrow-right') }}</a>
+      <a class="mobile-menu__link" href="/contact/">Contact & horaires{{ ui.icon('arrow-right') }}</a>
+    </div>
+    {%- else %}
+    <div class="mobile-menu__group">
+      {%- for label, href in t.nav_anchors %}
+      <a class="mobile-menu__link" href="{{ href }}" data-menu-close>{{ label }}{{ ui.icon('arrow-right') }}</a>
+      {%- endfor %}
+      <a class="mobile-menu__link" href="/" hreflang="fr" lang="fr">Français{{ ui.icon('arrow-right') }}</a>
+    </div>
+    {%- endif %}
+    <div class="mobile-menu__actions">
+      {{ ui.call_btn(cls="btn--primary btn--lg") }}
+      <a class="btn btn--outline btn--lg" href="{{ t.quote_url }}" data-menu-close>{{ t.cta }}{{ ui.icon('arrow-right') }}</a>
+    </div>
+  </div>
+</div>

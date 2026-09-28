@@ -1,0 +1,53 @@
+{%- import "macros.html" as ui with context -%}
+<!doctype html>
+<html lang="{{ page.lang_tag }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<meta name="robots" content="{{ 'noindex, follow' if page.noindex else 'index, follow, max-image-preview:large, max-snippet:-1' }}">
+{%- if not page.noindex %}
+<link rel="canonical" href="{{ site.url }}{{ page.path }}">
+{%- endif %}
+{%- for lang, path in (page.alternates or {}).items() %}
+<link rel="alternate" hreflang="{{ 'fr-BE' if lang == 'fr' else ('nl-BE' if lang == 'nl' else 'en') }}" href="{{ site.url }}{{ path }}">
+{%- endfor %}
+{%- if page.alternates %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+{%- endif %}
+<link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css?v={{ v.css }}">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#ffffff">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital-Buro">
+<meta property="og:locale" content="{{ page.og_locale }}">
+<meta property="og:title" content="{{ page.og_title or page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.path }}">
+<meta property="og:image" content="{{ site.url }}/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Digital-Buro, réparation d’imprimantes, PC et Mac à Saint-Gilles">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">__JSONLD__</script>
+</head>
+<body data-page="{{ page.nav }}">
+<a class="skip-link" href="#contenu">{{ t.skip }}</a>
+{% include "partials/announce.html" %}
+{% include "partials/header.html" %}
+<main id="contenu">
+{% block content %}{% endblock %}
+</main>
+{% include "partials/footer.html" %}
+{% include "partials/callbar.html" %}
+{% include "partials/consent.html" %}
+<script id="site-data" type="application/json">{{ runtime_json|safe }}</script>
+<script src="/assets/js/main.js?v={{ v.js }}" defer></script>
+</body>
+</html>

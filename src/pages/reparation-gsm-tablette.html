@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+{% block content %}
+
+{{ ui.service_hero(
+  "GSM · Smartphones · Tablettes",
+  "Réparation de GSM, smartphones et tablettes à Saint-Gilles",
+  "Écran cassé, batterie qui ne tient plus la journée, connecteur de charge capricieux : faites réparer votre GSM ou votre tablette près de chez vous, à Saint-Gilles. Diagnostic et devis avant toute réparation.",
+  "ill-phone.svg",
+  "/contact/?sujet=reparation&appareil=GSM#formulaire",
+  ["Toutes marques courantes", "Conseil honnête", "Devis avant réparation"]
+) }}
+
+<section class="section section--fog" aria-labelledby="pannes-titre">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <h2 class="h2" id="pannes-titre">Les réparations de GSM et de tablettes</h2>
+      <p class="lead">Les pannes les plus courantes se réparent sans perdre vos données. Nous vous indiquons le prix et le délai avant de commencer.</p>
+    </div>
+    <div class="grid grid--4">
+      {{ ui.feature("crack", "Écran et vitre cassés", "Vitre fissurée, écran tactile qui ne répond plus, taches ou lignes : remplacement de l’écran.") }}
+      {{ ui.feature("battery", "Batterie fatiguée", "Le téléphone s’éteint à 20 %, gonfle ou ne tient plus la journée : remplacement de la batterie.") }}
+      {{ ui.feature("plug", "Connecteur de charge", "Le câble doit être tenu dans un angle précis pour charger : nettoyage ou remplacement du connecteur.") }}
+      {{ ui.feature("camera", "Caméras", "Photos floues, objectif fissuré, caméra qui ne s’ouvre plus : diagnostic et remplacement du module.") }}
+      {{ ui.feature("speaker", "Haut-parleur et micro", "Vos correspondants ne vous entendent plus, son grésillant : nettoyage ou remplacement des composants audio.") }}
+      {{ ui.feature("power", "Boutons", "Bouton de démarrage ou de volume enfoncé, qui ne répond plus : réparation des boutons et nappes.") }}
+      {{ ui.feature("refresh", "Logiciel et blocages", "Téléphone lent, bloqué au démarrage, mise à jour qui échoue : remise en état du système.") }}
+      {{ ui.feature("smartphone", "Transfert de données", "Contacts, photos et applications transférés vers votre nouveau téléphone, sans rien oublier.") }}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="attente-titre">
+  <div class="container split">
+    <div class="stack-lg sticky">
+      <h2 class="h2" id="attente-titre">Les bons réflexes avant de venir.</h2>
+      <p class="lead">Quelques gestes simples évitent d’aggraver la panne et facilitent la réparation.</p>
+    </div>
+    <ol class="reasons" role="list">
+      <li>
+        <span class="reasons__num">01</span>
+        <div><h3 class="reasons__title">Écran fissuré&nbsp;: protégez-le</h3><p class="reasons__text">Posez un film ou un morceau de ruban adhésif transparent sur la fissure&nbsp;: vous évitez de vous couper et la fissure s’étend moins vite.</p></div>
+      </li>
+      <li>
+        <span class="reasons__num">02</span>
+        <div><h3 class="reasons__title">Tombé dans l’eau&nbsp;: éteignez-le</h3><p class="reasons__text">Éteignez-le immédiatement, ne le chargez pas et oubliez le bol de riz&nbsp;: il ne sèche pas l’intérieur et peut laisser des poussières. Apportez-le au plus vite.</p></div>
+      </li>
+      <li>
+        <span class="reasons__num">03</span>
+        <div><h3 class="reasons__title">Sauvegardez si vous le pouvez</h3><p class="reasons__text">Si le téléphone fonctionne encore, lancez une sauvegarde de vos photos et contacts avant de nous le confier.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--fog" aria-labelledby="modeles-titre">
+  <div class="container split split--center">
+    <div class="stack">
+      <h2 class="h3" id="modeles-titre">Les marques les plus courantes</h2>
+      <p class="text">Un doute sur votre modèle&nbsp;? Appelez-nous au <a href="tel:{{ site.phone_intl }}" data-track="call">{{ site.phone }}</a> avec la référence exacte, nous vérifions la disponibilité de la pièce.</p>
+    </div>
+    {{ ui.chips(["iPhone", "Samsung Galaxy", "Xiaomi", "Huawei", "Oppo", "Google Pixel", "iPad", "Tablettes Android"]) }}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-titre">
+  <div class="container split">
+    <div class="sticky stack">
+      <h2 class="faq-title" id="faq-titre">Questions fréquentes sur la réparation de GSM</h2>
+    </div>
+    {{ ui.faq([
+      ("Combien de temps prend un changement d’écran ?",
+       "<p>Cela dépend du modèle et de la disponibilité de la pièce. Nous vous indiquons le délai en même temps que le devis, avant toute réparation.</p>"),
+      ("Mes données sont-elles conservées lors de la réparation ?",
+       "<p>Un changement d’écran, de batterie ou de connecteur n’efface pas vos données. Par précaution, nous vous conseillons toutefois de faire une sauvegarde si votre téléphone fonctionne encore.</p>"),
+      ("Réparez-vous les iPhone et les iPad ?",
+       "<p>Oui, en tant que réparateur indépendant, sans lien avec Apple. Si votre appareil est encore sous garantie, faites-la jouer en priorité.</p>"),
+      ("Réparez-vous aussi les tablettes ?",
+       "<p>Oui : iPad et tablettes Android, pour l’écran, la batterie, le connecteur de charge et les problèmes logiciels.</p>"),
+      ("Mon téléphone ne vaut peut-être plus la peine d’être réparé…",
+       "<p>C’est possible, et nous vous le dirons. Si la réparation coûte presque le prix d’un appareil équivalent, nous vous le signalons avant d’intervenir, et nous pouvons transférer vos données vers votre nouveau téléphone.</p>")
+    ]) }}
+  </div>
+</section>
+
+{{ ui.cta_band("Un écran cassé ou une batterie à bout ?", "Passez au magasin avec votre téléphone ou votre tablette, ou appelez-nous avec le modèle exact : devis avant toute réparation.") }}
+
+{{ ui.related(['ordinateur', 'mac', 'cartouches'], "Nos autres services") }}
+
+{% endblock %}

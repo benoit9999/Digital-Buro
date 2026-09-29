@@ -1,3 +1,14 @@
+# Formulaires et derniers ajustements
+
+- Bouton de pause des marques supprimé ; pause au survol et au clavier conservée.
+- Nom et téléphone requis, avec contrôles identiques dans le navigateur et sur le serveur. Accents, apostrophes et noms composés acceptés ; chiffres dans le nom et numéros incohérents refusés.
+- Envoi effectif via PHP mail() au destinataire fixe digital-buro@skynet.be, vérifié sur le site d’origine. E-mail facultatif utilisé uniquement comme adresse de réponse.
+- Jeton de session à usage unique, délai contrôlé côté serveur, protections contre les injections, champ piège et limitation des envois avec verrou atomique.
+- Formulaire PHP autonome accessible sans JavaScript ; données de session limitées à la protection du formulaire.
+- Tests avec vrai PHP et SMTP local, y compris via le navigateur ; erreur réelle affichée si le transport de courrier refuse le message. Réception externe à valider sur l’hébergement après publication.
+
+---
+
 # Finalisation du parcours client
 
 - Version précédente sauvegardée et poussée sur main : 67a4244.

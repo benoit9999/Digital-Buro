@@ -63,3 +63,9 @@ Le build final génère 16 pages sans lien cassé. Les contrôles navigateur ont
 `content-checks.json` confirme que les avis sont présents uniquement sur les accueils FR/NL/EN, que l’offre GSM est absente du HTML, du catalogue structuré et du sitemap, et que les formules signalées sont retirées. Le favicon régénéré a été contrôlé visuellement. Les captures correspondent à cette dernière version.
 
 Les scores Lighthouse conservés ci-dessus sont ceux de la précédente refonte, pas une nouvelle mesure de cette passe éditoriale. Les limites de validation PHP et de messagerie restent inchangées.
+
+## Formulaires — validation PHP réelle
+
+La limitation concernant l’absence de runtime PHP ci-dessus est levée pour les tests locaux : PHP 8.4.26 portable, téléchargé depuis la distribution officielle avec vérification SHA-256, a exécuté le traitement. Aucun binaire PHP n’est inclus dans Git ou le site.
+
+`contact-tests.json` consigne les scénarios : nom avec chiffres ou balises, numéros incorrects, e-mail invalide/injection, champ piège, trop de liens, origine étrangère, jeton absent/réutilisé, délai minimal, intervalle et quota horaire, contact, rappel, formulaire sans JS et panne du transport. Le test navigateur contrôle aussi le refus des mauvaises saisies puis envoie via le vrai PHP vers le serveur SMTP de capture local. Aucun e-mail de test n’a quitté la machine. La réception effective chez le client et le transport OVH restent à valider après publication.

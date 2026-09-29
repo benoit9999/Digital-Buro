@@ -72,7 +72,6 @@
     if('IntersectionObserver' in window){const reviewObserver=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){measureReviews();reviewObserver.disconnect();}},{rootMargin:'100px'});reviewObserver.observe(box);}else requestAnimationFrame(measureReviews);
   });
   all('[data-review-date]').forEach(time=>{const date=new Date(time.dateTime);if(!Number.isFinite(date.getTime()))return;const days=Math.round((date-Date.now())/86400000);const units=Math.abs(days)>365?['year',Math.round(days/365)]:Math.abs(days)>30?['month',Math.round(days/30)]:['day',days];time.textContent=new Intl.RelativeTimeFormat(lang,{numeric:'auto'}).format(units[1],units[0]);});
-  all('[data-motion-toggle]').forEach(btn=>btn.addEventListener('click',()=>{const paused=btn.getAttribute('aria-pressed')!=='true';btn.setAttribute('aria-pressed',String(paused));root.classList.toggle('motion-paused',paused);btn.closest('[data-marquee]').classList.toggle('is-paused',paused);btn.textContent=paused?text('Reprendre','Hervatten','Resume'):text('Mettre en pause','Pauzeren','Pause animation');}));
 
   // Keep tel links for touch devices and when clipboard access fails.
   const toast=document.createElement('div');toast.className='toast';toast.setAttribute('role','status');toast.setAttribute('aria-live','polite');document.body.append(toast);let toastTimer;

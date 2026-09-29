@@ -1,0 +1,97 @@
+{
+  "ok": true,
+  "php": "PHP 8.4.26 (cli) (built: Sep 22 2026 15:11:32) (NTS Visual C++ 2022 x64)",
+  "transport": "real PHP mail() to isolated localhost SMTP sink, no external delivery",
+  "recipient": "digital-buro@skynet.be",
+  "captured_messages": 4,
+  "tests": [
+    {
+      "test": "Direct POST without session rejected",
+      "status": 403
+    },
+    {
+      "test": "Server-side minimum time",
+      "status": 429
+    },
+    {
+      "test": "Name containing digits",
+      "status": 422
+    },
+    {
+      "test": "Name containing markup",
+      "status": 422
+    },
+    {
+      "test": "Missing phone",
+      "status": 422
+    },
+    {
+      "test": "Phone containing letters",
+      "status": 422
+    },
+    {
+      "test": "Repeated fake number",
+      "status": 422
+    },
+    {
+      "test": "Too short phone",
+      "status": 422
+    },
+    {
+      "test": "Invalid email",
+      "status": 422
+    },
+    {
+      "test": "Header injection",
+      "status": 422
+    },
+    {
+      "test": "Honeypot",
+      "status": 422
+    },
+    {
+      "test": "Spam links",
+      "status": 422
+    },
+    {
+      "test": "Unknown subject",
+      "status": 422
+    },
+    {
+      "test": "Foreign origin",
+      "status": 403
+    },
+    {
+      "test": "Contact accepted by real PHP mail()",
+      "status": 200
+    },
+    {
+      "test": "Used token cannot be replayed",
+      "status": 403
+    },
+    {
+      "test": "IP cooldown",
+      "status": 429
+    },
+    {
+      "test": "Callback without email",
+      "status": 200
+    },
+    {
+      "test": "Hourly volume limit",
+      "status": 429
+    },
+    {
+      "test": "No-JavaScript form submits through PHP",
+      "status": 303
+    },
+    {
+      "test": "Browser JavaScript through real PHP mail transport",
+      "status": 200
+    },
+    {
+      "test": "Mail transport failure never returns success",
+      "status": 503
+    }
+  ]
+}

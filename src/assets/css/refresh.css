@@ -44,3 +44,5 @@ main>section+section,main>section+.brand-band,main>.brand-band+section{border-to
 .visit-actions{margin-top:24px}
 .experience-seal>svg,.brand-run{will-change:transform}
 @media(prefers-reduced-motion:reduce){.experience-seal>svg,.brand-run{will-change:auto}}
+
+.brand-window:focus-visible{outline:2px solid var(--ember);outline-offset:-2px}.brand-band:focus-within .brand-run{animation-play-state:paused}

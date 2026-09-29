@@ -32,7 +32,7 @@ Le logo reprend les arcs, les points et le mot bicolore de l’enseigne jointe. 
 
 Pour régénérer les assets de marque, installer aussi Pillow et fonttools, puis exécuter `python tools/make_brand.py` et `node tools/raster_brand.cjs` (nécessite le module Node sharp, ou CODEX_NODE_MODULES pointant vers son dossier parent). Reconstruire ensuite le site. La police source est fournie dans `tools/fonts/`.
 
-Les effets comprennent soulignements, boutons, menus, FAQ animées, apparitions, compteurs, frise, illustrations et défilé des marques. Le bouton de pause du défilé arrête aussi le badge tournant. La préférence système de réduction des animations est respectée. Sans JavaScript, contenus, liens, FAQ, navigation de secours et formulaires HTML restent accessibles.
+Les effets comprennent soulignements, boutons, menus, FAQ animées, apparitions, compteurs, frise, illustrations et défilé des marques. Le bouton de pause du défilé a été retiré. Les marques se mettent en pause au survol ou au focus clavier. La préférence système de réduction des animations est respectée. Sans JavaScript, contenus, liens, FAQ et navigation de secours restent accessibles. Un lien ouvre un formulaire PHP autonome pour envoyer une demande sans JavaScript.
 
 ## Photos et licences
 
@@ -71,9 +71,15 @@ Variables serveur : `DB_PLACES_ENABLED=1`, `DB_PLACES_API_KEY`, `DB_PLACES_ID`. 
 
 ## Formulaires, prix et WhatsApp
 
-Le contact accepte le nom et au moins un téléphone ou un e-mail. Message facultatif. Le rappel nécessite nom et téléphone. Spinner, confirmation, erreur et réactivation du bouton sont prévus ; le serveur conserve ses protections anti-spam.
+Le contact et le rappel nécessitent un nom et un téléphone. E-mail et message facultatifs. Les noms acceptent les lettres Unicode, accents, espaces, points, apostrophes et traits d’union, mais pas les chiffres. Les numéros belges et internationaux sont contrôlés et normalisés. Cette validation porte sur le format : elle ne prouve ni l’identité ni la propriété ou l’existence d’une ligne.
 
-Le destinataire reste `digital-buro@skynet.be`, l’expéditeur `site@digital-buro.be`. L’hébergement doit autoriser cet expéditeur. Aucun e-mail réel n’a été envoyé pendant les tests. Un petit fichier temporaire de limitation par IP est utilisé ; les demandes ne sont pas enregistrées dans une base de données.
+Le destinataire reste `digital-buro@skynet.be`, confirmé sur le site actuel. Tous les formulaires postent vers `api/contact.php`, qui utilise réellement `mail()`. L’expéditeur par défaut est `site@digital-buro.be`, modifiable avec la variable serveur `DB_MAIL_FROM`. **L’hébergement doit autoriser cet expéditeur et disposer d’un transport de courrier opérationnel**. Ne jamais utiliser l’adresse saisie par un visiteur comme expéditeur : elle figure uniquement dans Reply-To.
+
+Protections côté PHP, même si JavaScript est contourné : jeton de session à usage unique, origine de la requête, délai minimal de deux secondes, champ piège, longueur des champs, noms et téléphones plausibles, filtrage de l’e-mail et des injections, maximum de liens, verrou de concurrence, délai de 30 secondes et cinq envois par heure par IP. Le cookie de session est strictement nécessaire et créé à la première interaction avec le formulaire. Un fichier temporaire contient seulement un identifiant dérivé de l’IP et les horaires ; aucun contenu de message n’y est stocké.
+
+Les tests utilisent un véritable runtime PHP et un serveur SMTP de capture local : quatre messages de test ont été acceptés, sans aucun envoi externe. Le parcours navigateur → PHP → transport de mail a été exercé. Un échec du transport retourne une erreur, jamais une confirmation. **La réception dans la boîte Skynet reste à tester après publication sur l’hébergement du client** ; le code seul ne garantit pas la délivrabilité. Voir `artifacts/contact-tests.json`.
+
+Pour tester localement sans envoyer de courrier externe : lancer `tools/verify_contact.py` avec PHP dans `.deps/php/php.exe` et les modules Playwright disponibles via `CODEX_NODE_MODULES`. Le test lance et arrête ses propres serveurs HTTP/SMTP, isolés dans un dossier temporaire. L’aperçu Python sur le port 8080 n’exécute pas PHP.
 
 - `site.whatsapp` : laisser vide jusqu’à confirmation du numéro et de son usage WhatsApp ; renseigner ensuite une URL https://wa.me/… validée.
 - `site.prices` : objet vide par défaut. Ajouter un texte validé sous la clé du service (par exemple `imprimante`) pour afficher un tarif indicatif. Aucun montant n’est inventé.

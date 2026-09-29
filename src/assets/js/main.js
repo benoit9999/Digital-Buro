@@ -177,6 +177,27 @@
      Formulaire de contact
      ------------------------------------------------------------------ */
   document.documentElement.classList.add("js");
+  var tokenRequest=null,tokenRequestedAt=0;
+  function getFormToken() {
+    if(!tokenRequest || Date.now()-tokenRequestedAt>1800000){
+      tokenRequestedAt=Date.now();
+      var tokenController=new AbortController(),tokenTimeout=setTimeout(function(){tokenController.abort();},8000);
+      tokenRequest=fetch('/api/contact.php?token=1',{headers:{Accept:'application/json'},credentials:'same-origin',cache:'no-store',signal:tokenController.signal})
+      .then(function(r){if(!r.ok)throw new Error('token');return r.json();})
+      .then(function(j){if(!j.token)throw new Error('token');return j.token;})
+      .catch(function(e){tokenRequest=null;throw e;}).finally(function(){clearTimeout(tokenTimeout);});
+    }
+    return tokenRequest;
+  }
+  function validPhone(value) {
+    if(!/^[+0-9 ().-]{7,40}$/.test(value))return false;
+    var p=value.replace(/[ ().-]/g,'').replace(/^00/,'+').replace(/^\+320/,'+32');
+    if(p.startsWith('0')){if(!/^0(?:4[5-9][0-9]{7}|[1-9][0-9]{7})$/.test(p))return false;p='+32'+p.slice(1);}
+    if(!/^\+[1-9][0-9]{7,14}$/.test(p))return false;
+    if(p.startsWith('+32')&&!/^\+32(?:4[5-9][0-9]{7}|[1-9][0-9]{7})$/.test(p))return false;
+    if(p.startsWith('+33')&&!/^\+33[1-9][0-9]{8}$/.test(p))return false;
+    return !/([0-9])\1{6,}/.test(p)&&!/(?:12345678|87654321)$/.test(p);
+  }
   $$("[data-contact-form]").forEach(function(form) {
     var params = new URLSearchParams(location.search), F = DATA.form || {};
     ["appareil", "sujet"].forEach(function(key) {
@@ -189,18 +210,20 @@
     });
     if(form.elements.ts) form.elements.ts.value=String(Date.now());
     var statusBox=$("[data-form-status]",form), submitBtn=$("[type=submit]",form);
-    var messages = LANG === "en" ? {sending:"Sending…",ok:"Thank you. Your request has been sent.",error:"Sending failed. Please call 02 534 47 02.",contact:"Enter a phone number or an email address.",phone:"Enter a valid phone number."} : LANG === "nl" ? {sending:"Verzenden…",ok:"Bedankt. Uw aanvraag is verzonden.",error:"Verzenden mislukt. Bel 02 534 47 02.",contact:"Vul een telefoonnummer of e-mailadres in.",phone:"Vul een geldig telefoonnummer in."} : {sending:"Envoi en cours…",ok:"Merci ! Votre demande est bien envoyée.",error:"L’envoi a échoué. Appelez le 02 534 47 02.",contact:"Indiquez un téléphone ou une adresse e-mail.",phone:"Indiquez un numéro de téléphone valide."};
+    form.addEventListener("focusin",function(){getFormToken().catch(function(){});},{once:true});
+    var messages = LANG === "en" ? {sending:"Sending…",ok:"Thank you. Your request has been submitted.",error:"Sending failed. Please call 02 534 47 02.",contact:"Enter a phone number or an email address.",phone:"Enter a valid phone number."} : LANG === "nl" ? {sending:"Verzenden…",ok:"Bedankt. Uw aanvraag is verzonden.",error:"Verzenden mislukt. Bel 02 534 47 02.",contact:"Vul een telefoonnummer of e-mailadres in.",phone:"Vul een geldig telefoonnummer in."} : {sending:"Envoi en cours…",ok:"Merci ! Votre demande a été transmise au magasin.",error:"L’envoi a échoué. Appelez le 02 534 47 02.",contact:"Indiquez un téléphone ou une adresse e-mail.",phone:"Indiquez un numéro de téléphone valide."};
     function showStatus(kind,message) {
       statusBox.className="form__status is-visible form__status--"+kind;
       statusBox.textContent=message;statusBox.setAttribute("role",kind==="error"?"alert":"status");
     }
+    messages.name=LANG==='en'?'Enter your name without numbers.':LANG==='nl'?'Vul uw naam in zonder cijfers.':'Indiquez votre nom sans chiffres (accents, apostrophes et traits d’union acceptés).';
     function validateContact() {
-      var phone=form.elements.telephone,email=form.elements.email;
-      if(phone)phone.setCustomValidity("");if(email)email.setCustomValidity("");
-      if(phone && phone.value.trim() && (!/^[+()0-9 .-]{7,40}$/.test(phone.value.trim()) || phone.value.replace(/[^0-9]/g, "").length < 7))phone.setCustomValidity(messages.phone);
-      if(email && !email.value.trim() && !phone.value.trim())phone.setCustomValidity(messages.contact);
+      var name=form.elements.nom,phone=form.elements.telephone;
+      name.setCustomValidity('');phone.setCustomValidity('');
+      if(!/^\p{L}[\p{L}\p{M} .'’\-]*\p{L}\p{M}*$/u.test(name.value.trim()))name.setCustomValidity(messages.name);
+      if(!validPhone(phone.value.trim()))phone.setCustomValidity(messages.phone);
     }
-    ["telephone","email"].forEach(function(key){if(form.elements[key]) form.elements[key].addEventListener("input",validateContact);});
+    ['nom','telephone','email'].forEach(function(key){if(form.elements[key])form.elements[key].addEventListener('input',validateContact);});
     if(params.get("erreur"))showStatus("error",messages.error);
     form.addEventListener("submit",function(e) {
       validateContact();
@@ -210,9 +233,9 @@
       submitBtn.disabled=true;submitBtn.classList.add("is-sending");form.setAttribute("aria-busy","true");
       var old=submitBtn.innerHTML;submitBtn.textContent=messages.sending;
       var controller=new AbortController(),timeout=setTimeout(function(){controller.abort();},15000);
-      fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"},signal:controller.signal})
-      .then(function(res){return res.json().then(function(j){return {ok:res.ok&&j.ok,message:j.message};});})
-      .then(function(res){if(res.ok){form.reset();if(form.elements.ts)form.elements.ts.value=String(Date.now());showStatus("ok",messages.ok);track("form");}else showStatus("error",LANG==="fr"&&res.message?res.message:messages.error);})
+      getFormToken().then(function(token){form.elements.form_token.value=token;return fetch(form.action,{method:"POST",body:new FormData(form),credentials:"same-origin",headers:{Accept:"application/json"},signal:controller.signal});})
+      .then(function(res){return res.json().then(function(j){if(res.status===403)tokenRequest=null;return {ok:res.ok&&j.ok,message:j.message};});})
+      .then(function(res){if(res.ok){tokenRequest=null;form.reset();if(form.elements.ts)form.elements.ts.value=String(Date.now());showStatus("ok",messages.ok);track("form");}else showStatus("error",LANG==="fr"&&res.message?res.message:messages.error);})
       .catch(function(){showStatus("error",messages.error);})
       .finally(function(){clearTimeout(timeout);submitBtn.disabled=false;submitBtn.classList.remove("is-sending");submitBtn.innerHTML=old;form.removeAttribute("aria-busy");});
     });

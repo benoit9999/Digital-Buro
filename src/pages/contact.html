@@ -40,22 +40,22 @@
   <div class="container split">
     <div class="form-card">
       <h2 class="h3" id="form-titre">Envoyer une demande</h2>
-      <p class="text" style="margin-top:8px">Un téléphone ou un e-mail suffit pour vous répondre.</p>
+      <p class="text" style="margin-top:8px">Votre nom et votre téléphone nous permettent de vous recontacter.</p>
       <form class="form" style="margin-top:28px" action="/api/contact.php" method="post" data-contact-form>
         <div class="form__row form__row--2">
           <div class="field">
             <label class="field__label" for="f-nom">Nom</label>
-            <input class="field__input" id="f-nom" name="nom" type="text" autocomplete="name" required maxlength="120">
+            <input class="field__input" id="f-nom" name="nom" type="text" autocomplete="name" required minlength="2" maxlength="120">
           </div>
           <div class="field">
-            <label class="field__label" for="f-email">E-mail <small>(ou téléphone)</small></label>
+            <label class="field__label" for="f-email">E-mail <small>(facultatif)</small></label>
             <input class="field__input" id="f-email" name="email" type="email" autocomplete="email" maxlength="180">
           </div>
         </div>
         <div class="form__row form__row--2">
           <div class="field">
-            <label class="field__label" for="f-tel">Téléphone <small>(ou e-mail)</small></label>
-            <input class="field__input" id="f-tel" name="telephone" type="tel" autocomplete="tel" maxlength="40">
+            <label class="field__label" for="f-tel">Téléphone</label>
+            <input class="field__input" id="f-tel" name="telephone" type="tel" autocomplete="tel" maxlength="40" required placeholder="02 534 47 02 ou +32…">
           </div>
           <input type="hidden" name="sujet" value="reparation">
         </div>
@@ -71,11 +71,11 @@
           <label for="f-site">Ne pas remplir ce champ</label>
           <input id="f-site" name="site_web" type="text" tabindex="-1" autocomplete="off">
         </div>
-        <input type="hidden" name="ts" value="">
+        <input type="hidden" name="ts" value=""><input type="hidden" name="form_token" value="">
         <p class="form__legal">Vos coordonnées servent à répondre à votre demande. <a href="/confidentialite/">Politique de confidentialité</a>.</p>
         <div class="form__status" data-form-status aria-live="polite"></div>
         <div><button class="btn btn--primary btn--lg" type="submit">Envoyer la demande</button></div>
-      </form>
+      </form><noscript><p><a href="/api/contact.php?form=1">Ouvrir le formulaire sans JavaScript</a></p></noscript>
     </div>
 
     <div class="stack-lg" id="acces">

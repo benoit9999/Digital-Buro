@@ -1,138 +1,134 @@
 <?php
 /**
- * Digital-Buro — traitement du formulaire de contact (/contact/).
- *
- * - Répond en JSON quand le formulaire est envoyé en JavaScript (fetch),
- *   sinon redirige vers /merci/ (ou vers le formulaire en cas d'erreur).
- * - Protections anti-spam : champ piège, délai minimal, limite par IP, filtre de liens.
- * - Aucune donnée n'est stockée sur le serveur : la demande est envoyée par e-mail.
- *
- * Compatible PHP 7.2+ (hébergement mutualisé OVH).
+ * Contact + callback. PHP 7.4+; real mail() transport on the hosting server.
+ * Recipient is fixed. A success means the mail server accepted the message.
  */
 declare(strict_types=1);
+require_once __DIR__ . '/form-validation.php';
 date_default_timezone_set('Europe/Brussels');
-
-/* ------------------------------------------------------------------ Réglages */
-const TO_EMAIL   = 'digital-buro@skynet.be';   // destinataire des demandes
-const FROM_EMAIL = 'site@digital-buro.be';     // expéditeur : une adresse du domaine du site (délivrabilité / SPF)
-const SITE_NAME  = 'Digital-Buro';
-const THANKS_URL = '/merci/';
-const FORM_URL   = '/contact/';
-
-const SUBJECTS = [
-    'reparation' => 'Réparation / devis',
-    'cartouches' => 'Cartouches & toners',
-    'achat'      => 'Achat de matériel',
-    'entreprise' => 'Entreprise / intervention sur site',
-    'sav'        => 'Service après-vente / réclamation',
-    'autre'      => 'Autre demande',
-    'rappel'     => 'Demande de rappel',
-];
+const TO_EMAIL = 'digital-buro@skynet.be';
+const FROM_EMAIL = 'site@digital-buro.be';
+const SUBJECTS = ['reparation'=>'Réparation / devis','cartouches'=>'Cartouches & toners',
+    'achat'=>'Achat de matériel','entreprise'=>'Entreprise / intervention',
+    'sav'=>'Service après-vente','autre'=>'Autre demande','rappel'=>'Demande de rappel'];
 
 header('X-Robots-Tag: noindex, nofollow');
 header('Cache-Control: no-store');
-
-$wantsJson = isset($_SERVER['HTTP_ACCEPT']) && strpos((string) $_SERVER['HTTP_ACCEPT'], 'application/json') !== false;
-
-function respond(bool $ok, string $message = '', int $code = 200): void
-{
+header('X-Content-Type-Options: nosniff');
+$wantsJson = strpos($_SERVER['HTTP_ACCEPT'] ?? '', 'application/json') !== false;
+function escape(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
+function respond(bool $ok, string $message, int $code=200): void {
     global $wantsJson;
     if ($wantsJson) {
         http_response_code($code);
         header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(['ok' => $ok, 'message' => $message], JSON_UNESCAPED_UNICODE);
+        echo json_encode(['ok'=>$ok,'message'=>$message], JSON_UNESCAPED_UNICODE);
+    } elseif ($ok) {
+        header('Location: /merci/', true, 303);
     } else {
-        header('Location: ' . ($ok ? THANKS_URL : FORM_URL . '?erreur=1#formulaire'), true, 303);
+        http_response_code($code);
+        header('Content-Type: text/html; charset=utf-8');
+        echo '<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Votre demande — Digital-Buro</title><link rel="stylesheet" href="/assets/css/style.css"><main class="container section"><h1 class="h2">Votre demande n’a pas été envoyée</h1><p class="lead">'.escape($message).'</p><p><a class="btn btn--primary" href="/api/contact.php?form=1">Revenir au formulaire</a></p><p><a href="tel:+3225344702">02 534 47 02</a> · <a href="mailto:'.TO_EMAIL.'">'.TO_EMAIL.'</a></p></main></html>';
     }
     exit;
 }
-
-function field(string $key, int $max): string
-{
-    $v = isset($_POST[$key]) && is_string($_POST[$key]) ? $_POST[$key] : '';
-    $v = trim(str_replace("\0", '', $v));
-    return function_exists('mb_substr') ? mb_substr($v, 0, $max, 'UTF-8') : substr($v, 0, $max);
+function field(string $name, int $limit): string {
+    $value = $_POST[$name] ?? '';
+    if (!is_string($value) || strlen($value) > $limit || strpos($value, "\0") !== false) {
+        respond(false, 'Un champ dépasse la taille autorisée ou contient des caractères non valides.', 422);
+    }
+    return trim($value);
+}
+function start_form_session(): void {
+    session_name('db_form');
+    session_set_cookie_params(['lifetime'=>0,'path'=>'/api/','secure'=>!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
+        'httponly'=>true,'samesite'=>'Lax']);
+    if (!session_start(['use_strict_mode'=>true])) respond(false, 'Le formulaire est indisponible. Appelez le magasin.', 503);
+}
+function token(): string {
+    if (empty($_SESSION['form_token']) || time()-($_SESSION['form_time'] ?? 0)>3600) {
+        $_SESSION['form_token'] = bin2hex(random_bytes(32));
+        $_SESSION['form_time'] = time();
+    }
+    return $_SESSION['form_token'];
 }
 
-function oneLine(string $v): string
-{
-    return trim((string) preg_replace('/[\r\n\t]+/', ' ', $v));
-}
-
-if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
-    header('Location: ' . FORM_URL, true, 303);
+$method = $_SERVER['REQUEST_METHOD'] ?? '';
+if ($method === 'GET' && (isset($_GET['token']) || isset($_GET['form']))) {
+    start_form_session();
+    $token = token();
+    session_write_close();
+    if (isset($_GET['token'])) {
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode(['ok'=>true,'token'=>$token]);
+        exit;
+    }
+    header('Content-Type: text/html; charset=utf-8');
+    echo '<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact — Digital-Buro</title><link rel="stylesheet" href="/assets/css/style.css"></head><body><main class="container section" style="max-width:680px"><a href="/contact/">← Contact et horaires</a><h1 class="h1">Contacter Digital-Buro</h1><p class="lead">Votre nom et votre téléphone sont obligatoires.</p><form class="form" method="post" action="/api/contact.php"><div class="field"><label for="nom">Nom</label><input class="field__input" id="nom" name="nom" autocomplete="name" minlength="2" maxlength="120" required></div><div class="field"><label for="telephone">Téléphone</label><input class="field__input" id="telephone" name="telephone" type="tel" autocomplete="tel" maxlength="40" required></div><div class="field"><label for="email">E-mail (facultatif)</label><input class="field__input" id="email" name="email" type="email" autocomplete="email" maxlength="180"></div><div class="field"><label for="message">Votre demande (facultatif)</label><textarea class="field__input" id="message" name="message" maxlength="5000"></textarea></div><input type="hidden" name="form_token" value="'.escape($token).'"><input type="hidden" name="sujet" value="autre"><div class="form__hp" aria-hidden="true"><label for="site_web">Ne pas remplir</label><input name="site_web" id="site_web" tabindex="-1" autocomplete="off"></div><p class="form__legal">Vos coordonnées servent à répondre à votre demande. <a href="/confidentialite/">Confidentialité</a>.</p><button class="btn btn--primary" type="submit">Envoyer la demande</button></form></main></body></html>';
     exit;
 }
-
-// Anti-spam 1 : champ piège, invisible pour les visiteurs
-if (field('site_web', 200) !== '') {
-    respond(true, 'OK');
+if ($method !== 'POST') { header('Location: /contact/', true, 303); exit; }
+if ((int)($_SERVER['CONTENT_LENGTH'] ?? 0)>24000) respond(false, 'Demande trop volumineuse.', 413);
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if ($origin !== '' && parse_url($origin, PHP_URL_HOST) !== parse_url('http://'.($_SERVER['HTTP_HOST'] ?? ''), PHP_URL_HOST)) {
+    respond(false, 'Rechargez le formulaire depuis notre site.', 403);
 }
+if (field('site_web',200) !== '') respond(false, 'Votre demande a été refusée. Contactez le magasin par téléphone.', 422);
 
-// Anti-spam 2 : envoi trop rapide après l'affichage de la page (robots)
-$ts = (int) field('ts', 20);
-if ($ts > 0 && (microtime(true) * 1000 - $ts) < 2500) {
-    respond(false, 'Merci de patienter quelques secondes avant l’envoi.', 429);
+start_form_session();
+$postedToken=field('form_token',64);
+if ($postedToken==='' || empty($_SESSION['form_token']) || !hash_equals($_SESSION['form_token'],$postedToken)
+    || time()-($_SESSION['form_time'] ?? 0)>3600) {
+    respond(false, 'La session du formulaire a expiré. Rechargez la page puis réessayez.', 403);
 }
-
-// Anti-spam 3 : un envoi toutes les 30 secondes maximum par adresse IP
-$ip = (string) ($_SERVER['REMOTE_ADDR'] ?? '0.0.0.0');
-$lock = rtrim(sys_get_temp_dir(), '/\\') . DIRECTORY_SEPARATOR . 'dbcontact_' . md5($ip);
-if (is_file($lock) && (time() - (int) filemtime($lock)) < 30) {
-    respond(false, 'Merci de patienter quelques secondes avant un nouvel envoi.', 429);
+if (time()-($_SESSION['form_time'] ?? time())<2) {
+    respond(false, 'Merci de patienter deux secondes avant de réessayer.', 429);
 }
+$nom=field('nom',480);
+$email=field('email',180);
+$telephone=normalized_contact_phone(field('telephone',40));
+$sujetKey=field('sujet',30);
+$appareil=field('appareil',160);
+$message=field('message',20000);
+if (!preg_match('//u',$message) || preg_match_all('/./us',$message)>5000) respond(false,'Votre message doit contenir au maximum 5 000 caractères.',422);
+if (!valid_contact_name($nom)) respond(false, 'Indiquez votre nom sans chiffres ni caractères spéciaux (accents, espaces, apostrophes et traits d’union acceptés).',422);
+if ($telephone===null) respond(false, 'Indiquez un téléphone valide : numéro belge ou numéro international avec + et l’indicatif du pays.',422);
+if ($email!=='' && (!filter_var($email,FILTER_VALIDATE_EMAIL) || preg_match('/[\r\n]/',$email))) respond(false,'Vérifiez votre adresse e-mail.',422);
+if (preg_match('/[\r\n]/',$appareil) || !isset(SUBJECTS[$sujetKey])) respond(false,'Vérifiez le sujet de votre demande.',422);
+if (preg_match_all('~https?://~i',$message)>3) respond(false,'Votre message contient trop de liens. Décrivez votre demande sans ces liens.',422);
 
-$nom       = oneLine(field('nom', 120));
-$email     = oneLine(field('email', 180));
-$telephone = oneLine(field('telephone', 40));
-$sujetKey  = oneLine(field('sujet', 30));
-$appareil  = oneLine(field('appareil', 160));
-$message   = field('message', 5000);
-$sujet     = SUBJECTS[$sujetKey] ?? SUBJECTS['autre'];
-
-if ($nom === '' || ($telephone === '' && $email === '')) {
-    respond(false, 'Indiquez votre nom et un téléphone ou une adresse e-mail.', 422);
+// Atomic limits: at most 5 accepted submissions/hour, 30 seconds between attempts.
+// File contains hashed-IP identifier + timestamps only, no message or contact data.
+$ip=(string)($_SERVER['REMOTE_ADDR'] ?? '');
+$lockPath=rtrim(sys_get_temp_dir(),'/\\').DIRECTORY_SEPARATOR.'dbcontact_v2_'.hash('sha256',$ip);
+$handle=@fopen($lockPath,'c+');
+if (!$handle || !flock($handle,LOCK_EX)) respond(false,'Le formulaire est temporairement indisponible. Appelez le magasin.',503);
+$state=json_decode(stream_get_contents($handle),true) ?: [];
+$now=time();
+$recent=array_values(array_filter($state['sent'] ?? [],function($t)use($now){return is_int($t) && $now-$t<3600;}));
+if (count($recent)>=5 || $now-(int)($state['attempt'] ?? 0)<30) {
+    header('Retry-After: 30');
+    respond(false,'Trop de demandes rapprochées. Patientez avant de réessayer ou appelez le magasin.',429);
 }
-if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    respond(false, 'Merci de vérifier votre adresse e-mail.', 422);
+$state=['attempt'=>$now,'sent'=>$recent];
+rewind($handle);ftruncate($handle,0);fwrite($handle,json_encode($state));fflush($handle);
+
+$sujet=SUBJECTS[$sujetKey];
+$body="Demande depuis le site Digital-Buro\n\nNom : {$nom}\nTéléphone : {$telephone}\nE-mail : {$email}\nSujet : {$sujet}\nAppareil : {$appareil}\n\n{$message}\n\nEnvoyé le ".date('d/m/Y à H:i')."\n";
+$subject='=?UTF-8?B?'.base64_encode("[Site] {$sujet} — {$nom}").'?=';
+$from=getenv('DB_MAIL_FROM') ?: FROM_EMAIL;
+if (!filter_var($from,FILTER_VALIDATE_EMAIL) || preg_match('/[\r\n]/',$from)) respond(false,'Configuration d’envoi indisponible. Appelez le magasin.',503);
+$headers=['From'=>'Digital-Buro <'.$from.'>','MIME-Version'=>'1.0','Content-Type'=>'text/plain; charset=UTF-8','Content-Transfer-Encoding'=>'8bit'];
+if ($email!=='') $headers['Reply-To']=$email;
+try { $sent=@mail(TO_EMAIL,$subject,$body,$headers); } catch (Throwable $e) { $sent=false; }
+if (!$sent) {
+    error_log('Digital-Buro contact: mail transport refused a message.');
+    respond(false,'L’envoi a échoué. Appelez le 02 534 47 02 ou écrivez à '.TO_EMAIL.'.',503);
 }
-if ($telephone !== '' && (!preg_match('/^[+()0-9 .-]{7,40}$/', $telephone) || strlen(preg_replace('/[^0-9]/', '', $telephone)) < 7)) {
-    respond(false, 'Merci de vérifier votre numéro de téléphone.', 422);
-}
-if ($sujetKey === 'rappel' && $telephone === '') {
-    respond(false, 'Le numéro de téléphone est nécessaire pour vous rappeler.', 422);
-}
+$state['sent'][]=$now;
+rewind($handle);ftruncate($handle,0);fwrite($handle,json_encode($state));
+flock($handle,LOCK_UN);fclose($handle);
+unset($_SESSION['form_token'],$_SESSION['form_time']);
+session_write_close();
+respond(true,'Merci ! Votre demande a été transmise au magasin.');
 
-// Anti-spam 4 : trop de liens dans le message
-if (preg_match_all('~https?://~i', $message) > 3) {
-    respond(true, 'OK');
-}
-
-$line = str_repeat('-', 52);
-$body  = "Nouvelle demande envoyée depuis le site " . SITE_NAME . "\n{$line}\n";
-$body .= "Nom       : {$nom}\n";
-$body .= "E-mail    : {$email}\n";
-$body .= 'Téléphone : ' . ($telephone !== '' ? $telephone : '—') . "\n";
-$body .= "Sujet     : {$sujet}\n";
-$body .= 'Appareil  : ' . ($appareil !== '' ? $appareil : '—') . "\n";
-$body .= "{$line}\n\n{$message}\n\n{$line}\n";
-$body .= 'Envoyé le ' . date('d/m/Y à H:i') . "\n";
-$body .= $email !== '' ? "Répondre à cet e-mail ou rappeler le client.\n" : "Rappeler le client au numéro indiqué.\n";
-
-$subjectLine = '=?UTF-8?B?' . base64_encode("[Site] {$sujet} — {$nom}") . '?=';
-$fromName    = '=?UTF-8?B?' . base64_encode('Site ' . SITE_NAME) . '?=';
-
-$headers  = "From: {$fromName} <" . FROM_EMAIL . ">\r\n";
-if ($email !== '') $headers .= "Reply-To: {$email}\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-$headers .= "Content-Transfer-Encoding: 8bit\r\n";
-$headers .= "X-Mailer: DigitalBuro-Site\r\n";
-
-$sent = @mail(TO_EMAIL, $subjectLine, $body, $headers, '-f' . FROM_EMAIL);
-
-if ($sent) {
-    @touch($lock);
-    respond(true, 'Merci ! Votre demande est bien envoyée.');
-}
-respond(false, "L'envoi a échoué. Appelez-nous au 02 534 47 02 ou écrivez à " . TO_EMAIL . '.', 500);

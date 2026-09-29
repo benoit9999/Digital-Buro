@@ -1,0 +1,26 @@
+[
+  {
+    "route": "/",
+    "violations": []
+  },
+  {
+    "route": "/contact/",
+    "violations": []
+  },
+  {
+    "route": "/reparation-imprimante/",
+    "violations": []
+  },
+  {
+    "route": "/nl/",
+    "violations": []
+  },
+  {
+    "route": "/en/",
+    "violations": []
+  },
+  {
+    "route": "/a-propos/",
+    "violations": []
+  }
+]

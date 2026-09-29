@@ -1,17 +1,6 @@
-# Python
+.deps/
+tools/qa-deps/
 __pycache__/
-*.py[cod]
-.venv/
-venv/
-
-# Systèmes / éditeurs
-.DS_Store
-Thumbs.db
-desktop.ini
-*.swp
-.vscode/
-.idea/
-
-# Journaux et fichiers temporaires
-*.log
-*.tmp
+*.pyc
+artifacts/*.zip
+tools/test-*.jpg

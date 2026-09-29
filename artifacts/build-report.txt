@@ -1,0 +1,23 @@
+
+17 pages générées dans C:\Users\benoi\OneDrive - UCL\Bureau\Sites webs\Digital Buro\public
+
+Page                                                        Titre  Desc.  H1
+/                                                              61    151  1
+/reparation-imprimante/                                        62    159  1
+/reparation-ordinateur/                                        66    158  1
+/reparation-mac/                                               55    154  1
+/reparation-gsm-tablette/                                      58    157  1
+/cartouches-toners/                                            58    156  1
+/vente-materiel/                                               61    158  1
+/entreprises/                                                  59    148  1
+/a-propos/                                                     60    159  1
+/contact/                                                      54    148  1
+/conseils/fonctionnement-imprimante-laser-jet-encre/           53    160  1
+/mentions-legales/                                             31    124  1
+/confidentialite/                                              54    129  1
+/merci/                                                        47     48  1
+/404.html                                                      31     42  1
+/nl/                                                           60    157  1
+/en/                                                           62    156  1
+
+✓ Aucun lien cassé, un seul H1 par page, titres et descriptions uniques.

@@ -86,7 +86,9 @@
   window.addEventListener("scroll", function () {
     if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
   }, { passive: true });
-  onScroll();
+  // Default header state already matches the top of the page. Read geometry only
+  // after the browser has painted, including when restoring a scroll position.
+  window.requestAnimationFrame(function () { window.requestAnimationFrame(onScroll); });
 
   /* ------------------------------------------------------------------
      Menu déroulant « Réparations »
@@ -149,7 +151,7 @@
       if (e.key === "Escape" && menu.classList.contains("is-open")) { setMenu(false); toggle.focus(); }
     });
     window.addEventListener("resize", function () {
-      if (window.innerWidth >= 1100 && menu.classList.contains("is-open")) setMenu(false);
+      if (menu.classList.contains("is-open") && window.innerWidth >= 1100) setMenu(false);
     });
   }
 
@@ -174,53 +176,47 @@
   /* ------------------------------------------------------------------
      Formulaire de contact
      ------------------------------------------------------------------ */
-  var form = $("[data-contact-form]");
-  if (form) {
-    var params = new URLSearchParams(window.location.search);
-    var appareil = params.get("appareil");
-    if (appareil && form.elements.appareil) form.elements.appareil.value = appareil.slice(0, 160);
-    var sujet = params.get("sujet");
-    if (sujet && form.elements.sujet) {
-      for (var i = 0; i < form.elements.sujet.options.length; i++) {
-        if (form.elements.sujet.options[i].value === sujet) { form.elements.sujet.value = sujet; break; }
-      }
-    }
-    if (form.elements.ts) form.elements.ts.value = String(Date.now());
-
-    var statusBox = $("[data-form-status]", form);
-    var submitBtn = $("[type=submit]", form);
-    var F = DATA.form || {};
-    function showStatus(kind, text) {
-      if (!statusBox) return;
-      statusBox.className = "form__status is-visible form__status--" + kind;
-      statusBox.textContent = text;
-      statusBox.setAttribute("role", kind === "error" ? "alert" : "status");
-    }
-    if (params.get("erreur") && F.error) showStatus("error", F.error);
-
-    form.addEventListener("submit", function (e) {
-      if (!window.fetch || !window.FormData) return; // envoi classique
-      e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); if (F.invalid) showStatus("error", F.invalid); return; }
-      submitBtn.disabled = true;
-      var label = submitBtn.textContent;
-      submitBtn.textContent = F.sending || "…";
-      fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
-        .then(function (res) { return res.json().then(function (j) { return { ok: res.ok && j.ok, j: j }; }); })
-        .then(function (r) {
-          if (r.ok) {
-            form.reset();
-            if (form.elements.ts) form.elements.ts.value = String(Date.now());
-            showStatus("ok", F.ok || "OK");
-            track("form");
-          } else {
-            showStatus("error", (r.j && r.j.message) || F.error);
-          }
-        })
-        .catch(function () { showStatus("error", F.error || "Erreur"); })
-        .then(function () { submitBtn.disabled = false; submitBtn.textContent = label; });
+  document.documentElement.classList.add("js");
+  $$("[data-contact-form]").forEach(function(form) {
+    var params = new URLSearchParams(location.search), F = DATA.form || {};
+    ["appareil", "sujet"].forEach(function(key) {
+      var field = form.elements[key], value = params.get(key);
+      if (!field || !value) return;
+      if (field.tagName === "SELECT") {
+        var option = Array.from(field.options).find(function(o) { return o.value === value || o.textContent.toLowerCase().includes(value.toLowerCase()); });
+        if (option) field.value=option.value;
+      } else field.value=value.slice(0,160);
     });
-  }
+    if(form.elements.ts) form.elements.ts.value=String(Date.now());
+    var statusBox=$("[data-form-status]",form), submitBtn=$("[type=submit]",form);
+    var messages = LANG === "en" ? {sending:"Sending…",ok:"Thank you. Your request has been sent.",error:"Sending failed. Please call 02 534 47 02.",contact:"Enter a phone number or an email address.",phone:"Enter a valid phone number."} : LANG === "nl" ? {sending:"Verzenden…",ok:"Bedankt. Uw aanvraag is verzonden.",error:"Verzenden mislukt. Bel 02 534 47 02.",contact:"Vul een telefoonnummer of e-mailadres in.",phone:"Vul een geldig telefoonnummer in."} : {sending:"Envoi en cours…",ok:"Merci ! Votre demande est bien envoyée.",error:"L’envoi a échoué. Appelez le 02 534 47 02.",contact:"Indiquez un téléphone ou une adresse e-mail.",phone:"Indiquez un numéro de téléphone valide."};
+    function showStatus(kind,message) {
+      statusBox.className="form__status is-visible form__status--"+kind;
+      statusBox.textContent=message;statusBox.setAttribute("role",kind==="error"?"alert":"status");
+    }
+    function validateContact() {
+      var phone=form.elements.telephone,email=form.elements.email;
+      if(phone)phone.setCustomValidity("");if(email)email.setCustomValidity("");
+      if(phone && phone.value.trim() && (!/^[+()0-9 .-]{7,40}$/.test(phone.value.trim()) || phone.value.replace(/[^0-9]/g, "").length < 7))phone.setCustomValidity(messages.phone);
+      if(email && !email.value.trim() && !phone.value.trim())phone.setCustomValidity(messages.contact);
+    }
+    ["telephone","email"].forEach(function(key){if(form.elements[key]) form.elements[key].addEventListener("input",validateContact);});
+    if(params.get("erreur"))showStatus("error",messages.error);
+    form.addEventListener("submit",function(e) {
+      validateContact();
+      if(!form.checkValidity()){e.preventDefault();form.reportValidity();return;}
+      if(!window.fetch || !window.FormData)return;
+      e.preventDefault();if(submitBtn.disabled)return;
+      submitBtn.disabled=true;submitBtn.classList.add("is-sending");form.setAttribute("aria-busy","true");
+      var old=submitBtn.innerHTML;submitBtn.textContent=messages.sending;
+      var controller=new AbortController(),timeout=setTimeout(function(){controller.abort();},15000);
+      fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"},signal:controller.signal})
+      .then(function(res){return res.json().then(function(j){return {ok:res.ok&&j.ok,message:j.message};});})
+      .then(function(res){if(res.ok){form.reset();if(form.elements.ts)form.elements.ts.value=String(Date.now());showStatus("ok",messages.ok);track("form");}else showStatus("error",LANG==="fr"&&res.message?res.message:messages.error);})
+      .catch(function(){showStatus("error",messages.error);})
+      .finally(function(){clearTimeout(timeout);submitBtn.disabled=false;submitBtn.classList.remove("is-sending");submitBtn.innerHTML=old;form.removeAttribute("aria-busy");});
+    });
+  });
 
   /* ------------------------------------------------------------------
      Mesure (Google Ads / GA4) — inactive tant que site.json ne contient

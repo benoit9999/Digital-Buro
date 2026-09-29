@@ -150,28 +150,10 @@
 
 {% macro process() -%}
 <ol class="steps" role="list">
-  <li class="step">
-    <span class="step__num">01</span>
-    <h3 class="step__title">Vous passez au magasin</h3>
-    <p class="step__text">Apportez votre appareil aux heures d’ouverture. Pour les professionnels et le matériel lourd, nos techniciens se déplacent.</p>
-  </li>
-  <li class="step">
-    <span class="step__num">02</span>
-    <h3 class="step__title">Diagnostic de la panne</h3>
-    <p class="step__text">Nos techniciens analysent la panne pour identifier précisément la pièce, le réglage ou le logiciel en cause.</p>
-  </li>
-  <li class="step">
-    <span class="step__num">03</span>
-    <h3 class="step__title">Un devis clair</h3>
-    <p class="step__text">Vous recevez un devis et la solution la mieux adaptée. Si la réparation n’en vaut pas la peine, on vous le dit.</p>
-  </li>
-  <li class="step">
-    <span class="step__num">04</span>
-    <h3 class="step__title">Réparé, prêt à l’emploi</h3>
-    <p class="step__text">Vous récupérez votre machine au magasin. Pour les entreprises : livraison, installation et configuration sur place.</p>
-  </li>
-</ol>
-{%- endmacro %}
+{% set steps = [('Vous nous contactez', 'Un appel ou un passage au magasin pour parler de votre appareil.'), ('Diagnostic et devis', 'La panne identifiée, vous choisissez la suite.'), ('Votre appareil repart', 'La réparation convenue, votre machine retrouve son utilité.')] %}
+{% if page.lang == 'en' %}{% set steps = [('Get in touch','Call or visit to tell us about your device.'),('Diagnosis and estimate','Understand the problem and choose the next step.'),('Back in service','We carry out the agreed repair.')] %}{% elif page.lang == 'nl' %}{% set steps = [('Neem contact op','Bel of kom langs om uw toestel te bespreken.'),('Diagnose en offerte','U kent het probleem en kiest de volgende stap.'),('Weer aan het werk','We voeren de afgesproken herstelling uit.')] %}{% endif %}
+{% for title,desc in steps %}<li class="step"><span class="step__num">0{{ loop.index }}</span><h3 class="step__title">{{ title }}</h3><p class="step__text">{{ desc }}</p></li>{% endfor %}
+</ol>{%- endmacro %}
 
 {% macro cta_band(title, text) -%}
 <section class="section section--flush">

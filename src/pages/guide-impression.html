@@ -4,7 +4,7 @@
 
 {{ ui.breadcrumb(page.breadcrumb) }}
 
-<article>
+<article data-reading>
   <header class="page-hero page-hero--simple">
     <div class="container">
       <div class="page-hero__copy" style="max-width:52rem">
@@ -18,6 +18,8 @@
 
   <div class="container article-grid">
     <div class="prose">
+<aside class="callout"><strong>L’essentiel en 30 secondes</strong><p>Le laser fixe une poudre, le toner, grâce à la chaleur. Le jet d’encre projette de petites gouttes. Des traces ou des couleurs manquantes peuvent venir de plusieurs pièces : le diagnostic évite de remplacer le mauvais consommable.</p></aside>
+<div class="laser-diagram" data-reveal aria-label="Les six étapes de l’impression laser">{% for label in ['Nettoyer','Charger','Écrire','Développer','Transférer','Fixer'] %}<div style="--i:{{ loop.index0 }}"><b>0{{ loop.index }}</b>{{ label }}</div>{% endfor %}</div>
       <h2 id="laser">L’imprimante laser en bref</h2>
       <p>Le processus d’impression commence par la génération d’un rayon laser au moyen d’une <strong>diode laser</strong>. Le rayon est dirigé par des miroirs et des lentilles de focalisation vers la surface d’un cylindre, le <strong>tambour</strong> (ou «&nbsp;drum&nbsp;»). La zone balayée devient une image électrique, invisible à l’œil nu.</p>
       <p>Le laser s’allume et s’éteint alternativement lorsqu’il balaie le tambour. Sa fréquence se mesure en points par pouce (<abbr title="dots per inch">dpi</abbr>)&nbsp;: c’est elle qui détermine la résolution de l’imprimante, par exemple 600 ou 1&nbsp;200&nbsp;dpi.</p>

@@ -1,4 +1,5 @@
 <div class="callbar" data-callbar>
   <a class="btn btn--primary" href="tel:{{ site.phone_intl }}" data-track="call">{{ ui.icon('phone') }}{{ t.call }}</a>
   <a class="btn btn--outline" href="{{ site.google.directions_url }}" target="_blank" rel="noopener" data-track="directions">{{ ui.icon('pin') }}{{ t.directions }}</a>
+{% if site.whatsapp %}<a class="btn btn--outline" href="https://wa.me/{{ site.whatsapp|e }}" data-track="whatsapp" target="_blank" rel="noopener">WhatsApp</a>{% endif %}
 </div>

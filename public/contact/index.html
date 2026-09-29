@@ -8,7 +8,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://www.digital-buro.be/contact/">
 <link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css?v=965e20db8e">
+<link rel="stylesheet" href="/assets/css/style.css?v=22029e7f14">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -40,7 +40,7 @@
 <header class="site-header" data-header>
   <div class="container nav">
     <a class="nav__logo" href="/">
-      <img src="/assets/img/logo.svg" alt="Digital-Buro — Accueil" width="139" height="26">
+      <img src="/assets/img/logo.svg" alt="Digital-Buro — Accueil" width="175" height="36">
     </a>
     <nav class="nav__menu" aria-label="Navigation principale">
       <div class="nav__item" data-dropdown>
@@ -101,6 +101,7 @@
     </div>
   </div>
 </div>
+<noscript><nav class="no-js-nav" aria-label="Navigation sans JavaScript"><a href="/">Accueil</a> · <a href="/reparation-imprimante/">Imprimantes</a> · <a href="/reparation-ordinateur/">PC</a> · <a href="/contact/">Contact</a></nav></noscript>
 <main id="contenu">
 <nav class="breadcrumb container" aria-label="Fil d’Ariane">
   <ol>
@@ -115,6 +116,7 @@
       <h1 class="h1">Contact, horaires et accès</h1>
       <p class="lead">Passez au magasin, appelez-nous ou décrivez votre demande ci-dessous&nbsp;: nous vous répondons pendant les heures d’ouverture.</p>
     </div>
+    <div style="margin-top:20px"><a class="rating" href="https://www.google.com/maps/place/Digital-Buro/@50.8240646,4.3539242,17z/data=!4m6!3m5!1s0x47c3c467aaaaab01:0x3f667ea5a1fd6371!8m2!3d50.8240646!4d4.3539242!16s%2Fg%2F1w97tkhb" target="_blank" rel="noopener"><span class="rating__stars" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=d34698d46b#star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=d34698d46b#star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=d34698d46b#star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=d34698d46b#star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=d34698d46b#star"></use></svg></span><span><strong>4,7/5</strong> · plus de 440 avis Google</span></a></div>
     <div class="contact-cards" style="margin-top:40px">
       <a class="contact-card" href="tel:+3225344702" data-track="call">
         <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=d34698d46b#phone"></use></svg>
@@ -134,20 +136,14 @@
         <span class="contact-card__value">Chaussée de Charleroi 257</span>
         <span class="contact-card__hint">1060 Saint-Gilles · Itinéraire&nbsp;↗</span>
       </a>
-      <div class="contact-card">
-        <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=d34698d46b#fax"></use></svg>
-        <span class="contact-card__label">Fax</span>
-        <span class="contact-card__value tnum">02 534 53 51</span>
-        <span class="contact-card__hint">TVA BE 0874.004.642</span>
-      </div>
     </div>
   </div>
 </section>
 <section class="section section--fog" id="formulaire" aria-labelledby="form-titre">
   <div class="container split">
     <div class="form-card">
-      <h2 class="h3" id="form-titre">Demande de devis ou d’information</h2>
-      <p class="text" style="margin-top:8px">Décrivez votre appareil et la panne le plus précisément possible (marque, modèle, symptômes)&nbsp;: nous vous répondrons plus vite.</p>
+      <h2 class="h3" id="form-titre">Parlons de votre appareil.</h2>
+      <p class="text" style="margin-top:8px">Un téléphone ou un e-mail suffit pour vous répondre.</p>
       <form class="form" style="margin-top:28px" action="/api/contact.php" method="post" data-contact-form>
         <div class="form__row form__row--2">
           <div class="field">
@@ -155,41 +151,31 @@
             <input class="field__input" id="f-nom" name="nom" type="text" autocomplete="name" required maxlength="120">
           </div>
           <div class="field">
-            <label class="field__label" for="f-email">E-mail</label>
-            <input class="field__input" id="f-email" name="email" type="email" autocomplete="email" required maxlength="180">
+            <label class="field__label" for="f-email">E-mail <small>(ou téléphone)</small></label>
+            <input class="field__input" id="f-email" name="email" type="email" autocomplete="email" maxlength="180">
           </div>
         </div>
         <div class="form__row form__row--2">
           <div class="field">
-            <label class="field__label" for="f-tel">Téléphone <small>(facultatif)</small></label>
+            <label class="field__label" for="f-tel">Téléphone <small>(ou e-mail)</small></label>
             <input class="field__input" id="f-tel" name="telephone" type="tel" autocomplete="tel" maxlength="40">
           </div>
-          <div class="field">
-            <label class="field__label" for="f-sujet">Sujet</label>
-            <select class="field__input" id="f-sujet" name="sujet">
-              <option value="reparation">Réparation / devis</option>
-              <option value="cartouches">Cartouches &amp; toners</option>
-              <option value="achat">Achat de matériel</option>
-              <option value="entreprise">Entreprise / intervention sur site</option>
-              <option value="sav">Service après-vente / réclamation</option>
-              <option value="autre">Autre demande</option>
-            </select>
-          </div>
+          <input type="hidden" name="sujet" value="reparation">
         </div>
         <div class="field">
-          <label class="field__label" for="f-appareil">Appareil <small>(marque et modèle, facultatif)</small></label>
-          <input class="field__input" id="f-appareil" name="appareil" type="text" maxlength="160" placeholder="Ex. : HP LaserJet Pro M404, MacBook Air 2020…">
+          <label class="field__label" for="f-appareil">Appareil</label>
+          <select class="field__input" id="f-appareil" name="appareil"><option value="">Choisir un appareil</option><option>Imprimante</option><option>Photocopieur</option><option>PC portable</option><option>PC fixe</option><option>Mac</option><option>GSM / tablette</option><option>Cartouche / toner</option><option>Entreprise</option><option>Achat de matériel</option><option>Autre</option></select>
         </div>
         <div class="field">
-          <label class="field__label" for="f-message">Votre message</label>
-          <textarea class="field__input" id="f-message" name="message" required maxlength="5000" placeholder="Décrivez la panne, la référence de cartouche recherchée ou votre projet…"></textarea>
+          <label class="field__label" for="f-message">Votre message <small>(facultatif)</small></label>
+          <textarea class="field__input" id="f-message" name="message" maxlength="5000" placeholder="Décrivez la panne, la référence de cartouche recherchée ou votre projet…"></textarea>
         </div>
         <div class="form__hp" aria-hidden="true">
           <label for="f-site">Ne pas remplir ce champ</label>
           <input id="f-site" name="site_web" type="text" tabindex="-1" autocomplete="off">
         </div>
         <input type="hidden" name="ts" value="">
-        <p class="form__legal">Vos données servent uniquement à répondre à votre demande et ne sont jamais transmises à des tiers. <a href="/confidentialite/">Politique de confidentialité</a>.</p>
+        <p class="form__legal">Vos coordonnées servent à répondre à votre demande. <a href="/confidentialite/">Politique de confidentialité</a>.</p>
         <div class="form__status" data-form-status aria-live="polite"></div>
         <div><button class="btn btn--primary btn--lg" type="submit">Envoyer la demande</button></div>
       </form>
@@ -252,24 +238,13 @@
     </div>
   </div>
 </section>
-<section class="section" id="sav" aria-labelledby="sav-titre">
-  <div class="container split split--center">
-    <div class="stack">
-      <h2 class="h2" id="sav-titre">Service après-vente et réclamations</h2>
-      <p class="lead">Un souci après une réparation ou un achat&nbsp;? Nous voulons le savoir, et le régler avec vous.</p>
-    </div>
-    <div class="stack">
-      <p class="text">Choisissez «&nbsp;Service après-vente / réclamation&nbsp;» dans le <a href="/contact/?sujet=sav#formulaire">formulaire</a> en précisant la date de votre passage et l’appareil concerné, ou appelez-nous au <a href="tel:+3225344702" data-track="call">02 534 47 02</a>. Nous reprenons votre dossier avec vous pour trouver une solution.</p>
-      <p class="text">Vous êtes satisfait&nbsp;? Un avis sur Google nous aide énormément&nbsp;: <a href="https://www.google.com/maps/place/Digital-Buro/@50.8240646,4.3539242,17z/data=!4m6!3m5!1s0x47c3c467aaaaab01:0x3f667ea5a1fd6371!8m2!3d50.8240646!4d4.3539242!16s%2Fg%2F1w97tkhb" target="_blank" rel="noopener">laisser un avis</a>.</p>
-    </div>
-  </div>
-</section>
+<section class="section section--tight" id="sav"><div class="container"><h2 class="h4">Un souci après votre passage ?</h2><p class="text">Appelez-nous ou <a href="/contact/?sujet=sav#formulaire">contactez le service après-vente</a> avec la date et l’appareil concerné.</p></div></section>
 </main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="/"><img src="/assets/img/logo-white.svg" alt="Digital-Buro" width="139" height="26" loading="lazy"></a>
+        <a href="/"><img src="/assets/img/logo-white.svg" alt="Digital-Buro" width="175" height="36" loading="lazy"></a>
         <p class="footer__tagline">Votre meilleur partenaire bureautique & digital. Plus de 30 ans d’expérience au service des particuliers et des entreprises.</p>
         <address class="footer__nap">
           Digital-Buro<br>
@@ -328,6 +303,7 @@
   <a class="btn btn--outline" href="https://www.google.com/maps/dir/?api=1&destination=Digital-Buro%2C%20Chauss%C3%A9e%20de%20Charleroi%20257%2C%201060%20Saint-Gilles" target="_blank" rel="noopener" data-track="directions"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=d34698d46b#pin"></use></svg>Itinéraire</a>
 </div>
 <script id="site-data" type="application/json">{"lang":"fr","hours":[["10:30","18:00"],["10:30","18:00"],["10:30","18:00"],["10:30","18:00"],["10:30","18:00"],["11:00","17:00"],["",""]],"status":{"open":"Ouvert maintenant · jusqu’à {close}","today":"Fermé · ouvre aujourd’hui à {open}","tomorrow":"Fermé · ouvre demain à {open}","later":"Fermé · ouvre {day} à {open}","days":["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"]},"form":{"sending":"Envoi en cours…","ok":"Merci ! Votre demande est bien envoyée. Nous vous répondons au plus vite (pendant les heures d’ouverture).","error":"L’envoi n’a pas fonctionné. Réessayez, ou contactez-nous directement au 02 534 47 02 ou par e-mail.","invalid":"Merci de compléter les champs obligatoires."},"tracking":null}</script>
-<script src="/assets/js/main.js?v=a3f58c714b" defer></script>
+<script src="/assets/js/main.js?v=b49395b62e" defer></script>
+<script src="/assets/js/refresh.js?v=7258960b0b" defer></script>
 </body>
 </html>

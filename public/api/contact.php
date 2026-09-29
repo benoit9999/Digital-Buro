@@ -26,6 +26,7 @@ const SUBJECTS = [
     'entreprise' => 'Entreprise / intervention sur site',
     'sav'        => 'Service après-vente / réclamation',
     'autre'      => 'Autre demande',
+    'rappel'     => 'Demande de rappel',
 ];
 
 header('X-Robots-Tag: noindex, nofollow');
@@ -71,7 +72,7 @@ if (field('site_web', 200) !== '') {
 // Anti-spam 2 : envoi trop rapide après l'affichage de la page (robots)
 $ts = (int) field('ts', 20);
 if ($ts > 0 && (microtime(true) * 1000 - $ts) < 2500) {
-    respond(true, 'OK');
+    respond(false, 'Merci de patienter quelques secondes avant l’envoi.', 429);
 }
 
 // Anti-spam 3 : un envoi toutes les 30 secondes maximum par adresse IP
@@ -89,8 +90,17 @@ $appareil  = oneLine(field('appareil', 160));
 $message   = field('message', 5000);
 $sujet     = SUBJECTS[$sujetKey] ?? SUBJECTS['autre'];
 
-if ($nom === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    respond(false, 'Merci de compléter les champs obligatoires : nom, e-mail valide et message.', 422);
+if ($nom === '' || ($telephone === '' && $email === '')) {
+    respond(false, 'Indiquez votre nom et un téléphone ou une adresse e-mail.', 422);
+}
+if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    respond(false, 'Merci de vérifier votre adresse e-mail.', 422);
+}
+if ($telephone !== '' && (!preg_match('/^[+()0-9 .-]{7,40}$/', $telephone) || strlen(preg_replace('/[^0-9]/', '', $telephone)) < 7)) {
+    respond(false, 'Merci de vérifier votre numéro de téléphone.', 422);
+}
+if ($sujetKey === 'rappel' && $telephone === '') {
+    respond(false, 'Le numéro de téléphone est nécessaire pour vous rappeler.', 422);
 }
 
 // Anti-spam 4 : trop de liens dans le message
@@ -107,13 +117,13 @@ $body .= "Sujet     : {$sujet}\n";
 $body .= 'Appareil  : ' . ($appareil !== '' ? $appareil : '—') . "\n";
 $body .= "{$line}\n\n{$message}\n\n{$line}\n";
 $body .= 'Envoyé le ' . date('d/m/Y à H:i') . "\n";
-$body .= "Répondre directement à cet e-mail pour contacter le client.\n";
+$body .= $email !== '' ? "Répondre à cet e-mail ou rappeler le client.\n" : "Rappeler le client au numéro indiqué.\n";
 
 $subjectLine = '=?UTF-8?B?' . base64_encode("[Site] {$sujet} — {$nom}") . '?=';
 $fromName    = '=?UTF-8?B?' . base64_encode('Site ' . SITE_NAME) . '?=';
 
 $headers  = "From: {$fromName} <" . FROM_EMAIL . ">\r\n";
-$headers .= "Reply-To: {$email}\r\n";
+if ($email !== '') $headers .= "Reply-To: {$email}\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit\r\n";

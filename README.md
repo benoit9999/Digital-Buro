@@ -1,90 +1,111 @@
-# Digital-Buro — nouveau site vitrine
+# Digital-Buro — refonte du site vitrine
 
-Site statique (HTML/CSS/JS pur, aucun framework) généré par un petit script Python.
-Objectif : **SEO local** (« réparation imprimante Saint-Gilles », « réparation PC Bruxelles »…),
-**pages d'atterrissage Google Ads** et modernisation complète de www.digital-buro.be.
+Version du 29 septembre 2026. Site statique généré avec Python/Jinja2, compatible avec l’hébergement Apache/PHP existant. Les 17 URL sont conservées. Rien n’a été publié sur le site de production.
 
-## Structure
+## Générer et prévisualiser
 
-```
-build.py              générateur : assemble les pages, JSON-LD, sitemap, robots, contrôles SEO
-src/data/site.json    coordonnées, horaires, services, marques, note Google, suivi Ads
-src/data/pages.json   titres, meta descriptions, fil d'Ariane, langues de chaque page
-src/pages/            contenu des pages (gabarits Jinja2)
-src/templates/        mise en page commune, en-tête, pied de page, composants
-src/assets/           CSS, JS, police Inter (auto-hébergée), icônes et illustrations
-src/static/           .htaccess, formulaire PHP (api/contact.php), favicons
-public/               ⇦ SITE FINAL À METTRE EN LIGNE (généré, ne pas modifier à la main)
-tools/                outils de développement (logo, captures d'écran) — non déployés
-```
-
-## Modifier puis régénérer le site
-
-```bash
+```sh
 pip install -r requirements.txt
-python build.py            # génère public/ et affiche le rapport SEO
-python build.py --serve    # idem + aperçu sur http://localhost:8080
+python build.py
+python build.py --serve
 ```
 
-Le rapport vérifie à chaque build : liens internes cassés, un seul `<h1>` par page,
-longueur et unicité des titres / descriptions, images sans `alt`.
+Aperçu : http://localhost:8080. Le serveur Python montre le site mais **n’exécute pas PHP**. Le dossier `public/` est généré ; modifier les sources, puis reconstruire.
 
-- Horaires, téléphone, note Google… : `src/data/site.json` (répercuté partout, y compris dans les données structurées).
-- Titres et descriptions Google : `src/data/pages.json`.
-- Textes : `src/pages/*.html`.
+| Emplacement | Contenu |
+|---|---|
+| `src/data/site.json` | Coordonnées, horaires, services, contenus courts, photos, avis, options |
+| `src/data/pages.json` | Titres SEO, descriptions, URL, langues et fil d’Ariane |
+| `src/pages/` | Accueil, contact, histoire, guide, pages légales et entrées des services |
+| `src/templates/service-compact.html` | Structure commune des sept pages de service |
+| `src/templates/partials/fresh-macros.html` | Avis, photos, rappel, frise, marques, badge |
+| `src/assets/css/style.css`, `refresh.css` | Base et nouvelle direction visuelle ; fusionnées au build |
+| `src/assets/js/main.js`, `refresh.js` | Navigation, formulaires, interactions sans bibliothèque |
+| `src/static/api/` | Traitement PHP des demandes et adaptateur Places facultatif |
+| `artifacts/` | Captures, rapport du build et résultats des contrôles |
 
-## Mise en ligne (hébergement OVH actuel)
+Les anciennes URL et redirections, les données structurées LocalBusiness/Service/FAQPage/BreadcrumbList, le sitemap, les liens de langues et les attributs de suivi sont conservés. Aucun balisage Review ou AggregateRating n’a été ajouté.
 
-1. Sauvegarder l'ancien site (FTP), puis **supprimer ses fichiers** : `index.html`, `Presentation.html`,
-   `Principe-impression.html`, `Reclamation.php`, `contact.php`, dossiers `css/`, `js/`, `images/`, `fonts/`.
-2. Envoyer **le contenu** du dossier `public/` à la racine (`www/`), **y compris `.htaccess`** (fichier caché).
-3. Vérifier que PHP ≥ 7.2 est actif (espace client OVH), puis créer l'adresse `site@digital-buro.be`
-   (ou modifier `FROM_EMAIL` dans `api/contact.php`) : c'est l'expéditeur des e-mails du formulaire.
-4. Tester : le formulaire de contact, `https://digital-buro.be` → doit rediriger vers `https://www.digital-buro.be`,
-   et les anciennes adresses (`/Presentation.html`, `/contact.php`…) → redirection 301 vers les nouvelles pages.
+## Identité et interactions
 
-## Après la mise en ligne (indispensable pour le SEO local)
+Le logo reprend les arcs, les points et le mot bicolore de l’enseigne jointe. Le lettrage est vectorisé : pas de police à charger pour l’afficher. Variantes dans `src/assets/img/` : `logo.svg` orange/bleu nuit, `logo-heritage.svg` rouge/bleu, `logo-white.svg` et `logo-mark.svg`. Les favicons et l’image de partage sont déjà générés.
 
-- **Google Search Console** : ajouter le domaine, envoyer `https://www.digital-buro.be/sitemap.xml`, demander l'indexation de l'accueil et des pages de services.
-- **Fiche Google (Google Business Profile)** — c'est elle qui fait apparaître le magasin dans la carte :
-  catégorie principale « Service de réparation d'ordinateurs » + « Magasin informatique », « Service de réparation d'imprimantes » ;
-  lister les services en liant chaque page du site ; ajouter des photos récentes ; publier une actualité par mois ;
-  répondre à chaque avis et en demander aux clients satisfaits.
-- **Cohérence NAP** : même nom, adresse et téléphone partout (Pages d'Or, Yelp, Kompass, koifaire…), avec le lien vers le nouveau site.
-- **Bing Places** : importer la fiche Google (5 minutes).
+Pour régénérer les assets de marque, installer aussi Pillow et fonttools, puis exécuter `python tools/make_brand.py` et `node tools/raster_brand.cjs` (nécessite le module Node sharp, ou CODEX_NODE_MODULES pointant vers son dossier parent). Reconstruire ensuite le site. La police source est fournie dans `tools/fonts/`.
 
-## Google Ads
+Les effets comprennent soulignements, boutons, menus, FAQ animées, apparitions, compteurs, frise, illustrations et défilé des marques. Le bouton de pause du défilé arrête aussi le badge tournant. La préférence système de réduction des animations est respectée. Sans JavaScript, contenus, liens, FAQ, navigation de secours et formulaires HTML restent accessibles.
 
-- Chaque groupe d'annonces pointe vers **sa** page : imprimantes → `/reparation-imprimante/`, PC → `/reparation-ordinateur/`,
-  Mac → `/reparation-mac/`, GSM → `/reparation-gsm-tablette/`, toner → `/cartouches-toners/`, B2B → `/entreprises/`.
-  Titre de page = mot-clé de l'annonce : meilleur Niveau de qualité, donc clics moins chers.
-- **Suivi des conversions** : renseigner `tracking` dans `src/data/site.json` (`google_ads_id` = `AW-…`,
-  libellés de conversion « appel » et « formulaire »), puis relancer `python build.py`.
-  La bannière de consentement (RGPD / Consent Mode) s'active alors automatiquement ; sans identifiant, **aucun** traceur n'est chargé.
-  Sont mesurés : clics sur le numéro, envois du formulaire, demandes d'itinéraire.
+## Photos et licences
+
+La vitrine existante reste la seule photo identifiée comme celle du magasin. Les photos de banque d’images illustrent les prestations ; elles ne sont pas présentées comme l’équipe ou l’atelier de Digital-Buro.
+
+| Fichiers dans `src/assets/img/photos/` | Photographe et source | Licence |
+|---|---|---|
+| imprimante-800/1600.webp | [engin akyurt](https://unsplash.com/photos/CGnoRQZGWmw) | [Unsplash](https://unsplash.com/license) |
+| entreprises-800/1600.webp | [Meatball Overexposure](https://unsplash.com/photos/8r1ZlqqGxMU) | [Unsplash](https://unsplash.com/license) |
+| mac-800/1600.webp | [Aleksi Tappura](https://unsplash.com/photos/mCg0ZgD7BgU) | [Unsplash](https://unsplash.com/license) |
+| ordinateur-800/1600.webp | [IT services EU](https://www.pexels.com/photo/7639373/) | [Pexels](https://www.pexels.com/license/) |
+| gsm-800/1600.webp | [Tima Miroshnichenko](https://www.pexels.com/photo/6754839/) | [Pexels](https://www.pexels.com/license/) |
+| cartouches-800/1600.webp | [Jakub Zerdzicki](https://www.pexels.com/photo/17536002/) | [Pexels](https://www.pexels.com/license/) |
+
+La page Vente réutilise la photo imprimante. La photo Cartouches montre des cartouches installées, en attendant une vraie photo du rayonnage. La vitrine (900 × 334) n’est pas agrandie au-delà de sa taille native.
+
+Pour remplacer une image, conserver ses deux noms et exporter en WebP, 800 × 500 et 1600 × 1000, chacun sous 150 Ko. Actualiser le texte alternatif, l’auteur et la source dans `site.photos`. Les attributs de taille, srcset et chargement différé sont déjà prévus ; les photos de premier écran sont prioritaires.
+
+## Avis Google
+
+Trois **extraits** attribués à Nathan M., Corine S. et Michael M. sont intégrés, avec un lien vers [la fiche Google](https://www.google.com/maps?cid=4568478121866388337). Les extraits sont identifiés comme tels. Aucun témoignage supplémentaire ni réponse du propriétaire n’est inventé.
+
+La note 4,7/5 et le total 448 correspondent au relevé du 28 septembre 2026, pas à une mise à jour en direct. Modifier `site.google` pour les actualiser. Les dates exactes n’étant pas connues, `date` reste null et `date_label` indique un mois approximatif. Une date ISO confirmée active l’affichage relatif. Ne pas transformer un mois approximatif en jour inventé.
+
+Le filtre utilise les tags des avis. Faute d’avis vérifié correspondant au service, le composant présente la sélection générale et le précise. Il n’affiche donc pas trois avis spécialisés pour chaque métier. Ajouter les avis imprimante/cartouches et entreprise dès réception de leurs textes exacts, notes et dates.
+
+Le bloc est une sélection éditoriale du magasin avec attribution Google Maps, pas un widget officiel ni une certification Google.
+
+### Option Places API, désactivée
+
+`api/reviews.php` prépare l’accès serveur à Places API (New), avec clé en variable d’environnement, délai d’attente et repli vers la sélection statique. Sans configuration, il retourne une indisponibilité et n’appelle pas Google. Le site utilise actuellement les avis statiques ; le raccordement de ce flux au composant reste à activer et tester avec le compte du client.
+
+Variables serveur : `DB_PLACES_ENABLED=1`, `DB_PLACES_API_KEY`, `DB_PLACES_ID`. La clé ne doit jamais figurer dans le JSON du site ni dans JavaScript. Restreindre la clé au service nécessaire.
+
+Écart au brief : pas de cache de 24 h des avis. Les [règles Places](https://developers.google.com/maps/documentation/places/web-service/policies) limitent le stockage du contenu ; l’adaptateur ne conserve que l’horodatage de sa limitation de fréquence. Il ne garantit donc ni 30 appels par mois ni un coût négligeable. Vérifier les conditions, quotas et tarifs avant activation.
+
+## Formulaires, prix et WhatsApp
+
+Le contact accepte le nom et au moins un téléphone ou un e-mail. Message facultatif. Le rappel nécessite nom et téléphone. Spinner, confirmation, erreur et réactivation du bouton sont prévus ; le serveur conserve ses protections anti-spam.
+
+Le destinataire reste `digital-buro@skynet.be`, l’expéditeur `site@digital-buro.be`. L’hébergement doit autoriser cet expéditeur. Aucun e-mail réel n’a été envoyé pendant les tests. Un petit fichier temporaire de limitation par IP est utilisé ; les demandes ne sont pas enregistrées dans une base de données.
+
+- `site.whatsapp` : laisser vide jusqu’à confirmation du numéro et de son usage WhatsApp ; renseigner ensuite une URL https://wa.me/… validée.
+- `site.prices` : objet vide par défaut. Ajouter un texte validé sous la clé du service (par exemple `imprimante`) pour afficher un tarif indicatif. Aucun montant n’est inventé.
+- `google.review_url` : lien officiel « laisser un avis », à renseigner depuis la fiche du client.
+
+## Mise en ligne
+
+1. Sauvegarder le site et la configuration actuels, préparer un emplacement de préproduction.
+2. Y envoyer le contenu de `public/`, y compris `.htaccess`.
+3. Vérifier PHP, l’envoi des e-mails, l’expéditeur, les deux types de formulaire et les erreurs.
+4. Vérifier HTTPS/www, anciennes URL, redirections 301, pages FR/NL/EN et sitemap.
+5. Publier après validation, conserver une sauvegarde permettant le retour arrière.
+
+Les contrôles locaux ne valident pas le fonctionnement de PHP, du courrier ou des règles Apache sur OVH.
+
+## Référencement et Google Ads
+
+Les annonces payantes et le référencement naturel sont distincts. Aucun site ne peut garantir une première place Google. L’architecture conserve des pages dédiées aux services, des contenus locaux lisibles et le maillage interne. Après publication, contrôler les redirections, l’indexation dans Search Console et la cohérence des coordonnées avec la fiche Google.
+
+Les destinations des annonces peuvent pointer directement vers le service concerné. Les conversions restent configurables dans `tracking`. Le suivi publicitaire n’est chargé qu’avec une configuration et le consentement prévu par le site. Aucune baisse du coût par clic n’est promise.
 
 ## À confirmer avec le client
 
-| Point | Pourquoi |
-|---|---|
-| **Réparation de GSM / tablettes** | Page créée car demandée dans le brief, mais absente de l'ancien site. À supprimer si le magasin ne le fait pas. |
-| **Pages NL et EN** (`/nl/`, `/en/`) | Captent les recherches néerlandophones et des expatriés. À garder si l'accueil en NL/EN est possible. |
-| Année de début du dirigeant | L'ancien site (2017) annonçait 30 ans d'expérience : on pourrait écrire « près de 40 ans » / « depuis 1987 ». |
-| Diagnostic : payant ? tarif ? garantie ? délais ? | À afficher clairement (FAQ) : rassure et évite les avis négatifs sur le prix du diagnostic. |
-| GSM 0486 65 91 04 (listé sur Pages d'Or), WhatsApp ? | Un bouton WhatsApp augmenterait les contacts mobiles. |
-| « Ingénieurs et techniciens certifiés » | Mention de l'ancien site non reprise faute de pouvoir la vérifier. |
-| WebShop (digital-buro.1.ufp.de) | Lien mort (404) : retiré. À réintégrer si une nouvelle boutique existe. |
-| Photos réelles | Intérieur, comptoir, atelier, technicien au travail : remplaceraient avantageusement les illustrations (la photo de vitrine actuelle est en basse définition). |
-| Lien « laisser un avis » | Renseigner `google.review_url` (lien fourni dans l'espace Google Business Profile). |
-| Adresse e-mail | Une adresse `contact@digital-buro.be` ferait plus professionnel que `@skynet.be`. |
-| Congés et jours fériés | L'indicateur « Ouvert / Fermé » suit les horaires habituels uniquement. |
-| Note Google | 4,7/5 et « plus de 440 avis » relevés le 28/09/2026 : à actualiser de temps en temps dans `site.json`. |
+- Prix de diagnostic, délais, garanties, rendez-vous et périmètre exact des réparations GSM/tablettes.
+- Année de début du dirigeant : conservation prudente de « plus de 30 ans », sans inventer « depuis 1987 ».
+- Photos actuelles du magasin, du rayonnage et de l’atelier ; autorisation d’utiliser les personnes éventuellement photographiées.
+- Textes exacts, notes et dates des avis manquants ; actualisation des chiffres Google.
+- Numéro WhatsApp, lien pour laisser un avis et éventuelle nouvelle boutique en ligne.
+- Accueil possible en néerlandais et anglais.
+- Adresse d’expédition des formulaires et configuration de messagerie de l’hébergeur.
+- Horaires exceptionnels et jours fériés : l’indicateur suit uniquement la semaine habituelle.
+- Choix final entre le logo orange/bleu nuit et la variante héritage.
 
-## Choix de design
+Consulter `CHANGELOG.md` et `artifacts/VALIDATION.md` pour les modifications, résultats et limites des tests.
 
-- Charte « White concrete, single ember » : toile blanche, Inter à interlettrage négatif, un seul accent Ember `#ff5900`,
-  rayons 12 px, filets fins, pas d'ombres, cadres sombres (barre d'annonce Carbon, pied de page Abyss).
-- **Boutons Ember en texte noir** plutôt que blanc : contraste 6,7:1 (norme WCAG AA) contre 3,1:1 en blanc, et c'est le
-  code couleur classique des ateliers de réparation (orange et noir).
-- Logo modernisé : « Digital-Buro » en Inter, le trait d'union devient l'étincelle Ember ; favicon « D-B » dans la continuité de l'ancien.
-- Police Inter auto-hébergée (42 Ko, aucun appel à Google Fonts), carte Google chargée uniquement au clic : rapide et conforme au RGPD.

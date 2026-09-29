@@ -431,6 +431,8 @@ def main():
     tracking_enabled = bool(tracking.get("google_ads_id") or tracking.get("ga4_id"))
 
     out = STAGE
+    if out.resolve() != (Path(tempfile.gettempdir()) / "digital-buro-build").resolve():
+        raise RuntimeError("Dossier temporaire inattendu")
     if out.exists():
         shutil.rmtree(out, ignore_errors=True)
     out.mkdir(parents=True, exist_ok=True)
@@ -438,7 +440,7 @@ def main():
     # 1. Ressources statiques
     shutil.copytree(SRC / "assets", out / "assets", dirs_exist_ok=True)
     css_path = out / "assets" / "css" / "style.css"
-    css_path.write_text(minify_css(css_path.read_text(encoding="utf-8")), encoding="utf-8")
+    css_path.write_text(minify_css(css_path.read_text(encoding="utf-8") + "\n" + (out / "assets/css/refresh.css").read_text(encoding="utf-8-sig")), encoding="utf-8")
     for item in (SRC / "static").iterdir():
         dest = out / item.name
         if item.is_dir():
@@ -447,6 +449,8 @@ def main():
             shutil.copy2(item, dest)
 
     versions = {
+        "refresh": short_hash(out / "assets/css/refresh.css"),
+        "refresh_js": short_hash(out / "assets/js/refresh.js"),
         "css": short_hash(css_path),
         "js": short_hash(out / "assets" / "js" / "main.js"),
         "icons": short_hash(out / "assets" / "img" / "icons.svg"),

@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "widths": [
+    375,
+    390,
+    768,
+    1100,
+    1440
+  ],
+  "errors": [],
+  "forms": "Success and failure mocked; no real email sent"
+}

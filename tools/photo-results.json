@@ -1,0 +1,44 @@
+{
+  "imprimante": {
+    "file": "imprimante",
+    "alt": "Photocopieur multifonction blanc dans un bureau",
+    "source": "https://unsplash.com/photos/CGnoRQZGWmw",
+    "author": "engin akyurt",
+    "license": "https://unsplash.com/license"
+  },
+  "entreprises": {
+    "file": "entreprises",
+    "alt": "Imprimante et matériel informatique dans un bureau lumineux",
+    "source": "https://unsplash.com/photos/8r1ZlqqGxMU",
+    "author": "Meatball Overexposure",
+    "license": "https://unsplash.com/license"
+  },
+  "mac": {
+    "file": "mac",
+    "alt": "MacBook ouvert sur un bureau en bois",
+    "source": "https://unsplash.com/photos/mCg0ZgD7BgU",
+    "author": "Aleksi Tappura",
+    "license": "https://unsplash.com/license"
+  },
+  "ordinateur": {
+    "file": "ordinateur",
+    "alt": "Réparation d’un ordinateur portable ouvert avec un tournevis",
+    "source": "https://www.pexels.com/photo/7639373/",
+    "author": "IT services EU",
+    "license": "https://www.pexels.com/license/"
+  },
+  "gsm": {
+    "file": "gsm",
+    "alt": "Intervention sur un smartphone avec des outils de précision",
+    "source": "https://www.pexels.com/photo/6754839/",
+    "author": "Tima Miroshnichenko",
+    "license": "https://www.pexels.com/license/"
+  },
+  "cartouches": {
+    "file": "cartouches",
+    "alt": "Cartouches d’encre dans une imprimante photo",
+    "source": "https://www.pexels.com/photo/17536002/",
+    "author": "Jakub Zerdzicki",
+    "license": "https://www.pexels.com/license/"
+  }
+}

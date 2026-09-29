@@ -1,235 +1,34 @@
 {% extends "base.html" %}
-{% import "macros.html" as ui with context %}
 {% block content %}
-
-<section class="hero">
-  <div class="container hero__grid">
-    <div class="hero__copy">
-      <span class="tag">Réparateur toutes marques · Saint-Gilles, Bruxelles</span>
-      <h1 class="display">Réparation d’imprimantes, PC &amp; Mac à Saint-Gilles.</h1>
-      <p class="lead hero__lead">Imprimantes, photocopieurs, ordinateurs, Mac et GSM&nbsp;: toutes marques, en atelier ou dans vos locaux. Un diagnostic précis, un devis clair, par une équipe qui répare la bureautique depuis l’époque des machines à écrire.</p>
-
-      <form class="quick-form" action="/contact/#formulaire" method="get">
-        <label class="visually-hidden" for="qf-appareil">Votre appareil ou votre panne</label>
-        <div class="quick-form__row">
-          <input class="quick-form__input" id="qf-appareil" name="appareil" type="text" maxlength="160" autocomplete="off" placeholder="Ex. : imprimante HP qui bourre, PC lent…">
-          <button class="btn btn--primary btn--lg" type="submit">Demander un devis</button>
-        </div>
-        <p class="quick-form__alt">ou appelez-nous&nbsp;: <a href="tel:{{ site.phone_intl }}" data-track="call">{{ ui.icon('phone') }}<span class="tnum">{{ site.phone }}</span></a></p>
-      </form>
-
-      <div class="hero__proof">
-        {{ ui.rating() }}
-        <ul class="trust" role="list">
-          <li>{{ ui.icon('check') }}Toutes marques</li>
-          <li>{{ ui.icon('check') }}Atelier &amp; sur site</li>
-          <li>{{ ui.icon('check') }}Devis avant réparation</li>
-        </ul>
-      </div>
-    </div>
-
-    <aside class="xp-card" aria-label="Plus de 30 ans d’expérience">
-      <div class="xp-card__top">
-        <span class="tag tag--line">Expérience</span>
-        <span class="caption">Bureautique &amp; informatique</span>
-      </div>
-      <p class="xp-card__num">30<span>+</span></p>
-      <p class="xp-card__label">ans à réparer les machines qui font tourner vos bureaux.</p>
-      <div class="timeline">
-        <ol class="timeline__track" role="list">
-          {%- for sym, label in [('tl-typewriter', 'Machine à écrire'), ('tl-fax', 'Fax'), ('tl-matrix', 'Matricielle'), ('tl-laser', 'Laser'), ('tl-desktop', 'PC'), ('tl-laptop', 'Mac')] %}
-          <li class="timeline__item">{{ ui.icon(sym) }}<span class="timeline__dot" aria-hidden="true"></span><span class="timeline__label">{{ label }}</span></li>
-          {%- endfor %}
-        </ol>
-        <p class="timeline__caption">De la machine à écrire au MacBook&nbsp;: nous connaissons chaque génération de machines.</p>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<section class="section section--fog" aria-labelledby="marques-titre">
-  <div class="container">
-    <div class="section-head section-head--center">
-      <h2 class="h3" id="marques-titre">Toutes les marques, réparées et entretenues</h2>
-      <p class="lead measure">Des grands noms de l’impression aux ordinateurs et aux Mac, nos techniciens interviennent sur les modèles récents comme sur les plus anciens.</p>
-    </div>
-    <ul class="brands" role="list">
-      {%- for b in site.brands.home %}
-      <li class="brands__item">{{ b }}</li>
-      {%- endfor %}
-    </ul>
-    <p class="brands-note">… et aussi Panasonic, Philips, Tektronix, IBM, Fujitsu Siemens, Compaq, Sony Vaio, Olympia.</p>
-  </div>
-</section>
-
-<section class="section" id="services" aria-labelledby="services-titre">
-  <div class="container">
-    <div class="section-head section-head--split">
-      <h2 class="h2" id="services-titre">Une seule adresse pour toutes vos machines.</h2>
-      <p class="lead">Réparation, entretien, consommables et matériel neuf&nbsp;: particuliers, indépendants et entreprises trouvent chez nous un interlocuteur unique, qui connaît leurs machines de A à Z.</p>
-    </div>
-    {{ ui.service_grid(['imprimante', 'ordinateur', 'mac', 'gsm', 'cartouches', 'entreprises']) }}
-    <div class="svc-more">
-      <p><strong>Besoin d’une nouvelle machine&nbsp;?</strong> Imprimantes, photocopieurs, scanners, PC et fournitures de bureau&nbsp;: conseillés, livrés et configurés.</p>
-      <a class="link-arrow" href="/vente-materiel/">Vente de matériel{{ ui.icon('arrow-right') }}</a>
-    </div>
-  </div>
-</section>
-
-<section class="section section--fog" aria-labelledby="experience-titre">
-  <div class="container">
-    <div class="split">
-      <div class="sticky stack-lg">
-        <h2 class="h2" id="experience-titre">Trente ans d’atelier. Et toujours la même exigence.</h2>
-        <p class="lead">L’histoire de Digital-Buro s’inscrit dans la révolution numérique qu’a connue la bureautique à partir des années 90. Fort de plus de 30 ans d’expérience de son dirigeant, le magasin a été parmi les premiers à investir dans un vrai service technique&nbsp;: réparer, entretenir et conseiller, plutôt que simplement vendre.</p>
-        <figure class="media">
-          <img src="/assets/img/vitrine-digital-buro-saint-gilles.webp" srcset="/assets/img/vitrine-digital-buro-saint-gilles-600.webp 600w, /assets/img/vitrine-digital-buro-saint-gilles.webp 900w" sizes="(min-width: 1024px) 560px, 100vw" width="900" height="334" loading="lazy" decoding="async" alt="La vitrine du magasin Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles : bureautique et informatique toutes marques">
-          <figcaption>Le magasin, Chaussée de Charleroi 257, quartier Ma Campagne.</figcaption>
-        </figure>
-        <a class="link-arrow" href="/a-propos/">Notre histoire{{ ui.icon('arrow-right') }}</a>
-      </div>
-      <ol class="reasons" role="list">
-        <li>
-          <span class="reasons__num">01</span>
-          <div>
-            <h3 class="reasons__title">L’œil de l’expérience</h3>
-            <p class="reasons__text">Une panne se reconnaît souvent à un bruit, à une trace sur la page ou à un message d’erreur. Plus de 30 ans de métier, c’est un diagnostic plus rapide et plus juste&nbsp;: du temps et de l’argent gagnés.</p>
-          </div>
-        </li>
-        <li>
-          <span class="reasons__num">02</span>
-          <div>
-            <h3 class="reasons__title">Un conseil honnête</h3>
-            <p class="reasons__text">Réparer ou remplacer&nbsp;? Nous vous disons ce qui vaut vraiment la peine, devis à l’appui. Si une réparation n’a pas de sens, nous vous le disons.</p>
-          </div>
-        </li>
-        <li>
-          <span class="reasons__num">03</span>
-          <div>
-            <h3 class="reasons__title">Le stock qui dépanne</h3>
-            <p class="reasons__text">Cartouches, toners, tambours et rubans pour toutes les marques, y compris pour les modèles anciens que les grandes surfaces ne proposent plus.</p>
-          </div>
-        </li>
-        <li>
-          <span class="reasons__num">04</span>
-          <div>
-            <h3 class="reasons__title">Un vrai magasin de quartier</h3>
-            <p class="reasons__text">Un comptoir à Saint-Gilles où l’on prend le temps de vous écouter et de vous expliquer, et des techniciens qui se déplacent dans vos locaux quand il le faut.</p>
-          </div>
-        </li>
-        <li>
-          <span class="reasons__num">05</span>
-          <div>
-            <h3 class="reasons__title">Du conseil à l’installation</h3>
-            <p class="reasons__text">Vente, livraison, installation et configuration de vos appareils, réseau compris&nbsp;: vous repartez avec une machine prête à l’emploi.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-    <div class="stats stats--4" style="margin-top:56px">
-      <div class="stat"><p class="stat__num">30<span>+</span></p><p class="stat__label">ans d’expérience en bureautique et informatique</p></div>
-      <div class="stat"><p class="stat__num">{{ site.google.rating }}</p><p class="stat__label">note moyenne sur 5 sur Google</p></div>
-      <div class="stat"><p class="stat__num">440<span>+</span></p><p class="stat__label">avis de clients sur Google</p></div>
-      <div class="stat"><p class="stat__num">6j/7</p><p class="stat__label">jours d’ouverture, du lundi au samedi</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" aria-labelledby="methode-titre">
-  <div class="container">
-    <div class="section-head section-head--split">
-      <h2 class="h2" id="methode-titre">Comment ça se passe&nbsp;?</h2>
-      <p class="lead">Simple et transparent, de la prise en charge de votre appareil jusqu’à sa remise en service. Aucune réparation n’est lancée sans votre accord.</p>
-    </div>
-    {{ ui.process() }}
-  </div>
-</section>
-
-<section class="section section--fog" aria-labelledby="avis-titre">
-  <div class="container">
-    <div class="split split--center">
-      <div class="review-card">
-        <div class="review-card__score">
-          <span class="review-card__num">{{ site.google.rating }}</span>
-          <span class="review-card__of">/ 5</span>
-        </div>
-        {{ ui.stars() }}
-        <p class="text">Note moyenne attribuée par nos clients sur Google, sur plus de 440 avis.</p>
-        <a class="btn btn--outline" href="{{ site.google.maps_url }}" target="_blank" rel="noopener">Lire les avis sur Google{{ ui.icon('arrow-up-right') }}</a>
-      </div>
-      <div class="stack-lg">
-        <h2 class="h2" id="avis-titre">Ce que nos clients retiennent.</h2>
-        <p class="lead">Sur Google, les mots qui reviennent le plus souvent dans les avis de nos clients sont «&nbsp;vendeur&nbsp;», «&nbsp;cartouches&nbsp;», «&nbsp;technicien&nbsp;» et «&nbsp;honnête&nbsp;». Un bon résumé de ce que nous essayons de faire chaque jour.</p>
-        <ul class="themes" role="list">
-          <li>Accueil et conseil au comptoir</li>
-          <li>Cartouches introuvables ailleurs</li>
-          <li>Techniciens compétents</li>
-          <li>Honnêteté</li>
-          <li>Réparations efficaces</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="acces" aria-labelledby="acces-titre">
-  <div class="container">
-    <div class="section-head section-head--split">
-      <h2 class="h2" id="acces-titre">Au cœur de Saint-Gilles, quartier Ma Campagne.</h2>
-      <p class="lead">Nos clients viennent de Saint-Gilles, d’Ixelles, de Forest, d’Uccle, d’Anderlecht et de tout Bruxelles. Passez au magasin&nbsp;: on regarde votre machine avec vous.</p>
-    </div>
-    <div class="split">
-      <div>
-        <ul class="info-list" role="list">
-          <li>{{ ui.icon('pin') }}<div><span class="info-list__label">Adresse</span><span class="info-list__value">{{ site.street }}, {{ site.postal }} {{ site.city }} (Bruxelles)</span></div></li>
-          <li>{{ ui.icon('tram') }}<div><span class="info-list__label">En transports en commun</span><span class="info-list__value">{{ site.transport }}</span></div></li>
-          <li>{{ ui.icon('phone') }}<div><span class="info-list__label">Téléphone</span><a class="info-list__value tnum" href="tel:{{ site.phone_intl }}" data-track="call">{{ site.phone }}</a></div></li>
-          <li>{{ ui.icon('mail') }}<div><span class="info-list__label">E-mail</span><a class="info-list__value" href="mailto:{{ site.email }}" data-track="email">{{ site.email }}</a></div></li>
-        </ul>
-        <div class="btn-row" style="margin-top:24px">
-          {{ ui.directions_btn(label="Itinéraire vers le magasin", cls="btn--primary") }}
-          <a class="btn btn--outline" href="/contact/">Contact &amp; plan{{ ui.icon('arrow-right') }}</a>
-        </div>
-      </div>
-      <div>
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:8px">
-          <h3 class="h4">Horaires d’ouverture</h3>
-          <span class="status" data-status data-state="unknown"><span class="status__dot" aria-hidden="true"></span><span class="text-sm muted" data-status-text></span></span>
-        </div>
-        {{ ui.hours_table() }}
-        <p class="notice" style="margin-top:12px">Jours fériés et congés&nbsp;: un doute&nbsp;? Appelez-nous avant de vous déplacer.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--fog" aria-labelledby="faq-titre">
-  <div class="container">
-    <div class="split">
-      <div class="sticky stack">
-        <h2 class="faq-title" id="faq-titre">Questions fréquentes</h2>
-        <p class="lead">Une autre question&nbsp;? Appelez-nous au <a href="tel:{{ site.phone_intl }}" data-track="call">{{ site.phone }}</a>, on vous répond volontiers.</p>
-      </div>
-      {{ ui.faq([
-        ("Réparez-vous toutes les marques ?",
-         "<p>Oui. Imprimantes HP, Canon, Epson, Brother, OKI, Xerox, Ricoh, Kyocera, Lexmark ; ordinateurs HP, Dell, Lenovo, Acer, Asus, Toshiba ; Mac… Nous intervenons sur toutes les marques, y compris sur des machines anciennes comme les imprimantes matricielles, les fax et les machines à écrire.</p>"),
-        ("Faut-il prendre rendez-vous ?",
-         "<p>Vous pouvez passer directement au magasin aux heures d’ouverture, du lundi au vendredi de 10h30 à 18h et le samedi de 11h à 17h. Pour une intervention dans vos locaux, appelez-nous au 02 534 47 02 afin de convenir d’un moment.</p>"),
-        ("Combien coûte une réparation ?",
-         "<p>Le prix dépend de la panne et des pièces nécessaires. Après le diagnostic, vous recevez un devis précis et vous décidez en connaissance de cause de faire réparer ou non. Les conditions du diagnostic vous sont expliquées clairement dès la prise en charge de votre appareil.</p>"),
-        ("Vous déplacez-vous à domicile ou en entreprise ?",
-         "<p>Oui, nos techniciens interviennent dans vos locaux à Bruxelles, notamment pour les imprimantes de bureau, les photocopieurs et les réseaux. Pour un ordinateur portable ou un GSM, le plus rapide est souvent de le déposer au magasin.</p>"),
-        ("Avez-vous des cartouches pour les anciennes imprimantes ?",
-         "<p>C’est l’une de nos spécialités : nous avons un large stock de cartouches, de toners, de tambours et de rubans, y compris pour des modèles que l’on ne trouve plus en grande surface. Apportez votre ancienne cartouche ou sa référence, ou <a href=\"/cartouches-toners/\">consultez notre page cartouches et toners</a>.</p>"),
-        ("Vaut-il mieux réparer ou racheter ?",
-         "<p>Cela dépend de l’appareil. Pour une imprimante laser professionnelle ou un ordinateur de qualité, remplacer une pièce d’usure coûte souvent bien moins cher qu’un appareil neuf. Si la réparation ne vaut pas la peine, nous vous le disons et vous proposons une alternative adaptée à votre usage.</p>"),
-        ("Comment venir au magasin ?",
-         "<p>Digital-Buro se trouve Chaussée de Charleroi 257, à 1060 Saint-Gilles, dans le quartier Ma Campagne. Le tram 92 s’arrête à Ma Campagne. <a href=\"/contact/\">Voir le plan et l’itinéraire</a>.</p>")
-      ]) }}
-    </div>
-  </div>
-</section>
-
-{{ ui.cta_band("Une machine en panne ? Parlons-en.", "Passez au magasin, appelez-nous ou décrivez votre panne en ligne : nous vous proposons une solution claire, au juste prix.") }}
-
+<section class="hero home-hero"><div class="container hero__grid">
+<div class="hero__copy"><span class="eyebrow">VOTRE RÉPARATEUR DE QUARTIER · BRUXELLES</span>
+<h1 class="display">Réparation d’imprimantes,<br> PC &amp; Mac<br> à <span class="draw-line">Saint-Gilles.</span></h1>
+<p class="lead">Votre appareil fait des siennes ? On s’en occupe. Plus de 30 ans d’expérience.</p>
+<div class="hero-status">{{ fx.status() }}</div>
+<div class="btn-row">{{ ui.call_btn(label="02 534 47 02", cls="btn--primary btn--lg") }}{{ ui.directions_btn(cls="btn--outline btn--lg") }}</div>
+<a class="link-arrow" href="/contact/#formulaire">Demander un devis {{ ui.icon('arrow-right') }}</a>
+<div class="hero-rating">{{ fx.gmark() }}{{ ui.rating(label="448 avis Google") }}</div>
+</div>
+<div class="hero-scene"><div class="scene-grid" aria-hidden="true"></div><figure class="shop-card"><img src="/assets/img/vitrine-digital-buro-saint-gilles.webp" srcset="/assets/img/vitrine-digital-buro-saint-gilles-600.webp 600w, /assets/img/vitrine-digital-buro-saint-gilles.webp 900w" sizes="(min-width:1024px) 520px, calc(100vw - 64px)" alt="La vraie vitrine Digital-Buro, Chaussée de Charleroi à Saint-Gilles" width="900" height="334" fetchpriority="high"><figcaption><span>{{ ui.icon('pin') }} Ma Campagne, Saint-Gilles</span><strong>Votre magasin. Vos solutions.</strong></figcaption></figure>
+<span class="floating-note floating-note--top">{{ fx.gmark() }}<span><strong>4,7 / 5</strong><small>448 avis Google</small></span></span>
+<div class="scene-repair"><img src="/assets/img/ill-printer.svg" alt="" width="320" height="200"><span><strong>Une seconde vie.</strong><small>Ça commence ici.</small></span></div>
+{{ fx.seal() }}<span class="floating-note floating-note--bottom">{{ ui.icon('check') }} Toutes marques</span></div>
+</div></section>
+<section class="device-section" id="services"><div class="container"><div class="section-head section-head--split"><div><span class="eyebrow">ON COMMENCE PAR QUOI ?</span><h2 class="h3">Qu’est-ce qui est en panne ?</h2></div><a class="link-arrow" href="/entreprises/">Vous êtes une entreprise ? {{ ui.icon('arrow-right') }}</a></div>
+<div class="device-grid">{% for key,label,icon in [('imprimante','Imprimante / copieur','printer'),('ordinateur','PC portable','laptop'),('ordinateur','PC fixe','monitor'),('mac','Mac / MacBook','tl-laptop'),('gsm','GSM / tablette','smartphone'),('cartouches','Cartouche / toner','droplet')] %}<a class="device-tile" href="{{ services[key].url }}">{{ ui.icon(icon) }}<span>{{ label }}</span>{{ ui.icon('arrow-up-right') }}</a>{% endfor %}</div></div></section>
+<section class="proof-band"><div class="container proof-grid"><div><strong><span data-count="30">30</span>+</strong><span>ans d’expérience du dirigeant</span></div><div><strong><span data-count="4.7" data-decimals="1">4,7</span><span class="proof-star">★</span></strong><span>sur Google</span></div><div><strong data-count="448">448</strong><span>avis sur Google</span></div><div><strong>Toutes marques.</strong><span>Les récentes. Et les anciennes.</span></div></div></section>
+<section class="section section--fog"><div class="container"><div class="section-head section-head--split"><div><span class="eyebrow">RÉPARER. ÉQUIPER. CONSEILLER.</span><h2 class="h2">Un problème en moins.<br>Un appareil qui repart.</h2></div><a class="link-arrow" href="/vente-materiel/">Aussi du matériel neuf {{ ui.icon('arrow-right') }}</a></div>{{ ui.service_grid(['imprimante','ordinateur','mac','gsm','cartouches','entreprises']) }}</div></section>
+{{ fx.reviews() }}
+<section class="section section--fog"><div class="container"><div class="split split--center"><div class="story-photo">{{ fx.photo('ordinateur') }}<span class="photo-label">Le goût du travail bien fait.</span></div><div class="stack-lg"><span class="eyebrow">UN VRAI MAGASIN, TOUT SIMPLEMENT.</span><h2 class="h2">Les machines changent.<br>Le savoir-faire reste.</h2><ul class="reason-list" role="list"><li>{{ ui.icon('wrench') }}<span><strong>30 ans de métier.</strong> L’expérience au service de votre appareil.</span></li><li>{{ ui.icon('check') }}<span><strong>Un devis avant réparation.</strong> Vous choisissez en connaissance de cause.</span></li><li>{{ ui.icon('pin') }}<span><strong>À deux pas de chez vous.</strong> Un interlocuteur à Saint-Gilles.</span></li><li>{{ ui.icon('building') }}<span><strong>À l’atelier ou sur site.</strong> Une solution pour votre bureau.</span></li></ul><a class="link-arrow" href="/a-propos/">Notre histoire {{ ui.icon('arrow-right') }}</a></div></div><div class="timeline-heading"><h3 class="h4">De la machine à écrire au MacBook.</h3><p class="text-sm muted">Chaque génération de machines nous a appris quelque chose.</p></div>{{ fx.timeline() }}</div></section>
+<section class="section"><div class="container"><div class="section-head"><span class="eyebrow">SIMPLE, DU DÉBUT À LA FIN.</span><h2 class="h2">Et maintenant ?</h2></div>{{ ui.process() }}</div></section>
+{{ fx.brands(site.brands.home) }}
+<section class="section" id="acces"><div class="container split"><div class="stack-lg"><span class="eyebrow">ON EST JUSTE ICI.</span><h2 class="h2">Rendez-vous<br>à Ma Campagne.</h2><p class="lead">{{ site.street }}<br>1060 Saint-Gilles, Bruxelles</p>{{ fx.status() }}{{ ui.hours_table() }}<p class="caption">Horaires habituels. Pour les jours fériés, appelez avant de venir.</p><div class="btn-row">{{ ui.directions_btn(cls="btn--primary") }}{{ ui.call_btn(label="Appeler", cls="btn--outline") }}</div></div><div class="stack-lg"><figure class="shop-location"><img src="/assets/img/vitrine-digital-buro-saint-gilles.webp" alt="L’enseigne et la vitrine de Digital-Buro à Ma Campagne" width="900" height="334" loading="lazy"></figure>{{ ui.map_facade() }}<p class="caption">{{ site.transport }} · Un magasin au service de tout Bruxelles.</p></div></div></section>
+<section class="section section--fog"><div class="container split"><div class="stack"><span class="eyebrow">LES RÉPONSES UTILES.</span><h2 class="h2">Avant de passer.</h2><a class="link-arrow" href="/contact/">Une autre question ? {{ ui.icon('arrow-right') }}</a></div>{{ ui.faq([
+('Réparez-vous mon appareil ?', '<p>Imprimantes, photocopieurs, PC, Mac, GSM et tablettes : contactez-nous avec la marque et le modèle. Nous vérifions la prise en charge et les pièces disponibles, y compris pour les machines anciennes.</p>'),
+('Combien coûte une réparation ?', '<p>Le tarif dépend de la panne et des pièces. Demandez les conditions du diagnostic avant le dépôt. Le devis permet ensuite de décider si la réparation vous convient.</p>'),
+('Faut-il prendre rendez-vous ?', '<p>Appelez le 02 534 47 02 avant de venir : nous vous indiquons comment déposer votre appareil ou organiser une intervention dans vos locaux.</p>'),
+('Vous avez la bonne cartouche ?', '<p>Apportez votre ancienne cartouche ou sa référence. Nous proposons des cartouches, toners et rubans toutes marques, y compris pour des modèles anciens. Appelez pour vérifier la disponibilité.</p>')]) }}</div></section>
+{{ fx.callback() }}
+{{ ui.cta_band('On regarde ça ensemble ?', 'Un appel, et vous savez par où commencer.') }}
 {% endblock %}
+

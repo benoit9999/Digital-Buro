@@ -1,4 +1,5 @@
 {%- import "macros.html" as ui with context -%}
+{%- import "partials/fresh-macros.html" as fx with context -%}
 <!doctype html>
 <html lang="{{ page.lang_tag }}">
 <head>
@@ -49,5 +50,6 @@
 {% include "partials/consent.html" %}
 <script id="site-data" type="application/json">{{ runtime_json|safe }}</script>
 <script src="/assets/js/main.js?v={{ v.js }}" defer></script>
+<script src="/assets/js/refresh.js?v={{ v.refresh_js }}" defer></script>
 </body>
 </html>

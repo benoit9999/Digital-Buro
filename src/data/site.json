@@ -6,14 +6,12 @@
   "vat_compact": "BE0874004642",
   "tagline": "Votre meilleur partenaire bureautique & digital",
   "experience_years": "30",
-
   "phone": "02 534 47 02",
   "phone_intl": "+3225344702",
   "phone_display_intl": "+32 2 534 47 02",
   "fax": "02 534 53 51",
   "fax_intl": "+3225345351",
   "email": "digital-buro@skynet.be",
-
   "street": "Chaussée de Charleroi 257",
   "street_nl": "Charleroise Steenweg 257",
   "postal": "1060",
@@ -26,7 +24,6 @@
   "lng": 4.3539242,
   "plus_code": "R9F3+JH Saint-Gilles",
   "transport": "Tram 92, arrêt Ma Campagne",
-
   "google": {
     "rating": "4,7",
     "rating_en": "4.7",
@@ -37,21 +34,84 @@
     "cid_url": "https://www.google.com/maps?cid=4568478121866388337",
     "directions_url": "https://www.google.com/maps/dir/?api=1&destination=Digital-Buro%2C%20Chauss%C3%A9e%20de%20Charleroi%20257%2C%201060%20Saint-Gilles",
     "embed_url": "https://www.google.com/maps?q=Digital-Buro,+Chauss%C3%A9e+de+Charleroi+257,+1060+Saint-Gilles&hl=fr&z=16&output=embed",
-    "review_url": ""
+    "review_url": "",
+    "review_count": 448,
+    "checked_on": "2026-09-28"
   },
-
   "hours": [
-    {"day": "Lundi", "day_nl": "Maandag", "day_en": "Monday", "code": "Mo", "schema": "Monday", "open": "10:30", "close": "18:00"},
-    {"day": "Mardi", "day_nl": "Dinsdag", "day_en": "Tuesday", "code": "Tu", "schema": "Tuesday", "open": "10:30", "close": "18:00"},
-    {"day": "Mercredi", "day_nl": "Woensdag", "day_en": "Wednesday", "code": "We", "schema": "Wednesday", "open": "10:30", "close": "18:00"},
-    {"day": "Jeudi", "day_nl": "Donderdag", "day_en": "Thursday", "code": "Th", "schema": "Thursday", "open": "10:30", "close": "18:00"},
-    {"day": "Vendredi", "day_nl": "Vrijdag", "day_en": "Friday", "code": "Fr", "schema": "Friday", "open": "10:30", "close": "18:00"},
-    {"day": "Samedi", "day_nl": "Zaterdag", "day_en": "Saturday", "code": "Sa", "schema": "Saturday", "open": "11:00", "close": "17:00"},
-    {"day": "Dimanche", "day_nl": "Zondag", "day_en": "Sunday", "code": "Su", "schema": "Sunday", "open": "", "close": ""}
+    {
+      "day": "Lundi",
+      "day_nl": "Maandag",
+      "day_en": "Monday",
+      "code": "Mo",
+      "schema": "Monday",
+      "open": "10:30",
+      "close": "18:00"
+    },
+    {
+      "day": "Mardi",
+      "day_nl": "Dinsdag",
+      "day_en": "Tuesday",
+      "code": "Tu",
+      "schema": "Tuesday",
+      "open": "10:30",
+      "close": "18:00"
+    },
+    {
+      "day": "Mercredi",
+      "day_nl": "Woensdag",
+      "day_en": "Wednesday",
+      "code": "We",
+      "schema": "Wednesday",
+      "open": "10:30",
+      "close": "18:00"
+    },
+    {
+      "day": "Jeudi",
+      "day_nl": "Donderdag",
+      "day_en": "Thursday",
+      "code": "Th",
+      "schema": "Thursday",
+      "open": "10:30",
+      "close": "18:00"
+    },
+    {
+      "day": "Vendredi",
+      "day_nl": "Vrijdag",
+      "day_en": "Friday",
+      "code": "Fr",
+      "schema": "Friday",
+      "open": "10:30",
+      "close": "18:00"
+    },
+    {
+      "day": "Samedi",
+      "day_nl": "Zaterdag",
+      "day_en": "Saturday",
+      "code": "Sa",
+      "schema": "Saturday",
+      "open": "11:00",
+      "close": "17:00"
+    },
+    {
+      "day": "Dimanche",
+      "day_nl": "Zondag",
+      "day_en": "Sunday",
+      "code": "Su",
+      "schema": "Sunday",
+      "open": "",
+      "close": ""
+    }
   ],
-
-  "areas": ["Saint-Gilles", "Ixelles", "Forest", "Uccle", "Anderlecht", "Bruxelles-Ville", "Etterbeek"],
-
+  "areas": [
+    "Saint-Gilles",
+    "Ixelles",
+    "Forest",
+    "Uccle",
+    "Anderlecht",
+    "Bruxelles-Ville",
+    "Etterbeek"
+  ],
   "services": [
     {
       "key": "imprimante",
@@ -61,7 +121,7 @@
       "url": "/reparation-imprimante/",
       "icon": "printer",
       "art": "ill-printer.svg",
-      "teaser": "Laser, jet d’encre, multifonctions, matricielles et photocopieurs : bourrages, traces, erreurs, tête d’impression bouchée…",
+      "teaser": "Bourrage, traces, code erreur : retrouvons le plaisir d’imprimer.",
       "link": "Réparation d’imprimantes"
     },
     {
@@ -72,7 +132,7 @@
       "url": "/reparation-ordinateur/",
       "icon": "laptop",
       "art": "ill-laptop.svg",
-      "teaser": "Écran, clavier, batterie, PC lent ou infecté, passage à Windows 11, SSD et mémoire, récupération de données.",
+      "teaser": "PC lent, écran cassé ou batterie fatiguée : on regarde ça.",
       "link": "Réparation d’ordinateurs"
     },
     {
@@ -83,7 +143,7 @@
       "url": "/reparation-mac/",
       "icon": "monitor",
       "art": "ill-mac.svg",
-      "teaser": "Diagnostic, écran, batterie, clavier, macOS, sauvegarde et migration : votre Mac entre de bonnes mains.",
+      "teaser": "MacBook, iMac, Mac mini : une seconde vie pour votre Mac.",
       "link": "Réparation Mac"
     },
     {
@@ -94,7 +154,7 @@
       "url": "/reparation-gsm-tablette/",
       "icon": "smartphone",
       "art": "ill-phone.svg",
-      "teaser": "Écran cassé, batterie fatiguée, connecteur de charge : smartphones et tablettes réparés près de chez vous.",
+      "teaser": "Écran, batterie, charge : parlons de votre smartphone ou tablette.",
       "link": "Réparation GSM & tablettes"
     },
     {
@@ -105,7 +165,7 @@
       "url": "/cartouches-toners/",
       "icon": "droplet",
       "art": "ill-cartridges.svg",
-      "teaser": "Un grand stock d’encre, de toners, de tambours et de rubans pour toutes les marques, y compris les anciens modèles.",
+      "teaser": "La bonne référence, même pour votre ancienne imprimante.",
       "link": "Cartouches & toners"
     },
     {
@@ -116,7 +176,7 @@
       "url": "/entreprises/",
       "icon": "building",
       "art": "ill-network.svg",
-      "teaser": "Intervention dans vos locaux, entretien du parc, réseau et Wi-Fi, installation et livraison de consommables.",
+      "teaser": "Votre bureau continue de tourner. Intervention sur site à Bruxelles.",
       "link": "Services aux entreprises"
     },
     {
@@ -127,20 +187,86 @@
       "url": "/vente-materiel/",
       "icon": "package",
       "art": "ill-copier.svg",
-      "teaser": "Imprimantes, photocopieurs, scanners, PC, réseau, logiciels et fournitures : conseillés, installés et configurés.",
+      "teaser": "Le bon matériel, conseillé, installé et configuré.",
       "link": "Vente de matériel"
     }
   ],
-
   "brands": {
-    "home": ["HP", "Canon", "Epson", "Brother", "OKI", "Xerox", "Ricoh", "Kyocera", "Lexmark", "Samsung", "Konica Minolta", "Olivetti", "Dell", "Lenovo", "Acer", "Asus", "Toshiba", "Apple"],
-    "printers": ["HP", "Canon", "Epson", "Brother", "OKI", "Xerox", "Ricoh", "Kyocera", "Lexmark", "Samsung", "Konica Minolta", "Panasonic", "Olivetti", "Dell", "Philips", "Tektronix", "IBM", "Olympia"],
-    "computers": ["HP", "Dell", "Lenovo", "Acer", "Asus", "Toshiba", "Fujitsu Siemens", "Compaq", "Samsung", "Sony Vaio", "Microsoft"],
-    "network": ["TP-Link", "D-Link", "Linksys", "US Robotics", "Belkin"],
-    "accessories": ["Logitech", "Kingston", "Iomega", "Belkin"],
-    "software": ["Windows", "Microsoft Office", "Kaspersky", "Bitdefender", "Norton", "McAfee"]
+    "home": [
+      "HP",
+      "Canon",
+      "Epson",
+      "Brother",
+      "OKI",
+      "Xerox",
+      "Ricoh",
+      "Kyocera",
+      "Lexmark",
+      "Samsung",
+      "Konica Minolta",
+      "Olivetti",
+      "Dell",
+      "Lenovo",
+      "Acer",
+      "Asus",
+      "Toshiba",
+      "Apple"
+    ],
+    "printers": [
+      "HP",
+      "Canon",
+      "Epson",
+      "Brother",
+      "OKI",
+      "Xerox",
+      "Ricoh",
+      "Kyocera",
+      "Lexmark",
+      "Samsung",
+      "Konica Minolta",
+      "Panasonic",
+      "Olivetti",
+      "Dell",
+      "Philips",
+      "Tektronix",
+      "IBM",
+      "Olympia"
+    ],
+    "computers": [
+      "HP",
+      "Dell",
+      "Lenovo",
+      "Acer",
+      "Asus",
+      "Toshiba",
+      "Fujitsu Siemens",
+      "Compaq",
+      "Samsung",
+      "Sony Vaio",
+      "Microsoft"
+    ],
+    "network": [
+      "TP-Link",
+      "D-Link",
+      "Linksys",
+      "US Robotics",
+      "Belkin"
+    ],
+    "accessories": [
+      "Logitech",
+      "Kingston",
+      "Iomega",
+      "Belkin"
+    ],
+    "software": [
+      "Windows",
+      "Microsoft Office",
+      "Kaspersky",
+      "Bitdefender",
+      "Norton",
+      "McAfee"
+    ]
   },
-
   "tracking": {
     "_comment": "Laisser vide pour désactiver tout suivi (et la bannière cookies). Renseigner l'ID Google Ads (AW-XXXXXXXXX) et/ou GA4 (G-XXXXXXXXXX) pour activer la bannière de consentement et le suivi des conversions.",
     "google_ads_id": "",
@@ -148,6 +274,649 @@
     "conversion_label_call": "",
     "conversion_label_form": ""
   },
-
-  "credit": ""
+  "credit": "",
+  "whatsapp": "",
+  "prices": {},
+  "reviews_api": {
+    "enabled": false,
+    "place_id": "",
+    "endpoint": "/api/reviews.php"
+  },
+  "photos": {
+    "imprimante": {
+      "file": "imprimante",
+      "alt": "Photocopieur multifonction blanc dans un bureau",
+      "source": "https://unsplash.com/photos/CGnoRQZGWmw",
+      "author": "engin akyurt",
+      "license": "https://unsplash.com/license"
+    },
+    "entreprises": {
+      "file": "entreprises",
+      "alt": "Imprimante et matériel informatique dans un bureau lumineux",
+      "source": "https://unsplash.com/photos/8r1ZlqqGxMU",
+      "author": "Meatball Overexposure",
+      "license": "https://unsplash.com/license"
+    },
+    "mac": {
+      "file": "mac",
+      "alt": "MacBook ouvert sur un bureau en bois",
+      "source": "https://unsplash.com/photos/mCg0ZgD7BgU",
+      "author": "Aleksi Tappura",
+      "license": "https://unsplash.com/license"
+    },
+    "ordinateur": {
+      "file": "ordinateur",
+      "alt": "Réparation d’un ordinateur portable ouvert avec un tournevis",
+      "source": "https://www.pexels.com/photo/7639373/",
+      "author": "IT services EU",
+      "license": "https://www.pexels.com/license/"
+    },
+    "gsm": {
+      "file": "gsm",
+      "alt": "Intervention sur un smartphone avec des outils de précision",
+      "source": "https://www.pexels.com/photo/6754839/",
+      "author": "Tima Miroshnichenko",
+      "license": "https://www.pexels.com/license/"
+    },
+    "cartouches": {
+      "file": "cartouches",
+      "alt": "Cartouches d’encre dans une imprimante photo",
+      "source": "https://www.pexels.com/photo/17536002/",
+      "author": "Jakub Zerdzicki",
+      "license": "https://www.pexels.com/license/"
+    },
+    "vente": {
+      "file": "imprimante",
+      "alt": "Photocopieur multifonction blanc dans un bureau",
+      "source": "https://unsplash.com/photos/CGnoRQZGWmw",
+      "author": "engin akyurt",
+      "license": "https://unsplash.com/license"
+    }
+  },
+  "reviews": [
+    {
+      "author": "Nathan M.",
+      "initial": "N",
+      "rating": 5,
+      "date": null,
+      "date_label": "Vers juin 2026",
+      "text": "Merci à l’équipe de Digital-Buro pour le professionnalisme et l’efficacité de leurs réparations.",
+      "tags": [
+        "pc"
+      ],
+      "response": "",
+      "source": "https://www.google.com/maps?cid=4568478121866388337"
+    },
+    {
+      "author": "Corine S.",
+      "initial": "C",
+      "rating": 5,
+      "date": null,
+      "date_label": "Vers juillet 2026",
+      "text": "Le monsieur était tres accueillant et bienveillant. Il est de bon conseil et la qualité des produits est géniale.",
+      "tags": [
+        "vente",
+        "accueil"
+      ],
+      "response": "",
+      "source": "https://www.google.com/maps?cid=4568478121866388337"
+    },
+    {
+      "author": "Michael M.",
+      "initial": "M",
+      "rating": 5,
+      "date": null,
+      "date_label": "Vers mars 2026",
+      "text": "Une expérience fantastique chez Digital Buro sur la Chaussée de Charleroi ! ⭐",
+      "tags": [
+        "accueil"
+      ],
+      "response": "",
+      "source": "https://www.google.com/maps?cid=4568478121866388337"
+    }
+  ],
+  "service_content": {
+    "imprimante": {
+      "tag": "LE CŒUR DE NOTRE MÉTIER",
+      "h1": "Réparation d’imprimantes à Saint-Gilles.",
+      "lead": "Bourrages, traces, erreurs : redonnons de belles pages à votre imprimante.",
+      "device": "Imprimante",
+      "photo": "imprimante",
+      "eyebrow": "LASER, JET D’ENCRE ET PHOTOCOPIEURS",
+      "heading": "Elle imprime mal ? On regarde.",
+      "intro": [
+        "Votre imprimante bloque le travail à la maison ou au bureau ? Digital-Buro prend en charge imprimantes et photocopieurs toutes marques à Saint-Gilles, près de Ma Campagne.",
+        "Laser, jet d’encre, multifonction ou ancienne matricielle : indiquez-nous le modèle et le défaut observé. L’expérience du dirigeant aide à reconnaître les pannes et à orienter le diagnostic."
+      ],
+      "symptoms": [
+        [
+          "paper-jam",
+          "Bourrage papier"
+        ],
+        [
+          "lines",
+          "Traces sur la feuille"
+        ],
+        [
+          "droplet",
+          "Couleurs manquantes"
+        ],
+        [
+          "alert",
+          "Code erreur"
+        ],
+        [
+          "power",
+          "Ne s’allume plus"
+        ],
+        [
+          "wifi",
+          "Imprimante introuvable"
+        ],
+        [
+          "scan",
+          "Scanner bloqué"
+        ],
+        [
+          "thermometer",
+          "Toner qui s’efface"
+        ]
+      ],
+      "brands": [
+        "HP",
+        "Canon",
+        "Epson",
+        "Brother",
+        "OKI",
+        "Xerox",
+        "Ricoh",
+        "Kyocera"
+      ],
+      "note": "Photocopieur difficile à transporter ? Demandez une intervention dans vos locaux à Bruxelles.",
+      "review_tag": "imprimante",
+      "faq": [
+        [
+          "Quel budget prévoir ?",
+          "<p>Le coût dépend du modèle, de la panne et des pièces. Demandez les conditions du diagnostic avant de déposer votre appareil. Le devis vous permet de décider de la suite, sans mauvaise surprise sur les travaux envisagés.</p>"
+        ],
+        [
+          "Réparer ou remplacer ?",
+          "<p>L’état de la machine, son usage et les pièces disponibles comptent autant que son âge. Après diagnostic, comparez le devis au remplacement. Nous pouvons aussi vous conseiller une imprimante adaptée à votre volume d’impression.</p>"
+        ],
+        [
+          "Que faut-il apporter ?",
+          "<p>Notez le modèle et le code erreur. Une page montrant les traces ou les couleurs manquantes nous aide beaucoup. Appelez avant de transporter un appareil lourd ou encombrant.</p>"
+        ],
+        [
+          "Et les cartouches des anciens modèles ?",
+          "<p>Nous proposons des cartouches, toners, tambours et rubans, y compris pour des modèles anciens. Apportez la référence de votre consommable ou une photo de l’étiquette de l’imprimante pour vérifier la compatibilité et la disponibilité.</p>"
+        ]
+      ],
+      "advice": "Pour préparer votre visite, notez quand le défaut apparaît : au démarrage, pendant l’impression ou au scan. Évitez de démonter la machine. Nous vous aidons à choisir entre entretien, réparation et remplacement selon votre besoin.",
+      "related": [
+        "cartouches",
+        "vente",
+        "entreprises"
+      ],
+      "process_title": "Du premier échange à la solution.",
+      "faq_title": "Vos questions, nos réponses."
+    },
+    "ordinateur": {
+      "tag": "PC FIXES & PORTABLES · TOUTES MARQUES",
+      "h1": "Réparation de PC à Saint-Gilles.",
+      "lead": "Un PC qui ralentit, s’éteint ou ne démarre plus ? Parlons-en.",
+      "device": "PC portable",
+      "photo": "ordinateur",
+      "eyebrow": "VOTRE ORDINATEUR PEUT ENCORE SERVIR",
+      "heading": "Retrouvez un PC agréable à utiliser.",
+      "intro": [
+        "Pour travailler, étudier ou gérer le quotidien, un ordinateur en panne complique tout. Notre magasin de Saint-Gilles vous accompagne pour la réparation de PC fixes et portables, toutes marques.",
+        "Un écran abîmé, une batterie usée ou des lenteurs ne demandent pas la même intervention. Expliquez ce qui a changé et donnez le modèle : nous orientons la prise en charge."
+      ],
+      "symptoms": [
+        [
+          "laptop",
+          "Écran cassé"
+        ],
+        [
+          "battery",
+          "Batterie fatiguée"
+        ],
+        [
+          "power",
+          "Démarrage impossible"
+        ],
+        [
+          "settings",
+          "PC lent"
+        ],
+        [
+          "thermometer",
+          "Surchauffe"
+        ],
+        [
+          "wifi",
+          "Connexion instable"
+        ],
+        [
+          "shield",
+          "Logiciels indésirables"
+        ],
+        [
+          "keyboard",
+          "Clavier défectueux"
+        ]
+      ],
+      "brands": [
+        "HP",
+        "Dell",
+        "Lenovo",
+        "Asus",
+        "Acer",
+        "Toshiba",
+        "Samsung"
+      ],
+      "note": "Votre PC fonctionne encore sous Windows 10 ? Vérifions sa compatibilité avec Windows 11 avant d’envisager la migration.",
+      "review_tag": "pc",
+      "faq": [
+        [
+          "Quel budget prévoir ?",
+          "<p>Le coût dépend du modèle, de la panne et des pièces. Demandez les conditions du diagnostic avant de déposer votre appareil. Le devis vous permet de décider de la suite, sans mauvaise surprise sur les travaux envisagés.</p>"
+        ],
+        [
+          "Un PC lent doit-il être remplacé ?",
+          "<p>Pas forcément. Le stockage, la mémoire ou les logiciels peuvent expliquer les lenteurs. Selon le modèle, une remise en état ou une évolution du matériel peut être envisageable. Nous discutons des options après diagnostic.</p>"
+        ],
+        [
+          "Comment préparer mes données ?",
+          "<p>Sauvegardez vos fichiers si l’ordinateur fonctionne encore. Signalez les documents importants et vos besoins avant toute intervention. Une récupération dépend de l’état du support : aucun résultat ne peut être promis avant examen.</p>"
+        ],
+        [
+          "Mon ordinateur peut-il passer à Windows 11 ?",
+          "<p>Cela dépend de sa configuration et des exigences de Microsoft. Nous vérifions la compatibilité du modèle avant de proposer une migration. Pensez à sauvegarder vos documents et à signaler les logiciels dont vous avez besoin.</p>"
+        ]
+      ],
+      "advice": "Apportez le chargeur de votre portable et décrivez les symptômes. Précisez si le souci apparaît sur batterie, au branchement ou avec un logiciel particulier. Ces informations facilitent le diagnostic et évitent les essais inutiles.",
+      "related": [
+        "mac",
+        "vente",
+        "entreprises"
+      ],
+      "process_title": "Du premier échange à la solution.",
+      "faq_title": "Vos questions, nos réponses."
+    },
+    "mac": {
+      "tag": "MACBOOK · IMAC · MAC MINI",
+      "h1": "Réparation de Mac à Saint-Gilles.",
+      "lead": "Votre Mac mérite de retrouver son rythme. Voyons ce qui le ralentit.",
+      "device": "Mac",
+      "photo": "mac",
+      "eyebrow": "UNE SECONDE VIE POUR VOTRE MAC",
+      "heading": "Le bon diagnostic, pour votre modèle.",
+      "intro": [
+        "Vous utilisez un MacBook, un iMac ou un Mac mini à Bruxelles ? Digital-Buro vous accueille à Saint-Gilles pour faire le point sur une panne, une batterie fatiguée ou un problème de fonctionnement.",
+        "Chaque génération de Mac a ses particularités. Précisez le modèle et l’année : nous vérifions les possibilités d’intervention et de remplacement des pièces avant de vous orienter."
+      ],
+      "symptoms": [
+        [
+          "monitor",
+          "Écran endommagé"
+        ],
+        [
+          "battery",
+          "Autonomie réduite"
+        ],
+        [
+          "keyboard",
+          "Touches défaillantes"
+        ],
+        [
+          "power",
+          "Mac qui ne démarre plus"
+        ],
+        [
+          "settings",
+          "macOS instable"
+        ],
+        [
+          "thermometer",
+          "Ventilation bruyante"
+        ]
+      ],
+      "brands": [
+        "MacBook Air",
+        "MacBook Pro",
+        "iMac",
+        "Mac mini"
+      ],
+      "note": "Réparateur indépendant. La prise en charge dépend du modèle et des pièces disponibles.",
+      "review_tag": "mac",
+      "faq": [
+        [
+          "Quel budget prévoir ?",
+          "<p>Le coût dépend du modèle, de la panne et des pièces. Demandez les conditions du diagnostic avant de déposer votre appareil. Le devis vous permet de décider de la suite, sans mauvaise surprise sur les travaux envisagés.</p>"
+        ],
+        [
+          "Quel est le délai ?",
+          "<p>Le délai dépend du diagnostic et des pièces disponibles pour votre modèle. Contactez-nous avec sa référence : nous vous indiquerons comment organiser la prise en charge, puis les possibilités de réparation après examen.</p>"
+        ],
+        [
+          "Faut-il apporter le chargeur ?",
+          "<p>Oui, pour un MacBook, le chargeur aide à distinguer un problème d’alimentation d’une panne de batterie. Notez aussi les symptômes : écran noir, extinction, bruit inhabituel ou autonomie réduite, et le moment où ils apparaissent.</p>"
+        ],
+        [
+          "Mes fichiers seront-ils conservés ?",
+          "<p>Faites une sauvegarde avant de confier votre Mac si vous le pouvez. Indiquez les données à préserver et les opérations autorisées. Les possibilités de récupération dépendent du modèle et de l’état du stockage ; elles nécessitent un diagnostic.</p>"
+        ]
+      ],
+      "advice": "Avant de venir, relevez les informations disponibles dans « À propos de ce Mac » ou sur l’étiquette de l’appareil. Ne communiquez pas vos mots de passe par le formulaire. Nous préciserons avec vous ce qui est nécessaire à l’intervention.",
+      "related": [
+        "ordinateur",
+        "vente",
+        "entreprises"
+      ],
+      "process_title": "Du premier échange à la solution.",
+      "faq_title": "Vos questions, nos réponses."
+    },
+    "gsm": {
+      "tag": "SMARTPHONES & TABLETTES",
+      "h1": "Réparation de GSM à Saint-Gilles.",
+      "lead": "Écran cassé, charge impossible ? Commençons par le modèle de votre téléphone.",
+      "device": "GSM / tablette",
+      "photo": "gsm",
+      "eyebrow": "VOTRE TÉLÉPHONE AU QUOTIDIEN",
+      "heading": "Un souci qui vous bloque ?",
+      "intro": [
+        "Un smartphone ou une tablette accompagne les appels, les photos et le travail. Pour une réparation de GSM à Saint-Gilles, contactez Digital-Buro avec la marque et le modèle de votre appareil.",
+        "Le type d’écran, la batterie et le connecteur varient selon les versions. Nous vérifions les possibilités de prise en charge et la disponibilité des pièces avant de vous proposer la suite."
+      ],
+      "symptoms": [
+        [
+          "smartphone",
+          "Écran fissuré"
+        ],
+        [
+          "battery",
+          "Batterie qui se vide"
+        ],
+        [
+          "power",
+          "Ne s’allume plus"
+        ],
+        [
+          "settings",
+          "Charge impossible"
+        ],
+        [
+          "alert",
+          "Affichage défectueux"
+        ],
+        [
+          "droplet",
+          "Contact avec un liquide"
+        ]
+      ],
+      "brands": [
+        "Apple",
+        "Samsung",
+        "Huawei",
+        "Xiaomi"
+      ],
+      "note": "Sauvegardez vos photos et vos contacts avant toute intervention, si l’appareil le permet.",
+      "review_tag": "gsm",
+      "faq": [
+        [
+          "Quel budget prévoir ?",
+          "<p>Le coût dépend du modèle, de la panne et des pièces. Demandez les conditions du diagnostic avant de déposer votre appareil. Le devis vous permet de décider de la suite, sans mauvaise surprise sur les travaux envisagés.</p>"
+        ],
+        [
+          "Quel est le délai ?",
+          "<p>Le délai dépend du diagnostic et des pièces disponibles pour votre modèle. Contactez-nous avec sa référence : nous vous indiquerons comment organiser la prise en charge, puis les possibilités de réparation après examen.</p>"
+        ],
+        [
+          "Mon téléphone a pris l’eau, que faire ?",
+          "<p>Éteignez-le et ne le mettez pas en charge. Évitez de le chauffer ou de le démonter. Contactez-nous en précisant ce qui s’est passé. L’étendue des dommages et les possibilités de réparation ne peuvent être évaluées qu’après examen.</p>"
+        ],
+        [
+          "Réparez-vous mon modèle de tablette ?",
+          "<p>Appelez avec la référence exacte, généralement visible dans les réglages ou au dos. La prise en charge dépend du modèle, de la panne et des pièces disponibles. Nous vous indiquons les informations utiles avant votre déplacement.</p>"
+        ]
+      ],
+      "advice": "Décrivez le problème simplement : la batterie se vide, le câble ne tient plus ou une partie de l’écran ne répond pas. Indiquez toute chute ou exposition à un liquide. N’envoyez ni code de déverrouillage ni mot de passe via le formulaire.",
+      "related": [
+        "ordinateur",
+        "mac",
+        "cartouches"
+      ],
+      "process_title": "Du premier échange à la solution.",
+      "faq_title": "Vos questions, nos réponses."
+    },
+    "cartouches": {
+      "tag": "ENCRE, TONER & CONSOMMABLES",
+      "h1": "Cartouches et toners à Saint-Gilles.",
+      "lead": "La bonne référence pour votre imprimante. Même si elle a quelques années.",
+      "device": "Cartouche / toner",
+      "photo": "cartouches",
+      "eyebrow": "LE SPÉCIALISTE DES CONSOMMABLES",
+      "heading": "Vous imprimez. On vous équipe.",
+      "intro": [
+        "À la recherche d’une cartouche d’encre, d’un toner ou d’un ruban à Bruxelles ? Notre magasin de Saint-Gilles propose un grand choix de consommables pour imprimantes, photocopieurs et machines de bureau.",
+        "Apportez votre ancienne cartouche ou la référence de la machine. Nous vous aidons à identifier le bon produit, notamment pour les modèles anciens dont les références sont parfois difficiles à retrouver."
+      ],
+      "symptoms": [
+        [
+          "droplet",
+          "Cartouches d’encre"
+        ],
+        [
+          "printer",
+          "Toners laser"
+        ],
+        [
+          "settings",
+          "Tambours"
+        ],
+        [
+          "paper",
+          "Rubans"
+        ],
+        [
+          "scan",
+          "Consommables pour copieurs"
+        ],
+        [
+          "building",
+          "Fournitures pour bureaux"
+        ]
+      ],
+      "brands": [
+        "HP",
+        "Canon",
+        "Epson",
+        "Brother",
+        "OKI",
+        "Lexmark",
+        "Ricoh"
+      ],
+      "note": "Une référence précise ? Appelez avant de venir pour vérifier le stock.",
+      "review_tag": "cartouches",
+      "faq": [
+        [
+          "Comment trouver la bonne cartouche ?",
+          "<p>Relevez la référence sur l’ancienne cartouche et le modèle exact de l’imprimante. Une photo nette de chaque étiquette est utile. Le nom de la marque seul ne suffit pas à garantir la compatibilité.</p>"
+        ],
+        [
+          "Avez-vous des références anciennes ?",
+          "<p>Nous proposons aussi des consommables pour des machines anciennes : encre, toner et rubans. Leur disponibilité dépend de la référence. Contactez-nous avant de vous déplacer pour que nous vérifiions le produit recherché.</p>"
+        ],
+        [
+          "Toner ou tambour : que remplacer ?",
+          "<p>Le toner contient la poudre d’impression ; le tambour participe au transfert de l’image. Ils sont séparés sur certains modèles. Notez le message affiché par l’imprimante afin de ne pas remplacer le mauvais consommable.</p>"
+        ],
+        [
+          "Livrez-vous les entreprises ?",
+          "<p>Digital-Buro propose la livraison de consommables aux professionnels. Contactez-nous avec vos références, quantités et adresse à Bruxelles pour connaître les possibilités et conditions adaptées à votre bureau.</p>"
+        ]
+      ],
+      "advice": "Une cartouche neuve ne résout pas toutes les pannes d’impression. Si les traces persistent ou si la machine affiche une erreur, décrivez le défaut au magasin. Nous pouvons vous orienter vers un diagnostic plutôt que vers un achat inutile.",
+      "related": [
+        "imprimante",
+        "vente",
+        "entreprises"
+      ],
+      "process_title": "Du premier échange à la solution.",
+      "faq_title": "Vos questions, nos réponses."
+    },
+    "vente": {
+      "tag": "CHOISIR LE BON MATÉRIEL",
+      "h1": "Matériel informatique à Saint-Gilles.",
+      "lead": "Une imprimante, un PC, un bureau à équiper ? Partons de vos besoins.",
+      "device": "Achat de matériel",
+      "photo": "vente",
+      "eyebrow": "DU CONSEIL À L’INSTALLATION",
+      "heading": "Bien équipé, tout simplement.",
+      "intro": [
+        "Digital-Buro propose la vente de matériel bureautique et informatique à Saint-Gilles : imprimantes, photocopieurs, scanners et ordinateurs. Nous vous aidons à choisir selon votre usage et votre budget.",
+        "Pour la maison ou votre entreprise à Bruxelles, pensez au coût des consommables, aux connexions et à la place disponible. Ces détails comptent autant que la fiche technique pour choisir un appareil agréable à utiliser."
+      ],
+      "symptoms": [
+        [
+          "printer",
+          "Imprimantes"
+        ],
+        [
+          "scan",
+          "Photocopieurs & scanners"
+        ],
+        [
+          "laptop",
+          "PC portables"
+        ],
+        [
+          "monitor",
+          "Ordinateurs de bureau"
+        ],
+        [
+          "wifi",
+          "Matériel réseau"
+        ],
+        [
+          "package",
+          "Fournitures & accessoires"
+        ]
+      ],
+      "brands": [
+        "HP",
+        "Canon",
+        "Epson",
+        "Brother",
+        "Dell",
+        "Lenovo"
+      ],
+      "note": "Votre usage, votre budget, vos consommables : trois repères pour un achat adapté.",
+      "review_tag": "vente",
+      "faq": [
+        [
+          "Laser ou jet d’encre ?",
+          "<p>Le volume de pages, la fréquence d’utilisation et le besoin de couleur orientent le choix. Indiquez ce que vous imprimez : documents de bureau, photos ou travaux scolaires. Nous comparons les possibilités en tenant compte des consommables.</p>"
+        ],
+        [
+          "Installez-vous le matériel ?",
+          "<p>Nous proposons l’installation et la configuration de matériel de bureau. Contactez-nous pour préciser les appareils à raccorder, votre réseau et votre adresse. Les modalités se définissent selon les besoins de votre installation.</p>"
+        ],
+        [
+          "Pouvez-vous équiper une entreprise ?",
+          "<p>Oui. Imprimantes, photocopieurs, ordinateurs et consommables peuvent être étudiés ensemble. Expliquez le nombre d’utilisateurs, les documents imprimés et les besoins du bureau pour que nous vous orientions vers une solution adaptée.</p>"
+        ],
+        [
+          "Comment connaître les prix ?",
+          "<p>Appelez ou envoyez votre besoin par le formulaire. Les modèles, les configurations et la disponibilité font varier les prix. Un échange au magasin permet de comparer les options et de préciser les frais d’installation éventuels.</p>"
+        ]
+      ],
+      "advice": "Vous remplacez un appareil existant ? Apportez sa référence et notez ce qui vous convient ou vous manque. Nous examinerons avec vous le format, les usages et les possibilités d’entretien pour préparer votre achat.",
+      "related": [
+        "imprimante",
+        "cartouches",
+        "entreprises"
+      ],
+      "process_title": "Du premier échange à la solution.",
+      "faq_title": "Vos questions, nos réponses."
+    },
+    "entreprises": {
+      "tag": "INDÉPENDANTS, ASSOCIATIONS & PME",
+      "h1": "Dépannage informatique pour entreprises à Bruxelles.",
+      "lead": "Une panne ne devrait pas arrêter votre bureau. Parlons de votre installation.",
+      "device": "Entreprise",
+      "photo": "entreprises",
+      "eyebrow": "UN INTERLOCUTEUR POUR VOTRE BUREAU",
+      "heading": "Vos outils doivent suivre votre rythme.",
+      "intro": [
+        "Basé à Saint-Gilles, Digital-Buro accompagne les professionnels de Bruxelles pour l’entretien et la réparation de leur matériel de bureau. Imprimantes, photocopieurs, informatique et consommables : les besoins se traitent avec un même interlocuteur.",
+        "Décrivez le matériel concerné, les utilisateurs touchés et le problème rencontré. Nous vous indiquons comment organiser le diagnostic et, selon le besoin, une intervention dans vos locaux ou à l’atelier."
+      ],
+      "symptoms": [
+        [
+          "printer",
+          "Imprimante partagée en panne"
+        ],
+        [
+          "wifi",
+          "Réseau & Wi-Fi"
+        ],
+        [
+          "settings",
+          "Entretien du matériel"
+        ],
+        [
+          "laptop",
+          "Postes de travail"
+        ],
+        [
+          "package",
+          "Livraison de consommables"
+        ],
+        [
+          "building",
+          "Installation sur site"
+        ]
+      ],
+      "brands": [
+        "HP",
+        "Canon",
+        "Brother",
+        "Ricoh",
+        "Kyocera",
+        "Dell",
+        "Lenovo"
+      ],
+      "note": "Saint-Gilles, Ixelles, Forest, Uccle et Bruxelles : contactez-nous pour organiser une intervention.",
+      "review_tag": "entreprises",
+      "faq": [
+        [
+          "Intervenez-vous dans nos locaux ?",
+          "<p>Oui, Digital-Buro propose des interventions sur site à Bruxelles, notamment pour les machines de bureau et le réseau. Communiquez l’adresse, le modèle et les symptômes afin de convenir des modalités et d’un passage.</p>"
+        ],
+        [
+          "Proposez-vous un entretien régulier ?",
+          "<p>Nous pouvons étudier l’entretien de votre matériel de bureau selon son usage. Indiquez les machines, leur ancienneté et votre volume d’impression. Le périmètre et la fréquence se définissent avec vous.</p>"
+        ],
+        [
+          "Pouvez-vous installer un nouveau bureau ?",
+          "<p>Nous proposons la vente, l’installation et la configuration de matériel informatique et bureautique. Décrivez vos postes, imprimantes et besoins de connexion : nous vous aidons à préparer un équipement cohérent pour votre activité.</p>"
+        ],
+        [
+          "Comment demander une intervention ?",
+          "<p>Appelez le 02 534 47 02 ou utilisez le formulaire en choisissant « Entreprise ». Précisez le modèle, le message d’erreur et le nombre d’utilisateurs concernés. N’envoyez pas de mots de passe.</p>"
+        ]
+      ],
+      "advice": "Pour une panne qui touche plusieurs personnes, notez si elle concerne tous les postes ou une seule machine. Signalez les changements récents : nouveau routeur, nouvel ordinateur ou déplacement d’une imprimante. Cela aide à cibler les premières vérifications.",
+      "related": [
+        "imprimante",
+        "ordinateur",
+        "cartouches"
+      ],
+      "process_title": "Du premier échange à la solution.",
+      "faq_title": "Vos questions, nos réponses."
+    }
+  }
 }

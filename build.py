@@ -141,7 +141,7 @@ I18N = {
         "consent_more": "Meer info",
         "consent_accept": "Aanvaarden",
         "consent_reject": "Weigeren",
-        "svc_names": {"imprimante": "Printerherstelling", "ordinateur": "Pc- en laptopherstelling", "mac": "Mac-herstelling", "gsm": "Gsm- en tabletherstelling"},
+        "svc_names": {"imprimante": "Printerherstelling", "ordinateur": "Pc- en laptopherstelling", "mac": "Mac-herstelling"},
         "status": {
             "open": "Nu open · tot {close}",
             "today": "Gesloten · opent vandaag om {open}",
@@ -196,7 +196,7 @@ I18N = {
         "consent_more": "Learn more",
         "consent_accept": "Accept",
         "consent_reject": "Decline",
-        "svc_names": {"imprimante": "Printer repair", "ordinateur": "PC & laptop repair", "mac": "Mac repair", "gsm": "Phone & tablet repair"},
+        "svc_names": {"imprimante": "Printer repair", "ordinateur": "PC & laptop repair", "mac": "Mac repair"},
         "status": {
             "open": "Open now · until {close}",
             "today": "Closed · opens today at {open}",
@@ -285,7 +285,7 @@ def business_node(site):
         "alternateName": "DIGITAL-BURO",
         "legalName": site["legal_name"],
         "description": "Magasin de bureautique et d’informatique à Saint-Gilles (Bruxelles) : réparation "
-                       "d’imprimantes, de photocopieurs, de PC, de Mac et de GSM toutes marques, cartouches "
+                       "d’imprimantes, de photocopieurs, de PC et de Mac toutes marques, cartouches "
                        "et toners, vente, installation et maintenance de matériel.",
         "slogan": "Votre meilleur partenaire bureautique & digital",
         "url": f"{url}/",
@@ -449,6 +449,7 @@ def main():
             shutil.copy2(item, dest)
 
     versions = {
+        "brand": short_hash(out / "favicon.svg"),
         "refresh": short_hash(out / "assets/css/refresh.css"),
         "refresh_js": short_hash(out / "assets/js/refresh.js"),
         "css": short_hash(css_path),

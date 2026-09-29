@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "pages": 16,
+  "checks": [
+    "Avis uniquement sur les accueils FR/NL/EN",
+    "Aucun service GSM dans le HTML, les liens, le sitemap et les données structurées",
+    "Formules retirées absentes",
+    "Page GSM retirée du site généré"
+  ]
+}

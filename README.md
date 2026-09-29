@@ -1,6 +1,6 @@
 # Digital-Buro — refonte du site vitrine
 
-Version du 29 septembre 2026. Site statique généré avec Python/Jinja2, compatible avec l’hébergement Apache/PHP existant. Les 17 URL sont conservées. Rien n’a été publié sur le site de production.
+Version du 29 septembre 2026. Site statique généré avec Python/Jinja2, compatible avec l’hébergement Apache/PHP existant. Le site comprend 16 pages. La page GSM/tablettes ajoutée pendant la maquette a été retirée faute de confirmation sur le site d’origine ; les URL des prestations confirmées sont conservées. Rien n’a été publié sur le site de production.
 
 ## Générer et prévisualiser
 
@@ -17,7 +17,7 @@ Aperçu : http://localhost:8080. Le serveur Python montre le site mais **n’ex�
 | `src/data/site.json` | Coordonnées, horaires, services, contenus courts, photos, avis, options |
 | `src/data/pages.json` | Titres SEO, descriptions, URL, langues et fil d’Ariane |
 | `src/pages/` | Accueil, contact, histoire, guide, pages légales et entrées des services |
-| `src/templates/service-compact.html` | Structure commune des sept pages de service |
+| `src/templates/service-compact.html` | Structure commune des six pages de service |
 | `src/templates/partials/fresh-macros.html` | Avis, photos, rappel, frise, marques, badge |
 | `src/assets/css/style.css`, `refresh.css` | Base et nouvelle direction visuelle ; fusionnées au build |
 | `src/assets/js/main.js`, `refresh.js` | Navigation, formulaires, interactions sans bibliothèque |
@@ -57,7 +57,7 @@ Trois **extraits** attribués à Nathan M., Corine S. et Michael M. sont intégr
 
 La note 4,7/5 et le total 448 correspondent au relevé du 28 septembre 2026, pas à une mise à jour en direct. Modifier `site.google` pour les actualiser. Les dates exactes n’étant pas connues, `date` reste null et `date_label` indique un mois approximatif. Une date ISO confirmée active l’affichage relatif. Ne pas transformer un mois approximatif en jour inventé.
 
-Le filtre utilise les tags des avis. Faute d’avis vérifié correspondant au service, le composant présente la sélection générale et le précise. Il n’affiche donc pas trois avis spécialisés pour chaque métier. Ajouter les avis imprimante/cartouches et entreprise dès réception de leurs textes exacts, notes et dates.
+Les avis sont affichés uniquement sur les pages d’accueil FR/NL/EN. Aucun bloc d’avis ni badge de note ne surcharge les pages de service, le contact ou la présentation du magasin.
 
 Le bloc est une sélection éditoriale du magasin avec attribution Google Maps, pas un widget officiel ni une certification Google.
 
@@ -97,7 +97,8 @@ Les destinations des annonces peuvent pointer directement vers le service concer
 
 ## À confirmer avec le client
 
-- Prix de diagnostic, délais, garanties, rendez-vous et périmètre exact des réparations GSM/tablettes.
+- Prix de diagnostic, délais, garanties et conditions de dépôt.
+- GSM/tablettes : non proposés dans cette version. Réintroduire uniquement après confirmation explicite du client, avec des informations vérifiables.
 - Année de début du dirigeant : conservation prudente de « plus de 30 ans », sans inventer « depuis 1987 ».
 - Photos actuelles du magasin, du rayonnage et de l’atelier ; autorisation d’utiliser les personnes éventuellement photographiées.
 - Textes exacts, notes et dates des avis manquants ; actualisation des chiffres Google.
@@ -109,3 +110,7 @@ Les destinations des annonces peuvent pointer directement vers le service concer
 
 Consulter `CHANGELOG.md` et `artifacts/VALIDATION.md` pour les modifications, résultats et limites des tests.
 
+
+## Dernière passe de finalisation
+
+Les titres ont été simplifiés, les avis concentrés sur l’accueil et les accès au magasin renforcés. Les pages Vente et Cartouches disposent de leurs propres étapes. De fins séparateurs bleu nuit/orange structurent les sections ; le monogramme du favicon est centré sur les contours des lettres. La vérification des prestations est documentée dans `artifacts/source-audit/VERIFICATION.md`.

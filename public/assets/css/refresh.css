@@ -37,5 +37,10 @@
 .motion-paused .experience-seal>svg,.motion-paused .brand-run{animation-play-state:paused!important}
 /* Opaque chrome avoids continuously blurring the moving content underneath. */
 .site-header,.callbar{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none}
+/* Fine navy/ember separators mark section changes without adding visual weight. */
+main>section+section,main>section+.brand-band,main>.brand-band+section{border-top:1px solid #d8dce6;border-image:linear-gradient(90deg,#0b1f4d20,#ff590048 50%,#0b1f4d20) 1}
+.visit-address{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--graphite);margin-top:16px}
+.visit-address a{text-decoration:underline;text-underline-offset:3px}
+.visit-actions{margin-top:24px}
 .experience-seal>svg,.brand-run{will-change:transform}
 @media(prefers-reduced-motion:reduce){.experience-seal>svg,.brand-run{will-change:auto}}

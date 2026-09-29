@@ -1,6 +1,8 @@
 """Vectorise le logo historique avec Inter ; rasterisation via raster_brand.cjs."""
 from pathlib import Path
 from fontTools.ttLib import TTFont
+from fontTools.pens.boundsPen import BoundsPen
+from fontTools.pens.transformPen import TransformPen
 from make_brand import glyph_run, path_for
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,8 +30,15 @@ def logo(a, b):
 
 for name,a,b in [('logo','#ff5900','#0b1f4d'),('logo-heritage','#ec222a','#3e59aa'),('logo-white','#ffffff','#ffffff')]:
     (IMG/f'{name}.svg').write_text(logo(a,b),encoding='utf-8')
-mark_text,_ = text_paths('D-B',28,77,49,'#0b1f4d')
-mark=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144"><rect width="144" height="144" rx="30" fill="white"/><path d="M25 42Q72 7 119 42" fill="none" stroke="#ff5900" stroke-width="7" stroke-linecap="round"/>{mark_text}<path d="M25 99Q72 134 119 99" fill="none" stroke="#0b1f4d" stroke-width="7" stroke-linecap="round"/></svg>'''
+# Centre the visible glyph outlines, not their advance width or baseline.
+glyphs = font.getGlyphSet()
+bounds = BoundsPen(glyphs)
+for name, dx in glyph_run(font, 'D-B', -0.028)[0]:
+    glyphs[name].draw(TransformPen(bounds, (1, 0, 0, 1, dx, 0)))
+x0, y0, x1, y1 = bounds.bounds
+scale = 49 / font['head'].unitsPerEm
+mark_text,_ = text_paths('D-B',72-(x0+x1)*scale/2,72+(y0+y1)*scale/2,49,'#0b1f4d')
+mark=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144"><rect width="144" height="144" rx="30" fill="white"/><path d="M25 42Q72 7 119 42" fill="none" stroke="#ff5900" stroke-width="7" stroke-linecap="round"/>{mark_text}<path d="M25 102Q72 137 119 102" fill="none" stroke="#0b1f4d" stroke-width="7" stroke-linecap="round"/></svg>'''
 (IMG/'logo-mark.svg').write_text(mark,encoding='utf-8')
 (ROOT/'src/static/favicon.svg').write_text(mark,encoding='utf-8')
 og=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f3f3f7"/><rect x="780" width="420" height="630" fill="#0b1f4d"/><g transform="translate(50 30)">{logo('#ff5900','#0b1f4d').replace('<svg ', '<svg x="0" y="0" ')}</g>'''

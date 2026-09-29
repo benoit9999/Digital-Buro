@@ -2,13 +2,13 @@
 
 ## Build
 
-17 pages générées. Résultat :
+16 pages générées après retrait de l’offre GSM non confirmée. Résultat :
 
 > ✓ Aucun lien cassé, un seul H1 par page, titres et descriptions uniques.
 
-La sortie complète figure dans [build-report.txt](build-report.txt). Les URL et métadonnées restent définies dans `src/data/pages.json`. Le fichier de redirections Apache existant est conservé.
+La sortie complète figure dans [build-report.txt](build-report.txt). Les URL des prestations confirmées et leurs métadonnées restent définies dans `src/data/pages.json`. Le fichier de redirections Apache existant est conservé.
 
-## Lighthouse mobile
+## Lighthouse mobile — mesures de la refonte avant cette dernière passe
 
 | Page | Performance | Accessibilité | SEO | CLS |
 |---|---:|---:|---:|---:|
@@ -55,3 +55,11 @@ Pour Lighthouse, définir `LH_BASE=http://127.0.0.1:8081`, puis exécuter `node 
 
 Tester sur l’hébergement : formulaires contact/rappel avec réception effective, erreurs de validation PHP, adresse d’expédition autorisée, HTTPS/www et anciennes URL. Confirmer les données commerciales et les photos avec le client. Le flux Places est une option préparée côté serveur, pas une récupération automatique actuellement active.
 
+
+## Contrôles de finalisation
+
+Le build final génère 16 pages sans lien cassé. Les contrôles navigateur ont été relancés après les modifications : aucun débordement sur les cinq largeurs testées, menus, FAQ, carrousel d’accueil et formulaires simulés fonctionnels. Le contrôle axe-core ne remonte aucune violation sur les six pages examinées.
+
+`content-checks.json` confirme que les avis sont présents uniquement sur les accueils FR/NL/EN, que l’offre GSM est absente du HTML, du catalogue structuré et du sitemap, et que les formules signalées sont retirées. Le favicon régénéré a été contrôlé visuellement. Les captures correspondent à cette dernière version.
+
+Les scores Lighthouse conservés ci-dessus sont ceux de la précédente refonte, pas une nouvelle mesure de cette passe éditoriale. Les limites de validation PHP et de messagerie restent inchangées.

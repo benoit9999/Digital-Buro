@@ -9,9 +9,9 @@
     <div class="page-hero__copy" style="max-width:48rem">
       <span class="tag">Saint-Gilles · Bruxelles</span>
       <h1 class="h1">Contact, horaires et accès</h1>
-      <p class="lead">Passez au magasin, appelez-nous ou décrivez votre demande ci-dessous&nbsp;: nous vous répondons pendant les heures d’ouverture.</p>
+      <p class="lead">Retrouvez-nous Chaussée de Charleroi 257, à Ma Campagne. Pour une question, appelez-nous ou utilisez le formulaire.</p>
     </div>
-    <div style="margin-top:20px">{{ ui.rating() }}</div>
+    <div class="btn-row" style="margin-top:20px">{{ ui.directions_btn(label="Venir au magasin",cls="btn--primary") }}<a class="btn btn--outline" href="#horaires">Voir les horaires</a></div>
     <div class="contact-cards" style="margin-top:40px">
       <a class="contact-card" href="tel:{{ site.phone_intl }}" data-track="call">
         {{ ui.icon('phone') }}
@@ -23,7 +23,7 @@
         {{ ui.icon('mail') }}
         <span class="contact-card__label">E-mail</span>
         <span class="contact-card__value">{{ site.email }}</span>
-        <span class="contact-card__hint">Réponse pendant les heures d’ouverture</span>
+        <span class="contact-card__hint">Écrire au magasin</span>
       </a>
       <a class="contact-card" href="{{ site.google.directions_url }}" target="_blank" rel="noopener" data-track="directions">
         {{ ui.icon('pin') }}
@@ -39,7 +39,7 @@
 <section class="section section--fog" id="formulaire" aria-labelledby="form-titre">
   <div class="container split">
     <div class="form-card">
-      <h2 class="h3" id="form-titre">Parlons de votre appareil.</h2>
+      <h2 class="h3" id="form-titre">Envoyer une demande</h2>
       <p class="text" style="margin-top:8px">Un téléphone ou un e-mail suffit pour vous répondre.</p>
       <form class="form" style="margin-top:28px" action="/api/contact.php" method="post" data-contact-form>
         <div class="form__row form__row--2">
@@ -61,7 +61,7 @@
         </div>
         <div class="field">
           <label class="field__label" for="f-appareil">Appareil</label>
-          <select class="field__input" id="f-appareil" name="appareil"><option value="">Choisir un appareil</option>{% for label in ['Imprimante','Photocopieur','PC portable','PC fixe','Mac','GSM / tablette','Cartouche / toner','Entreprise','Achat de matériel','Autre'] %}<option>{{ label }}</option>{% endfor %}</select>
+          <select class="field__input" id="f-appareil" name="appareil"><option value="">Choisir un appareil</option>{% for label in ['Imprimante','Photocopieur','PC portable','PC fixe','Mac','Cartouche / toner','Entreprise','Achat de matériel','Autre'] %}<option>{{ label }}</option>{% endfor %}</select>
         </div>
         <div class="field">
           <label class="field__label" for="f-message">Votre message <small>(facultatif)</small></label>
@@ -78,10 +78,10 @@
       </form>
     </div>
 
-    <div class="stack-lg">
+    <div class="stack-lg" id="acces">
       <div>
         <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:8px">
-          <h2 class="h4">Horaires d’ouverture</h2>
+          <h2 class="h4" id="horaires">Horaires d’ouverture</h2>
           <span class="status" data-status data-state="unknown"><span class="status__dot" aria-hidden="true"></span><span class="text-sm muted" data-status-text></span></span>
         </div>
         {{ ui.hours_table() }}

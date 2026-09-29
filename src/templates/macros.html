@@ -148,10 +148,11 @@
 </div>
 {%- endmacro %}
 
-{% macro process() -%}
+{% macro process(custom_steps=None) -%}
 <ol class="steps" role="list">
-{% set steps = [('Vous nous contactez', 'Un appel ou un passage au magasin pour parler de votre appareil.'), ('Diagnostic et devis', 'La panne identifiée, vous choisissez la suite.'), ('Votre appareil repart', 'La réparation convenue, votre machine retrouve son utilité.')] %}
+{% set steps = [('Vous nous contactez', 'Un appel ou un passage au magasin pour parler de votre appareil.'), ('Diagnostic et devis', 'La panne identifiée, vous choisissez la suite.'), ('Réparation', 'Nous réalisons les travaux convenus avec vous.')] %}
 {% if page.lang == 'en' %}{% set steps = [('Get in touch','Call or visit to tell us about your device.'),('Diagnosis and estimate','Understand the problem and choose the next step.'),('Back in service','We carry out the agreed repair.')] %}{% elif page.lang == 'nl' %}{% set steps = [('Neem contact op','Bel of kom langs om uw toestel te bespreken.'),('Diagnose en offerte','U kent het probleem en kiest de volgende stap.'),('Weer aan het werk','We voeren de afgesproken herstelling uit.')] %}{% endif %}
+{% if custom_steps %}{% set steps=custom_steps %}{% endif %}
 {% for title,desc in steps %}<li class="step"><span class="step__num">0{{ loop.index }}</span><h3 class="step__title">{{ title }}</h3><p class="step__text">{{ desc }}</p></li>{% endfor %}
 </ol>{%- endmacro %}
 
@@ -169,7 +170,7 @@
       </div>
       <div class="btn-row">
         {{ call_btn(cls="btn--primary btn--lg") }}
-        {{ quote_btn(cls="btn--outline btn--lg") }}
+        {{ directions_btn(cls="btn--outline btn--lg") }}
       </div>
     </div>
   </div>

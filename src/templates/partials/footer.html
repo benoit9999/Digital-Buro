@@ -15,7 +15,7 @@
       <div>
         <h2 class="footer__title">{{ t.f_repairs }}</h2>
         <ul class="footer__links" role="list">
-          {%- for k in ['imprimante', 'ordinateur', 'mac', 'gsm'] %}{% set s = services[k] %}
+          {%- for k in ['imprimante', 'ordinateur', 'mac'] %}{% set s = services[k] %}
           <li><a href="{{ s.url }}"{% if page.lang != 'fr' %} hreflang="fr"{% endif %}>{{ s.link if page.lang == 'fr' else t.svc_names[k] }}</a></li>
           {%- endfor %}
           <li><a href="/conseils/fonctionnement-imprimante-laser-jet-encre/"{% if page.lang != 'fr' %} hreflang="fr"{% endif %}>{{ t.f_guide }}</a></li>

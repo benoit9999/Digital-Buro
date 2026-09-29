@@ -1,3 +1,16 @@
+# Finalisation du parcours client
+
+- Version précédente sauvegardée et poussée sur main : 67a4244.
+- Vérification du site d’origine et de ses bannières : imprimantes, PC et Mac confirmés ; aucune prestation GSM/tablettes trouvée. Offre GSM retirée des menus, cartes, formulaire, métadonnées, données structurées et sitemap. Le site généré contient désormais 16 pages.
+- Avis conservés sur les seuls accueils FR/NL/EN. Suppression des notes répétées sur les autres pages et du titre « La confiance, ça se répare aussi ».
+- Retrait de « Le goût du travail bien fait », titres plus factuels et conseils de visite raccourcis.
+- Adresse accessible dans les premières sections ; boutons vers le magasin et les horaires plus visibles. Le parcours Cartouches/Vente ne décrit plus une réparation.
+- Suppression de la promesse de migration Windows 11, non confirmée sur le site d’origine.
+- Séparateurs fins bleu nuit/orange entre sections. Favicon D-B centré géométriquement ; icônes régénérées et URL versionnées pour renouveler le cache.
+- Build, parcours responsive, menus, FAQ, formulaires simulés, absence de GSM et contrôle axe-core revérifiés. Aucun déploiement sur le domaine public.
+
+---
+
 # Changements — 29 septembre 2026
 
 - Logo redessiné depuis l’enseigne : arcs, points, lettrage vectoriel et quatre variantes. Favicons, icônes mobiles et image de partage régénérés.

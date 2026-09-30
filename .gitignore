@@ -1,4 +1,5 @@
 .deps/
+.pages-site/
 tools/qa-deps/
 __pycache__/
 *.pyc

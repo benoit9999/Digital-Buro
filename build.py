@@ -13,6 +13,7 @@ Mise en page / composants : src/templates/
 Dépendance unique : Jinja2  (pip install -r requirements.txt)
 """
 import datetime as dt
+import argparse
 import hashlib
 import html
 import json
@@ -423,12 +424,35 @@ def build_jsonld(site, page, rendered_html):
 # ---------------------------------------------------------------------------
 # Construction
 # ---------------------------------------------------------------------------
+def mount_html(markup, base_path):
+    """Prefix local HTML URLs, including every responsive-image candidate."""
+    def attribute(match):
+        name, quote, value = match.groups()
+        if name.lower() == "srcset":
+            value = re.sub(r"(^|,\s*)(/)(?!/)", lambda m: m[1] + base_path + "/", value)
+        elif value.startswith("/") and not value.startswith("//"):
+            value = base_path + value
+        return name + "=" + quote + value + quote
+    return re.sub(r'''\b(href|src|srcset|action|poster)=(['"])(.*?)\2''', attribute, markup, flags=re.I)
+
+
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--serve", action="store_true")
+    parser.add_argument("--github-pages", action="store_true")
+    parser.add_argument("--base-path", default="")
+    args = parser.parse_args()
+    base_path = args.base_path.rstrip("/")
+    if base_path and not re.fullmatch(r"/[A-Za-z0-9._-]+", base_path):
+        parser.error("--base-path doit être vide ou un chemin comme /Digital-Buro")
+    if base_path and not args.github_pages:
+        parser.error("--base-path nécessite --github-pages")
+    destination = ROOT / ".pages-site" if args.github_pages else OUT
     site = json.loads((SRC / "data" / "site.json").read_text(encoding="utf-8"))
     pages = json.loads((SRC / "data" / "pages.json").read_text(encoding="utf-8"))
     services = {s["key"]: s for s in site["services"]}
     tracking = site.get("tracking", {})
-    tracking_enabled = bool(tracking.get("google_ads_id") or tracking.get("ga4_id"))
+    tracking_enabled = not args.github_pages and bool(tracking.get("google_ads_id") or tracking.get("ga4_id"))
 
     out = STAGE
     if out.resolve() != (Path(tempfile.gettempdir()) / "digital-buro-build").resolve():
@@ -442,6 +466,8 @@ def main():
     css_path = out / "assets" / "css" / "style.css"
     css_path.write_text(minify_css(css_path.read_text(encoding="utf-8") + "\n" + (out / "assets/css/refresh.css").read_text(encoding="utf-8-sig")), encoding="utf-8")
     for item in (SRC / "static").iterdir():
+        if args.github_pages and (item.name in ("api", ".htaccess") or item.suffix == ".php"):
+            continue
         dest = out / item.name
         if item.is_dir():
             shutil.copytree(item, dest, dirs_exist_ok=True)
@@ -487,6 +513,8 @@ def main():
             "lang_tag": LANG_TAG[lang],
             "og_locale": OG_LOCALE[lang],
         }
+        if args.github_pages:
+            page["noindex"] = True
         runtime = {
             "lang": lang,
             "hours": [[h["open"], h["close"]] for h in site["hours"]],
@@ -502,6 +530,7 @@ def main():
             "v": versions,
             "year": dt.date.today().year,
             "tracking_enabled": tracking_enabled,
+            "static_preview": args.github_pages,
             "runtime_json": json.dumps(runtime, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/"),
         }
         tpl = env.get_template(page["template"])
@@ -516,7 +545,7 @@ def main():
         else:
             dest = out / page["path"].strip("/") / "index.html" if page["path"] != "/" else out / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_text(rendered, encoding="utf-8")
+        dest.write_text(mount_html(rendered, base_path), encoding="utf-8")
         built_paths.add(page["path"])
         report.append((page, rendered))
 
@@ -549,21 +578,28 @@ def main():
         "name": "Digital-Buro — Réparation informatique & imprimantes",
         "short_name": "Digital-Buro",
         "lang": "fr-BE",
-        "start_url": "/",
+        "start_url": base_path + "/",
+        "scope": base_path + "/",
         "display": "browser",
         "background_color": "#ffffff",
         "theme_color": "#ffffff",
         "icons": [
-            {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"},
-            {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"},
-            {"src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+            {"src": base_path + "/icon-192.png", "sizes": "192x192", "type": "image/png"},
+            {"src": base_path + "/icon-512.png", "sizes": "512x512", "type": "image/png"},
+            {"src": base_path + "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
         ],
     }, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # 5. Contrôles qualité
     problems = check(report, built_paths, out)
-    sync_dir(out, OUT)
-    print(f"\n{len(report)} pages générées dans {OUT}\n")
+    if args.github_pages:
+        (out / ".nojekyll").touch()
+        (out / "robots.txt").write_text("User-agent: *\nAllow: /\n", encoding="utf-8")
+        (out / "sitemap.xml").unlink()
+    if problems:
+        raise RuntimeError("Contrôles de génération : " + "; ".join(problems))
+    sync_dir(out, destination)
+    print(f"\n{len(report)} pages générées dans {destination}\n")
     print(f"{'Page':<58} {'Titre':>6} {'Desc.':>6}  H1")
     for page, rendered in report:
         h1 = len(re.findall(r"<h1[\s>]", rendered))

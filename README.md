@@ -87,6 +87,24 @@ Pour tester localement sans envoyer de courrier externe : lancer `tools/verify_c
 
 ## Mise en ligne
 
+### Aperçu gratuit sur GitHub Pages
+
+Le workflow `.github/workflows/static.yml` construit automatiquement une version
+adaptée au chemin du dépôt, puis publie `.pages-site/`. Dans Settings → Pages,
+choisir **GitHub Actions**. Chaque push sur `main` déclenche une mise à jour.
+
+Pour reproduire cet aperçu : `python build.py --github-pages --base-path /Digital-Buro`.
+Les liens, images responsives, icônes et le manifeste utilisent ce préfixe. Le
+dossier `public/` reste destiné à l'hébergement PHP du client.
+
+GitHub Pages n'exécute pas PHP : cette version remplace les formulaires par des
+liens e-mail et téléphone. Le bouton e-mail ouvre la messagerie du visiteur ; il
+ne confirme aucun envoi. Aucun fichier PHP ni configuration Apache n'est publié.
+Cet aperçu est en `noindex` et sans suivi publicitaire pour ne pas concurrencer
+le domaine du client. La version PHP conserve ses formulaires et son référencement.
+
+### Hébergement PHP du client
+
 1. Sauvegarder le site et la configuration actuels, préparer un emplacement de préproduction.
 2. Y envoyer le contenu de `public/`, y compris `.htaccess`.
 3. Vérifier PHP, l’envoi des e-mails, l’expéditeur, les deux types de formulaire et les erreurs.

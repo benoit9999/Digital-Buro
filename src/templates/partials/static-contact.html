@@ -1,0 +1,8 @@
+<div class="stack" style="margin-top:24px">
+  <p class="text">{{ 'To ask a question or request a callback, email or call the shop.' if page.lang == 'en' else ('Voor een vraag of een terugbelverzoek kunt u de winkel mailen of bellen.' if page.lang == 'nl' else 'Pour une question ou une demande de rappel, écrivez ou téléphonez au magasin.') }}</p>
+  <div class="btn-row">
+    <a class="btn btn--primary" href="mailto:{{ site.email }}">{{ 'Write an email' if page.lang == 'en' else ('E-mail sturen' if page.lang == 'nl' else 'Écrire un e-mail') }}</a>
+    <a class="btn btn--outline" href="tel:{{ site.phone_intl }}">{{ t.call }} {{ site.phone }}</a>
+  </div>
+  <p class="caption">{{ 'The email button opens your email app.' if page.lang == 'en' else ('De e-mailknop opent uw e-mailprogramma.' if page.lang == 'nl' else 'Le bouton e-mail ouvre votre application de messagerie.') }}</p>
+</div>

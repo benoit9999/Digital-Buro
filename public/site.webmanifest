@@ -3,6 +3,7 @@
   "short_name": "Digital-Buro",
   "lang": "fr-BE",
   "start_url": "/",
+  "scope": "/",
   "display": "browser",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",

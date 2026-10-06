@@ -5,7 +5,8 @@
   "vat": "BE 0874.004.642",
   "vat_compact": "BE0874004642",
   "tagline": "Votre meilleur partenaire bureautique & digital",
-  "experience_years": "30",
+  "logo": "/assets/img/logo-digital-client.png",
+  "experience_years": "35",
   "phone": "02 534 47 02",
   "phone_intl": "+3225344702",
   "phone_display_intl": "+32 2 534 47 02",
@@ -23,19 +24,20 @@
   "lat": 50.8240646,
   "lng": 4.3539242,
   "plus_code": "R9F3+JH Saint-Gilles",
-  "transport": "Tram 92, arrêt Ma Campagne",
+  "transport": "Tram 92, arrêt Ma Campagne · À 2 pas de l’avenue Louise",
   "google": {
     "rating": "4,7",
     "rating_en": "4.7",
-    "reviews_label": "plus de 440 avis Google",
-    "reviews_label_nl": "meer dan 440 Google-reviews",
-    "reviews_label_en": "440+ Google reviews",
+    "reviews_label": "+450 avis Google",
+    "reviews_label_nl": "+450 Google-reviews",
+    "reviews_label_en": "+450 Google reviews",
     "maps_url": "https://www.google.com/maps/place/Digital-Buro/@50.8240646,4.3539242,17z/data=!4m6!3m5!1s0x47c3c467aaaaab01:0x3f667ea5a1fd6371!8m2!3d50.8240646!4d4.3539242!16s%2Fg%2F1w97tkhb",
     "cid_url": "https://www.google.com/maps?cid=4568478121866388337",
     "directions_url": "https://www.google.com/maps/dir/?api=1&destination=Digital-Buro%2C%20Chauss%C3%A9e%20de%20Charleroi%20257%2C%201060%20Saint-Gilles",
     "embed_url": "https://www.google.com/maps?q=Digital-Buro,+Chauss%C3%A9e+de+Charleroi+257,+1060+Saint-Gilles&hl=fr&z=16&output=embed",
     "review_url": "",
-    "review_count": 448,
+    "review_count": 450,
+    "review_count_updated_on": "2026-10-06",
     "checked_on": "2026-09-28"
   },
   "hours": [
@@ -157,7 +159,7 @@
       "url": "/cartouches-toners/",
       "icon": "droplet",
       "art": "ill-cartridges.svg",
-      "card_photo": "cartouches",
+      "card_photo": "magasin-cartouches",
       "teaser": "La bonne référence, même pour votre ancienne imprimante.",
       "link": "Cartouches & toners"
     },
@@ -278,6 +280,34 @@
     "endpoint": "/api/reviews.php"
   },
   "photos": {
+    "magasin-cartouches": {
+      "file": "magasin-cartouches",
+      "widths": [400, 800, 1200],
+      "aspect_ratio": [4, 3],
+      "contain": true,
+      "alt": "Sélection de cartouches et toners HP, Epson, Brother, Canon, OKI et Lexmark, photo fournie par Digital-Buro",
+      "source": "photo_cartouche.jpeg, fournie par le client le 6 octobre 2026",
+      "author": "Digital-Buro",
+      "rights": "Photo fournie par le client pour le site Digital-Buro."
+    },
+    "magasin-interieur": {
+      "file": "magasin-interieur",
+      "widths": [400, 800, 1200],
+      "aspect_ratio": [4, 3],
+      "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique",
+      "source": "photo_interieur.jpeg, fournie par le client le 6 octobre 2026",
+      "author": "Digital-Buro",
+      "rights": "Photo fournie par le client pour le site Digital-Buro."
+    },
+    "magasin-exterieur": {
+      "file": "magasin-exterieur",
+      "widths": [400, 800, 1200],
+      "aspect_ratio": [4, 3],
+      "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne",
+      "source": "photo_exterieur.jpeg, fournie par le client le 6 octobre 2026",
+      "author": "Digital-Buro",
+      "rights": "Photo fournie par le client pour le site Digital-Buro."
+    },
     "imprimante": {
       "file": "hp-officejet-pro-9120e",
       "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",

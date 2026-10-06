@@ -1,0 +1,1036 @@
+{
+  "ok": true,
+  "date": "2026-10-06",
+  "checks": 42,
+  "widths": [
+    320,
+    375,
+    390,
+    640,
+    768,
+    1100,
+    1440
+  ],
+  "pages": 16,
+  "errors": [],
+  "noJS": true,
+  "prominentLocation": true,
+  "reviewLabel": "+450",
+  "clientLogo": true,
+  "records": [
+    {
+      "route": "/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Réparation d’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "location": "À côté de l’arrêt Ma Campagne\n\nÀ deux pas de l’avenue Louise.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 126,
+          "height": 95,
+          "naturalWidth": 128,
+          "naturalHeight": 96,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 126,
+          "height": 95,
+          "naturalWidth": 128,
+          "naturalHeight": 96,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/nl/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Herstelling van printers, pc’s en Macs in Sint-Gillis.",
+      "location": "Naast tramhalte Ma Campagne\n\nVlak bij de Louizalaan.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 126,
+          "height": 95,
+          "naturalWidth": 128,
+          "naturalHeight": 96,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 126,
+          "height": 95,
+          "naturalWidth": 128,
+          "naturalHeight": 96,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/en/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Printer, PC & Mac repair in Saint-Gilles.",
+      "location": "Next to the Ma Campagne tram stop\n\nA few steps from Avenue Louise.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 126,
+          "height": 95,
+          "naturalWidth": 128,
+          "naturalHeight": 96,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 126,
+          "height": 95,
+          "naturalWidth": 128,
+          "naturalHeight": 96,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 375,
+      "documentWidth": 375,
+      "h1": "Réparation d’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "location": "À côté de l’arrêt Ma Campagne\n\nÀ deux pas de l’avenue Louise.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 154,
+          "height": 115,
+          "naturalWidth": 155,
+          "naturalHeight": 116,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 154,
+          "height": 115,
+          "naturalWidth": 155,
+          "naturalHeight": 116,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/nl/",
+      "width": 375,
+      "documentWidth": 375,
+      "h1": "Herstelling van printers, pc’s en Macs in Sint-Gillis.",
+      "location": "Naast tramhalte Ma Campagne\n\nVlak bij de Louizalaan.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 154,
+          "height": 115,
+          "naturalWidth": 155,
+          "naturalHeight": 116,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 154,
+          "height": 115,
+          "naturalWidth": 155,
+          "naturalHeight": 116,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/en/",
+      "width": 375,
+      "documentWidth": 375,
+      "h1": "Printer, PC & Mac repair in Saint-Gilles.",
+      "location": "Next to the Ma Campagne tram stop\n\nA few steps from Avenue Louise.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 154,
+          "height": 115,
+          "naturalWidth": 155,
+          "naturalHeight": 116,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 154,
+          "height": 115,
+          "naturalWidth": 155,
+          "naturalHeight": 116,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Réparation d’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "location": "À côté de l’arrêt Ma Campagne\n\nÀ deux pas de l’avenue Louise.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/nl/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Herstelling van printers, pc’s en Macs in Sint-Gillis.",
+      "location": "Naast tramhalte Ma Campagne\n\nVlak bij de Louizalaan.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/en/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Printer, PC & Mac repair in Saint-Gilles.",
+      "location": "Next to the Ma Campagne tram stop\n\nA few steps from Avenue Louise.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 640,
+      "documentWidth": 640,
+      "h1": "Réparation d’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "location": "À côté de l’arrêt Ma Campagne\n\nÀ deux pas de l’avenue Louise.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 252,
+          "height": 189,
+          "naturalWidth": 250,
+          "naturalHeight": 187,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 252,
+          "height": 189,
+          "naturalWidth": 250,
+          "naturalHeight": 187,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/nl/",
+      "width": 640,
+      "documentWidth": 640,
+      "h1": "Herstelling van printers, pc’s en Macs in Sint-Gillis.",
+      "location": "Naast tramhalte Ma Campagne\n\nVlak bij de Louizalaan.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 252,
+          "height": 189,
+          "naturalWidth": 250,
+          "naturalHeight": 187,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 252,
+          "height": 189,
+          "naturalWidth": 250,
+          "naturalHeight": 187,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/en/",
+      "width": 640,
+      "documentWidth": 640,
+      "h1": "Printer, PC & Mac repair in Saint-Gilles.",
+      "location": "Next to the Ma Campagne tram stop\n\nA few steps from Avenue Louise.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 252,
+          "height": 189,
+          "naturalWidth": 250,
+          "naturalHeight": 187,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 252,
+          "height": 189,
+          "naturalWidth": 250,
+          "naturalHeight": 187,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "documentWidth": 768,
+      "h1": "Réparation d’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "location": "À côté de l’arrêt Ma Campagne\n\nÀ deux pas de l’avenue Louise.",
+      "locationFontSize": 23,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 145,
+          "height": 109,
+          "naturalWidth": 184,
+          "naturalHeight": 138,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 145,
+          "height": 109,
+          "naturalWidth": 184,
+          "naturalHeight": 138,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/nl/",
+      "width": 768,
+      "documentWidth": 768,
+      "h1": "Herstelling van printers, pc’s en Macs in Sint-Gillis.",
+      "location": "Naast tramhalte Ma Campagne\n\nVlak bij de Louizalaan.",
+      "locationFontSize": 23,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 145,
+          "height": 109,
+          "naturalWidth": 184,
+          "naturalHeight": 138,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 145,
+          "height": 109,
+          "naturalWidth": 184,
+          "naturalHeight": 138,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/en/",
+      "width": 768,
+      "documentWidth": 768,
+      "h1": "Printer, PC & Mac repair in Saint-Gilles.",
+      "location": "Next to the Ma Campagne tram stop\n\nA few steps from Avenue Louise.",
+      "locationFontSize": 23,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 145,
+          "height": 109,
+          "naturalWidth": 184,
+          "naturalHeight": 138,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 145,
+          "height": 109,
+          "naturalWidth": 184,
+          "naturalHeight": 138,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 1100,
+      "documentWidth": 1100,
+      "h1": "Réparation d’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "location": "À côté de l’arrêt Ma Campagne\n\nÀ deux pas de l’avenue Louise.",
+      "locationFontSize": 23,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 218,
+          "height": 163,
+          "naturalWidth": 264,
+          "naturalHeight": 198,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 218,
+          "height": 163,
+          "naturalWidth": 264,
+          "naturalHeight": 198,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/nl/",
+      "width": 1100,
+      "documentWidth": 1100,
+      "h1": "Herstelling van printers, pc’s en Macs in Sint-Gillis.",
+      "location": "Naast tramhalte Ma Campagne\n\nVlak bij de Louizalaan.",
+      "locationFontSize": 23,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 218,
+          "height": 163,
+          "naturalWidth": 264,
+          "naturalHeight": 198,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 218,
+          "height": 163,
+          "naturalWidth": 264,
+          "naturalHeight": 198,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/en/",
+      "width": 1100,
+      "documentWidth": 1100,
+      "h1": "Printer, PC & Mac repair in Saint-Gilles.",
+      "location": "Next to the Ma Campagne tram stop\n\nA few steps from Avenue Louise.",
+      "locationFontSize": 23,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 218,
+          "height": 163,
+          "naturalWidth": 264,
+          "naturalHeight": 198,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 218,
+          "height": 163,
+          "naturalWidth": 264,
+          "naturalHeight": 198,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Réparation d’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "location": "À côté de l’arrêt Ma Campagne\n\nÀ deux pas de l’avenue Louise.",
+      "locationFontSize": 23,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 256,
+          "height": 192,
+          "naturalWidth": 270,
+          "naturalHeight": 202,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 256,
+          "height": 192,
+          "naturalWidth": 270,
+          "naturalHeight": 202,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/nl/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Herstelling van printers, pc’s en Macs in Sint-Gillis.",
+      "location": "Naast tramhalte Ma Campagne\n\nVlak bij de Louizalaan.",
+      "locationFontSize": 23,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 256,
+          "height": 192,
+          "naturalWidth": 270,
+          "naturalHeight": 202,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 256,
+          "height": 192,
+          "naturalWidth": 270,
+          "naturalHeight": 202,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/en/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Printer, PC & Mac repair in Saint-Gilles.",
+      "location": "Next to the Ma Campagne tram stop\n\nA few steps from Avenue Louise.",
+      "locationFontSize": 23,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 256,
+          "height": 192,
+          "naturalWidth": 270,
+          "naturalHeight": 202,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 256,
+          "height": 192,
+          "naturalWidth": 270,
+          "naturalHeight": 202,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Réparation d’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "location": "À côté de l’arrêt Ma Campagne\n\nÀ deux pas de l’avenue Louise.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/reparation-imprimante/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Réparation d’imprimantes à Saint-Gilles.",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/reparation-ordinateur/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Réparation de PC à Saint-Gilles.",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/reparation-mac/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Réparation de Mac à Saint-Gilles.",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/cartouches-toners/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Cartouches et toners à Saint-Gilles.",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/vente-materiel/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Matériel informatique à Saint-Gilles.",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/entreprises/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Dépannage informatique pour entreprises à Bruxelles.",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/a-propos/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "+35 ans d’expérience\nen bureautique et informatique.",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/contact/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Contact, horaires et accès",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Comment fonctionne une imprimante laser ou jet d’encre ?",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/mentions-legales/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Mentions légales",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/confidentialite/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Politique de confidentialité et cookies",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/merci/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Merci, votre demande est bien envoyée.",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/404.html",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Cette page n’existe pas, ou plus.",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/nl/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Herstelling van printers, pc’s en Macs in Sint-Gillis.",
+      "location": "Naast tramhalte Ma Campagne\n\nVlak bij de Louizalaan.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/en/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Printer, PC & Mac repair in Saint-Gilles.",
+      "location": "Next to the Ma Campagne tram stop\n\nA few steps from Avenue Louise.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/contact/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Contact, horaires et accès",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/a-propos/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "+35 ans d’expérience\nen bureautique et informatique.",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Comment fonctionne une imprimante laser ou jet d’encre ?",
+      "locationFontSize": null,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Réparation d’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "location": "À côté de l’arrêt Ma Campagne\n\nÀ deux pas de l’avenue Louise.",
+      "locationFontSize": 23,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 256,
+          "height": 192,
+          "naturalWidth": 270,
+          "naturalHeight": 202,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 256,
+          "height": 192,
+          "naturalWidth": 270,
+          "naturalHeight": 202,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Réparation d’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "location": "À côté de l’arrêt Ma Campagne\n\nÀ deux pas de l’avenue Louise.",
+      "locationFontSize": 18,
+      "headerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "footerLogo": "/assets/img/logo-digital-client.png?v=66b4e83f3a",
+      "oldReviewCount": false,
+      "brokenImages": [],
+      "oldExperience": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-interieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique"
+        },
+        {
+          "src": "http://127.0.0.1:8080/assets/img/photos/magasin-exterieur-400.webp",
+          "width": 161,
+          "height": 121,
+          "naturalWidth": 162,
+          "naturalHeight": 122,
+          "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne"
+        }
+      ]
+    }
+  ]
+}

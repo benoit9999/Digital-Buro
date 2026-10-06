@@ -1,6 +1,6 @@
 # Digital-Buro — refonte du site vitrine
 
-Version actualisée le 4 octobre 2026. Site statique généré avec Python/Jinja2, compatible avec l’hébergement Apache/PHP existant. Le site comprend 16 pages. La page GSM/tablettes ajoutée pendant la maquette a été retirée faute de confirmation sur le site d’origine ; les URL des prestations confirmées sont conservées. Rien n’a été publié sur le site de production.
+Version actualisée le 6 octobre 2026. Site statique généré avec Python/Jinja2, compatible avec l’hébergement Apache/PHP existant. Le site comprend 16 pages. La page GSM/tablettes ajoutée pendant la maquette a été retirée faute de confirmation sur le site d’origine ; les URL des prestations confirmées sont conservées. Rien n’a été publié sur le site de production.
 
 ## Générer et prévisualiser
 
@@ -28,18 +28,21 @@ Les anciennes URL et redirections, les données structurées LocalBusiness/Servi
 
 ## Identité et interactions
 
-Le logo reprend les arcs, les points et le mot bicolore de l’enseigne jointe. Le lettrage est vectorisé : pas de police à charger pour l’afficher. Variantes dans `src/assets/img/` : `logo.svg` orange/bleu nuit, `logo-heritage.svg` rouge/bleu, `logo-white.svg` et `logo-mark.svg`. Les favicons et l’image de partage sont déjà générés.
+Le logo affiché dans l’en-tête et le pied de page est le fichier original `LOGO DIGITAL.png` envoyé par le client le 6 octobre 2026, copié à l’identique dans `src/assets/img/logo-digital-client.png`. Ses dimensions sont de 350 × 110 px ; les couleurs rouge/bleu et le fond blanc sont conservés. Le chemin est centralisé dans `site.logo`, utilisé aussi dans les données structurées. La version de son URL suit le contenu du fichier pour actualiser le cache du navigateur. Les anciens SVG et les favicons restent disponibles dans les assets.
 
-Pour régénérer les assets de marque, installer aussi Pillow et fonttools, puis exécuter `python tools/make_brand.py` et `node tools/raster_brand.cjs` (nécessite le module Node sharp, ou CODEX_NODE_MODULES pointant vers son dossier parent). Reconstruire ensuite le site. La police source est fournie dans `tools/fonts/`.
+Pour régénérer l’image de partage avec le logo fourni et les chiffres actuels : `python tools/prepare_client_brand.py`, puis `node tools/raster_brand.cjs` (fonttools et le module Node sharp requis, ou CODEX_NODE_MODULES pointant vers son dossier parent). Reconstruire ensuite le site. La police source est fournie dans `tools/fonts/`. Les outils historiques de vectorisation restent archivés dans `tools/`.
 
 Les effets comprennent soulignements, boutons, menus, FAQ animées, apparitions, compteurs, frise, illustrations et défilé des marques. Le bouton de pause du défilé a été retiré. Les marques se mettent en pause au survol ou au focus clavier. La préférence système de réduction des animations est respectée. Sans JavaScript, contenus, liens, FAQ et navigation de secours restent accessibles. Un lien ouvre un formulaire PHP autonome pour envoyer une demande sans JavaScript.
 
 ## Photos et licences
 
-La vitrine existante reste la seule photo identifiée comme celle du magasin. Les photos de banque d’images illustrent les prestations ; elles ne sont pas présentées comme l’équipe ou l’atelier de Digital-Buro.
+L’accueil présente les photos de l’intérieur et de l’extérieur du magasin fournies par le client le 6 octobre 2026. Elles sont affichées côte à côte dans le bloc d’accueil, avec les légendes « Intérieur » et « Extérieur ». Les photos de banque d’images illustrent les prestations ; elles ne sont pas présentées comme l’équipe ou l’atelier de Digital-Buro.
 
 | Fichiers dans `src/assets/img/photos/` | Photographe et source | Licence / droits |
 |---|---|---|
+| magasin-interieur-400/800/1200.webp | Digital-Buro, `photo_interieur.jpeg` fournie par le client | Photo fournie pour le site Digital-Buro |
+| magasin-exterieur-400/800/1200.webp | Digital-Buro, `photo_exterieur.jpeg` fournie par le client | Photo fournie pour le site Digital-Buro |
+| magasin-cartouches-400/800/1200.webp | Digital-Buro, `photo_cartouche.jpeg` fournie par le client | Photo fournie pour le site Digital-Buro |
 | imprimante-800/1600.webp | [engin akyurt](https://unsplash.com/photos/CGnoRQZGWmw) | [Unsplash](https://unsplash.com/license) |
 | entreprises-800/1600.webp | [Meatball Overexposure](https://unsplash.com/photos/8r1ZlqqGxMU) | [Unsplash](https://unsplash.com/license) |
 | mac-400/800/1600.webp | [Aleksi Tappura](https://unsplash.com/photos/mCg0ZgD7BgU) | [Unsplash](https://unsplash.com/license) |
@@ -50,9 +53,13 @@ La vitrine existante reste la seule photo identifiée comme celle du magasin. Le
 | brother-mfc-l8390cdw-400/800/1052.webp | [Brother MFC-L8390CDW — Brother](https://www.brother.com.au/en/printers/all-printers/mfc-l8390cdw) | Visuel officiel Brother, droits réservés au fabricant |
 | epson-ecotank-2025-400/670.webp | [Nouvelle gamme EcoTank 2025 — Epson Belgique](https://press.epson.eu/fr_BE/news/epson-devoile-de-nouvelles-imprimantes-ecotank-meilleure-productivite-plus-grande-facilite-d-utilisation-et-impression-sans-souci-pour-les-foyers-et-les-petites-entreprises1/) | Visuel de presse officiel Epson, droits réservés au fabricant |
 
-Depuis le 4 octobre 2026, l’accueil et les pages Imprimantes, Vente et Entreprises utilisent les trois visuels officiels HP, Epson et Brother ci-dessus. Les anciennes photos `imprimante` et `entreprises` restent archivées dans les assets. Les légendes présentent les nouveaux appareils comme des illustrations, sans annoncer de stock pour un modèle précis. Le visuel Epson illustre la nouvelle gamme EcoTank ; il n’est pas attribué à une référence précise. La photo Cartouches montre des cartouches installées, en attendant une vraie photo du rayonnage. La vitrine (900 × 334) n’est pas agrandie au-delà de sa taille native.
+Depuis le 4 octobre 2026, l’accueil et les pages Imprimantes, Vente et Entreprises utilisent les trois visuels officiels HP, Epson et Brother ci-dessus. Les anciennes photos `imprimante` et `entreprises` restent archivées dans les assets. Les légendes présentent les nouveaux appareils comme des illustrations, sans annoncer de stock pour un modèle précis. Le visuel Epson illustre la nouvelle gamme EcoTank ; il n’est pas attribué à une référence précise. La carte « Cartouches & toners » de l’accueil utilise la photo `photo_cartouche.jpeg` fournie par le client le 6 octobre 2026. La vitrine (900 × 334) n’est pas agrandie au-delà de sa taille native.
 
-Les six cartes de services disposent désormais d’une photo : les cartes PC, Mac et Cartouches réutilisent les photos déjà présentes sur leurs pages détaillées. La page Contact montre aussi la vitrine du magasin. Des variantes de 400 × 250 px limitent le poids des photos dans les cartes sur les petits écrans.
+Les six cartes de services disposent désormais d’une photo : les cartes PC et Mac réutilisent les photos déjà présentes sur leurs pages détaillées, et la carte Cartouches présente la photo fournie par le client. La page Contact montre aussi la vitrine du magasin. Des variantes de 400 px limitent le poids des photos dans les cartes sur les petits écrans.
+
+Pour régénérer les nouvelles photos du magasin : `python tools/prepare_shop_photos.py --source-dir C:/chemin/vers/les/photos`, puis reconstruire. Le script conserve leur cadrage complet en 4:3 et produit des WebP de 400, 800 et 1200 px, chacun sous 150 Ko. Les JPEG d’origine ne sont pas modifiés. L’option `--only magasin-cartouches` prépare seulement la photo de la carte « Cartouches & toners », qui conserve tous les produits visibles grâce à `object-fit: contain`.
+
+L’accueil affiche un encadré orange directement sous le titre : « À côté de l’arrêt Ma Campagne » et « À deux pas de l’avenue Louise », en caractères agrandis. Les repères sont également repris dans le contact et traduits sur les accueils NL/EN. Le client a confirmé « +35 ans d’expérience » : `site.experience_years` alimente les textes des pages, les compteurs et le badge. Les métadonnées et les textes de pied de page reprennent aussi cette durée.
 
 Pour les photos de banque d’images, conserver les noms et exporter en WebP, 400 × 250, 800 × 500 et 1600 × 1000, chacun sous 150 Ko (`tools/prepare_photos.py`). Renseigner les largeurs effectivement disponibles dans `site.photos[*].widths`. Pour les visuels d’imprimantes, `python tools/prepare_printer_photos.py` télécharge les URL officielles définies dans `site.photos`, conserve les originaux dans `.deps/` et crée les variantes de largeur indiquées par `widths` (Pillow requis). Le produit entier est conservé sur fond blanc, sans agrandissement au-delà de l’original. Chaque fichier d’imprimante pèse moins de 20 Ko. Actualiser le texte alternatif, l’auteur, la source et les droits dans `site.photos`, puis reconstruire. Les attributs de taille, srcset et chargement différé sont déjà prévus ; les photos de premier écran des pages de service sont prioritaires.
 
@@ -62,7 +69,7 @@ Les cartes occupent une colonne sous 640 px, deux colonnes entre 640 et 1023 px 
 
 Trois **extraits** attribués à Nathan M., Corine S. et Michael M. sont intégrés, avec un lien vers [la fiche Google](https://www.google.com/maps?cid=4568478121866388337). Les extraits sont identifiés comme tels. Aucun témoignage supplémentaire ni réponse du propriétaire n’est inventé.
 
-La note 4,7/5 et le total 448 correspondent au relevé du 28 septembre 2026, pas à une mise à jour en direct. Modifier `site.google` pour les actualiser. Les dates exactes n’étant pas connues, `date` reste null et `date_label` indique un mois approximatif. Une date ISO confirmée active l’affichage relatif. Ne pas transformer un mois approximatif en jour inventé.
+La note 4,7/5 correspond au relevé du 28 septembre 2026. Le client a demandé l’affichage « +450 avis » le 6 octobre 2026 : les badges, le compteur et le résumé des avis reprennent ce libellé dans les trois langues. `site.google` centralise les chiffres et les libellés ; ce n’est pas une mise à jour en direct. Les dates exactes n’étant pas connues, `date` reste null et `date_label` indique un mois approximatif. Une date ISO confirmée active l’affichage relatif. Ne pas transformer un mois approximatif en jour inventé.
 
 Les avis sont affichés uniquement sur les pages d’accueil FR/NL/EN. Aucun bloc d’avis ni badge de note ne surcharge les pages de service, le contact ou la présentation du magasin.
 
@@ -130,14 +137,13 @@ Les destinations des annonces peuvent pointer directement vers le service concer
 
 - Prix de diagnostic, délais, garanties et conditions de dépôt.
 - GSM/tablettes : non proposés dans cette version. Réintroduire uniquement après confirmation explicite du client, avec des informations vérifiables.
-- Année de début du dirigeant : conservation prudente de « plus de 30 ans », sans inventer « depuis 1987 ».
-- Photos actuelles du magasin, du rayonnage et de l’atelier ; autorisation d’utiliser les personnes éventuellement photographiées.
+- Année de début du dirigeant : « +35 ans d’expérience » confirmé par le client, sans inventer une année de début.
+- Photos complémentaires de l’atelier ; autorisation d’utiliser les personnes éventuellement photographiées. Les photos de l’intérieur et de l’extérieur ont été fournies le 6 octobre 2026.
 - Textes exacts, notes et dates des avis manquants ; actualisation des chiffres Google.
 - Numéro WhatsApp, lien pour laisser un avis et éventuelle nouvelle boutique en ligne.
 - Accueil possible en néerlandais et anglais.
 - Adresse d’expédition des formulaires et configuration de messagerie de l’hébergeur.
 - Horaires exceptionnels et jours fériés : l’indicateur suit uniquement la semaine habituelle.
-- Choix final entre le logo orange/bleu nuit et la variante héritage.
 
 Consulter `CHANGELOG.md` et `artifacts/VALIDATION.md` pour les modifications, résultats et limites des tests.
 

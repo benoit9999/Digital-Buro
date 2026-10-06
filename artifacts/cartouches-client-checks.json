@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "date": "2026-10-06",
+  "records": [
+    {
+      "viewport": 320,
+      "src": "http://127.0.0.1:8080/assets/img/photos/magasin-cartouches-400.webp",
+      "alt": "Sélection de cartouches et toners HP, Epson, Brother, Canon, OKI et Lexmark, photo fournie par Digital-Buro",
+      "fit": "contain",
+      "width": 246,
+      "height": 152,
+      "naturalWidth": 288,
+      "naturalHeight": 216
+    },
+    {
+      "viewport": 390,
+      "src": "http://127.0.0.1:8080/assets/img/photos/magasin-cartouches-400.webp",
+      "alt": "Sélection de cartouches et toners HP, Epson, Brother, Canon, OKI et Lexmark, photo fournie par Digital-Buro",
+      "fit": "contain",
+      "width": 316,
+      "height": 152,
+      "naturalWidth": 358,
+      "naturalHeight": 268
+    },
+    {
+      "viewport": 768,
+      "src": "http://127.0.0.1:8080/assets/img/photos/magasin-cartouches-400.webp",
+      "alt": "Sélection de cartouches et toners HP, Epson, Brother, Canon, OKI et Lexmark, photo fournie par Digital-Buro",
+      "fit": "contain",
+      "width": 302,
+      "height": 172,
+      "naturalWidth": 344,
+      "naturalHeight": 258
+    },
+    {
+      "viewport": 1440,
+      "src": "http://127.0.0.1:8080/assets/img/photos/magasin-cartouches-400.webp",
+      "alt": "Sélection de cartouches et toners HP, Epson, Brother, Canon, OKI et Lexmark, photo fournie par Digital-Buro",
+      "fit": "contain",
+      "width": 345,
+      "height": 172,
+      "naturalWidth": 380,
+      "naturalHeight": 285
+    }
+  ],
+  "errors": [],
+  "cardLink": true
+}

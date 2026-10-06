@@ -1,3 +1,16 @@
+# Modifications du client — validation du 6 octobre 2026
+
+- Carte « Cartouches & toners » : photo du client chargée à 320, 390, 768 et 1440 px, tous les produits visibles grâce à `object-fit: contain`, aucun débordement horizontal et lien vers la page Cartouches fonctionnel. Trois WebP de 400/800/1200 px sous 150 Ko. Captures examinées : `cartouches-client-390.png` et `cartouches-client-1440.png` ; rapport : [cartouches-client-checks.json](cartouches-client-checks.json).
+- Builds PHP et GitHub Pages (`/Digital-Buro`) : 16 pages, aucun lien cassé, un H1 par page, titres et descriptions uniques.
+- 42 contrôles ponctuels dans Chrome : les accueils FR/NL/EN examinés à 320, 375, 390, 640, 768, 1100 et 1440 px, ainsi que les 16 pages sur mobile. Aucun débordement horizontal, image cassée, erreur JavaScript ou réponse HTTP locale en erreur.
+- Localisation dans un encadré orange sous le titre, texte de 18 à 23 px : arrêt Ma Campagne et proximité de l’avenue Louise. « +35 » dans le badge et le compteur ; « +450 » dans les badges Google, le compteur d’avis et le résumé des trois langues. Aucune ancienne mention de 30 ans d’expérience, 440 ou 448 avis dans les pages examinées. Navigation mobile et affichage sans JavaScript vérifiés.
+- Logo fourni présent dans l’en-tête et le pied de page des 16 pages, avec URL versionnée ; fichier PNG de 350 × 110 px identique à l’original fourni. Données structurées et image de partage actualisées.
+- Les deux photos du magasin conservent leur format 4:3. Six variantes de 400/800/1200 px, de 33 200 à 144 768 octets ; attributs de taille, srcset et textes alternatifs présents.
+- Captures examinées : `client-home-desktop.png`, `client-home-mobile.png`, `client-hero-desktop.png`, `client-hero-mobile.png` et l’image de partage `src/assets/img/og-image.jpg`. Captures complémentaires : `client-footer-desktop.png`, `client-reviews-desktop.png`. Rapport : [client-updates-checks.json](client-updates-checks.json).
+- `tools/check_pages.cjs` passe : les 16 pages de l’aperçu préfixé, les liens, les images responsives, les polices, la navigation et le contact par e-mail restent valides. Les captures `pages-1440.png` et `pages-390.png` sont actualisées.
+
+---
+
 # Photos complémentaires et mobile — validation du 4 octobre 2026
 
 - 16 pages examinées dans Chrome sur dix formats : 320 × 740, 360 × 800, 375 × 812, 390 × 844, 430 × 932, 640 × 900, 768 × 1024, 844 × 390, 1024 × 900 et 1440 × 1000. Les 160 parcours passent : aucun débordement horizontal de la page, titre ou bouton tronqué, image en erreur, erreur JavaScript ou réponse HTTP locale en erreur.

@@ -1,3 +1,15 @@
+# Modifications demandées par le client — 6 octobre 2026
+
+- Photo de la carte « Cartouches & toners » remplacée par `photo_cartouche.jpeg` fournie par le client. Trois variantes WebP de 400/800/1200 px et affichage de tous les produits sans recadrage.
+- Localisation mise en avant dans un encadré orange sous le titre d’accueil : « À côté de l’arrêt Ma Campagne » et « À deux pas de l’avenue Louise », en gros caractères, également traduits sur NL/EN.
+- « +450 avis » affiché dans les badges Google, le compteur et le résumé des avis des trois langues, selon la demande du client ; chiffres et libellés centralisés dans `site.google`.
+- Logo rouge/bleu `LOGO DIGITAL.png` repris à l’identique dans l’en-tête et le pied de page. Référence des données structurées et image de partage actualisées ; URL du logo versionnée pour renouveler le cache.
+- Expérience passée à « +35 ans » dans les textes, le badge, le compteur, le guide, les pieds de page et les métadonnées, y compris sur les versions NL/EN.
+- Photos réelles de l’intérieur et de l’extérieur ajoutées côte à côte dans le bloc du magasin en haut de l’accueil FR/NL/EN. Cadrage complet en 4:3, légendes et WebP responsives de 400/800/1200 px.
+- Préparation reproductible des photos avec `tools/prepare_shop_photos.py` ; sources et provenance renseignées dans `site.photos`.
+
+---
+
 # Photos complémentaires et mobile — 4 octobre 2026
 
 - Photos ajoutées aux cartes PC, Mac et Cartouches ; les six prestations de l’accueil utilisent maintenant le même format photographique. Photo réelle de la vitrine ajoutée à la page Contact.

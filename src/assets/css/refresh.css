@@ -71,6 +71,7 @@ main>section+section,main>section+.brand-band,main>.brand-band+section{border-to
 .service-grid .svc-card__art{height:100%;min-height:0;margin-top:0;padding:12px 20px 16px;background:var(--paper)}
 .service-grid .svc-card__art img{width:100%;height:100%;max-width:none}
 .service-grid .svc-card__art--editorial img{object-fit:cover;border-radius:8px}
+.service-grid .svc-card__art--editorial img.photo--contain{object-fit:contain}
 .contact-shop-photo figcaption{margin-top:10px}
 .contact-page-cards{margin-top:40px}
 @media(min-width:640px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -107,3 +108,24 @@ body.menu-open .callbar{visibility:hidden;pointer-events:none}
   .proof-grid>div{padding-right:8px}
 }
 @media(hover:none){.svc-card:hover{transform:none}.svc-card:hover img{transform:none}}
+
+/* A prominent location block sits directly below the main headline. */
+.hero-location{display:flex;gap:14px;align-items:center;padding:16px 20px;max-width:560px;border-left:4px solid var(--ember);border-radius:0 10px 10px 0;background:#fff3eb;color:var(--navy)}
+.hero-location>.icon{width:30px;height:30px;flex:none;color:var(--ember)}
+.hero-location>div{min-width:0}
+.hero-location__stop{display:block;font-size:23px;line-height:1.35;font-weight:650;letter-spacing:-.01em}
+.hero-location p{margin-top:5px;font-size:20px;line-height:1.4}
+.hero-location__stop span,.hero-location p strong{white-space:nowrap}
+/* Both client photos keep their full frame. */
+.shop-card__photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;background:white}
+.shop-card__photo{position:relative;min-width:0}
+.shop-card__photos .editorial-photo{display:block;aspect-ratio:4/3;border-radius:0}
+.shop-card__photo-label{position:absolute;left:10px;bottom:10px;padding:4px 9px;border-radius:5px;background:#0b1f4de6;color:white;font-size:11px;font-weight:500;line-height:1.5}
+@media(max-width:767px){.hero-location{gap:10px;padding:12px 14px}.hero-location>.icon{width:24px;height:24px}.hero-location__stop{font-size:18px}.hero-location p{font-size:17px}.shop-card__photo-label{left:7px;bottom:7px;padding:3px 7px;font-size:10px}}
+
+/* Display the client’s original red/blue logo on a white background. */
+.nav__logo img{height:52px;width:auto}
+.site-header.is-scrolled .nav__logo img{height:46px}
+.footer__logo{display:inline-block;padding:6px 10px;background:#fff;border-radius:8px}
+.footer__brand .footer__logo img{width:200px;max-width:100%;height:auto}
+@media(max-width:767px){.nav__logo img,.site-header.is-scrolled .nav__logo img{height:48px}}

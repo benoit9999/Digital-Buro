@@ -54,11 +54,11 @@ I18N = {
         "hours_title": "Horaires",
         "addr_full": "Chaussée de Charleroi 257, 1060 Saint-Gilles",
         "closed": "Fermé",
-        "reviews_label": "plus de 440 avis Google",
+        "reviews_label": "+450 avis Google",
         "map_title": "Plan d’accès à Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles",
         "map_show": "Afficher la carte",
         "map_note": "La carte Google Maps ne se charge qu’à votre demande.",
-        "tagline": "Votre meilleur partenaire bureautique & digital. Plus de 30 ans d’expérience au service des particuliers et des entreprises.",
+        "tagline": "Votre meilleur partenaire bureautique & digital. +35 ans d’expérience au service des particuliers et des entreprises.",
         "brussels": "Bruxelles",
         "f_repairs": "Réparations",
         "f_guide": "Comment fonctionne une imprimante",
@@ -71,7 +71,7 @@ I18N = {
             ["Contact & accès", "/contact/"],
         ],
         "f_weekdays": "Lun – ven",
-        "transport": "Tram 92 · arrêt Ma Campagne",
+        "transport": "Tram 92 · arrêt Ma Campagne · À 2 pas de l’avenue Louise",
         "vat": "TVA",
         "legal_nav": "Informations légales",
         "legal": "Mentions légales",
@@ -115,11 +115,11 @@ I18N = {
         "hours_title": "Openingsuren",
         "addr_full": "Charleroise Steenweg 257, 1060 Sint-Gillis",
         "closed": "Gesloten",
-        "reviews_label": "meer dan 440 Google-reviews",
+        "reviews_label": "+450 Google-reviews",
         "map_title": "Kaart naar Digital-Buro, Charleroise Steenweg 257 in Sint-Gillis",
         "map_show": "Kaart tonen",
         "map_note": "De Google Maps-kaart wordt pas geladen als u erom vraagt.",
-        "tagline": "Uw partner voor kantoor en informatica, met meer dan 30 jaar ervaring.",
+        "tagline": "Uw partner voor kantoor en informatica, met meer dan 35 jaar ervaring.",
         "brussels": "Brussel",
         "f_repairs": "Herstellingen",
         "f_guide": "Hoe werkt een printer? (FR)",
@@ -131,7 +131,7 @@ I18N = {
             ["Contact", "/nl/#contact"],
         ],
         "f_weekdays": "Ma – vr",
-        "transport": "Tram 92 · halte Ma Campagne",
+        "transport": "Tram 92 · halte Ma Campagne · Vlak bij de Louizalaan",
         "vat": "btw",
         "legal_nav": "Juridische informatie",
         "legal": "Wettelijke vermeldingen",
@@ -170,11 +170,11 @@ I18N = {
         "hours_title": "Opening hours",
         "addr_full": "Chaussée de Charleroi 257, 1060 Saint-Gilles",
         "closed": "Closed",
-        "reviews_label": "440+ Google reviews",
+        "reviews_label": "+450 Google reviews",
         "map_title": "Map to Digital-Buro, Chaussée de Charleroi 257, Saint-Gilles",
         "map_show": "Show the map",
         "map_note": "The Google Maps map only loads when you ask for it.",
-        "tagline": "Your office & IT partner in Brussels, with over 30 years of experience.",
+        "tagline": "Your office & IT partner in Brussels, with over 35 years of experience.",
         "brussels": "Brussels",
         "f_repairs": "Repairs",
         "f_guide": "How printers work (FR)",
@@ -186,7 +186,7 @@ I18N = {
             ["Contact", "/en/#contact"],
         ],
         "f_weekdays": "Mon – Fri",
-        "transport": "Tram 92 · Ma Campagne stop",
+        "transport": "Tram 92 · Ma Campagne stop · A few steps from Avenue Louise",
         "vat": "VAT",
         "legal_nav": "Legal information",
         "legal": "Legal notice",
@@ -290,7 +290,7 @@ def business_node(site):
                        "et toners, vente, installation et maintenance de matériel.",
         "slogan": "Votre meilleur partenaire bureautique & digital",
         "url": f"{url}/",
-        "logo": f"{url}/icon-512.png",
+        "logo": f"{url}{site['logo']}",
         "image": [
             f"{url}/assets/img/vitrine-digital-buro-saint-gilles.webp",
             f"{url}/assets/img/og-image.jpg",
@@ -475,6 +475,7 @@ def main():
             shutil.copy2(item, dest)
 
     versions = {
+        "logo": short_hash(out / site['logo'].lstrip('/')),
         "brand": short_hash(out / "favicon.svg"),
         "refresh": short_hash(out / "assets/css/refresh.css"),
         "refresh_js": short_hash(out / "assets/js/refresh.js"),
@@ -503,7 +504,7 @@ def main():
 
     for page in pages:
         lang = page["lang"]
-        t = I18N[lang]
+        t = {**I18N[lang], "reviews_label": site["google"]["reviews_label" + ("" if lang == "fr" else f"_{lang}")]}
         page = {
             "noindex": False,
             "alternates": None,

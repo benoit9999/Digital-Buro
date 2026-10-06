@@ -2,7 +2,7 @@
 <header class="site-header" data-header>
   <div class="container nav">
     <a class="nav__logo" href="{{ t.home_url }}">
-      <img src="/assets/img/logo.svg" alt="Digital-Buro — {{ t.home }}" width="175" height="36">
+      <img src="{{ site.logo }}?v={{ v.logo }}" alt="Digital-Buro — {{ t.home }}" width="350" height="110">
     </a>
     {%- if page.lang == 'fr' %}
     <nav class="nav__menu" aria-label="Navigation principale">

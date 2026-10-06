@@ -1,14 +1,23 @@
 {# Components imported with context by macros.html. #}
 {% macro status() -%}<span class="status" data-status data-state="unknown"><span class="status__dot" aria-hidden="true"></span><span data-status-text>{{ t.hours_short }}</span></span>{%- endmacro %}
 
+{% macro home_location() -%}
+<div class="hero-location">
+{{ ui.icon('tram') }}
+<div><strong class="hero-location__stop">{{ 'Next to the' if page.lang == 'en' else ('Naast tramhalte' if page.lang == 'nl' else 'À côté de l’arrêt') }} <span>{{ site.district }}</span>{{ ' tram stop' if page.lang == 'en' else '' }}</strong>
+<p>{{ 'A few steps from' if page.lang == 'en' else ('Vlak bij' if page.lang == 'nl' else 'À deux pas de') }} <strong>{{ 'Avenue Louise' if page.lang == 'en' else ('de Louizalaan' if page.lang == 'nl' else 'l’avenue Louise') }}</strong>.</p></div>
+</div>
+{%- endmacro %}
+
 {% macro photo(key, eager=False, cls='', sizes='(min-width: 1024px) 560px, calc(100vw - 32px)', decorative=False) -%}
 {% set p = site.photos[key] %}
 {% set widths = p.get('widths', [800, 1600]) %}
 {% set fallback = 800 if 800 in widths else widths[-1] %}
-<img class="editorial-photo{% if p.get('product') %} product-photo{% endif %} {{ cls }}"
+{% set ratio = p.get('aspect_ratio', [8, 5]) %}
+<img class="editorial-photo{% if p.get('product') %} product-photo{% endif %}{% if p.get('contain') %} photo--contain{% endif %} {{ cls }}"
   src="/assets/img/photos/{{ p.file }}-{{ fallback }}.webp"
   srcset="{% for width in widths %}/assets/img/photos/{{ p.file }}-{{ width }}.webp {{ width }}w{% if not loop.last %}, {% endif %}{% endfor %}"
-  sizes="{{ sizes|e }}" width="{{ widths[-1] }}" height="{{ widths[-1] * 5 // 8 }}"
+  sizes="{{ sizes|e }}" width="{{ widths[-1] }}" height="{{ widths[-1] * ratio[1] // ratio[0] }}"
   alt="{{ '' if decorative else p.alt|e }}" loading="{{ 'eager' if eager else 'lazy' }}" {% if eager %}fetchpriority="high"{% endif %} decoding="async">
 {%- endmacro %}
 
@@ -21,8 +30,19 @@
 {%- endmacro %}
 
 {% macro seal() -%}
-<div class="experience-seal" aria-label="Plus de 30 ans d’expérience">
-<svg viewBox="0 0 140 140" aria-hidden="true"><defs><path id="seal-ring" d="M70,70m-53,0a53,53 0 1,1 106,0a53,53 0 1,1 -106,0"/></defs><text><textPath href="#seal-ring" textLength="330">RÉPARATION TOUTES MARQUES • PLUS DE 30 ANS • </textPath></text></svg><span><strong>30<span>+</span></strong><small>ANS</small></span></div>
+<div class="experience-seal" aria-label="{{ 'Over ' if page.lang == 'en' else ('Meer dan ' if page.lang == 'nl' else 'Plus de ') }}{{ site.experience_years }}{{ ' years of experience' if page.lang == 'en' else (' jaar ervaring' if page.lang == 'nl' else ' ans d’expérience') }}">
+<svg viewBox="0 0 140 140" aria-hidden="true"><defs><path id="seal-ring" d="M70,70m-53,0a53,53 0 1,1 106,0a53,53 0 1,1 -106,0"/></defs><text><textPath href="#seal-ring" textLength="330">{{ 'ALL BRANDS REPAIRED • OVER ' if page.lang == 'en' else ('HERSTELLING ALLE MERKEN • MEER DAN ' if page.lang == 'nl' else 'RÉPARATION TOUTES MARQUES • PLUS DE ') }}{{ site.experience_years }}{{ ' YEARS • ' if page.lang == 'en' else (' JAAR • ' if page.lang == 'nl' else ' ANS • ') }}</textPath></text></svg><span><strong><span>+</span>{{ site.experience_years }}</strong><small>{{ 'YEARS' if page.lang == 'en' else ('JAAR' if page.lang == 'nl' else 'ANS') }}</small></span></div>
+{%- endmacro %}
+
+{% macro shop_photos() -%}
+<div class="shop-card__photos">
+{% for key, label_fr, label_en, label_nl in [('magasin-interieur', 'Intérieur', 'Inside', 'Binnen'), ('magasin-exterieur', 'Extérieur', 'Outside', 'Buiten')] %}
+<div class="shop-card__photo">
+{{ photo(key, eager=True, sizes='(min-width: 1300px) 270px, (min-width: 768px) 24vw, (min-width: 576px) 250px, calc((100vw - 64px) / 2)') }}
+<span class="shop-card__photo-label">{{ label_en if page.lang == 'en' else (label_nl if page.lang == 'nl' else label_fr) }}</span>
+</div>
+{% endfor %}
+</div>
 {%- endmacro %}
 
 {% macro timeline() -%}
@@ -38,10 +58,10 @@
 {% set filtered = selected.items|length > 0 %}{% if not selected.items %}{% set selected.items = site.reviews %}{% endif %}
 <section class="section reviews-section" aria-label="{{ 'Google reviews' if page.lang == 'en' else ('Google-reviews' if page.lang == 'nl' else 'Avis Google') }}"><div class="container" data-carousel>
 <div class="review-heading"><div><span class="eyebrow">{{ 'DIGITAL-BURO · SAINT-GILLES' if page.lang == 'en' else ('DIGITAL-BURO · SINT-GILLIS' if page.lang == 'nl' else 'DIGITAL-BURO · SAINT-GILLES') }}</span><h2 class="h2">{{ 'Customer reviews' if page.lang == 'en' else ('Klantenreviews' if page.lang == 'nl' else 'Les avis de nos clients') }}</h2></div><div class="carousel-controls"><button type="button" class="round-btn" data-prev aria-label="Avis précédents">←</button><button type="button" class="round-btn" data-next aria-label="Avis suivants">→</button></div></div>
-<div class="google-summary">{{ gmark() }}<div><strong>Avis Google Maps</strong><div class="google-score"><b>{{ site.google.rating }}</b><span class="google-stars" role="img" aria-label="4,7 sur 5"><span aria-hidden="true">★★★★★</span><span aria-hidden="true" style="width:94%">★★★★★</span></span><a href="{{ site.google.cid_url }}" target="_blank" rel="noopener">{{ site.google.review_count }} avis ↗</a></div></div><a class="btn btn--outline" href="{{ site.google.cid_url }}" target="_blank" rel="noopener">{{ 'Read all reviews' if page.lang == 'en' else ('Alle reviews' if page.lang == 'nl' else 'Voir tous les avis') }}</a>{% if site.google.review_url %}<a class="btn btn--outline" href="{{ site.google.review_url }}" target="_blank" rel="noopener">Laisser un avis</a>{% endif %}</div>
+<div class="google-summary">{{ gmark() }}<div><strong>Avis Google Maps</strong><div class="google-score"><b>{{ site.google.rating }}</b><span class="google-stars" role="img" aria-label="4,7 sur 5"><span aria-hidden="true">★★★★★</span><span aria-hidden="true" style="width:94%">★★★★★</span></span><a href="{{ site.google.cid_url }}" target="_blank" rel="noopener">+{{ site.google.review_count }} {{ 'avis' if page.lang == 'fr' else 'reviews' }} ↗</a></div></div><a class="btn btn--outline" href="{{ site.google.cid_url }}" target="_blank" rel="noopener">{{ 'Read all reviews' if page.lang == 'en' else ('Alle reviews' if page.lang == 'nl' else 'Voir tous les avis') }}</a>{% if site.google.review_url %}<a class="btn btn--outline" href="{{ site.google.review_url }}" target="_blank" rel="noopener">Laisser un avis</a>{% endif %}</div>
 {% if selected.items %}<div class="review-track" tabindex="0" aria-label="Avis clients, défilement horizontal" data-review-track>
 {% for r in selected.items %}<article class="review-card"><header><span class="review-avatar avatar-{{ loop.index0 % 3 }}">{{ r.initial|e }}</span><div><h3>{{ r.author|e }}</h3>{% if r.date %}<time datetime="{{ r.date }}" data-review-date>{{ r.date }}</time>{% else %}<span class="review-date">{{ r.date_label|e }}</span>{% endif %}</div>{{ gmark() }}</header><span class="review-stars" role="img" aria-label="{{ r.rating }} sur 5">{{ '★' * r.rating }}</span><div class="review-text" lang="fr"><p>{{ r.text|e }}</p></div><button class="review-more" type="button" aria-expanded="false" data-review-more hidden>{{ 'More' if page.lang == 'en' else ('Meer' if page.lang == 'nl' else 'Plus') }}</button>{% if r.response %}<details class="owner-reply"><summary>Réponse du propriétaire</summary><p>{{ r.response|e }}</p></details>{% endif %}<a class="review-source" href="{{ r.source }}" target="_blank" rel="noopener">Google Maps ↗</a></article>{% endfor %}</div>{% else %}<p class="review-empty">{{ 'Read our customers’ experiences on Google Maps.' if page.lang == 'en' else ('Lees de ervaringen van onze klanten op Google Maps.' if page.lang == 'nl' else 'Retrouvez les témoignages de nos clients sur Google Maps.') }}</p>{% endif %}
-<p class="caption review-disclosure">{% if tag and not filtered %}Avis sur le magasin, tous services confondus. {% endif %}Extraits. {{ 'Selection of reviews reproduced from Google Maps. Figures recorded on 28 September 2026.' if page.lang == 'en' else ('Selectie van Google Maps-reviews. Cijfers genoteerd op 28 september 2026.' if page.lang == 'nl' else 'Sélection d’avis reproduits depuis Google Maps. Note relevée le 28 septembre 2026.') }}</p>
+<p class="caption review-disclosure">{% if tag and not filtered %}Avis sur le magasin, tous services confondus. {% endif %}Extraits. {{ 'Selection of reviews reproduced from Google Maps. Rating recorded on 28 September 2026.' if page.lang == 'en' else ('Selectie van Google Maps-reviews. Score genoteerd op 28 september 2026.' if page.lang == 'nl' else 'Sélection d’avis reproduits depuis Google Maps. Note relevée le 28 septembre 2026.') }}</p>
 </div></section>
 {%- endmacro %}
 

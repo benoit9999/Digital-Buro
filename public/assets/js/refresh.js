@@ -39,8 +39,16 @@
   if(toggle&&menu){
     all('.mobile-menu__link',menu).forEach((el,i)=>el.style.setProperty('--menu-i',i));
     const background=all('main,.site-footer,[data-callbar]');
-    const sync=()=>{const open=toggle.getAttribute('aria-expanded')==='true';background.forEach(el=>el.inert=open);menu.inert=!open;if(open){header.classList.remove('is-hidden');menu.style.setProperty('--menu-top',header.getBoundingClientRect().bottom+'px');menu.querySelector('a')?.focus({preventScroll:true});}};
+    const updateMenuTop=()=>{
+      if(toggle.getAttribute('aria-expanded')!=='true'||!header)return;
+      const top=Math.max(0,header.getBoundingClientRect().top)+header.offsetHeight;
+      menu.style.setProperty('--menu-top',top+'px');
+    };
+    const sync=()=>{const open=toggle.getAttribute('aria-expanded')==='true';background.forEach(el=>el.inert=open);menu.inert=!open;if(open){header.classList.remove('is-hidden');updateMenuTop();menu.querySelector('a')?.focus({preventScroll:true});}};
     new MutationObserver(sync).observe(toggle,{attributes:true,attributeFilter:['aria-expanded']});menu.inert=true;
+    if(header&&'ResizeObserver' in window)new ResizeObserver(updateMenuTop).observe(header);
+    addEventListener('resize',updateMenuTop,{passive:true});
+    window.visualViewport?.addEventListener('resize',updateMenuTop,{passive:true});
     document.addEventListener('keydown',e=>{if(e.key!=='Tab'||toggle.getAttribute('aria-expanded')!=='true')return;const focusables=[toggle,...all('a,button',menu)];const first=focusables[0],last=focusables.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}});
   }
 

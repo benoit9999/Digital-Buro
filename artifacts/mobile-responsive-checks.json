@@ -1,0 +1,1371 @@
+{
+  "date": "2026-10-04",
+  "pages": 16,
+  "viewports": 10,
+  "results": [
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/reparation-imprimante/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/reparation-ordinateur/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/reparation-mac/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/cartouches-toners/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/vente-materiel/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/entreprises/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/a-propos/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/contact/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/mentions-legales/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/confidentialite/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/merci/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/404.html",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/nl/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "path": "/en/",
+      "scrollWidth": 320,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/reparation-imprimante/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/reparation-ordinateur/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/reparation-mac/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/cartouches-toners/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/vente-materiel/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/entreprises/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/a-propos/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/contact/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/mentions-legales/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/confidentialite/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/merci/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/404.html",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/nl/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/en/",
+      "scrollWidth": 360,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/reparation-imprimante/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/reparation-ordinateur/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/reparation-mac/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/cartouches-toners/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/vente-materiel/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/entreprises/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/a-propos/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/contact/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/mentions-legales/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/confidentialite/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/merci/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/404.html",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/nl/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "path": "/en/",
+      "scrollWidth": 375,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/reparation-imprimante/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/reparation-ordinateur/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/reparation-mac/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/cartouches-toners/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/vente-materiel/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/entreprises/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/a-propos/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/contact/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/mentions-legales/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/confidentialite/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/merci/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/404.html",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/nl/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "path": "/en/",
+      "scrollWidth": 390,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/reparation-imprimante/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/reparation-ordinateur/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/reparation-mac/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/cartouches-toners/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/vente-materiel/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/entreprises/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/a-propos/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/contact/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/mentions-legales/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/confidentialite/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/merci/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/404.html",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/nl/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/en/",
+      "scrollWidth": 430,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/reparation-imprimante/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/reparation-ordinateur/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/reparation-mac/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/cartouches-toners/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/vente-materiel/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/entreprises/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/a-propos/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/contact/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/mentions-legales/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/confidentialite/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/merci/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/404.html",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/nl/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "path": "/en/",
+      "scrollWidth": 640,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/reparation-imprimante/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/reparation-ordinateur/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/reparation-mac/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/cartouches-toners/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/vente-materiel/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/entreprises/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/a-propos/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/contact/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/mentions-legales/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/confidentialite/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/merci/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/404.html",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/nl/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "path": "/en/",
+      "scrollWidth": 768,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/reparation-imprimante/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/reparation-ordinateur/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/reparation-mac/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/cartouches-toners/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/vente-materiel/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/entreprises/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/a-propos/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/contact/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/mentions-legales/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/confidentialite/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/merci/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/404.html",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/nl/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/en/",
+      "scrollWidth": 844,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/reparation-imprimante/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/reparation-ordinateur/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/reparation-mac/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/cartouches-toners/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/vente-materiel/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/entreprises/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/a-propos/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/contact/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/mentions-legales/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/confidentialite/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/merci/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/404.html",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/nl/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "path": "/en/",
+      "scrollWidth": 1024,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/reparation-imprimante/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/reparation-ordinateur/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/reparation-mac/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/cartouches-toners/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/vente-materiel/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/entreprises/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/a-propos/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/contact/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/mentions-legales/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/confidentialite/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/merci/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/404.html",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/nl/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "/en/",
+      "scrollWidth": 1440,
+      "outside": [],
+      "clipped": []
+    }
+  ],
+  "menus": [
+    {
+      "width": 320,
+      "height": 740,
+      "alignment": {
+        "header": 97,
+        "menu": 97
+      },
+      "ok": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "alignment": {
+        "header": 97,
+        "menu": 97
+      },
+      "ok": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "alignment": {
+        "header": 97,
+        "menu": 97
+      },
+      "ok": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "alignment": {
+        "header": 97,
+        "menu": 97
+      },
+      "ok": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "alignment": {
+        "header": 97,
+        "menu": 97
+      },
+      "ok": true
+    },
+    {
+      "width": 640,
+      "height": 900,
+      "alignment": {
+        "header": 97,
+        "menu": 97
+      },
+      "ok": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "alignment": {
+        "header": 109,
+        "menu": 109
+      },
+      "ok": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "alignment": {
+        "header": 109,
+        "menu": 109
+      },
+      "ok": true
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "alignment": {
+        "header": 109,
+        "menu": 109
+      },
+      "ok": true
+    }
+  ],
+  "errors": []
+}

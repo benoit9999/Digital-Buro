@@ -11,7 +11,7 @@
 </div>
 <div class="hero-scene"><div class="scene-grid" aria-hidden="true"></div><figure class="shop-card"><img src="/assets/img/vitrine-digital-buro-saint-gilles.webp" srcset="/assets/img/vitrine-digital-buro-saint-gilles-600.webp 600w, /assets/img/vitrine-digital-buro-saint-gilles.webp 900w" sizes="(min-width:1024px) 520px, calc(100vw - 64px)" alt="La vraie vitrine Digital-Buro, Chaussée de Charleroi à Saint-Gilles" width="900" height="334" fetchpriority="high"><figcaption><span>{{ ui.icon('pin') }} Ma Campagne, Saint-Gilles</span><strong>Chaussée de Charleroi 257</strong></figcaption></figure>
 <span class="floating-note floating-note--top">{{ fx.gmark() }}<span><strong>4,7 / 5</strong><small>448 avis Google</small></span></span>
-<div class="scene-repair"><img src="/assets/img/ill-printer.svg" alt="" width="320" height="200"><span><strong>Réparation & entretien</strong><small>Imprimantes toutes marques</small></span></div>
+<div class="scene-repair scene-repair--photo">{{ fx.photo('imprimante', sizes='100px', decorative=True) }}<span><strong>Réparation & entretien</strong><small>Imprimantes toutes marques</small></span></div>
 {{ fx.seal() }}<span class="floating-note floating-note--bottom">{{ ui.icon('check') }} Toutes marques</span></div>
 </div></section>
 <section class="device-section" id="services"><div class="container"><div class="section-head section-head--split"><div><span class="eyebrow">ON COMMENCE PAR QUOI ?</span><h2 class="h3">Qu’est-ce qui est en panne ?</h2></div><a class="link-arrow" href="/entreprises/">Vous êtes une entreprise ? {{ ui.icon('arrow-right') }}</a></div>
@@ -31,4 +31,3 @@
 {{ fx.callback() }}
 {{ ui.cta_band('Besoin d’une réparation ou d’un consommable ?', 'Retrouvez-nous Chaussée de Charleroi 257, à Saint-Gilles.') }}
 {% endblock %}
-

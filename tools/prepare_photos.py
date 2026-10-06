@@ -20,7 +20,7 @@ def get(p):
  try:
   req=urllib.request.Request(url+'?w=1600&auto=format&fit=crop',headers={'User-Agent':'Mozilla/5.0'})
   image=Image.open(io.BytesIO(urllib.request.urlopen(req,timeout=20).read())).convert('RGB')
-  for width in (800,1600):
+  for width in (400,800,1600):
    im=ImageOps.fit(image,(width,width*5//8),method=Image.Resampling.LANCZOS)
    q=80
    while True:
@@ -28,7 +28,7 @@ def get(p):
     if len(buffer.getvalue())<=150000 or q<=40:break
     q-=5
    (OUT/f'{key}-{width}.webp').write_bytes(buffer.getvalue())
-  return key,dict(file=key,alt=alt,source=source,author=author,license='https://unsplash.com/license' if 'unsplash' in url else 'https://www.pexels.com/license/')
+  return key,dict(file=key,alt=alt,source=source,author=author,widths=[400,800,1600],license='https://unsplash.com/license' if 'unsplash' in url else 'https://www.pexels.com/license/')
  except Exception as exc:
   print(key, str(exc));return key,None
 with ThreadPoolExecutor(max_workers=4) as pool:

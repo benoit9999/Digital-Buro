@@ -121,6 +121,7 @@
       "url": "/reparation-imprimante/",
       "icon": "printer",
       "art": "ill-printer.svg",
+      "card_photo": "imprimante",
       "teaser": "Diagnostic, entretien et réparation, en atelier ou dans vos locaux.",
       "link": "Réparation d’imprimantes"
     },
@@ -132,6 +133,7 @@
       "url": "/reparation-ordinateur/",
       "icon": "laptop",
       "art": "ill-laptop.svg",
+      "card_photo": "ordinateur",
       "teaser": "PC lent, écran cassé ou batterie fatiguée : on regarde ça.",
       "link": "Réparation d’ordinateurs"
     },
@@ -143,6 +145,7 @@
       "url": "/reparation-mac/",
       "icon": "monitor",
       "art": "ill-mac.svg",
+      "card_photo": "mac",
       "teaser": "MacBook, iMac, Mac mini : une seconde vie pour votre Mac.",
       "link": "Réparation Mac"
     },
@@ -154,6 +157,7 @@
       "url": "/cartouches-toners/",
       "icon": "droplet",
       "art": "ill-cartridges.svg",
+      "card_photo": "cartouches",
       "teaser": "La bonne référence, même pour votre ancienne imprimante.",
       "link": "Cartouches & toners"
     },
@@ -165,6 +169,7 @@
       "url": "/entreprises/",
       "icon": "building",
       "art": "ill-network.svg",
+      "card_photo": "entreprises",
       "teaser": "Maintenance, réseau, installation et livraison de consommables pour votre bureau.",
       "link": "Services aux entreprises"
     },
@@ -176,6 +181,7 @@
       "url": "/vente-materiel/",
       "icon": "package",
       "art": "ill-copier.svg",
+      "card_photo": "vente",
       "teaser": "Le bon matériel, conseillé, installé et configuré.",
       "link": "Vente de matériel"
     }
@@ -273,21 +279,32 @@
   },
   "photos": {
     "imprimante": {
-      "file": "imprimante",
-      "alt": "Photocopieur multifonction blanc dans un bureau",
-      "source": "https://unsplash.com/photos/CGnoRQZGWmw",
-      "author": "engin akyurt",
-      "license": "https://unsplash.com/license"
+      "file": "hp-officejet-pro-9120e",
+      "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",
+      "source": "https://www.hp.com/be-fr/products/printers/product-details/2101610322",
+      "download": "https://hp.widen.net/content/uljgknvw1d/png/uljgknvw1d.png?w=1600&h=1200&dpi=72&color=ffffff00",
+      "author": "HP",
+      "brand": "HP",
+      "model": "OfficeJet Pro 9120e",
+      "product": true,
+      "widths": [400, 800, 1600],
+      "rights": "Visuel officiel HP ; droits réservés au fabricant."
     },
     "entreprises": {
-      "file": "entreprises",
-      "alt": "Imprimante et matériel informatique dans un bureau lumineux",
-      "source": "https://unsplash.com/photos/8r1ZlqqGxMU",
-      "author": "Meatball Overexposure",
-      "license": "https://unsplash.com/license"
+      "file": "brother-mfc-l8390cdw",
+      "alt": "Imprimante multifonction couleur Brother MFC-L8390CDW vue de trois quarts",
+      "source": "https://www.brother.com.au/en/printers/all-printers/mfc-l8390cdw",
+      "download": "https://www.brother.com.au/-/media/8c69502dc0c9493788fa517073daffa4.jpg?as=0&h=1052&w=1052&rev=75cbc6ab70474d2180cfc913bc0ca10e&hash=0C7C66E166C02BBA6891F6458F887CEF",
+      "author": "Brother",
+      "brand": "Brother",
+      "model": "MFC-L8390CDW",
+      "product": true,
+      "widths": [400, 800, 1052],
+      "rights": "Visuel officiel Brother ; droits réservés au fabricant."
     },
     "mac": {
       "file": "mac",
+      "widths": [400, 800, 1600],
       "alt": "MacBook ouvert sur un bureau en bois",
       "source": "https://unsplash.com/photos/mCg0ZgD7BgU",
       "author": "Aleksi Tappura",
@@ -295,6 +312,7 @@
     },
     "ordinateur": {
       "file": "ordinateur",
+      "widths": [400, 800, 1600],
       "alt": "Réparation d’un ordinateur portable ouvert avec un tournevis",
       "source": "https://www.pexels.com/photo/7639373/",
       "author": "IT services EU",
@@ -302,17 +320,23 @@
     },
     "cartouches": {
       "file": "cartouches",
+      "widths": [400, 800, 1600],
       "alt": "Cartouches d’encre dans une imprimante photo",
       "source": "https://www.pexels.com/photo/17536002/",
       "author": "Jakub Zerdzicki",
       "license": "https://www.pexels.com/license/"
     },
     "vente": {
-      "file": "imprimante",
-      "alt": "Photocopieur multifonction blanc dans un bureau",
-      "source": "https://unsplash.com/photos/CGnoRQZGWmw",
-      "author": "engin akyurt",
-      "license": "https://unsplash.com/license"
+      "file": "epson-ecotank-2025",
+      "alt": "Imprimante Epson EcoTank de la gamme 2025 avec réservoirs d’encre rechargeables",
+      "source": "https://press.epson.eu/fr_BE/news/epson-devoile-de-nouvelles-imprimantes-ecotank-meilleure-productivite-plus-grande-facilite-d-utilisation-et-impression-sans-souci-pour-les-foyers-et-les-petites-entreprises1/",
+      "download": "https://press.epson.eu/app/uploads/2025/05/24lio3_fal_blk_06.jpg.jpg",
+      "author": "Epson",
+      "brand": "Epson",
+      "model": "EcoTank",
+      "product": true,
+      "widths": [400, 670],
+      "rights": "Visuel de presse officiel Epson ; droits réservés au fabricant."
     }
   },
   "reviews": [

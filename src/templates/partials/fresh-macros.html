@@ -1,9 +1,23 @@
 {# Components imported with context by macros.html. #}
 {% macro status() -%}<span class="status" data-status data-state="unknown"><span class="status__dot" aria-hidden="true"></span><span data-status-text>{{ t.hours_short }}</span></span>{%- endmacro %}
 
-{% macro photo(key, eager=False, cls='') -%}
+{% macro photo(key, eager=False, cls='', sizes='(min-width: 1024px) 560px, calc(100vw - 32px)', decorative=False) -%}
 {% set p = site.photos[key] %}
-<img class="editorial-photo {{ cls }}" src="/assets/img/photos/{{ p.file }}-800.webp" srcset="/assets/img/photos/{{ p.file }}-800.webp 800w, /assets/img/photos/{{ p.file }}-1600.webp 1600w" sizes="(min-width: 1024px) 560px, calc(100vw - 32px)" width="1600" height="1000" alt="{{ p.alt|e }}" loading="{{ 'eager' if eager else 'lazy' }}" {% if eager %}fetchpriority="high"{% endif %} decoding="async">
+{% set widths = p.get('widths', [800, 1600]) %}
+{% set fallback = 800 if 800 in widths else widths[-1] %}
+<img class="editorial-photo{% if p.get('product') %} product-photo{% endif %} {{ cls }}"
+  src="/assets/img/photos/{{ p.file }}-{{ fallback }}.webp"
+  srcset="{% for width in widths %}/assets/img/photos/{{ p.file }}-{{ width }}.webp {{ width }}w{% if not loop.last %}, {% endif %}{% endfor %}"
+  sizes="{{ sizes|e }}" width="{{ widths[-1] }}" height="{{ widths[-1] * 5 // 8 }}"
+  alt="{{ '' if decorative else p.alt|e }}" loading="{{ 'eager' if eager else 'lazy' }}" {% if eager %}fetchpriority="high"{% endif %} decoding="async">
+{%- endmacro %}
+
+{% macro product_figure(key, eager=False) -%}
+{% set p = site.photos[key] %}
+<figure class="printer-figure">
+  {{ photo(key, eager) }}
+  <figcaption><strong>{{ p.brand|e }} {{ p.model|e }}</strong><span>Visuel d’illustration</span></figcaption>
+</figure>
 {%- endmacro %}
 
 {% macro seal() -%}

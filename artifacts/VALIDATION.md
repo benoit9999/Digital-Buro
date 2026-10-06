@@ -1,3 +1,26 @@
+# Photos complémentaires et mobile — validation du 4 octobre 2026
+
+- 16 pages examinées dans Chrome sur dix formats : 320 × 740, 360 × 800, 375 × 812, 390 × 844, 430 × 932, 640 × 900, 768 × 1024, 844 × 390, 1024 × 900 et 1440 × 1000. Les 160 parcours passent : aucun débordement horizontal de la page, titre ou bouton tronqué, image en erreur, erreur JavaScript ou réponse HTTP locale en erreur.
+- Six cartes photographiques sur l’accueil. Une colonne sous 640 px, deux de 640 à 1023 px, trois à partir de 1024 px. Les appareils restent entiers ; les photos éditoriales remplissent leur cadre. Photo réelle du magasin visible dans Contact et champs mobiles de 16 px minimum.
+- Menu testé sur les neuf formats inférieurs à 1100 px : arrière-plan rendu inactif, barre d’appel masquée, accès aux dernières actions par défilement et fermeture avec Échap. Position vérifiée après passage du portrait au paysage ; fermeture automatique et restauration du contenu lors du passage au grand écran.
+- FAQ, carrousel et défilement au clavier des tableaux du guide vérifiés. Le cadre du tableau défile, tandis que la page reste à la largeur de l’écran.
+- `tools/check_refresh.cjs` passe aussi avec les animations habituelles : navigation, FAQ, carrousel, formulaires simulés, réduction des animations et navigation sans JavaScript. Aucun message externe envoyé.
+- Builds PHP et GitHub Pages avec `/Digital-Buro` : 16 pages, liens et srcset valides ; `tools/check_pages.cjs` passe sur la version préfixée.
+- Rapport détaillé : [mobile-responsive-checks.json](mobile-responsive-checks.json). Captures examinées : `mobile-home-*`, `mobile-services-*`, `mobile-contact-*`, `mobile-guide-*` et `mobile-menu-landscape.png`. Contrôles locaux de mise en page ; aucune nouvelle mesure Lighthouse et aucun test sur un téléphone physique.
+
+---
+
+# Photos d’imprimantes — validation du 4 octobre 2026
+
+- Build de l’hébergement PHP : 16 pages, aucun lien cassé, un H1 par page, titres et descriptions uniques.
+- Build GitHub Pages avec le préfixe `/Digital-Buro` et contrôle existant `tools/check_pages.cjs` : 16 pages, liens, assets, srcset, navigation et affichage mobile/ordinateur validés.
+- 10 pages vérifiées à 390, 768 et 1440 px, soit 30 parcours : toutes les images décodées, aucun débordement horizontal, aucune erreur JavaScript ou réponse HTTP locale en erreur.
+- Trois photos dans les cartes de services de l’accueil et une photo légendée sur chacune des pages Imprimantes, Vente et Entreprises. Les produits restent entiers (`object-fit: contain`).
+- Huit variantes WebP de 3 070 à 19 146 octets, identiques dans `src/` et `public/`. Sources officielles, textes alternatifs et droits documentés dans `site.photos` et le README.
+- Captures examinées : accueil, cartes de services, Imprimantes, Vente et Entreprises sur mobile et ordinateur. Rapport : [printer-photo-checks.json](printer-photo-checks.json) ; captures `printers-*.png`.
+
+---
+
 # Validation locale — 29 septembre 2026
 
 ## Build

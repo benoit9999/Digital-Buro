@@ -1,6 +1,6 @@
 # Digital-Buro — refonte du site vitrine
 
-Version du 29 septembre 2026. Site statique généré avec Python/Jinja2, compatible avec l’hébergement Apache/PHP existant. Le site comprend 16 pages. La page GSM/tablettes ajoutée pendant la maquette a été retirée faute de confirmation sur le site d’origine ; les URL des prestations confirmées sont conservées. Rien n’a été publié sur le site de production.
+Version actualisée le 4 octobre 2026. Site statique généré avec Python/Jinja2, compatible avec l’hébergement Apache/PHP existant. Le site comprend 16 pages. La page GSM/tablettes ajoutée pendant la maquette a été retirée faute de confirmation sur le site d’origine ; les URL des prestations confirmées sont conservées. Rien n’a été publié sur le site de production.
 
 ## Générer et prévisualiser
 
@@ -38,18 +38,25 @@ Les effets comprennent soulignements, boutons, menus, FAQ animées, apparitions,
 
 La vitrine existante reste la seule photo identifiée comme celle du magasin. Les photos de banque d’images illustrent les prestations ; elles ne sont pas présentées comme l’équipe ou l’atelier de Digital-Buro.
 
-| Fichiers dans `src/assets/img/photos/` | Photographe et source | Licence |
+| Fichiers dans `src/assets/img/photos/` | Photographe et source | Licence / droits |
 |---|---|---|
 | imprimante-800/1600.webp | [engin akyurt](https://unsplash.com/photos/CGnoRQZGWmw) | [Unsplash](https://unsplash.com/license) |
 | entreprises-800/1600.webp | [Meatball Overexposure](https://unsplash.com/photos/8r1ZlqqGxMU) | [Unsplash](https://unsplash.com/license) |
-| mac-800/1600.webp | [Aleksi Tappura](https://unsplash.com/photos/mCg0ZgD7BgU) | [Unsplash](https://unsplash.com/license) |
-| ordinateur-800/1600.webp | [IT services EU](https://www.pexels.com/photo/7639373/) | [Pexels](https://www.pexels.com/license/) |
+| mac-400/800/1600.webp | [Aleksi Tappura](https://unsplash.com/photos/mCg0ZgD7BgU) | [Unsplash](https://unsplash.com/license) |
+| ordinateur-400/800/1600.webp | [IT services EU](https://www.pexels.com/photo/7639373/) | [Pexels](https://www.pexels.com/license/) |
 | gsm-800/1600.webp | [Tima Miroshnichenko](https://www.pexels.com/photo/6754839/) | [Pexels](https://www.pexels.com/license/) |
-| cartouches-800/1600.webp | [Jakub Zerdzicki](https://www.pexels.com/photo/17536002/) | [Pexels](https://www.pexels.com/license/) |
+| cartouches-400/800/1600.webp | [Jakub Zerdzicki](https://www.pexels.com/photo/17536002/) | [Pexels](https://www.pexels.com/license/) |
+| hp-officejet-pro-9120e-400/800/1600.webp | [HP OfficeJet Pro 9120e — HP Belgique](https://www.hp.com/be-fr/products/printers/product-details/2101610322) | Visuel officiel HP, droits réservés au fabricant |
+| brother-mfc-l8390cdw-400/800/1052.webp | [Brother MFC-L8390CDW — Brother](https://www.brother.com.au/en/printers/all-printers/mfc-l8390cdw) | Visuel officiel Brother, droits réservés au fabricant |
+| epson-ecotank-2025-400/670.webp | [Nouvelle gamme EcoTank 2025 — Epson Belgique](https://press.epson.eu/fr_BE/news/epson-devoile-de-nouvelles-imprimantes-ecotank-meilleure-productivite-plus-grande-facilite-d-utilisation-et-impression-sans-souci-pour-les-foyers-et-les-petites-entreprises1/) | Visuel de presse officiel Epson, droits réservés au fabricant |
 
-La page Vente réutilise la photo imprimante. La photo Cartouches montre des cartouches installées, en attendant une vraie photo du rayonnage. La vitrine (900 × 334) n’est pas agrandie au-delà de sa taille native.
+Depuis le 4 octobre 2026, l’accueil et les pages Imprimantes, Vente et Entreprises utilisent les trois visuels officiels HP, Epson et Brother ci-dessus. Les anciennes photos `imprimante` et `entreprises` restent archivées dans les assets. Les légendes présentent les nouveaux appareils comme des illustrations, sans annoncer de stock pour un modèle précis. Le visuel Epson illustre la nouvelle gamme EcoTank ; il n’est pas attribué à une référence précise. La photo Cartouches montre des cartouches installées, en attendant une vraie photo du rayonnage. La vitrine (900 × 334) n’est pas agrandie au-delà de sa taille native.
 
-Pour remplacer une image, conserver ses deux noms et exporter en WebP, 800 × 500 et 1600 × 1000, chacun sous 150 Ko. Actualiser le texte alternatif, l’auteur et la source dans `site.photos`. Les attributs de taille, srcset et chargement différé sont déjà prévus ; les photos de premier écran sont prioritaires.
+Les six cartes de services disposent désormais d’une photo : les cartes PC, Mac et Cartouches réutilisent les photos déjà présentes sur leurs pages détaillées. La page Contact montre aussi la vitrine du magasin. Des variantes de 400 × 250 px limitent le poids des photos dans les cartes sur les petits écrans.
+
+Pour les photos de banque d’images, conserver les noms et exporter en WebP, 400 × 250, 800 × 500 et 1600 × 1000, chacun sous 150 Ko (`tools/prepare_photos.py`). Renseigner les largeurs effectivement disponibles dans `site.photos[*].widths`. Pour les visuels d’imprimantes, `python tools/prepare_printer_photos.py` télécharge les URL officielles définies dans `site.photos`, conserve les originaux dans `.deps/` et crée les variantes de largeur indiquées par `widths` (Pillow requis). Le produit entier est conservé sur fond blanc, sans agrandissement au-delà de l’original. Chaque fichier d’imprimante pèse moins de 20 Ko. Actualiser le texte alternatif, l’auteur, la source et les droits dans `site.photos`, puis reconstruire. Les attributs de taille, srcset et chargement différé sont déjà prévus ; les photos de premier écran des pages de service sont prioritaires.
+
+Les cartes occupent une colonne sous 640 px, deux colonnes entre 640 et 1023 px et trois colonnes à partir de 1024 px. Les tableaux du guide défilent dans leur propre cadre sur mobile. Le menu suit les changements d’orientation et les barres mobiles réservent la zone de sécurité des écrans avec encoche. Les contrôles du 4 octobre 2026 couvrent les 16 pages sur dix formats, dont 320 px et le mode paysage ; voir `artifacts/mobile-responsive-checks.json`.
 
 ## Avis Google
 

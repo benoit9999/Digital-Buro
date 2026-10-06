@@ -12,7 +12,7 @@
       <p class="lead">Retrouvez-nous Chaussée de Charleroi 257, à Ma Campagne. Pour une question, appelez-nous ou {{ 'écrivez-nous par e-mail.' if static_preview else 'utilisez le formulaire.' }}</p>
     </div>
     <div class="btn-row" style="margin-top:20px">{{ ui.directions_btn(label="Venir au magasin",cls="btn--primary") }}<a class="btn btn--outline" href="#horaires">Voir les horaires</a></div>
-    <div class="contact-cards" style="margin-top:40px">
+    <div class="contact-cards contact-page-cards">
       <a class="contact-card" href="tel:{{ site.phone_intl }}" data-track="call">
         {{ ui.icon('phone') }}
         <span class="contact-card__label">Téléphone</span>
@@ -96,6 +96,10 @@
         <li>{{ ui.icon('tram') }}<div><span class="info-list__label">Transports en commun</span><span class="info-list__value">{{ site.transport }}</span></div></li>
         <li>{{ ui.icon('globe') }}<div><span class="info-list__label">Nous accueillons des clients de</span><span class="info-list__value" style="font-weight:500">{{ site.areas|join(', ') }} et de tout Bruxelles</span></div></li>
       </ul>
+      <figure class="shop-location contact-shop-photo">
+        <img src="/assets/img/vitrine-digital-buro-saint-gilles.webp" srcset="/assets/img/vitrine-digital-buro-saint-gilles-600.webp 600w, /assets/img/vitrine-digital-buro-saint-gilles.webp 900w" sizes="(min-width:1024px) 520px, calc(100vw - 32px)" alt="La vitrine du magasin Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles" width="900" height="334" loading="lazy" decoding="async">
+        <figcaption class="caption">Le magasin, Chaussée de Charleroi 257.</figcaption>
+      </figure>
       {{ ui.map_facade() }}
       {{ ui.directions_btn(label="Itinéraire vers le magasin", cls="btn--primary btn--block") }}
     </div>

@@ -1,6 +1,7 @@
 {#- =====================================================================
     Composants réutilisables (Jinja2)
     ===================================================================== -#}
+{% from "partials/fresh-macros.html" import photo as service_photo with context %}
 
 {% macro icon(name, cls="") -%}
 <svg class="icon{{ ' ' ~ cls if cls }}" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v={{ v.icons }}#{{ name }}"></use></svg>
@@ -86,12 +87,16 @@
     <p class="svc-card__text">{{ s.teaser }}</p>
     <span class="link-arrow svc-card__link">{{ s.link }}{{ icon('arrow-right') }}</span>
   </div>
+  {% if s.get('card_photo') %}
+  <div class="svc-card__art svc-card__art--photo{% if not site.photos[s.card_photo].get('product') %} svc-card__art--editorial{% endif %}">{{ service_photo(s.card_photo, sizes='(min-width: 1280px) 380px, (min-width: 1024px) calc((100vw - 104px) / 3), (min-width: 768px) calc((100vw - 80px) / 2), (min-width: 640px) calc((100vw - 48px) / 2), calc(100vw - 32px)') }}</div>
+  {% else %}
   <div class="svc-card__art"><img src="/assets/img/{{ s.art }}" alt="" width="320" height="200" loading="lazy" decoding="async"></div>
+  {% endif %}
 </a>
 {%- endmacro %}
 
 {% macro service_grid(keys, heading="h3") -%}
-<div class="grid grid--3">
+<div class="grid grid--3 service-grid">
 {%- for k in keys %}{% set s = services[k] %}
   {{ service_card(s, heading) }}
 {%- endfor %}

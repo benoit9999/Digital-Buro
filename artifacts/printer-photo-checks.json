@@ -1,0 +1,415 @@
+{
+  "date": "2026-10-04",
+  "errors": [],
+  "results": [
+    {
+      "width": 390,
+      "route": "/",
+      "photos": [
+        {
+          "alt": "",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+          "width": 100,
+          "height": 62,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+          "width": 174,
+          "height": 108,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante Epson EcoTank de la gamme 2025 avec réservoirs d’encre rechargeables",
+          "src": "/assets/img/photos/epson-ecotank-2025-400.webp",
+          "width": 174,
+          "height": 108,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante multifonction couleur Brother MFC-L8390CDW vue de trois quarts",
+          "src": "/assets/img/photos/brother-mfc-l8390cdw-400.webp",
+          "width": 174,
+          "height": 108,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/reparation-imprimante/",
+      "photos": [
+        {
+          "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+          "width": 358,
+          "height": 223,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/vente-materiel/",
+      "photos": [
+        {
+          "alt": "Imprimante Epson EcoTank de la gamme 2025 avec réservoirs d’encre rechargeables",
+          "src": "/assets/img/photos/epson-ecotank-2025-400.webp",
+          "width": 358,
+          "height": 223,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/entreprises/",
+      "photos": [
+        {
+          "alt": "Imprimante multifonction couleur Brother MFC-L8390CDW vue de trois quarts",
+          "src": "/assets/img/photos/brother-mfc-l8390cdw-400.webp",
+          "width": 358,
+          "height": 223,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/reparation-ordinateur/",
+      "photos": []
+    },
+    {
+      "width": 390,
+      "route": "/reparation-mac/",
+      "photos": []
+    },
+    {
+      "width": 390,
+      "route": "/cartouches-toners/",
+      "photos": []
+    },
+    {
+      "width": 390,
+      "route": "/nl/",
+      "photos": []
+    },
+    {
+      "width": 390,
+      "route": "/en/",
+      "photos": []
+    },
+    {
+      "width": 390,
+      "route": "/404.html",
+      "photos": [
+        {
+          "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+          "width": 174,
+          "height": 108,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante Epson EcoTank de la gamme 2025 avec réservoirs d’encre rechargeables",
+          "src": "/assets/img/photos/epson-ecotank-2025-400.webp",
+          "width": 174,
+          "height": 108,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante multifonction couleur Brother MFC-L8390CDW vue de trois quarts",
+          "src": "/assets/img/photos/brother-mfc-l8390cdw-400.webp",
+          "width": 174,
+          "height": 108,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "photos": [
+        {
+          "alt": "",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+          "width": 100,
+          "height": 62,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+          "width": 224,
+          "height": 140,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante Epson EcoTank de la gamme 2025 avec réservoirs d’encre rechargeables",
+          "src": "/assets/img/photos/epson-ecotank-2025-400.webp",
+          "width": 224,
+          "height": 140,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante multifonction couleur Brother MFC-L8390CDW vue de trois quarts",
+          "src": "/assets/img/photos/brother-mfc-l8390cdw-400.webp",
+          "width": 224,
+          "height": 140,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/reparation-imprimante/",
+      "photos": [
+        {
+          "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-800.webp",
+          "width": 736,
+          "height": 460,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/vente-materiel/",
+      "photos": [
+        {
+          "alt": "Imprimante Epson EcoTank de la gamme 2025 avec réservoirs d’encre rechargeables",
+          "src": "/assets/img/photos/epson-ecotank-2025-670.webp",
+          "width": 736,
+          "height": 459,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/entreprises/",
+      "photos": [
+        {
+          "alt": "Imprimante multifonction couleur Brother MFC-L8390CDW vue de trois quarts",
+          "src": "/assets/img/photos/brother-mfc-l8390cdw-800.webp",
+          "width": 736,
+          "height": 460,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/reparation-ordinateur/",
+      "photos": []
+    },
+    {
+      "width": 768,
+      "route": "/reparation-mac/",
+      "photos": []
+    },
+    {
+      "width": 768,
+      "route": "/cartouches-toners/",
+      "photos": []
+    },
+    {
+      "width": 768,
+      "route": "/nl/",
+      "photos": []
+    },
+    {
+      "width": 768,
+      "route": "/en/",
+      "photos": []
+    },
+    {
+      "width": 768,
+      "route": "/404.html",
+      "photos": [
+        {
+          "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+          "width": 224,
+          "height": 140,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante Epson EcoTank de la gamme 2025 avec réservoirs d’encre rechargeables",
+          "src": "/assets/img/photos/epson-ecotank-2025-400.webp",
+          "width": 224,
+          "height": 140,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante multifonction couleur Brother MFC-L8390CDW vue de trois quarts",
+          "src": "/assets/img/photos/brother-mfc-l8390cdw-400.webp",
+          "width": 224,
+          "height": 140,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "photos": [
+        {
+          "alt": "",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+          "width": 100,
+          "height": 62,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+          "width": 340,
+          "height": 212,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante Epson EcoTank de la gamme 2025 avec réservoirs d’encre rechargeables",
+          "src": "/assets/img/photos/epson-ecotank-2025-400.webp",
+          "width": 340,
+          "height": 212,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante multifonction couleur Brother MFC-L8390CDW vue de trois quarts",
+          "src": "/assets/img/photos/brother-mfc-l8390cdw-400.webp",
+          "width": 340,
+          "height": 212,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/reparation-imprimante/",
+      "photos": [
+        {
+          "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-800.webp",
+          "width": 560,
+          "height": 350,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/vente-materiel/",
+      "photos": [
+        {
+          "alt": "Imprimante Epson EcoTank de la gamme 2025 avec réservoirs d’encre rechargeables",
+          "src": "/assets/img/photos/epson-ecotank-2025-670.webp",
+          "width": 560,
+          "height": 349,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/entreprises/",
+      "photos": [
+        {
+          "alt": "Imprimante multifonction couleur Brother MFC-L8390CDW vue de trois quarts",
+          "src": "/assets/img/photos/brother-mfc-l8390cdw-800.webp",
+          "width": 560,
+          "height": 350,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/reparation-ordinateur/",
+      "photos": []
+    },
+    {
+      "width": 1440,
+      "route": "/reparation-mac/",
+      "photos": []
+    },
+    {
+      "width": 1440,
+      "route": "/cartouches-toners/",
+      "photos": []
+    },
+    {
+      "width": 1440,
+      "route": "/nl/",
+      "photos": []
+    },
+    {
+      "width": 1440,
+      "route": "/en/",
+      "photos": []
+    },
+    {
+      "width": 1440,
+      "route": "/404.html",
+      "photos": [
+        {
+          "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",
+          "src": "/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+          "width": 340,
+          "height": 212,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante Epson EcoTank de la gamme 2025 avec réservoirs d’encre rechargeables",
+          "src": "/assets/img/photos/epson-ecotank-2025-400.webp",
+          "width": 340,
+          "height": 212,
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Imprimante multifonction couleur Brother MFC-L8390CDW vue de trois quarts",
+          "src": "/assets/img/photos/brother-mfc-l8390cdw-400.webp",
+          "width": 340,
+          "height": 212,
+          "objectFit": "contain"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "file": "src/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+      "bytes": 3070
+    },
+    {
+      "file": "src/assets/img/photos/hp-officejet-pro-9120e-800.webp",
+      "bytes": 6980
+    },
+    {
+      "file": "src/assets/img/photos/hp-officejet-pro-9120e-1600.webp",
+      "bytes": 19146
+    },
+    {
+      "file": "src/assets/img/photos/brother-mfc-l8390cdw-400.webp",
+      "bytes": 3528
+    },
+    {
+      "file": "src/assets/img/photos/brother-mfc-l8390cdw-800.webp",
+      "bytes": 10422
+    },
+    {
+      "file": "src/assets/img/photos/brother-mfc-l8390cdw-1052.webp",
+      "bytes": 15926
+    },
+    {
+      "file": "src/assets/img/photos/epson-ecotank-2025-400.webp",
+      "bytes": 7188
+    },
+    {
+      "file": "src/assets/img/photos/epson-ecotank-2025-670.webp",
+      "bytes": 15370
+    }
+  ]
+}

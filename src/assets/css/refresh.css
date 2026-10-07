@@ -113,15 +113,30 @@ body.menu-open .callbar{visibility:hidden;pointer-events:none}
 .hero-location{display:flex;gap:14px;align-items:center;padding:16px 20px;max-width:560px;border-left:4px solid var(--ember);border-radius:0 10px 10px 0;background:#fff3eb;color:var(--navy)}
 .hero-location>.icon{width:30px;height:30px;flex:none;color:var(--ember)}
 .hero-location>div{min-width:0}
-.hero-location__stop{display:block;font-size:23px;line-height:1.35;font-weight:650;letter-spacing:-.01em}
+.hero-location__district{display:block;font-size:23px;line-height:1.35;font-weight:650;letter-spacing:-.01em}
 .hero-location p{margin-top:5px;font-size:20px;line-height:1.4}
-.hero-location__stop span,.hero-location p strong{white-space:nowrap}
+.hero-location__district span,.hero-location p strong{white-space:nowrap}
 /* Both client photos keep their full frame. */
 .shop-card__photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;background:white}
 .shop-card__photo{position:relative;min-width:0}
 .shop-card__photos .editorial-photo{display:block;aspect-ratio:4/3;border-radius:0}
 .shop-card__photo-label{position:absolute;left:10px;bottom:10px;padding:4px 9px;border-radius:5px;background:#0b1f4de6;color:white;font-size:11px;font-weight:500;line-height:1.5}
-@media(max-width:767px){.hero-location{gap:10px;padding:12px 14px}.hero-location>.icon{width:24px;height:24px}.hero-location__stop{font-size:18px}.hero-location p{font-size:17px}.shop-card__photo-label{left:7px;bottom:7px;padding:3px 7px;font-size:10px}}
+@media(max-width:767px){.hero-location{gap:10px;padding:12px 14px}.hero-location>.icon{width:24px;height:24px}.hero-location__district{font-size:18px}.hero-location p{font-size:17px}.shop-card__photo-label{left:7px;bottom:7px;padding:3px 7px;font-size:10px}}
+
+/* Client photos retain their complete frame in service heroes and shop sections. */
+.editorial-photo.photo--contain{object-fit:contain;background:#fff}
+.service-visual .editorial-photo.photo--contain,.shop-location .editorial-photo,.shop-card>.editorial-photo{aspect-ratio:4/3}
+.service-visual .editorial-photo.photo--contain{max-height:none}
+
+/* Image credits identify each photo with its author, source and applicable licence. */
+.photo-credits{display:grid;gap:20px;margin-block:24px}
+.photo-credit{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;align-items:start;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.photo-credit__preview{display:block;background:var(--fog);border-radius:8px;overflow:hidden}
+.photo-credit__preview .editorial-photo{display:block;aspect-ratio:4/3;object-fit:contain;border-radius:0;background:var(--paper)}
+.prose .photo-credit h3{margin:0;font-size:16px;line-height:1.4}
+.prose .photo-credit p{margin:6px 0 0;font-size:14px;line-height:1.6}
+.photo-credit__links{display:flex;gap:6px 14px;flex-wrap:wrap}
+@media(max-width:479px){.photo-credit{grid-template-columns:72px minmax(0,1fr);gap:12px}}
 
 /* Display the client’s original red/blue logo on a white background. */
 .nav__logo img{height:52px;width:auto}

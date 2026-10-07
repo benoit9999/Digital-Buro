@@ -9,7 +9,7 @@
     <div class="page-hero__copy" style="max-width:48rem">
       <span class="tag">Saint-Gilles · Bruxelles</span>
       <h1 class="h1">Contact, horaires et accès</h1>
-      <p class="lead">Retrouvez-nous Chaussée de Charleroi 257, à Saint-Gilles (Arrêt Ma Campagne), à 2 pas de l’avenue Louise. Pour une question, appelez-nous ou {{ 'écrivez-nous par e-mail.' if static_preview else 'utilisez le formulaire.' }}</p>
+      <p class="lead">Retrouvez-nous Chaussée de Charleroi 257, à Saint-Gilles, dans le quartier Ma Campagne, à deux pas de l’avenue Louise. Pour une question, appelez-nous ou {{ 'écrivez-nous par e-mail.' if static_preview else 'utilisez le formulaire.' }}</p>
     </div>
     <div class="btn-row" style="margin-top:20px">{{ ui.directions_btn(label="Venir au magasin",cls="btn--primary") }}<a class="btn btn--outline" href="#horaires">Voir les horaires</a></div>
     <div class="contact-cards contact-page-cards">
@@ -92,12 +92,12 @@
         <p class="notice" style="margin-top:12px">Jours fériés et congés&nbsp;: un doute&nbsp;? Appelez-nous avant de vous déplacer.</p>
       </div>
       <ul class="info-list" role="list">
-        <li>{{ ui.icon('pin') }}<div><span class="info-list__label">Adresse</span><span class="info-list__value">{{ site.street }}, {{ site.postal }} {{ site.city }}</span><span class="text-sm muted">Arrêt Ma Campagne · À 2 pas de l’avenue Louise</span></div></li>
+        <li>{{ ui.icon('pin') }}<div><span class="info-list__label">Adresse</span><span class="info-list__value">{{ site.street }}, {{ site.postal }} {{ site.city }}</span><span class="text-sm muted">Quartier Ma Campagne · À deux pas de l’avenue Louise</span></div></li>
         <li>{{ ui.icon('tram') }}<div><span class="info-list__label">Transports en commun</span><span class="info-list__value">{{ site.transport }}</span></div></li>
         <li>{{ ui.icon('globe') }}<div><span class="info-list__label">Nous accueillons des clients de</span><span class="info-list__value" style="font-weight:500">{{ site.areas|join(', ') }} et de tout Bruxelles</span></div></li>
       </ul>
       <figure class="shop-location contact-shop-photo">
-        <img src="/assets/img/vitrine-digital-buro-saint-gilles.webp" srcset="/assets/img/vitrine-digital-buro-saint-gilles-600.webp 600w, /assets/img/vitrine-digital-buro-saint-gilles.webp 900w" sizes="(min-width:1024px) 520px, calc(100vw - 32px)" alt="La vitrine du magasin Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles" width="900" height="334" loading="lazy" decoding="async">
+        {{ fx.photo('magasin-exterieur', sizes='(min-width:1024px) 520px, calc(100vw - 32px)') }}
         <figcaption class="caption">Le magasin, Chaussée de Charleroi 257.</figcaption>
       </figure>
       {{ ui.map_facade() }}

@@ -3,8 +3,8 @@
 
 {% macro home_location() -%}
 <div class="hero-location">
-{{ ui.icon('tram') }}
-<div><strong class="hero-location__stop">{{ 'Next to the' if page.lang == 'en' else ('Naast tramhalte' if page.lang == 'nl' else 'À côté de l’arrêt') }} <span>{{ site.district }}</span>{{ ' tram stop' if page.lang == 'en' else '' }}</strong>
+{{ ui.icon('pin') }}
+<div><strong class="hero-location__district">{{ 'In the' if page.lang == 'en' else ('In de wijk' if page.lang == 'nl' else 'Dans le quartier') }} <span>{{ site.district }}</span>{{ ' neighbourhood' if page.lang == 'en' else '' }}</strong>
 <p>{{ 'A few steps from' if page.lang == 'en' else ('Vlak bij' if page.lang == 'nl' else 'À deux pas de') }} <strong>{{ 'Avenue Louise' if page.lang == 'en' else ('de Louizalaan' if page.lang == 'nl' else 'l’avenue Louise') }}</strong>.</p></div>
 </div>
 {%- endmacro %}

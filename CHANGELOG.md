@@ -1,3 +1,44 @@
+# Envoi PHP et anti-spam de la copie HTML — 7 octobre 2026
+
+- Script fourni `send_reservation.php` adapté au contact et aux rappels de Digital-Buro : e-mail HTML via `mail()`, destinataire fixe `digital-buro@skynet.be`, expéditeur Digital-Buro et Reply-To facultatif validé.
+- Dix formulaires HTML raccordés à `send_contact.php`, dont les accueils FR/NL/EN et les pages de services. Champs, préremplissage, validations locales et présentation conservés ; formulaire PHP disponible sans JavaScript.
+- Anti-spam serveur : champ piège, jeton de session à usage unique, délai minimal, contrôles de formats et d’injection, quotas par IP/téléphone, blocage des doublons et plafond global de 30 tentatives/h et 100/24 h.
+- Registre de compteurs avec verrou et empreintes salées, hors du dossier public ; échec de stockage ou du transport traité sans confirmation d’envoi.
+- `tools/sync_site_html.py` conserve désormais le raccordement PHP lors des synchronisations. Notices d’exploitation et de confidentialité adaptées au fonctionnement de cette version.
+- Tests du transport réel vers un SMTP de capture local, des refus anti-spam et des parcours navigateur ; aucun envoi externe. Le script de l’autre client n’est pas modifié.
+
+---
+
+# Synchronisation de la copie HTML — 6 octobre 2026
+
+- Les 16 pages de `site-html/` reprennent la version principale actuelle : textes, titres, logo du client, chiffres, photos du magasin, cartouches multimarques, crédits et derniers ajustements visuels.
+- Prestations réseau et Wi-Fi, ancienne photo de cartouches et anciens fichiers supprimés de la copie ; notices Feather/Lucide ajoutées.
+- Liens relatifs, ancres des crédits, variantes WebP, métadonnées, sitemap et manifeste adaptés aux noms des pages HTML. Une seule feuille CSS éditable et deux scripts JavaScript.
+- Envoi des formulaires conservé pour une étape ultérieure, selon la demande du client ; champs, préremplissage et validation locale repris.
+- Synchronisation reproductible via `tools/sync_site_html.py`, avec sauvegarde ZIP de la copie précédente et inventaire des empreintes des fichiers.
+
+---
+
+# Crédits et vérification des droits d’image — 6 octobre 2026
+
+- Lien « Crédits photos » dans le pied de page FR/NL/EN ; rubrique dédiée des mentions légales avec les huit miniatures, images utilisées, auteurs, sources et licences lorsqu’elles sont vérifiées.
+- Propriété des photos du magasin et des cartouches déclarée par le client ; pages individuelles et licences commerciales des photos PC/Mac vérifiées sur Pexels et Unsplash.
+- Autorisations des visuels HP, Brother et Epson signalées comme non établies, avec sources et conditions dans `artifacts/IMAGE-RIGHTS.md`. Les liens de source ne sont pas présentés comme des autorisations ; accord ou remplacement nécessaire avant publication.
+- Clause attribuant globalement tous les contenus à Digital-Buro remplacée par une mention respectant les droits des tiers. Notices de licence Feather/Lucide distribuées avec les assets, et licence Inter liée.
+- Inventaire daté avec empreintes des variantes dans `artifacts/image-rights-inventory.json` ; affichage, liens, licences et navigation des crédits vérifiés sur mobile et ordinateur.
+
+---
+
+# Corrections complémentaires du client — 6 octobre 2026
+
+- « Quartier Ma Campagne » remplace les mentions de l’arrêt dans les pages, les traductions, les métadonnées et l’image de partage ; icône de localisation dans l’encadré d’accueil.
+- Vente et réparation d’imprimantes présentées ensemble dans le titre principal FR/NL/EN, le texte d’accueil et les métadonnées.
+- Photo du stock multimarque utilisée pour tous les visuels photographiques des cartouches et toners, y compris la page détaillée, avec cadrage complet. Ancienne photo et ses trois variantes supprimées.
+- Prestations réseau et Wi-Fi retirées des cartes, listes de services, FAQ, marques et métadonnées ; illustration réseau supprimée.
+- Nouvelle photo extérieure réutilisée près des horaires, sur Contact et À propos, et dans les données structurées. Images responsives au format 4:3.
+
+---
+
 # Modifications demandées par le client — 6 octobre 2026
 
 - Photo de la carte « Cartouches & toners » remplacée par `photo_cartouche.jpeg` fournie par le client. Trois variantes WebP de 400/800/1200 px et affichage de tous les produits sans recadrage.

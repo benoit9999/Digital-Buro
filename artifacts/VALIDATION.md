@@ -1,3 +1,48 @@
+# Envoi PHP de la version HTML — validation du 7 octobre 2026
+
+- Dix formulaires de `site-html/` raccordés à `send_contact.php`, avec e-mail HTML vers le destinataire fixe `digital-buro@skynet.be`. Le fichier fourni de l’autre client a été lu comme référence et n’a pas été modifié. La version principale `public/` est inchangée par ce raccordement.
+- PHP 8.5.11 : syntaxe des deux fichiers PHP et du JavaScript validée. Transport réel `mail()` vers un SMTP de capture isolé sur localhost ; dix messages acceptés localement, aucun envoi externe. Destinataire fixe, Reply-To facultatif, caractères UTF-8, longs sujets MIME et échappement du HTML vérifiés.
+- 33 scénarios consignés dans [html-form-tests.json](html-form-tests.json) : absence/expiration/réutilisation du jeton, délai serveur, piège anti-robots, mauvais champs, tableaux à la place de chaînes, injection d’en-têtes, volume et liens, origine étrangère, quotas IP/téléphone/global, doublons entre compartiments IP, verrou partagé et stockage indisponible.
+- 32 parcours de mise en page sur les 16 pages à 390 et 1440 px. Préremplissage, validations client, contact, rappels FR/NL/EN et service Cartouches exercés dans Chrome via le vrai PHP. Formulaire sans JavaScript et redirection vers `merci.html` vérifiés. [html-form-browser-tests.json](html-form-browser-tests.json).
+- Raccordement testé à la racine et sous `/site-html/` avec cookie de session correctement limité au chemin. Panne réelle du SMTP : HTTP 503, aucune confirmation de réussite, données du formulaire conservées et bouton réactivé.
+- Plafonds par défaut : 5 tentatives/IP/h, 3 par téléphone/h, 30 globales/h et 100 sur 24 h glissantes ; intervalle IP de 30 s, jeton valable une heure, délai de remplissage de 2 s et doublons bloqués 10 min. Compteurs salés et horaires hors du dossier public, sous verrou ; aucun message stocké en clair dans ce registre.
+- Les sources du raccordement sont maintenues dans `tools/site-html/` et reprises par `tools/sync_site_html.py`. Notice de confidentialité et documentation de la copie HTML actualisées.
+- La réception réelle dans Skynet et l’autorisation de l’expéditeur par l’hébergement restent à vérifier après installation sur le serveur du client. Les tests locaux prouvent l’acceptation par le transport de capture, pas la délivrabilité en production.
+
+---
+
+# Synchronisation HTML — validation du 6 octobre 2026
+
+- Les 16 pages de `site-html/` ont été reconstruites depuis la version actuelle de `public/`, après un build validé. Les dernières corrections et les crédits sont présents ; liens, ancres, métadonnées, sitemap et manifeste utilisent les noms des fichiers HTML.
+- 64 parcours Chrome à 320, 390, 768 et 1440 px : aucun débordement horizontal, texte tronqué, image cassée, erreur JavaScript ou réponse HTTP locale en erreur. Les 64 comparaisons avec la version principale confirment l’identité des textes visibles, des positions, dimensions et styles examinés.
+- 49 médias/notices de licence et `refresh.js` identiques octet par octet. Empreintes de `public/` inchangées après la copie ; anciens fichiers cartouches et illustration réseau supprimés de `site-html/`.
+- Douze paires de captures complètes : onze identiques pixel par pixel. Le viewport mobile de Contact est identique ; seule sa capture complète présente un faible écart sur une ligne de texte partiellement masquée par la barre fixe, sans différence de contenu ou de géométrie. Détails dans [site-html-checks.json](site-html-checks.json).
+- Navigation, menu et rotation, FAQ, carrousel, tableaux, préremplissage et validation des formulaires vérifiés. Aucun POST ni appel API ; l’envoi sera traité ultérieurement selon la demande du client. Ouverture à la racine, en sous-dossier, en `file://` et sans JavaScript contrôlée. Police Inter et icônes chargées en ouverture directe, sans erreur de console.
+- Sauvegarde ZIP de l’ancienne copie et inventaire des fichiers : [site-html-sync-files.json](site-html-sync-files.json). Captures actualisées `site-html-*`.
+
+---
+
+# Crédits photos — validation du 6 octobre 2026
+
+- Builds PHP et GitHub Pages : les 16 pages conservent des liens et ressources valides ; les crédits sont liés dans le pied de page des trois langues.
+- 12 parcours Chrome : accueil FR/NL/EN et mentions légales examinés à 320, 390 et 1440 px. Huit miniatures chargées, sept liens externes de source/licence, aucun débordement horizontal, image cassée, erreur JavaScript ni réponse HTTP locale en erreur. Navigation depuis le lien NL vers l’ancre des crédits vérifiée.
+- Notices MIT/ISC Feather/Lucide et OFL Inter accessibles en HTTP 200. Ancienne clause d’appropriation globale des contenus remplacée, sans prétendre qu’un crédit accorde des droits d’utilisation.
+- Sources individuelles PC/Mac et licences vérifiées ; droits du magasin/cartouches déclarés par le client. La vérification **ne valide pas** la publication commerciale des photos HP/Brother/Epson et ne remplace pas une autorisation.
+- Captures examinées : `photo-credits-1440.png`, `photo-credits-320.png` et `photo-credits-footer-1440.png`. Rapport des contrôles : [photo-credits-checks.json](photo-credits-checks.json). Bilan des droits : [IMAGE-RIGHTS.md](IMAGE-RIGHTS.md).
+
+---
+
+# Corrections complémentaires du client — validation du 6 octobre 2026
+
+- Builds PHP et GitHub Pages (`/Digital-Buro`) réussis : 16 pages, aucun lien cassé, un H1 par page, titres et descriptions uniques.
+- 36 parcours Chrome : les 16 pages à 320 et 1440 px, puis les accueils FR/NL/EN et la page Cartouches à 390 px. Aucun débordement horizontal, image cassée, erreur JavaScript ou réponse HTTP locale en erreur. Menu mobile ouvert puis fermé avec Échap.
+- Titres d’accueil associant vente et réparation ; quartier Ma Campagne dans les trois langues. Absence des anciennes mentions de l’arrêt, des prestations réseau/Wi-Fi, de l’ancienne photo des cartouches et de l’ancienne façade dans le HTML examiné, y compris les FAQ et métadonnées.
+- Même photo du stock de cartouches dans la carte de services et la page détaillée, sans recadrage ni illustration superposée. Format 4:3 vérifié ; limite de hauteur mobile retirée pour conserver ce format.
+- Nouvelle photo extérieure identique à celle du haut de l’accueil près des horaires, dans Contact et À propos. Image de partage actualisée.
+- Rapport : [client-corrections-checks.json](client-corrections-checks.json). Captures examinées : `client-corrections-hero-1440.png`, `client-corrections-hero-390.png`, `client-corrections-access-1440.png`, `client-corrections-cartouches-1440.png`, `client-corrections-cartouches-390.png`, ainsi que l’image de partage.
+
+---
+
 # Modifications du client — validation du 6 octobre 2026
 
 - Carte « Cartouches & toners » : photo du client chargée à 320, 390, 768 et 1440 px, tous les produits visibles grâce à `object-fit: contain`, aucun débordement horizontal et lien vers la page Cartouches fonctionnel. Trois WebP de 400/800/1200 px sous 150 Ko. Captures examinées : `cartouches-client-390.png` et `cartouches-client-1440.png` ; rapport : [cartouches-client-checks.json](cartouches-client-checks.json).

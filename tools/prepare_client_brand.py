@@ -33,10 +33,10 @@ def prepare_share_image():
         f'<image x="50" y="30" width="350" height="110" href="data:image/png;base64,{logo}"/>'
     )
     for label, x, y, size, color in [
-        ("Réparer.", 65, 255, 88, "#0b1f4d"),
-        ("C’est notre métier.", 65, 350, 66, "#0b1f4d"),
-        ("Imprimantes · PC · Mac", 65, 435, 30, "#60646c"),
-        ("Saint-Gilles · Arrêt Ma Campagne", 65, 500, 30, "#0b1f4d"),
+        ("Vente & réparation", 65, 255, 66, "#0b1f4d"),
+        ("d’imprimantes", 65, 350, 72, "#0b1f4d"),
+        ("PC · Mac · Consommables", 65, 435, 30, "#60646c"),
+        ("Quartier Ma Campagne · Saint-Gilles", 65, 500, 30, "#0b1f4d"),
         ("À deux pas de l’avenue Louise", 65, 550, 28, "#0b1f4d"),
         (f"+{site['experience_years']}", 825, 285, 115, "#ffffff"),
         ("ans d’expérience", 820, 344, 31, "#ffffff"),

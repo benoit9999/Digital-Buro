@@ -24,7 +24,7 @@
   "lat": 50.8240646,
   "lng": 4.3539242,
   "plus_code": "R9F3+JH Saint-Gilles",
-  "transport": "Tram 92, arrêt Ma Campagne · À 2 pas de l’avenue Louise",
+  "transport": "Tram 92 · Quartier Ma Campagne · À deux pas de l’avenue Louise",
   "google": {
     "rating": "4,7",
     "rating_en": "4.7",
@@ -165,14 +165,14 @@
     },
     {
       "key": "entreprises",
-      "name": "Entreprises & réseaux",
+      "name": "Services aux entreprises",
       "nav": "Entreprises",
-      "nav_desc": "Sur site, maintenance, réseau",
+      "nav_desc": "Sur site, entretien, installation",
       "url": "/entreprises/",
       "icon": "building",
-      "art": "ill-network.svg",
+      "art": "ill-copier.svg",
       "card_photo": "entreprises",
-      "teaser": "Maintenance, réseau, installation et livraison de consommables pour votre bureau.",
+      "teaser": "Entretien, installation et livraison de consommables pour votre bureau.",
       "link": "Services aux entreprises"
     },
     {
@@ -242,13 +242,6 @@
       "Sony Vaio",
       "Microsoft"
     ],
-    "network": [
-      "TP-Link",
-      "D-Link",
-      "Linksys",
-      "US Robotics",
-      "Belkin"
-    ],
     "accessories": [
       "Logitech",
       "Kingston",
@@ -281,6 +274,8 @@
   },
   "photos": {
     "magasin-cartouches": {
+      "credit_label": "Cartouches et toners du magasin",
+      "credit_kind": "client",
       "file": "magasin-cartouches",
       "widths": [400, 800, 1200],
       "aspect_ratio": [4, 3],
@@ -288,27 +283,35 @@
       "alt": "Sélection de cartouches et toners HP, Epson, Brother, Canon, OKI et Lexmark, photo fournie par Digital-Buro",
       "source": "photo_cartouche.jpeg, fournie par le client le 6 octobre 2026",
       "author": "Digital-Buro",
-      "rights": "Photo fournie par le client pour le site Digital-Buro."
+      "rights": "© Digital-Buro SRL. Propriété des droits confirmée par le client le 6 octobre 2026."
     },
     "magasin-interieur": {
+      "credit_label": "Intérieur du magasin",
+      "credit_kind": "client",
       "file": "magasin-interieur",
       "widths": [400, 800, 1200],
       "aspect_ratio": [4, 3],
       "alt": "L’intérieur de Digital-Buro : comptoir, rayonnages de cartouches et matériel bureautique",
       "source": "photo_interieur.jpeg, fournie par le client le 6 octobre 2026",
       "author": "Digital-Buro",
-      "rights": "Photo fournie par le client pour le site Digital-Buro."
+      "rights": "© Digital-Buro SRL. Propriété des droits confirmée par le client le 6 octobre 2026."
     },
     "magasin-exterieur": {
+      "credit_label": "Façade et entrée du magasin",
+      "credit_kind": "client",
       "file": "magasin-exterieur",
       "widths": [400, 800, 1200],
       "aspect_ratio": [4, 3],
-      "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, arrêt Ma Campagne",
+      "alt": "La façade et l’entrée de Digital-Buro, Chaussée de Charleroi 257 à Saint-Gilles, quartier Ma Campagne",
       "source": "photo_exterieur.jpeg, fournie par le client le 6 octobre 2026",
       "author": "Digital-Buro",
-      "rights": "Photo fournie par le client pour le site Digital-Buro."
+      "rights": "© Digital-Buro SRL. Propriété des droits confirmée par le client le 6 octobre 2026."
     },
     "imprimante": {
+      "credit_label": "Imprimante HP OfficeJet Pro 9120e",
+      "credit_kind": "manufacturer",
+      "usage_status": "permission_required",
+      "terms": "https://www.hp.com/be-fr/terms-of-use.html",
       "file": "hp-officejet-pro-9120e",
       "alt": "Imprimante multifonction HP OfficeJet Pro 9120e avec écran tactile",
       "source": "https://www.hp.com/be-fr/products/printers/product-details/2101610322",
@@ -318,9 +321,13 @@
       "model": "OfficeJet Pro 9120e",
       "product": true,
       "widths": [400, 800, 1600],
-      "rights": "Visuel officiel HP ; droits réservés au fabricant."
+      "rights": "© HP. Visuel officiel ; droits réservés. La source ne confère pas d’autorisation de republication sur ce site commercial."
     },
     "entreprises": {
+      "credit_label": "Imprimante Brother MFC-L8390CDW",
+      "credit_kind": "manufacturer",
+      "usage_status": "permission_required",
+      "terms": "https://www.brother.com.au/en/about/tnc",
       "file": "brother-mfc-l8390cdw",
       "alt": "Imprimante multifonction couleur Brother MFC-L8390CDW vue de trois quarts",
       "source": "https://www.brother.com.au/en/printers/all-printers/mfc-l8390cdw",
@@ -330,33 +337,36 @@
       "model": "MFC-L8390CDW",
       "product": true,
       "widths": [400, 800, 1052],
-      "rights": "Visuel officiel Brother ; droits réservés au fabricant."
+      "rights": "© Brother. Visuel officiel ; droits réservés. Autorisation de republication commerciale à obtenir."
     },
     "mac": {
+      "credit_label": "MacBook sur un bureau",
+      "credit_kind": "stock",
+      "license_name": "Unsplash",
+      "usage_status": "commercial_license",
       "file": "mac",
       "widths": [400, 800, 1600],
       "alt": "MacBook ouvert sur un bureau en bois",
-      "source": "https://unsplash.com/photos/mCg0ZgD7BgU",
+      "source": "https://unsplash.com/photos/turned-on-macbook-on-beige-wooden-desk-mCg0ZgD7BgU",
       "author": "Aleksi Tappura",
       "license": "https://unsplash.com/license"
     },
     "ordinateur": {
+      "credit_label": "Réparation d’un ordinateur portable",
+      "credit_kind": "stock",
+      "license_name": "Pexels",
+      "usage_status": "commercial_license",
       "file": "ordinateur",
       "widths": [400, 800, 1600],
       "alt": "Réparation d’un ordinateur portable ouvert avec un tournevis",
-      "source": "https://www.pexels.com/photo/7639373/",
+      "source": "https://www.pexels.com/photo/hand-with-screwdriver-fixing-motherboard-7639373/",
       "author": "IT services EU",
       "license": "https://www.pexels.com/license/"
     },
-    "cartouches": {
-      "file": "cartouches",
-      "widths": [400, 800, 1600],
-      "alt": "Cartouches d’encre dans une imprimante photo",
-      "source": "https://www.pexels.com/photo/17536002/",
-      "author": "Jakub Zerdzicki",
-      "license": "https://www.pexels.com/license/"
-    },
     "vente": {
+      "credit_label": "Imprimante Epson EcoTank",
+      "credit_kind": "manufacturer",
+      "usage_status": "permission_unverified",
       "file": "epson-ecotank-2025",
       "alt": "Imprimante Epson EcoTank de la gamme 2025 avec réservoirs d’encre rechargeables",
       "source": "https://press.epson.eu/fr_BE/news/epson-devoile-de-nouvelles-imprimantes-ecotank-meilleure-productivite-plus-grande-facilite-d-utilisation-et-impression-sans-souci-pour-les-foyers-et-les-petites-entreprises1/",
@@ -366,7 +376,7 @@
       "model": "EcoTank",
       "product": true,
       "widths": [400, 670],
-      "rights": "Visuel de presse officiel Epson ; droits réservés au fabricant."
+      "rights": "© Seiko Epson Corporation. Visuel de presse ; droits réservés. Autorisation couvrant ce site commercial non vérifiée."
     }
   },
   "reviews": [
@@ -444,10 +454,6 @@
         [
           "power",
           "Ne s’allume plus"
-        ],
-        [
-          "wifi",
-          "Imprimante introuvable"
         ],
         [
           "scan",
@@ -528,10 +534,6 @@
         [
           "thermometer",
           "Surchauffe"
-        ],
-        [
-          "wifi",
-          "Connexion instable"
         ],
         [
           "shield",
@@ -652,7 +654,7 @@
       "h1": "Cartouches et toners à Saint-Gilles.",
       "lead": "La bonne référence pour votre imprimante. Même si elle a quelques années.",
       "device": "Cartouche / toner",
-      "photo": "cartouches",
+      "photo": "magasin-cartouches",
       "eyebrow": "LE SPÉCIALISTE DES CONSOMMABLES",
       "heading": "Cartouches, toners, tambours et rubans",
       "intro": [
@@ -746,7 +748,7 @@
       "heading": "Le matériel disponible au magasin",
       "intro": [
         "Digital-Buro propose la vente de matériel bureautique et informatique à Saint-Gilles : imprimantes, photocopieurs, scanners et ordinateurs. Nous vous aidons à choisir selon votre usage et votre budget.",
-        "Pour la maison ou votre entreprise à Bruxelles, pensez au coût des consommables, aux connexions et à la place disponible. Ces détails comptent autant que la fiche technique pour choisir un appareil agréable à utiliser."
+        "Pour la maison ou votre entreprise à Bruxelles, pensez au coût des consommables, au format des documents et à la place disponible. Ces détails comptent autant que la fiche technique pour choisir un appareil agréable à utiliser."
       ],
       "symptoms": [
         [
@@ -764,10 +766,6 @@
         [
           "monitor",
           "Ordinateurs de bureau"
-        ],
-        [
-          "wifi",
-          "Matériel réseau"
         ],
         [
           "package",
@@ -790,7 +788,7 @@
         ],
         [
           "Installez-vous le matériel ?",
-          "<p>Nous proposons l’installation et la configuration de matériel de bureau. Contactez-nous pour préciser les appareils à raccorder, votre réseau et votre adresse. Les modalités se définissent selon les besoins de votre installation.</p>"
+          "<p>Nous proposons l’installation et la configuration de matériel de bureau. Contactez-nous pour préciser les appareils à installer, leur usage et votre adresse. Les modalités se définissent selon les besoins de votre installation.</p>"
         ],
         [
           "Pouvez-vous équiper une entreprise ?",
@@ -839,11 +837,7 @@
       "symptoms": [
         [
           "printer",
-          "Imprimante partagée en panne"
-        ],
-        [
-          "wifi",
-          "Réseau & Wi-Fi"
+          "Imprimante en panne"
         ],
         [
           "settings",
@@ -875,7 +869,7 @@
       "faq": [
         [
           "Intervenez-vous dans nos locaux ?",
-          "<p>Oui, Digital-Buro propose des interventions sur site à Bruxelles, notamment pour les machines de bureau et le réseau. Communiquez l’adresse, le modèle et les symptômes afin de convenir des modalités et d’un passage.</p>"
+          "<p>Oui, Digital-Buro propose des interventions sur site à Bruxelles pour l’entretien, la réparation et l’installation des machines de bureau. Communiquez l’adresse, le modèle et les symptômes afin de convenir des modalités et d’un passage.</p>"
         ],
         [
           "Proposez-vous un entretien régulier ?",
@@ -883,7 +877,7 @@
         ],
         [
           "Pouvez-vous installer un nouveau bureau ?",
-          "<p>Nous proposons la vente, l’installation et la configuration de matériel informatique et bureautique. Décrivez vos postes, imprimantes et besoins de connexion : nous vous aidons à préparer un équipement cohérent pour votre activité.</p>"
+          "<p>Nous proposons la vente, l’installation et la configuration de matériel informatique et bureautique. Décrivez vos postes, imprimantes et usages : nous vous aidons à préparer un équipement cohérent pour votre activité.</p>"
         ],
         [
           "Comment demander une intervention ?",

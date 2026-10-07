@@ -31,8 +31,29 @@
       {%- endif %}
 
       <h2 id="propriete">Propriété intellectuelle</h2>
-      <p>L’ensemble des contenus de ce site (textes, illustrations, logo, photographies, mise en page) est la propriété de Digital-Buro SRL, sauf mention contraire. Toute reproduction, même partielle, sans autorisation écrite préalable est interdite.</p>
-      <p>Le site utilise la police de caractères Inter, distribuée sous licence SIL Open Font License 1.1.</p>
+      <p>Les contenus de ce site sont protégés par le droit d’auteur. Les photographies de tiers restent la propriété de leurs auteurs ou ayants droit respectifs. Leur réutilisation doit respecter les autorisations ou licences applicables. La mention d’un auteur, d’un copyright ou d’une source ne remplace pas une autorisation d’utilisation.</p>
+
+      <h2 id="credits-photos">Crédits photos</h2>
+      <p>Les photographies de l’intérieur, de l’extérieur du magasin et du stock de cartouches et toners ont été fournies par Digital-Buro SRL, qui en déclare détenir les droits. Les autres photographies sont des illustrations des prestations ou des produits ; elles ne représentent pas l’équipe ou l’atelier du magasin.</p>
+      <div class="photo-credits" role="list">
+        {%- for key in ['magasin-interieur', 'magasin-exterieur', 'magasin-cartouches', 'ordinateur', 'mac', 'imprimante', 'entreprises', 'vente'] %}
+        {%- set p = site.photos[key] %}{% set width = 800 if 800 in p.widths else p.widths[-1] %}
+        <article class="photo-credit" role="listitem">
+          <a class="photo-credit__preview" href="/assets/img/photos/{{ p.file }}-{{ width }}.webp" aria-label="Voir l’image : {{ p.credit_label|e }}">{{ fx.photo(key, sizes='96px') }}</a>
+          <div>
+            <h3>{{ p.credit_label|e }}</h3>
+            <p>© {{ site.legal_name if p.credit_kind == 'client' else p.author|e }}{% if p.credit_kind == 'stock' %} / {{ p.license_name }}{% elif p.credit_kind == 'manufacturer' %} · Droits réservés.{% endif %}</p>
+            <p class="photo-credit__links"><a href="/assets/img/photos/{{ p.file }}-{{ width }}.webp">Image utilisée</a>{% if p.credit_kind != 'client' %}<a href="{{ p.source|e }}" target="_blank" rel="noopener">Source : {{ p.license_name if p.credit_kind == 'stock' else p.brand }}</a>{% endif %}{% if p.get('license') %}<a href="{{ p.license|e }}" target="_blank" rel="noopener">Licence {{ p.license_name }}</a>{% endif %}</p>
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+      <p>Les photographies Unsplash et Pexels sont proposées sous les licences liées ci-dessus, qui autorisent notamment l’usage commercial dans le respect de leurs conditions. Les visuels HP, Brother et Epson restent soumis aux droits et conditions de leurs ayants droit ; les liens de source ne constituent pas une licence de réutilisation.</p>
+
+      <h2 id="credits-graphiques">Éléments graphiques</h2>
+      <p>Le <a href="{{ site.logo }}">logo Digital-Buro</a> a été fourni par le magasin. Les illustrations de matériel, le monogramme et l’<a href="/assets/img/og-image.jpg">image de partage</a> ont été préparés pour ce site.</p>
+      <p>Certains pictogrammes sont adaptés de <a href="https://feathericons.com/" target="_blank" rel="noopener">Feather Icons</a> (Cole Bemis, <a href="/assets/licenses/LICENSE-Feather.txt">licence MIT</a>) et de <a href="https://lucide.dev/" target="_blank" rel="noopener">Lucide</a> (contributeurs Lucide, <a href="/assets/licenses/LICENSE-Lucide.txt">licences ISC et MIT</a>). Les notices complètes sont conservées dans les fichiers de licence liés.</p>
+      <p>Le site utilise la police <a href="https://rsms.me/inter/" target="_blank" rel="noopener">Inter</a> de Rasmus Andersson, distribuée sous <a href="/assets/fonts/LICENSE-Inter.txt">licence SIL Open Font License 1.1</a>.</p>
 
       <h2 id="marques">Marques citées</h2>
       <p>Les noms de marques cités sur ce site (notamment HP, Canon, Epson, Brother, OKI, Xerox, Ricoh, Kyocera, Lexmark, Samsung, Dell, Lenovo, Apple, Microsoft et Windows) appartiennent à leurs propriétaires respectifs. Ils sont mentionnés uniquement pour désigner les produits que nous réparons, entretenons ou vendons. Digital-Buro est un réparateur indépendant, sans lien d’affiliation avec ces fabricants.</p>

@@ -5,7 +5,7 @@
 {% if site.photos[c.photo].get('product') %}
 {{ fx.product_figure(c.photo, eager=True) }}
 {% else %}
-{{ fx.photo(c.photo,True) }}<img class="mini-art" src="/assets/img/{{ s.art }}" alt="" width="320" height="200">
+{{ fx.photo(c.photo,True) }}{% if not site.photos[c.photo].get('contain') %}<img class="mini-art" src="/assets/img/{{ s.art }}" alt="" width="320" height="200">{% endif %}
 {% endif %}
 </div></div></section>
 <section class="section section--fog"><div class="container"><div class="section-head"><span class="eyebrow">{{ c.eyebrow }}</span><h2 class="h2">{{ c.heading }}</h2></div><div class="service-intro">{% for p in c.intro %}<p>{{ p }}</p>{% endfor %}</div><div class="symptom-grid">{% for icon,label in c.symptoms %}<div class="symptom">{{ ui.icon(icon) }}<span>{{ label }}</span></div>{% endfor %}</div><div class="compact-brands">{% for brand in c.brands %}<span>{{ brand }}</span>{% endfor %}</div>{% if c.note %}<p class="service-note">{{ c.note }}</p>{% endif %}{% if site.prices.get(page.nav) %}<p class="service-note">{{ site.prices[page.nav]|e }}</p>{% endif %}</div></section>

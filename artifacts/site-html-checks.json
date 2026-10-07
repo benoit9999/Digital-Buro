@@ -3,7 +3,7 @@
   "pages": 16,
   "cssFiles": 1,
   "jsFiles": 2,
-  "responsiveChecks": 160,
+  "responsiveChecks": 64,
   "visualGeometryComparisons": 64,
   "layouts": [
     {
@@ -135,262 +135,6 @@
       "clipped": []
     },
     {
-      "width": 360,
-      "height": 800,
-      "page": "index.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "reparation-imprimante.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "reparation-ordinateur.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "reparation-mac.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "cartouches-toners.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "vente-materiel.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "entreprises.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "a-propos.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "contact.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "guide-impression.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "mentions-legales.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "confidentialite.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "merci.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "404.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "nl.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 360,
-      "height": 800,
-      "page": "en.html",
-      "scrollWidth": 360,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "index.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "reparation-imprimante.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "reparation-ordinateur.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "reparation-mac.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "cartouches-toners.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "vente-materiel.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "entreprises.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "a-propos.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "contact.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "guide-impression.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "mentions-legales.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "confidentialite.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "merci.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "404.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "nl.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 375,
-      "height": 812,
-      "page": "en.html",
-      "scrollWidth": 375,
-      "outside": [],
-      "clipped": []
-    },
-    {
       "width": 390,
       "height": 844,
       "page": "index.html",
@@ -519,262 +263,6 @@
       "clipped": []
     },
     {
-      "width": 430,
-      "height": 932,
-      "page": "index.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "reparation-imprimante.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "reparation-ordinateur.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "reparation-mac.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "cartouches-toners.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "vente-materiel.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "entreprises.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "a-propos.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "contact.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "guide-impression.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "mentions-legales.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "confidentialite.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "merci.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "404.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "nl.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 430,
-      "height": 932,
-      "page": "en.html",
-      "scrollWidth": 430,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "index.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "reparation-imprimante.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "reparation-ordinateur.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "reparation-mac.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "cartouches-toners.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "vente-materiel.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "entreprises.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "a-propos.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "contact.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "guide-impression.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "mentions-legales.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "confidentialite.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "merci.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "404.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "nl.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 640,
-      "height": 900,
-      "page": "en.html",
-      "scrollWidth": 640,
-      "outside": [],
-      "clipped": []
-    },
-    {
       "width": 768,
       "height": 1024,
       "page": "index.html",
@@ -899,262 +387,6 @@
       "height": 1024,
       "page": "en.html",
       "scrollWidth": 768,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "index.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "reparation-imprimante.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "reparation-ordinateur.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "reparation-mac.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "cartouches-toners.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "vente-materiel.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "entreprises.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "a-propos.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "contact.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "guide-impression.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "mentions-legales.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "confidentialite.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "merci.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "404.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "nl.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 844,
-      "height": 390,
-      "page": "en.html",
-      "scrollWidth": 844,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "index.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "reparation-imprimante.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "reparation-ordinateur.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "reparation-mac.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "cartouches-toners.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "vente-materiel.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "entreprises.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "a-propos.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "contact.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "guide-impression.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "mentions-legales.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "confidentialite.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "merci.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "404.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "nl.html",
-      "scrollWidth": 1024,
-      "outside": [],
-      "clipped": []
-    },
-    {
-      "width": 1024,
-      "height": 900,
-      "page": "en.html",
-      "scrollWidth": 1024,
       "outside": [],
       "clipped": []
     },
@@ -1617,13 +849,26 @@
       "copyPath": "artifacts/site-html-index-390.png",
       "identicalPNG": true,
       "identicalPixels": true,
-      "differenceBounds": null
+      "differenceBounds": null,
+      "freshBrowserContexts": true,
+      "captureRenderer": "Chrome with GPU disabled for deterministic image resampling"
     },
     {
       "width": 390,
       "page": "reparation-imprimante.html",
       "referencePath": ".deps/static-copy/reference-reparation-imprimante-390.png",
       "copyPath": "artifacts/site-html-reparation-imprimante-390.png",
+      "identicalPNG": false,
+      "identicalPixels": true,
+      "differenceBounds": null,
+      "freshBrowserContexts": true,
+      "captureRenderer": "Chrome with GPU disabled for deterministic image resampling"
+    },
+    {
+      "width": 390,
+      "page": "cartouches-toners.html",
+      "referencePath": ".deps/static-copy/reference-cartouches-toners-390.png",
+      "copyPath": "artifacts/site-html-cartouches-toners-390.png",
       "identicalPNG": true,
       "identicalPixels": true,
       "differenceBounds": null
@@ -1633,18 +878,45 @@
       "page": "contact.html",
       "referencePath": ".deps/static-copy/reference-contact-390.png",
       "copyPath": "artifacts/site-html-contact-390.png",
-      "identicalPNG": true,
-      "identicalPixels": true,
-      "differenceBounds": null
+      "identicalPNG": false,
+      "identicalPixels": false,
+      "differenceBounds": [
+        39,
+        919,
+        250,
+        920
+      ],
+      "freshBrowserContexts": true,
+      "captureRenderer": "Chrome with GPU disabled for deterministic image resampling",
+      "referenceViewportPath": ".deps/static-copy/reference-contact-390-viewport.png",
+      "copyViewportPath": "artifacts/site-html-contact-390-viewport.png",
+      "identicalViewportPNG": true,
+      "identicalViewportPixels": true,
+      "fullPageCaptureNote": "136 pixels on one partially occluded text row differ by up to 2 RGB levels in the full-page capture; viewport pixels, visible text, computed styles and element geometry are identical.",
+      "differentPixelCount": 136,
+      "maximumRGBDifference": 2
     },
     {
       "width": 390,
       "page": "guide-impression.html",
       "referencePath": ".deps/static-copy/reference-guide-impression-390.png",
       "copyPath": "artifacts/site-html-guide-impression-390.png",
-      "identicalPNG": true,
+      "identicalPNG": false,
       "identicalPixels": true,
-      "differenceBounds": null
+      "differenceBounds": null,
+      "freshBrowserContexts": true,
+      "captureRenderer": "Chrome with GPU disabled for deterministic image resampling"
+    },
+    {
+      "width": 390,
+      "page": "mentions-legales.html",
+      "referencePath": ".deps/static-copy/reference-mentions-legales-390.png",
+      "copyPath": "artifacts/site-html-mentions-legales-390.png",
+      "identicalPNG": false,
+      "identicalPixels": true,
+      "differenceBounds": null,
+      "freshBrowserContexts": true,
+      "captureRenderer": "Chrome with GPU disabled for deterministic image resampling"
     },
     {
       "width": 1440,
@@ -1668,6 +940,15 @@
     },
     {
       "width": 1440,
+      "page": "cartouches-toners.html",
+      "referencePath": ".deps/static-copy/reference-cartouches-toners-1440.png",
+      "copyPath": "artifacts/site-html-cartouches-toners-1440.png",
+      "identicalPNG": true,
+      "identicalPixels": true,
+      "differenceBounds": null
+    },
+    {
+      "width": 1440,
       "page": "contact.html",
       "referencePath": ".deps/static-copy/reference-contact-1440.png",
       "copyPath": "artifacts/site-html-contact-1440.png",
@@ -1683,6 +964,15 @@
       "identicalPNG": true,
       "identicalPixels": true,
       "differenceBounds": null
+    },
+    {
+      "width": 1440,
+      "page": "mentions-legales.html",
+      "referencePath": ".deps/static-copy/reference-mentions-legales-1440.png",
+      "copyPath": "artifacts/site-html-mentions-legales-1440.png",
+      "identicalPNG": true,
+      "identicalPixels": true,
+      "differenceBounds": null
     }
   ],
   "interactions": "Menu, landscape rotation, navigation, prefill, pending contact/callback forms, FAQ, carousel and guide table passed",
@@ -1690,5 +980,6 @@
   "forms": "No POST or API request; no email sent",
   "errors": [],
   "originalUnchanged": true,
-  "identicalMediaFiles": 41
+  "identicalMediaFiles": 49,
+  "allComparedPixelsIdentical": false
 }

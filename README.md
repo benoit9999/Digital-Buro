@@ -12,6 +12,8 @@ python build.py --serve
 
 Aperçu : http://localhost:8080. Le serveur Python montre le site mais **n’exécute pas PHP**. Le dossier `public/` est généré ; modifier les sources, puis reconstruire.
 
+La copie `site-html/` contient les mêmes 16 pages sous forme de fichiers `.html` modifiables, avec liens relatifs et ressources locales. Pour la synchroniser après les changements : `python build.py`, puis `python tools/sync_site_html.py`. La copie précédente est archivée dans `artifacts/` ; les fichiers devenus inutiles sont retirés. Les contenus et le rendu reprennent la version principale. Depuis le 7 octobre 2026, les dix formulaires sont raccordés à `send_contact.php` : e-mail HTML via `mail()` vers `digital-buro@skynet.be`, protections anti-spam PHP et quotas par IP, téléphone et pour l’ensemble du site. Les deux fichiers PHP sont livrés dans le dossier et préservés par la synchronisation. Voir `site-html/README.md`, `artifacts/site-html-checks.json` et `artifacts/html-form-tests.json`.
+
 | Emplacement | Contenu |
 |---|---|
 | `src/data/site.json` | Coordonnées, horaires, services, contenus courts, photos, avis, options |
@@ -23,6 +25,7 @@ Aperçu : http://localhost:8080. Le serveur Python montre le site mais **n’ex�
 | `src/assets/js/main.js`, `refresh.js` | Navigation, formulaires, interactions sans bibliothèque |
 | `src/static/api/` | Traitement PHP des demandes et adaptateur Places facultatif |
 | `artifacts/` | Captures, rapport du build et résultats des contrôles |
+| `site-html/` | Copie autonome synchronisée, 16 pages HTML, styles et ressources locales |
 
 Les anciennes URL et redirections, les données structurées LocalBusiness/Service/FAQPage/BreadcrumbList, le sitemap, les liens de langues et les attributs de suivi sont conservés. Aucun balisage Review ou AggregateRating n’a été ajouté.
 
@@ -36,6 +39,8 @@ Les effets comprennent soulignements, boutons, menus, FAQ animées, apparitions,
 
 ## Photos et licences
 
+Vérification du 6 octobre 2026 : les photos du magasin et du stock de cartouches appartiennent au client selon sa confirmation ; les deux photos PC/Mac affichées relèvent des licences commerciales Pexels et Unsplash. **Les visuels officiels HP, Brother et Epson ne sont pas validés pour publication commerciale sur ce site : citer leur source ne suffit pas.** Obtenir une autorisation couvrant ces images ou les remplacer avant publication. Les crédits, miniatures et liens sont accessibles en pied de page dans les trois langues via `/mentions-legales/#credits-photos`. Voir [le rapport détaillé](artifacts/IMAGE-RIGHTS.md) et [l’inventaire](artifacts/image-rights-inventory.json). Les pictogrammes issus de Feather/Lucide et la police Inter conservent leurs notices de licence dans les assets.
+
 L’accueil présente les photos de l’intérieur et de l’extérieur du magasin fournies par le client le 6 octobre 2026. Elles sont affichées côte à côte dans le bloc d’accueil, avec les légendes « Intérieur » et « Extérieur ». Les photos de banque d’images illustrent les prestations ; elles ne sont pas présentées comme l’équipe ou l’atelier de Digital-Buro.
 
 | Fichiers dans `src/assets/img/photos/` | Photographe et source | Licence / droits |
@@ -48,18 +53,17 @@ L’accueil présente les photos de l’intérieur et de l’extérieur du magas
 | mac-400/800/1600.webp | [Aleksi Tappura](https://unsplash.com/photos/mCg0ZgD7BgU) | [Unsplash](https://unsplash.com/license) |
 | ordinateur-400/800/1600.webp | [IT services EU](https://www.pexels.com/photo/7639373/) | [Pexels](https://www.pexels.com/license/) |
 | gsm-800/1600.webp | [Tima Miroshnichenko](https://www.pexels.com/photo/6754839/) | [Pexels](https://www.pexels.com/license/) |
-| cartouches-400/800/1600.webp | [Jakub Zerdzicki](https://www.pexels.com/photo/17536002/) | [Pexels](https://www.pexels.com/license/) |
 | hp-officejet-pro-9120e-400/800/1600.webp | [HP OfficeJet Pro 9120e — HP Belgique](https://www.hp.com/be-fr/products/printers/product-details/2101610322) | Visuel officiel HP, droits réservés au fabricant |
 | brother-mfc-l8390cdw-400/800/1052.webp | [Brother MFC-L8390CDW — Brother](https://www.brother.com.au/en/printers/all-printers/mfc-l8390cdw) | Visuel officiel Brother, droits réservés au fabricant |
 | epson-ecotank-2025-400/670.webp | [Nouvelle gamme EcoTank 2025 — Epson Belgique](https://press.epson.eu/fr_BE/news/epson-devoile-de-nouvelles-imprimantes-ecotank-meilleure-productivite-plus-grande-facilite-d-utilisation-et-impression-sans-souci-pour-les-foyers-et-les-petites-entreprises1/) | Visuel de presse officiel Epson, droits réservés au fabricant |
 
-Depuis le 4 octobre 2026, l’accueil et les pages Imprimantes, Vente et Entreprises utilisent les trois visuels officiels HP, Epson et Brother ci-dessus. Les anciennes photos `imprimante` et `entreprises` restent archivées dans les assets. Les légendes présentent les nouveaux appareils comme des illustrations, sans annoncer de stock pour un modèle précis. Le visuel Epson illustre la nouvelle gamme EcoTank ; il n’est pas attribué à une référence précise. La carte « Cartouches & toners » de l’accueil utilise la photo `photo_cartouche.jpeg` fournie par le client le 6 octobre 2026. La vitrine (900 × 334) n’est pas agrandie au-delà de sa taille native.
+Depuis le 4 octobre 2026, l’accueil et les pages Imprimantes, Vente et Entreprises utilisent les trois visuels officiels HP, Epson et Brother ci-dessus. Les anciennes photos `imprimante` et `entreprises` restent archivées dans les assets. Les légendes présentent les nouveaux appareils comme des illustrations, sans annoncer de stock pour un modèle précis. Le visuel Epson illustre la nouvelle gamme EcoTank ; il n’est pas attribué à une référence précise. Tous les visuels photographiques des cartouches et toners utilisent `photo_cartouche.jpeg`, fournie par le client le 6 octobre 2026 : carte de services et page détaillée. L’ancienne photo de cartouches dans une imprimante et ses variantes ont été supprimées. La nouvelle photo extérieure du client est reprise près des horaires, sur Contact et À propos, ainsi que dans les données structurées.
 
 Les six cartes de services disposent désormais d’une photo : les cartes PC et Mac réutilisent les photos déjà présentes sur leurs pages détaillées, et la carte Cartouches présente la photo fournie par le client. La page Contact montre aussi la vitrine du magasin. Des variantes de 400 px limitent le poids des photos dans les cartes sur les petits écrans.
 
 Pour régénérer les nouvelles photos du magasin : `python tools/prepare_shop_photos.py --source-dir C:/chemin/vers/les/photos`, puis reconstruire. Le script conserve leur cadrage complet en 4:3 et produit des WebP de 400, 800 et 1200 px, chacun sous 150 Ko. Les JPEG d’origine ne sont pas modifiés. L’option `--only magasin-cartouches` prépare seulement la photo de la carte « Cartouches & toners », qui conserve tous les produits visibles grâce à `object-fit: contain`.
 
-L’accueil affiche un encadré orange directement sous le titre : « À côté de l’arrêt Ma Campagne » et « À deux pas de l’avenue Louise », en caractères agrandis. Les repères sont également repris dans le contact et traduits sur les accueils NL/EN. Le client a confirmé « +35 ans d’expérience » : `site.experience_years` alimente les textes des pages, les compteurs et le badge. Les métadonnées et les textes de pied de page reprennent aussi cette durée.
+L’accueil affiche un encadré orange directement sous le titre : « Dans le quartier Ma Campagne » et « À deux pas de l’avenue Louise », en caractères agrandis. Les repères sont également repris dans le contact et traduits sur les accueils NL/EN. Les titres des trois accueils et l’image de partage mettent en avant la vente et la réparation d’imprimantes. Les prestations réseau et Wi-Fi ont été retirées des services, des FAQ, des marques et des métadonnées. Le client a confirmé « +35 ans d’expérience » : `site.experience_years` alimente les textes des pages, les compteurs et le badge. Les métadonnées et les textes de pied de page reprennent aussi cette durée.
 
 Pour les photos de banque d’images, conserver les noms et exporter en WebP, 400 × 250, 800 × 500 et 1600 × 1000, chacun sous 150 Ko (`tools/prepare_photos.py`). Renseigner les largeurs effectivement disponibles dans `site.photos[*].widths`. Pour les visuels d’imprimantes, `python tools/prepare_printer_photos.py` télécharge les URL officielles définies dans `site.photos`, conserve les originaux dans `.deps/` et crée les variantes de largeur indiquées par `widths` (Pillow requis). Le produit entier est conservé sur fond blanc, sans agrandissement au-delà de l’original. Chaque fichier d’imprimante pèse moins de 20 Ko. Actualiser le texte alternatif, l’auteur, la source et les droits dans `site.photos`, puis reconstruire. Les attributs de taille, srcset et chargement différé sont déjà prévus ; les photos de premier écran des pages de service sont prioritaires.
 

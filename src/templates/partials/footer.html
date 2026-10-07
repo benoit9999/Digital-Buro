@@ -43,6 +43,7 @@
       <p>© {{ year }} Digital-Buro SRL · {{ t.vat }} {{ site.vat }}</p>
       <nav aria-label="{{ t.legal_nav }}">
         <a href="/mentions-legales/">{{ t.legal }}</a>
+        <a href="/mentions-legales/#credits-photos"{% if page.lang != 'fr' %} hreflang="fr"{% endif %}>{{ t.photo_credits }}</a>
         <a href="/confidentialite/">{{ t.privacy }}</a>
         {%- if tracking_enabled %}
         <button type="button" data-consent-open>{{ t.cookies_manage }}</button>

@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "checked_on": "2026-10-07",
+  "php": "PHP 8.5.11 (cli) (built: Sep 22 2026 13:51:38) (NTS Visual C++ 2022 x64)",
+  "transport": "Real PHP mail() to isolated localhost SMTP; no external mail",
+  "recipient": "digital-buro@skynet.be",
+  "captured_messages": 10,
+  "tests": [
+    {
+      "test": "Direct POST without session",
+      "status": 403
+    },
+    {
+      "test": "Server-side minimum filling time",
+      "status": 429
+    },
+    {
+      "test": "Name with digits",
+      "status": 422
+    },
+    {
+      "test": "Missing telephone",
+      "status": 422
+    },
+    {
+      "test": "Invalid telephone",
+      "status": 422
+    },
+    {
+      "test": "Invalid email",
+      "status": 422
+    },
+    {
+      "test": "Header injection",
+      "status": 422
+    },
+    {
+      "test": "Array instead of scalar",
+      "status": 422
+    },
+    {
+      "test": "Filled honeypot",
+      "status": 422
+    },
+    {
+      "test": "Too many links",
+      "status": 422
+    },
+    {
+      "test": "Unknown subject",
+      "status": 422
+    },
+    {
+      "test": "Message over 5000 characters",
+      "status": 422
+    },
+    {
+      "test": "Device with header injection",
+      "status": 422
+    },
+    {
+      "test": "Oversized request",
+      "status": 413
+    },
+    {
+      "test": "Foreign origin",
+      "status": 403
+    },
+    {
+      "test": "Different origin port",
+      "status": 403
+    },
+    {
+      "test": "Unsupported HTTP method",
+      "status": 405
+    },
+    {
+      "test": "Real PHP HTML mail accepted",
+      "status": 200
+    },
+    {
+      "test": "Consumed token replay",
+      "status": 403
+    },
+    {
+      "test": "Duplicate across IP buckets",
+      "status": 409
+    },
+    {
+      "test": "IP cooldown ignores forwarded IP headers",
+      "status": 429
+    },
+    {
+      "test": "Five attempts per IP per hour",
+      "status": 429
+    },
+    {
+      "test": "Repeated phone across IP buckets",
+      "status": 429
+    },
+    {
+      "test": "Global hourly mailbox cap",
+      "status": 429
+    },
+    {
+      "test": "Global rolling daily mailbox cap",
+      "status": 429
+    },
+    {
+      "test": "Concurrent requests cannot bypass the shared lock",
+      "status": 429
+    },
+    {
+      "test": "Broken anti-spam storage fails closed",
+      "status": 503
+    },
+    {
+      "test": "Callback without email",
+      "status": 200
+    },
+    {
+      "test": "Expired form token",
+      "status": 403
+    },
+    {
+      "test": "Native PHP success redirects to merci.html",
+      "status": 303
+    },
+    {
+      "test": "Browser contact, four callbacks and native fallback",
+      "status": 200
+    },
+    {
+      "test": "Subdirectory endpoint, scoped cookie and matching Origin",
+      "status": 200
+    },
+    {
+      "test": "Mail failure never returns success",
+      "status": 503
+    }
+  ],
+  "limits": {
+    "per_ip_hour": 5,
+    "same_phone_hour": 3,
+    "global_hour": 30,
+    "global_day": 100,
+    "duplicates_seconds": 600
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "checked_on": "2026-10-06",
+  "photos": [
+    {
+      "key": "magasin-cartouches",
+      "label": "Cartouches et toners du magasin",
+      "kind": "client",
+      "author": "Digital-Buro",
+      "source": "photo_cartouche.jpeg, fournie par le client le 6 octobre 2026",
+      "licence": null,
+      "licence_name": null,
+      "terms": null,
+      "status": "owner_declared_by_client",
+      "rights_note": "© Digital-Buro SRL. Propriété des droits confirmée par le client le 6 octobre 2026.",
+      "displayed_image": "/assets/img/photos/magasin-cartouches-800.webp",
+      "displayed_on": [
+        "/",
+        "/cartouches-toners/",
+        "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+        "/mentions-legales/",
+        "/merci/",
+        "/404.html"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/magasin-cartouches-400.webp",
+          "sha256": "4c886bbc1eb0114f7fd1559d553bf4bb53ffbcbfa0c667d3089688c1c145f165"
+        },
+        {
+          "file": "src/assets/img/photos/magasin-cartouches-800.webp",
+          "sha256": "61156a7adf2f96a59cdfcb0fa065e5c3b1c008455460990d3c14d69f1460e365"
+        },
+        {
+          "file": "src/assets/img/photos/magasin-cartouches-1200.webp",
+          "sha256": "ee7799ee9001d14a3505569cb7da8fbac10d7b187ad9e37142240d5d3bdae843"
+        }
+      ]
+    },
+    {
+      "key": "magasin-interieur",
+      "label": "Intérieur du magasin",
+      "kind": "client",
+      "author": "Digital-Buro",
+      "source": "photo_interieur.jpeg, fournie par le client le 6 octobre 2026",
+      "licence": null,
+      "licence_name": null,
+      "terms": null,
+      "status": "owner_declared_by_client",
+      "rights_note": "© Digital-Buro SRL. Propriété des droits confirmée par le client le 6 octobre 2026.",
+      "displayed_image": "/assets/img/photos/magasin-interieur-800.webp",
+      "displayed_on": [
+        "/",
+        "/mentions-legales/",
+        "/nl/",
+        "/en/"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/magasin-interieur-400.webp",
+          "sha256": "30ee41f72867e680cd2cd6b191faebcf3b8d33cf92135f52637e2f64661727c3"
+        },
+        {
+          "file": "src/assets/img/photos/magasin-interieur-800.webp",
+          "sha256": "9aea2279865f9f4a9c322bb971226de0952aa35c1846e65a77f725c32ebff56c"
+        },
+        {
+          "file": "src/assets/img/photos/magasin-interieur-1200.webp",
+          "sha256": "6c05f4b15b1f299c98d8c69255085b4e7145c85390d877e8278f8ad8dfba8ae6"
+        }
+      ]
+    },
+    {
+      "key": "magasin-exterieur",
+      "label": "Façade et entrée du magasin",
+      "kind": "client",
+      "author": "Digital-Buro",
+      "source": "photo_exterieur.jpeg, fournie par le client le 6 octobre 2026",
+      "licence": null,
+      "licence_name": null,
+      "terms": null,
+      "status": "owner_declared_by_client",
+      "rights_note": "© Digital-Buro SRL. Propriété des droits confirmée par le client le 6 octobre 2026.",
+      "displayed_image": "/assets/img/photos/magasin-exterieur-800.webp",
+      "displayed_on": [
+        "/",
+        "/a-propos/",
+        "/contact/",
+        "/mentions-legales/",
+        "/nl/",
+        "/en/"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/magasin-exterieur-400.webp",
+          "sha256": "07e969d5e8d648cda07f7c4fdac17224e6c515c7f5ab8ab8365b31922ff12dce"
+        },
+        {
+          "file": "src/assets/img/photos/magasin-exterieur-800.webp",
+          "sha256": "a069a1030bc6a3c8152e7446f0898821fd53d84c152864744eabae260817fcb4"
+        },
+        {
+          "file": "src/assets/img/photos/magasin-exterieur-1200.webp",
+          "sha256": "436c9dfdea0148bb1dac496a5797fb550628f186cffcdcf0c7bfd163f634013d"
+        }
+      ]
+    },
+    {
+      "key": "imprimante",
+      "label": "Imprimante HP OfficeJet Pro 9120e",
+      "kind": "manufacturer",
+      "author": "HP",
+      "source": "https://www.hp.com/be-fr/products/printers/product-details/2101610322",
+      "licence": null,
+      "licence_name": null,
+      "terms": "https://www.hp.com/be-fr/terms-of-use.html",
+      "status": "permission_required",
+      "rights_note": "© HP. Visuel officiel ; droits réservés. La source ne confère pas d’autorisation de republication sur ce site commercial.",
+      "displayed_image": "/assets/img/photos/hp-officejet-pro-9120e-800.webp",
+      "displayed_on": [
+        "/",
+        "/reparation-imprimante/",
+        "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+        "/mentions-legales/",
+        "/merci/",
+        "/404.html"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/hp-officejet-pro-9120e-400.webp",
+          "sha256": "4381b38c57d1f40650a49545727ba62fc4e386f089dae0b89d1ea4fda6e17105"
+        },
+        {
+          "file": "src/assets/img/photos/hp-officejet-pro-9120e-800.webp",
+          "sha256": "ec23942abc88c9eb2748bafb1702695feb8aa3b90e4c36ec55822ffcaa06707d"
+        },
+        {
+          "file": "src/assets/img/photos/hp-officejet-pro-9120e-1600.webp",
+          "sha256": "401d261ea5a5ebb7e8dbe032e45174b5d43f0fb5ecef6a9418a444630041f809"
+        }
+      ]
+    },
+    {
+      "key": "entreprises",
+      "label": "Imprimante Brother MFC-L8390CDW",
+      "kind": "manufacturer",
+      "author": "Brother",
+      "source": "https://www.brother.com.au/en/printers/all-printers/mfc-l8390cdw",
+      "licence": null,
+      "licence_name": null,
+      "terms": "https://www.brother.com.au/en/about/tnc",
+      "status": "permission_required",
+      "rights_note": "© Brother. Visuel officiel ; droits réservés. Autorisation de republication commerciale à obtenir.",
+      "displayed_image": "/assets/img/photos/brother-mfc-l8390cdw-800.webp",
+      "displayed_on": [
+        "/",
+        "/entreprises/",
+        "/mentions-legales/",
+        "/404.html"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/brother-mfc-l8390cdw-400.webp",
+          "sha256": "61e52adf35fc34edf1ee7a01a6b5746c66499897f7190bfd3479aa94efbe88b7"
+        },
+        {
+          "file": "src/assets/img/photos/brother-mfc-l8390cdw-800.webp",
+          "sha256": "26f6daca7f559d1961d7180970c157ccc1dde18d3c36ae8fc95f5e2658e8f8fe"
+        },
+        {
+          "file": "src/assets/img/photos/brother-mfc-l8390cdw-1052.webp",
+          "sha256": "c0d39ab44bdd21eaeb1e5561eacee368e46e93c23e9305d813f332fb9e752c85"
+        }
+      ]
+    },
+    {
+      "key": "mac",
+      "label": "MacBook sur un bureau",
+      "kind": "stock",
+      "author": "Aleksi Tappura",
+      "source": "https://unsplash.com/photos/turned-on-macbook-on-beige-wooden-desk-mCg0ZgD7BgU",
+      "licence": "https://unsplash.com/license",
+      "licence_name": "Unsplash",
+      "terms": null,
+      "status": "commercial_license",
+      "rights_note": null,
+      "displayed_image": "/assets/img/photos/mac-800.webp",
+      "displayed_on": [
+        "/",
+        "/reparation-mac/",
+        "/mentions-legales/",
+        "/404.html"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/mac-400.webp",
+          "sha256": "7d1ef60c31586bd6c2b90e2ca15726921ab0adafcf0031b90d0bbd717f4706e0"
+        },
+        {
+          "file": "src/assets/img/photos/mac-800.webp",
+          "sha256": "c91d7e57a6bce46b4af7a495ffe3b47260ff2164b269d6406d1a8724fa38eac1"
+        },
+        {
+          "file": "src/assets/img/photos/mac-1600.webp",
+          "sha256": "dcdf9baed25c9686e1b9fde7e822caa6be54ab4449ccf87a8b6e8c74f8041bdb"
+        }
+      ]
+    },
+    {
+      "key": "ordinateur",
+      "label": "Réparation d’un ordinateur portable",
+      "kind": "stock",
+      "author": "IT services EU",
+      "source": "https://www.pexels.com/photo/hand-with-screwdriver-fixing-motherboard-7639373/",
+      "licence": "https://www.pexels.com/license/",
+      "licence_name": "Pexels",
+      "terms": null,
+      "status": "commercial_license",
+      "rights_note": null,
+      "displayed_image": "/assets/img/photos/ordinateur-800.webp",
+      "displayed_on": [
+        "/",
+        "/reparation-ordinateur/",
+        "/mentions-legales/",
+        "/merci/",
+        "/404.html",
+        "/nl/",
+        "/en/"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/ordinateur-400.webp",
+          "sha256": "e41d7f687ce26d2e62fc22f1411b4071faeb98ea1f65de63d3f04ce538407787"
+        },
+        {
+          "file": "src/assets/img/photos/ordinateur-800.webp",
+          "sha256": "470a8ab92d998444675abb3b7498e6240a6c911e369e2d61ee6e2eaee9f6e1b4"
+        },
+        {
+          "file": "src/assets/img/photos/ordinateur-1600.webp",
+          "sha256": "6c91114c62bc88e565522d00ecaa1d3bef90245c8c52647724f39c38ef396994"
+        }
+      ]
+    },
+    {
+      "key": "vente",
+      "label": "Imprimante Epson EcoTank",
+      "kind": "manufacturer",
+      "author": "Epson",
+      "source": "https://press.epson.eu/fr_BE/news/epson-devoile-de-nouvelles-imprimantes-ecotank-meilleure-productivite-plus-grande-facilite-d-utilisation-et-impression-sans-souci-pour-les-foyers-et-les-petites-entreprises1/",
+      "licence": null,
+      "licence_name": null,
+      "terms": null,
+      "status": "permission_unverified",
+      "rights_note": "© Seiko Epson Corporation. Visuel de presse ; droits réservés. Autorisation couvrant ce site commercial non vérifiée.",
+      "displayed_image": "/assets/img/photos/epson-ecotank-2025-670.webp",
+      "displayed_on": [
+        "/",
+        "/vente-materiel/",
+        "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+        "/mentions-legales/",
+        "/404.html"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/epson-ecotank-2025-400.webp",
+          "sha256": "365d489873b517295ee7db288586266aa4d0e4c3c0c946681b9b2206313b554c"
+        },
+        {
+          "file": "src/assets/img/photos/epson-ecotank-2025-670.webp",
+          "sha256": "77139122a6655d209408a303e1e21829c90225e8e5dae1b12f9dbf4574ed9e83"
+        }
+      ]
+    }
+  ],
+  "client_ownership": "Confirmed by the user for shop interior/exterior and stock-of-cartridges photos in this conversation; independent chain of title not verified.",
+  "commercial_licences_verified": [
+    "ordinateur",
+    "mac"
+  ],
+  "unresolved_manufacturer_permissions": [
+    "imprimante",
+    "entreprises",
+    "vente"
+  ],
+  "all_displayed_photos_cleared_for_commercial_publication": false,
+  "official_guidance": "https://economie.fgov.be/sites/default/files/Files/Entreprises/Guidelines-droits-d-auteur-pour-les-detenteurs-de-sites-web.pdf",
+  "copyright_credit_does_not_grant_permission": true
+}

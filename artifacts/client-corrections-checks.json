@@ -1,0 +1,272 @@
+{
+  "ok": true,
+  "date": "2026-10-06",
+  "checks": 36,
+  "pages": 16,
+  "widths": [
+    320,
+    390,
+    1440
+  ],
+  "networkRemoved": true,
+  "neighbourhood": true,
+  "printerSales": true,
+  "stockPhotoEverywhere": true,
+  "newExteriorPhoto": true,
+  "menu": true,
+  "errors": [],
+  "records": [
+    {
+      "route": "/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Vente & réparation\nd’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/reparation-imprimante/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Réparation d’imprimantes à Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/reparation-ordinateur/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Réparation de PC à Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/reparation-mac/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Réparation de Mac à Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/cartouches-toners/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Cartouches et toners à Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/vente-materiel/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Matériel informatique à Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/entreprises/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Dépannage informatique pour entreprises à Bruxelles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/a-propos/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "+35 ans d’expérience\nen bureautique et informatique.",
+      "brokenImages": []
+    },
+    {
+      "route": "/contact/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Contact, horaires et accès",
+      "brokenImages": []
+    },
+    {
+      "route": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Comment fonctionne une imprimante laser ou jet d’encre ?",
+      "brokenImages": []
+    },
+    {
+      "route": "/mentions-legales/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Mentions légales",
+      "brokenImages": []
+    },
+    {
+      "route": "/confidentialite/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Politique de confidentialité et cookies",
+      "brokenImages": []
+    },
+    {
+      "route": "/merci/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Merci, votre demande est bien envoyée.",
+      "brokenImages": []
+    },
+    {
+      "route": "/404.html",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Cette page n’existe pas, ou plus.",
+      "brokenImages": []
+    },
+    {
+      "route": "/nl/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Verkoop & herstelling van printers, pc’s en Macs in Sint-Gillis.",
+      "brokenImages": []
+    },
+    {
+      "route": "/en/",
+      "width": 320,
+      "documentWidth": 320,
+      "h1": "Printer sales & repair, PC & Mac in Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Vente & réparation\nd’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/reparation-imprimante/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Réparation d’imprimantes à Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/reparation-ordinateur/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Réparation de PC à Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/reparation-mac/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Réparation de Mac à Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/cartouches-toners/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Cartouches et toners à Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/vente-materiel/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Matériel informatique à Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/entreprises/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Dépannage informatique pour entreprises à Bruxelles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/a-propos/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "+35 ans d’expérience\nen bureautique et informatique.",
+      "brokenImages": []
+    },
+    {
+      "route": "/contact/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Contact, horaires et accès",
+      "brokenImages": []
+    },
+    {
+      "route": "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Comment fonctionne une imprimante laser ou jet d’encre ?",
+      "brokenImages": []
+    },
+    {
+      "route": "/mentions-legales/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Mentions légales",
+      "brokenImages": []
+    },
+    {
+      "route": "/confidentialite/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Politique de confidentialité et cookies",
+      "brokenImages": []
+    },
+    {
+      "route": "/merci/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Merci, votre demande est bien envoyée.",
+      "brokenImages": []
+    },
+    {
+      "route": "/404.html",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Cette page n’existe pas, ou plus.",
+      "brokenImages": []
+    },
+    {
+      "route": "/nl/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Verkoop & herstelling van printers, pc’s en Macs in Sint-Gillis.",
+      "brokenImages": []
+    },
+    {
+      "route": "/en/",
+      "width": 1440,
+      "documentWidth": 1440,
+      "h1": "Printer sales & repair, PC & Mac in Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Vente & réparation\nd’imprimantes,\nPC & Mac\nà Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/nl/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Verkoop & herstelling van printers, pc’s en Macs in Sint-Gillis.",
+      "brokenImages": []
+    },
+    {
+      "route": "/en/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Printer sales & repair, PC & Mac in Saint-Gilles.",
+      "brokenImages": []
+    },
+    {
+      "route": "/cartouches-toners/",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": "Cartouches et toners à Saint-Gilles.",
+      "brokenImages": []
+    }
+  ]
+}

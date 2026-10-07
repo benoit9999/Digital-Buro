@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "pages": 16,
+  "layouts": 32,
+  "forms": 10,
+  "callbackLocales": [
+    "fr",
+    "en",
+    "nl"
+  ],
+  "nativeFallback": true,
+  "errors": []
+}

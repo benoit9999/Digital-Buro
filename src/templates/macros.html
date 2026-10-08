@@ -83,9 +83,9 @@
 {% macro service_card(s, heading="h3") -%}
 <a class="svc-card" href="{{ s.url }}">
   <div class="svc-card__body">
-    <{{ heading }} class="svc-card__title">{{ s.name }}</{{ heading }}>
-    <p class="svc-card__text">{{ s.teaser }}</p>
-    <span class="link-arrow svc-card__link">{{ s.link }}{{ icon('arrow-right') }}</span>
+    <{{ heading }} class="svc-card__title">{{ s.get('card_title', s.name) }}</{{ heading }}>
+    <p class="svc-card__text">{{ s.get('card_teaser', s.teaser) }}</p>
+    <span class="link-arrow svc-card__link">{{ s.get('card_link', s.link) }}{{ icon('arrow-right') }}</span>
   </div>
   {% if s.get('card_photo') %}
   <div class="svc-card__art svc-card__art--photo{% if not site.photos[s.card_photo].get('product') %} svc-card__art--editorial{% endif %}">{{ service_photo(s.card_photo, sizes='(min-width: 1280px) 380px, (min-width: 1024px) calc((100vw - 104px) / 3), (min-width: 768px) calc((100vw - 80px) / 2), (min-width: 640px) calc((100vw - 48px) / 2), calc(100vw - 32px)') }}</div>

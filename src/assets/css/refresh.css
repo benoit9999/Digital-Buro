@@ -151,6 +151,17 @@ body.menu-open .callbar{visibility:hidden;pointer-events:none}
 .device-detail__photo figcaption{margin-top:10px}
 @media(max-width:767px){.device-tile--photo{padding:8px;gap:10px 4px}}
 
+/* Full language names are visible at the top, including on small screens. */
+:root{--header-h:108px}
+.header-languages{height:36px;background:var(--fog);border-bottom:1px solid var(--line)}
+.header-languages>.container{height:100%;display:flex;justify-content:flex-end;align-items:center}
+.header-languages__choices{display:flex;align-items:center;gap:4px;font-size:12px;font-weight:500;color:var(--navy)}
+.header-languages__choices a{display:inline-flex;align-items:center;min-height:30px;padding:4px 12px;border-radius:6px;white-space:nowrap}
+.header-languages__choices a:hover{background:#fff}
+.header-languages__choices a[aria-current]{background:var(--navy);color:#fff}
+.header-languages__choices a:focus-visible{outline:2px solid var(--ember);outline-offset:2px}
+@media(max-width:767px){:root{--header-h:96px}.header-languages>.container{justify-content:center}.header-languages__choices a{padding-inline:11px}}
+
 /* Display the client’s original red/blue logo on a white background. */
 .nav__logo img{height:52px;width:auto}
 .site-header.is-scrolled .nav__logo img{height:46px}

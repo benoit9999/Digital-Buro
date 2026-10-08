@@ -1,5 +1,14 @@
 {%- set repair_keys = ['imprimante', 'ordinateur', 'mac'] -%}
 <header class="site-header" data-header>
+  <div class="header-languages">
+    <div class="container">
+      <nav class="header-languages__choices" aria-label="{{ 'Choose a language' if page.lang == 'en' else ('Kies een taal' if page.lang == 'nl' else 'Choisir une langue') }}">
+        {%- for code, label, url in [('fr', 'Français', '/'), ('nl', 'Nederlands', '/nl/'), ('en', 'English', '/en/')] %}
+        <a href="{{ (page.alternates or {}).get(code, url) }}" hreflang="{{ code }}" lang="{{ code }}"{% if page.lang == code %} aria-current="true"{% endif %}>{{ label }}</a>
+        {%- endfor %}
+      </nav>
+    </div>
+  </div>
   <div class="container nav">
     <a class="nav__logo" href="{{ t.home_url }}">
       <img src="{{ site.logo }}?v={{ v.logo }}" alt="Digital-Buro — {{ t.home }}" width="350" height="110">

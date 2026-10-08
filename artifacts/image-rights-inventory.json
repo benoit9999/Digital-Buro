@@ -364,6 +364,71 @@
           "sha256": "cff5bf12abad31df7f8ad1a96e9da7745b78a5d047518b12a2de1edaef1b13e3"
         }
       ]
+    },
+    {
+      "key": "livraison",
+      "label": "Livraison de colis dans un bureau",
+      "kind": "stock",
+      "author": "Tima Miroshnichenko",
+      "source": "https://www.pexels.com/photo/man-in-jacket-holding-cardboard-box-6170396/",
+      "licence": "https://www.pexels.com/license/",
+      "licence_name": "Pexels",
+      "status": "commercial_license",
+      "rights_note": "Adaptations pour le site : recadrage, redimensionnement et compression WebP.",
+      "displayed_image": "/assets/img/photos/livraison-consommables-800.webp",
+      "verified_on": "2026-10-08",
+      "displayed_on": [
+        "/404.html",
+        "/",
+        "/mentions-legales/"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/livraison-consommables-400.webp",
+          "sha256": "7cfd5b7f992e863b8778967ea96b3db6ff45b6aecc3d0e92a7110583d380b5c0"
+        },
+        {
+          "file": "src/assets/img/photos/livraison-consommables-800.webp",
+          "sha256": "37d174a72589e1243396c195642a80a6836c16f53555548f5ad59e5c6be1fb2a"
+        },
+        {
+          "file": "src/assets/img/photos/livraison-consommables-1600.webp",
+          "sha256": "e3d45cb96d731f69c383f0629fdbf3aaaf59ac0c07cf77c766de4f26eca7cac8"
+        }
+      ]
+    },
+    {
+      "key": "logiciels",
+      "label": "Kaspersky Plus, Microsoft Office et Windows 11",
+      "kind": "client",
+      "author": "Digital-Buro, photo fournie",
+      "source": "WhatsApp Image 2026-10-08 at 14.11.35.jpeg, photo fournie par le client le 8 octobre 2026",
+      "licence": null,
+      "licence_name": null,
+      "status": "client_supplied_for_site",
+      "rights_note": "Photo fournie par Digital-Buro ; présentation retouchée par IA à partir du cliché du client. Marques et emballages appartenant à leurs ayants droit.",
+      "displayed_image": "/assets/img/photos/logiciels-client-800.webp",
+      "verified_on": null,
+      "displayed_on": [
+        "/404.html",
+        "/",
+        "/conseils/fonctionnement-imprimante-laser-jet-encre/",
+        "/mentions-legales/"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/logiciels-client-400.webp",
+          "sha256": "9348863a4cc7d7e9c6340e7332e9bda5729da6f7c249255ea8092839aac88d14"
+        },
+        {
+          "file": "src/assets/img/photos/logiciels-client-800.webp",
+          "sha256": "509a26c3e15ea13b0af6f604b280b872b7851a1db36d9fa551486a12fd2fc4ce"
+        },
+        {
+          "file": "src/assets/img/photos/logiciels-client-1600.webp",
+          "sha256": "405307829ac9b73486a5db996b4de8b3f03fb35e14d5d3ce042b61925390edc7"
+        }
+      ]
     }
   ],
   "client_ownership": "Confirmed by the user for shop interior/exterior and stock-of-cartridges photos in this conversation; independent chain of title not verified.",

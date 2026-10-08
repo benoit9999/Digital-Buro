@@ -1,3 +1,12 @@
+# Livraison, logiciels et langues — 8 octobre 2026
+
+- Carte entreprises : titre « Service rapide de livraison pour vos consommables de bureau. » et photo de livreur de Tima Miroshnichenko sous licence Pexels.
+- Carte vente : composition Kaspersky Plus, Office 2024 et Windows 11 retouchée avec imagegen à partir de la photo du client ; original retouché et prompt conservés.
+- Choix Français / Nederlands / English affiché avant la navigation sur toutes les pages, y compris sur mobile.
+- Images WebP responsives, crédits mis à jour et copie HTML synchronisée.
+
+---
+
 # Photos PC fixe et photocopieur — 8 octobre 2026
 
 - Les choix d’appareils FR/NL/EN montrent des photos distinctes : portable conservé, tour de PC moderne ouverte pendant son entretien, véritable photocopieur professionnel Canon sur pied.

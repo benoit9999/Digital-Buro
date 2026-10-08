@@ -187,7 +187,7 @@
       "icon": "package",
       "art": "ill-copier.svg",
       "card_photo": "logiciels",
-      "card_teaser": "Kaspersky, Office et Windows 11 : vos logiciels au magasin.",
+      "card_teaser": "Kaspersky, Office, Windows 11 et disques durs portables : vos logiciels et accessoires au magasin.",
       "teaser": "Le bon matériel, conseillé, installé et configuré.",
       "link": "Vente de matériel"
     }
@@ -496,7 +496,7 @@
       "modifications": "Adaptations pour le site : recadrage, redimensionnement et compression WebP."
     },
     "logiciels": {
-      "credit_label": "Kaspersky Plus, Microsoft Office et Windows 11",
+      "credit_label": "Kaspersky Plus, Microsoft Office, Windows 11 et WD Elements",
       "credit_kind": "client",
       "usage_status": "client_supplied_for_site",
       "file": "logiciels-client",
@@ -510,7 +510,7 @@
         5
       ],
       "contain": true,
-      "alt": "Les logiciels Kaspersky Plus, Microsoft Office Famille et Petite Entreprise 2024 et Windows 11, présentation issue de la photo fournie par Digital-Buro",
+      "alt": "Kaspersky Plus, Microsoft Office Famille et Petite Entreprise 2024, Windows 11 et disque dur portable WD Elements 2 To, présentation issue de la photo fournie par Digital-Buro",
       "source": "WhatsApp Image 2026-10-08 at 14.11.35.jpeg, photo fournie par le client le 8 octobre 2026",
       "author": "Digital-Buro, photo fournie",
       "credit_note": "Photo fournie par Digital-Buro ; présentation retouchée par IA à partir du cliché du client. Marques et emballages appartenant à leurs ayants droit."

@@ -1,7 +1,7 @@
 # Livraison et logiciels — 8 octobre 2026
 
 - Livreur : Tima Miroshnichenko, [Pexels 6170396](https://www.pexels.com/photo/man-in-jacket-holding-cardboard-box-6170396/), [licence Pexels](https://www.pexels.com/license/) autorisant l’usage sur un site commercial. Illustration de livraison, sans présenter la personne comme un salarié Digital-Buro. Recadrage 8:5, redimensionnement et compression WebP ; auteur et licence indiqués dans les crédits.
-- Logiciels : photo fournie par le client le 8 octobre, retouchée avec imagegen pour présenter Kaspersky Plus, Office 2024 et Windows 11. Emballages et marques conservés ; présentation éclaircie et réorganisée, disque WD retiré. [Prompt et provenance](SOFTWARE-IMAGE-PROMPT.md), source retouchée conservée dans `tools/source-images/logiciels-client-edited.png`. Le crédit public précise cette retouche ; aucune licence de banque d’images ni confirmation supplémentaire de propriété n’est attribuée à ce cliché.
+- Logiciels et stockage : photo fournie par le client le 8 octobre, retouchée avec imagegen pour présenter Kaspersky Plus, Office 2024, Windows 11 et le disque dur portable WD Elements 2 To. Emballages et marques conservés ; présentation éclaircie et réorganisée. [Prompts et provenance](SOFTWARE-IMAGE-PROMPT.md), source retouchée conservée dans `tools/source-images/logiciels-client-edited.png`. Le crédit public précise cette retouche ; aucune licence de banque d’images ni confirmation supplémentaire de propriété n’est attribuée à ce cliché.
 
 # Vérification des droits d’image — complément du 8 octobre 2026
 

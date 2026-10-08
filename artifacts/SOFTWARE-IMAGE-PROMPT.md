@@ -1,10 +1,13 @@
-# Composition des logiciels — 8 octobre 2026
+# Composition des logiciels et du disque dur portable — 8 octobre 2026
 
 Outil : imagegen intégré, retouche de la photographie fournie par le client.
 Source : `WhatsApp Image 2026-10-08 at 14.11.35.jpeg`.
 Résultat conservé : `tools/source-images/logiciels-client-edited.png`.
 Exports : `src/assets/img/photos/logiciels-client-{400,800,1600}.webp`.
 
-## Prompt final
+## Prompt initial (remplacé par la composition de quatre produits)
 
 Edit target: the attached client photograph of packaged software. Create a polished photographic product composition for the Digital-Buro website service card, horizontal landscape 8:5. Keep the SAME real products, packaging graphics and recognizable branding from the reference: Microsoft Office Famille et Petite Entreprise 2024, Kaspersky PLUS (3 appareils, 1 an), and Windows 11 blue card. Show these three products neatly arranged side by side or slightly overlapping, all main labels unobstructed and readable, whole products visible with generous margins. Remove the WD hard-drive package because the requested subject is these three software products. Improve lighting, straighten the perspective and remove glare on the plastic Kaspersky packaging. Clean off-white studio tabletop and backdrop, soft realistic shadows, natural crisp product photography fitting a minimalist white/navy/orange repair shop website. Preserve the brand colours and logos, exact main product names, Office edition and year, Kaspersky licence quantity and duration; do not invent claims, certifications, new labels, extra products, promotional text, watermarks or frames. Maintain photographic authenticity to the supplied packages. Only improve presentation, light and composition.
+## Prompt final — ajout du WD Elements
+
+Edit target: image 1, the polished landscape software product composition. Supporting insert reference: image 2, the original client photo, specifically its WD Elements portable hard drive retail package. Update the existing composition to include ALL FOUR products: Microsoft Office Famille et Petite Entreprise 2024, Windows 11, Kaspersky Plus (3 appareils, 1 an), and the WD Elements Portable HDD 2 TB / 2 To box from the reference. Preserve the current clean off-white studio background, soft shadows, crisp realistic product photography, brand colours, packaging and main labels. Arrange the four products elegantly across the horizontal 8:5 frame with generous margins and all four recognizable at small website card size. Add the WD white package showing the black portable drive, orange WD logo, exact WD Elements product name and 2 TB / 2 To capacity, matching the original reference. You may subtly adjust the spacing and scale of the existing three products to fit the fourth, but preserve their identity and design. Keep all main names and capacity readable and unobstructed. No extra products, no invented marketing text, no watermark or frame. The result should look like the same polished composition, now complete with the portable hard drive.

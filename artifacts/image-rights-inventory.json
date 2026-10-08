@@ -399,7 +399,7 @@
     },
     {
       "key": "logiciels",
-      "label": "Kaspersky Plus, Microsoft Office et Windows 11",
+      "label": "Kaspersky Plus, Microsoft Office, Windows 11 et WD Elements",
       "kind": "client",
       "author": "Digital-Buro, photo fournie",
       "source": "WhatsApp Image 2026-10-08 at 14.11.35.jpeg, photo fournie par le client le 8 octobre 2026",
@@ -418,15 +418,15 @@
       "variants": [
         {
           "file": "src/assets/img/photos/logiciels-client-400.webp",
-          "sha256": "9348863a4cc7d7e9c6340e7332e9bda5729da6f7c249255ea8092839aac88d14"
+          "sha256": "d0efdc2aa50fac52e53958e3dbc6be43fc8f2055ee50f6b6a2463ed824aa06b5"
         },
         {
           "file": "src/assets/img/photos/logiciels-client-800.webp",
-          "sha256": "509a26c3e15ea13b0af6f604b280b872b7851a1db36d9fa551486a12fd2fc4ce"
+          "sha256": "59c610629fa8d99faa94503c79fc358097185eadb3606f3aa52f3637ffdd3a7e"
         },
         {
           "file": "src/assets/img/photos/logiciels-client-1600.webp",
-          "sha256": "405307829ac9b73486a5db996b4de8b3f03fb35e14d5d3ce042b61925390edc7"
+          "sha256": "36b50f9d6561017a5c8e7961394d47c9a6ae984346a483c22df2d69fea2149cd"
         }
       ]
     }

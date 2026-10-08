@@ -1,3 +1,12 @@
+# Photos PC fixe et photocopieur — 8 octobre 2026
+
+- Les choix d’appareils FR/NL/EN montrent des photos distinctes : portable conservé, tour de PC moderne ouverte pendant son entretien, véritable photocopieur professionnel Canon sur pied.
+- Les liens « PC fixe » et « Photocopieur » arrivent directement sur les sections illustrées de leurs pages de services, avec une demande de diagnostic préremplie.
+- Tour : Anete Lusina / Pexels, usage commercial autorisé par la licence Pexels. Photocopieur : Baron Maddock / Wikimedia Commons, CC BY 4.0 ; attribution, licence et adaptations indiquées dans les crédits.
+- Six variantes WebP en 400/800/1600 px, cadre 4:3 ; le photocopieur est conservé en entier. Sources et droits enregistrés dans les données du site et le registre d’images.
+
+---
+
 # Envoi PHP et anti-spam de la copie HTML — 7 octobre 2026
 
 - Script fourni `send_reservation.php` adapté au contact et aux rappels de Digital-Buro : e-mail HTML via `mail()`, destinataire fixe `digital-buro@skynet.be`, expéditeur Digital-Buro et Reply-To facultatif validé.

@@ -39,6 +39,8 @@ Les effets comprennent soulignements, boutons, menus, FAQ animées, apparitions,
 
 ## Photos et licences
 
+Le 8 octobre 2026, deux illustrations distinctes ont été ajoutées aux choix d’appareils FR/NL/EN et aux pages de services : une tour de PC moderne ouverte pendant son entretien (Anete Lusina / Pexels) et un photocopieur professionnel Canon imageRUNNER ADVANCE C7570i (Baron Maddock / Wikimedia Commons, CC BY 4.0). Les licences couvrent l’usage commercial ; la source, l’auteur, la licence et les adaptations sont indiqués dans les crédits. Les liens « PC fixe » et « Photocopieur » ciblent leurs sections dédiées. Régénération : `python tools/prepare_device_photos.py`, puis `python build.py` et `python tools/sync_site_html.py`. Les variantes WebP 400/800/1600 px sont au format 4:3 ; le photocopieur conserve son cadre complet. Les originaux restent dans `.deps/`.
+
 Vérification du 6 octobre 2026 : les photos du magasin et du stock de cartouches appartiennent au client selon sa confirmation ; les deux photos PC/Mac affichées relèvent des licences commerciales Pexels et Unsplash. **Les visuels officiels HP, Brother et Epson ne sont pas validés pour publication commerciale sur ce site : citer leur source ne suffit pas.** Obtenir une autorisation couvrant ces images ou les remplacer avant publication. Les crédits, miniatures et liens sont accessibles en pied de page dans les trois langues via `/mentions-legales/#credits-photos`. Voir [le rapport détaillé](artifacts/IMAGE-RIGHTS.md) et [l’inventaire](artifacts/image-rights-inventory.json). Les pictogrammes issus de Feather/Lucide et la police Inter conservent leurs notices de licence dans les assets.
 
 L’accueil présente les photos de l’intérieur et de l’extérieur du magasin fournies par le client le 6 octobre 2026. Elles sont affichées côte à côte dans le bloc d’accueil, avec les légendes « Intérieur » et « Extérieur ». Les photos de banque d’images illustrent les prestations ; elles ne sont pas présentées comme l’équipe ou l’atelier de Digital-Buro.
@@ -52,6 +54,8 @@ L’accueil présente les photos de l’intérieur et de l’extérieur du magas
 | entreprises-800/1600.webp | [Meatball Overexposure](https://unsplash.com/photos/8r1ZlqqGxMU) | [Unsplash](https://unsplash.com/license) |
 | mac-400/800/1600.webp | [Aleksi Tappura](https://unsplash.com/photos/mCg0ZgD7BgU) | [Unsplash](https://unsplash.com/license) |
 | ordinateur-400/800/1600.webp | [IT services EU](https://www.pexels.com/photo/7639373/) | [Pexels](https://www.pexels.com/license/) |
+| ordinateur-fixe-400/800/1600.webp | [Anete Lusina](https://www.pexels.com/photo/crop-unrecognizable-man-cleaning-computer-system-unit-4792719/) | [Pexels](https://www.pexels.com/license/) |
+| photocopieur-400/800/1600.webp | [Baron Maddock / Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Canon_ImageRUNNER_Advance_C7570i_photocopier.jpg) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) ; auteur, source, licence et adaptations dans les crédits |
 | gsm-800/1600.webp | [Tima Miroshnichenko](https://www.pexels.com/photo/6754839/) | [Pexels](https://www.pexels.com/license/) |
 | hp-officejet-pro-9120e-400/800/1600.webp | [HP OfficeJet Pro 9120e — HP Belgique](https://www.hp.com/be-fr/products/printers/product-details/2101610322) | Visuel officiel HP, droits réservés au fabricant |
 | brother-mfc-l8390cdw-400/800/1052.webp | [Brother MFC-L8390CDW — Brother](https://www.brother.com.au/en/printers/all-printers/mfc-l8390cdw) | Visuel officiel Brother, droits réservés au fabricant |

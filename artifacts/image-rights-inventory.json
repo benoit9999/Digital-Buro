@@ -15,11 +15,21 @@
       "displayed_image": "/assets/img/photos/magasin-cartouches-800.webp",
       "displayed_on": [
         "/",
+        "/reparation-imprimante/",
+        "/reparation-ordinateur/",
+        "/reparation-mac/",
         "/cartouches-toners/",
+        "/vente-materiel/",
+        "/entreprises/",
+        "/a-propos/",
+        "/contact/",
         "/conseils/fonctionnement-imprimante-laser-jet-encre/",
         "/mentions-legales/",
+        "/confidentialite/",
         "/merci/",
-        "/404.html"
+        "/404.html",
+        "/nl/",
+        "/en/"
       ],
       "variants": [
         {
@@ -83,9 +93,19 @@
       "displayed_image": "/assets/img/photos/magasin-exterieur-800.webp",
       "displayed_on": [
         "/",
+        "/reparation-imprimante/",
+        "/reparation-ordinateur/",
+        "/reparation-mac/",
+        "/cartouches-toners/",
+        "/vente-materiel/",
+        "/entreprises/",
         "/a-propos/",
         "/contact/",
+        "/conseils/fonctionnement-imprimante-laser-jet-encre/",
         "/mentions-legales/",
+        "/confidentialite/",
+        "/merci/",
+        "/404.html",
         "/nl/",
         "/en/"
       ],
@@ -122,7 +142,9 @@
         "/conseils/fonctionnement-imprimante-laser-jet-encre/",
         "/mentions-legales/",
         "/merci/",
-        "/404.html"
+        "/404.html",
+        "/nl/",
+        "/en/"
       ],
       "variants": [
         {
@@ -188,7 +210,9 @@
         "/",
         "/reparation-mac/",
         "/mentions-legales/",
-        "/404.html"
+        "/404.html",
+        "/nl/",
+        "/en/"
       ],
       "variants": [
         {
@@ -270,6 +294,76 @@
           "sha256": "77139122a6655d209408a303e1e21829c90225e8e5dae1b12f9dbf4574ed9e83"
         }
       ]
+    },
+    {
+      "key": "ordinateur-fixe",
+      "label": "Entretien d’une tour de PC ouverte",
+      "kind": "stock",
+      "author": "Anete Lusina",
+      "source": "https://www.pexels.com/photo/crop-unrecognizable-man-cleaning-computer-system-unit-4792719/",
+      "licence": "https://www.pexels.com/license/",
+      "licence_name": "Pexels",
+      "terms": null,
+      "status": "commercial_license",
+      "checked_on": "2026-10-08",
+      "modifications": "Adaptations pour le site : recadrage en 4:3, redimensionnement et compression WebP.",
+      "displayed_image": "/assets/img/photos/ordinateur-fixe-800.webp",
+      "displayed_on": [
+        "/",
+        "/reparation-ordinateur/",
+        "/mentions-legales/",
+        "/nl/",
+        "/en/"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/ordinateur-fixe-400.webp",
+          "sha256": "2b4d775cca0628efbec8d8eda82ac03b2e51fa86d6a4f5405486c2b9e00ddfa2"
+        },
+        {
+          "file": "src/assets/img/photos/ordinateur-fixe-800.webp",
+          "sha256": "e8ac89b5b58b6b7e6dca5354cc60380f5a7c2388554d885ceb9fa28d00570bfa"
+        },
+        {
+          "file": "src/assets/img/photos/ordinateur-fixe-1600.webp",
+          "sha256": "e355567d8b1fde1354e5d5d0d146f85d83e7828ec3321aea08292b4607f60cac"
+        }
+      ]
+    },
+    {
+      "key": "photocopieur",
+      "label": "Photocopieur Canon imageRUNNER ADVANCE C7570i",
+      "kind": "stock",
+      "author": "Baron Maddock",
+      "source": "https://commons.wikimedia.org/wiki/File:Canon_ImageRUNNER_Advance_C7570i_photocopier.jpg",
+      "licence": "https://creativecommons.org/licenses/by/4.0/",
+      "licence_name": "CC BY 4.0",
+      "terms": null,
+      "status": "commercial_license",
+      "checked_on": "2026-10-08",
+      "modifications": "Adaptations pour le site : redimensionnement, léger ajout de marges blanches au format 4:3 et compression WebP ; photographie conservée en entier.",
+      "displayed_image": "/assets/img/photos/photocopieur-800.webp",
+      "displayed_on": [
+        "/",
+        "/reparation-imprimante/",
+        "/mentions-legales/",
+        "/nl/",
+        "/en/"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/photocopieur-400.webp",
+          "sha256": "51e42dc9e5fa5153a10dc4d1db7e145c4a5d5bc0931121d35821b185e3a110bf"
+        },
+        {
+          "file": "src/assets/img/photos/photocopieur-800.webp",
+          "sha256": "8377df12aec77706e227040ea5b41def2d6c0dc533984e46a95047a9c5dc89e9"
+        },
+        {
+          "file": "src/assets/img/photos/photocopieur-1600.webp",
+          "sha256": "cff5bf12abad31df7f8ad1a96e9da7745b78a5d047518b12a2de1edaef1b13e3"
+        }
+      ]
     }
   ],
   "client_ownership": "Confirmed by the user for shop interior/exterior and stock-of-cartridges photos in this conversation; independent chain of title not verified.",
@@ -284,5 +378,6 @@
   ],
   "all_displayed_photos_cleared_for_commercial_publication": false,
   "official_guidance": "https://economie.fgov.be/sites/default/files/Files/Entreprises/Guidelines-droits-d-auteur-pour-les-detenteurs-de-sites-web.pdf",
-  "copyright_credit_does_not_grant_permission": true
+  "copyright_credit_does_not_grant_permission": true,
+  "updated_on": "2026-10-08"
 }

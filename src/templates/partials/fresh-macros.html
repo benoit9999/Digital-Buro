@@ -21,6 +21,13 @@
   alt="{{ '' if decorative else p.alt|e }}" loading="{{ 'eager' if eager else 'lazy' }}" {% if eager %}fetchpriority="high"{% endif %} decoding="async">
 {%- endmacro %}
 
+{% macro device_tile(service_key, photo_key, label, icon, anchor='', id='') -%}
+<a {% if id %}id="{{ id }}"{% endif %} class="device-tile device-tile--photo" href="{{ services[service_key].url }}{{ '#' ~ anchor if anchor else '' }}"{% if page.lang != 'fr' %} hreflang="fr"{% endif %}>
+  <div class="device-tile__photo">{{ photo(photo_key, sizes='(min-width: 1280px) 170px, (min-width: 1100px) 15vw, (min-width: 768px) 30vw, 45vw', decorative=True) }}</div>
+  <span class="device-tile__label">{{ ui.icon(icon) }}{{ label }}</span>{{ ui.icon('arrow-up-right') }}
+</a>
+{%- endmacro %}
+
 {% macro product_figure(key, eager=False) -%}
 {% set p = site.photos[key] %}
 <figure class="printer-figure">

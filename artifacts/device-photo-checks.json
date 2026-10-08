@@ -1,0 +1,80 @@
+{
+  "checked_on": "2026-10-08",
+  "ok": true,
+  "checks": [
+    {
+      "width": 320,
+      "route": "/",
+      "distinctPhotos": true,
+      "anchorNavigation": true,
+      "contactPrefill": true,
+      "noOverflow": true
+    },
+    {
+      "width": 320,
+      "route": "/en/",
+      "distinctPhotos": true,
+      "anchorNavigation": true,
+      "contactPrefill": true,
+      "noOverflow": true
+    },
+    {
+      "width": 320,
+      "route": "/nl/",
+      "distinctPhotos": true,
+      "anchorNavigation": true,
+      "contactPrefill": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "distinctPhotos": true,
+      "anchorNavigation": true,
+      "contactPrefill": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "route": "/en/",
+      "distinctPhotos": true,
+      "anchorNavigation": true,
+      "contactPrefill": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "route": "/nl/",
+      "distinctPhotos": true,
+      "anchorNavigation": true,
+      "contactPrefill": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "distinctPhotos": true,
+      "anchorNavigation": true,
+      "contactPrefill": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "route": "/en/",
+      "distinctPhotos": true,
+      "anchorNavigation": true,
+      "contactPrefill": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "route": "/nl/",
+      "distinctPhotos": true,
+      "anchorNavigation": true,
+      "contactPrefill": true,
+      "noOverflow": true
+    }
+  ],
+  "photoCredits": 10,
+  "errors": []
+}

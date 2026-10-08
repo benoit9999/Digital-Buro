@@ -1,4 +1,15 @@
-# Vérification des droits d’image — 6 octobre 2026
+# Vérification des droits d’image — complément du 8 octobre 2026
+
+Deux photos ont été vérifiées et intégrées pour distinguer le PC fixe du portable et le photocopieur de l’imprimante compacte :
+
+| Image et auteur | Source | Licence et adaptations |
+|---|---|---|
+| Tour de PC ouverte pendant son entretien — Anete Lusina | [Pexels, photo 4792719](https://www.pexels.com/photo/crop-unrecognizable-man-cleaning-computer-system-unit-4792719/) | [Licence Pexels](https://www.pexels.com/license/), [usage commercial confirmé par Pexels](https://help.pexels.com/hc/en-us/articles/360042295214-Can-I-use-the-photos-and-videos-for-a-commercial-project). Recadrage 4:3, redimensionnement, WebP. |
+| Canon ImageRUNNER Advance C7570i photocopier — Baron Maddock, photo du 14 mars 2025 | [Wikimedia Commons, œuvre personnelle du photographe](https://commons.wikimedia.org/wiki/File:Canon_ImageRUNNER_Advance_C7570i_photocopier.jpg) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) autorisant l’usage commercial avec attribution, lien de licence et indication des modifications. Redimensionnement, marges blanches et WebP ; photo entière conservée. |
+
+Les crédits publics contiennent l’auteur, la source, la licence et les adaptations pour chacune. Les photographies illustrent les appareils et prestations ; elles ne sont pas présentées comme des prises de vue de l’atelier Digital-Buro ou comme une recommandation des photographes ou marques. Les originaux sont conservés dans `.deps/device-photo-originals/`, les variantes livrées et leurs empreintes figurent dans `image-rights-inventory.json`. La vérification antérieure ci-dessous reste datée du 6 octobre pour les autres visuels.
+
+# Vérification antérieure — 6 octobre 2026
 
 Périmètre : les huit photographies affichées, le logo fourni, les illustrations, pictogrammes et éléments graphiques du site généré. Cette vérification documente les sources et les licences ; elle ne constitue ni une autorisation des fabricants ni une garantie d’absence de litige.
 

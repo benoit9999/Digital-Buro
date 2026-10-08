@@ -36,19 +36,20 @@
       <h2 id="credits-photos">Crédits photos</h2>
       <p>Les photographies de l’intérieur, de l’extérieur du magasin et du stock de cartouches et toners ont été fournies par Digital-Buro SRL, qui en déclare détenir les droits. Les autres photographies sont des illustrations des prestations ou des produits ; elles ne représentent pas l’équipe ou l’atelier du magasin.</p>
       <div class="photo-credits" role="list">
-        {%- for key in ['magasin-interieur', 'magasin-exterieur', 'magasin-cartouches', 'ordinateur', 'mac', 'imprimante', 'entreprises', 'vente'] %}
+        {%- for key in ['magasin-interieur', 'magasin-exterieur', 'magasin-cartouches', 'ordinateur', 'ordinateur-fixe', 'photocopieur', 'mac', 'imprimante', 'entreprises', 'vente'] %}
         {%- set p = site.photos[key] %}{% set width = 800 if 800 in p.widths else p.widths[-1] %}
         <article class="photo-credit" role="listitem">
           <a class="photo-credit__preview" href="/assets/img/photos/{{ p.file }}-{{ width }}.webp" aria-label="Voir l’image : {{ p.credit_label|e }}">{{ fx.photo(key, sizes='96px') }}</a>
           <div>
             <h3>{{ p.credit_label|e }}</h3>
             <p>© {{ site.legal_name if p.credit_kind == 'client' else p.author|e }}{% if p.credit_kind == 'stock' %} / {{ p.license_name }}{% elif p.credit_kind == 'manufacturer' %} · Droits réservés.{% endif %}</p>
-            <p class="photo-credit__links"><a href="/assets/img/photos/{{ p.file }}-{{ width }}.webp">Image utilisée</a>{% if p.credit_kind != 'client' %}<a href="{{ p.source|e }}" target="_blank" rel="noopener">Source : {{ p.license_name if p.credit_kind == 'stock' else p.brand }}</a>{% endif %}{% if p.get('license') %}<a href="{{ p.license|e }}" target="_blank" rel="noopener">Licence {{ p.license_name }}</a>{% endif %}</p>
+            <p class="photo-credit__links"><a href="/assets/img/photos/{{ p.file }}-{{ width }}.webp">Image utilisée</a>{% if p.credit_kind != 'client' %}<a href="{{ p.source|e }}" target="_blank" rel="noopener">Source : {{ p.get('source_name', p.license_name) if p.credit_kind == 'stock' else p.brand }}</a>{% endif %}{% if p.get('license') %}<a href="{{ p.license|e }}" target="_blank" rel="noopener">Licence {{ p.license_name }}</a>{% endif %}</p>
+            {% if p.get('modifications') %}<p>{{ p.modifications|e }}</p>{% endif %}
           </div>
         </article>
         {%- endfor %}
       </div>
-      <p>Les photographies Unsplash et Pexels sont proposées sous les licences liées ci-dessus, qui autorisent notamment l’usage commercial dans le respect de leurs conditions. Les visuels HP, Brother et Epson restent soumis aux droits et conditions de leurs ayants droit ; les liens de source ne constituent pas une licence de réutilisation.</p>
+      <p>Les photographies Unsplash, Pexels et Wikimedia Commons sont proposées sous les licences liées ci-dessus, qui autorisent notamment l’usage commercial dans le respect de leurs conditions. La photographie du photocopieur de Baron Maddock est utilisée sous licence CC BY 4.0, avec attribution, lien vers la source et indication des adaptations. Les visuels HP, Brother et Epson restent soumis aux droits et conditions de leurs ayants droit ; les liens de source ne constituent pas une licence de réutilisation.</p>
 
       <h2 id="credits-graphiques">Éléments graphiques</h2>
       <p>Le <a href="{{ site.logo }}">logo Digital-Buro</a> a été fourni par le magasin. Les illustrations de matériel, le monogramme et l’<a href="/assets/img/og-image.jpg">image de partage</a> ont été préparés pour ce site.</p>

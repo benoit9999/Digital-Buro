@@ -138,6 +138,19 @@ body.menu-open .callbar{visibility:hidden;pointer-events:none}
 .photo-credit__links{display:flex;gap:6px 14px;flex-wrap:wrap}
 @media(max-width:479px){.photo-credit{grid-template-columns:72px minmax(0,1fr);gap:12px}}
 
+/* Each device has its own photograph, with a consistent frame and label. */
+.device-tile--photo{padding:10px;gap:12px 4px;min-height:0;align-content:start}
+.device-tile__photo{grid-column:1/-1;overflow:hidden;border-radius:7px;background:#fff}
+.device-tile__photo .editorial-photo{display:block;aspect-ratio:4/3;border-radius:0;transition:transform .25s}
+.device-tile__label{display:flex;align-items:center;gap:6px;min-width:0;line-height:1.4}
+.device-tile__label .icon{flex:0 0 16px;width:16px;height:16px;color:var(--navy)}
+.device-tile--photo>.icon:last-child{align-self:center}
+.device-tile--photo:hover .editorial-photo{transform:scale(1.03)}
+.device-detail{scroll-margin-top:90px}
+.device-detail__photo .editorial-photo{aspect-ratio:4/3}
+.device-detail__photo figcaption{margin-top:10px}
+@media(max-width:767px){.device-tile--photo{padding:8px;gap:10px 4px}}
+
 /* Display the client’s original red/blue logo on a white background. */
 .nav__logo img{height:52px;width:auto}
 .site-header.is-scrolled .nav__logo img{height:46px}

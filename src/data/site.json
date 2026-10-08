@@ -373,20 +373,28 @@
       "rights": "© Brother. Visuel officiel ; droits réservés. Autorisation de republication commerciale à obtenir."
     },
     "mac": {
-      "credit_label": "MacBook sur un bureau",
+      "credit_label": "MacBook Pro en gros plan",
       "credit_kind": "stock",
-      "license_name": "Unsplash",
+      "license_name": "Pexels",
       "usage_status": "commercial_license",
-      "file": "mac",
+      "file": "macbook-pro",
       "widths": [
         400,
         800,
         1600
       ],
-      "alt": "MacBook ouvert sur un bureau en bois",
-      "source": "https://unsplash.com/photos/turned-on-macbook-on-beige-wooden-desk-mCg0ZgD7BgU",
-      "author": "Aleksi Tappura",
-      "license": "https://unsplash.com/license"
+      "alt": "Gros plan d’un MacBook Pro : écran coloré, clavier et châssis argenté",
+      "source": "https://www.pexels.com/photo/close-up-of-a-macbook-pro-laptop-10499853/",
+      "author": "Aleksey Zemlyanoy",
+      "license": "https://www.pexels.com/license/",
+      "source_name": "Pexels",
+      "verified_on": "2026-10-08",
+      "aspect_ratio": [
+        8,
+        5
+      ],
+      "download": "https://images.pexels.com/photos/10499853/pexels-photo-10499853.jpeg",
+      "modifications": "Adaptations pour le site : recadrage 8:5, redimensionnement et compression WebP."
     },
     "ordinateur": {
       "credit_label": "Réparation d’un ordinateur portable",
@@ -472,13 +480,13 @@
       "rights": "© Seiko Epson Corporation. Visuel de presse ; droits réservés. Autorisation couvrant ce site commercial non vérifiée."
     },
     "livraison": {
-      "credit_label": "Livraison de colis dans un bureau",
+      "credit_label": "Camionnette de livraison chargée de colis",
       "credit_kind": "stock",
       "license_name": "Pexels",
       "source_name": "Pexels",
       "usage_status": "commercial_license",
       "verified_on": "2026-10-08",
-      "file": "livraison-consommables",
+      "file": "livraison-camionnette",
       "widths": [
         400,
         800,
@@ -488,12 +496,12 @@
         8,
         5
       ],
-      "alt": "Livreur portant un colis dans un bureau, illustration du service de livraison de consommables",
-      "source": "https://www.pexels.com/photo/man-in-jacket-holding-cardboard-box-6170396/",
-      "download": "https://images.pexels.com/photos/6170396/pexels-photo-6170396.jpeg",
+      "alt": "Camionnette blanche de livraison ouverte, chargée de colis avec deux livreurs",
+      "source": "https://www.pexels.com/photo/men-delivering-parcels-6169010/",
+      "download": "https://images.pexels.com/photos/6169010/pexels-photo-6169010.jpeg",
       "author": "Tima Miroshnichenko",
       "license": "https://www.pexels.com/license/",
-      "modifications": "Adaptations pour le site : recadrage, redimensionnement et compression WebP."
+      "modifications": "Adaptations pour le site : recadrage 8:5, redimensionnement et compression WebP."
     },
     "logiciels": {
       "credit_label": "Kaspersky Plus, Microsoft Office, Windows 11 et WD Elements",
@@ -564,7 +572,6 @@
       "h1": "Réparation d’imprimantes à Saint-Gilles.",
       "lead": "Diagnostic et réparation d’imprimantes et de photocopieurs, en atelier ou sur site.",
       "device": "Imprimante",
-      "photo": "imprimante",
       "eyebrow": "LASER, JET D’ENCRE ET PHOTOCOPIEURS",
       "heading": "Les pannes d’imprimante courantes",
       "intro": [
@@ -644,7 +651,6 @@
       "h1": "Réparation de PC à Saint-Gilles.",
       "lead": "PC fixe ou portable : décrivez la panne pour préparer le diagnostic.",
       "device": "PC portable",
-      "photo": "ordinateur",
       "eyebrow": "DIAGNOSTIC & ENTRETIEN",
       "heading": "Les pannes de PC courantes",
       "intro": [
@@ -719,7 +725,6 @@
       "h1": "Réparation de Mac à Saint-Gilles.",
       "lead": "Contactez le magasin avec le modèle de votre Mac et les symptômes de la panne.",
       "device": "Mac",
-      "photo": "mac",
       "eyebrow": "DIAGNOSTIC & RÉPARATION",
       "heading": "Les problèmes à signaler",
       "intro": [
@@ -791,7 +796,6 @@
       "h1": "Cartouches et toners à Saint-Gilles.",
       "lead": "La bonne référence pour votre imprimante. Même si elle a quelques années.",
       "device": "Cartouche / toner",
-      "photo": "magasin-cartouches",
       "eyebrow": "LE SPÉCIALISTE DES CONSOMMABLES",
       "heading": "Cartouches, toners, tambours et rubans",
       "intro": [
@@ -880,7 +884,6 @@
       "h1": "Matériel informatique à Saint-Gilles.",
       "lead": "Une imprimante, un PC, un bureau à équiper ? Partons de vos besoins.",
       "device": "Achat de matériel",
-      "photo": "vente",
       "eyebrow": "DU CONSEIL À L’INSTALLATION",
       "heading": "Le matériel disponible au magasin",
       "intro": [
@@ -964,7 +967,6 @@
       "h1": "Dépannage informatique pour entreprises à Bruxelles.",
       "lead": "Entretien, réparation et installation de votre matériel de bureau, en atelier ou dans vos locaux.",
       "device": "Entreprise",
-      "photo": "entreprises",
       "eyebrow": "UN INTERLOCUTEUR POUR VOTRE BUREAU",
       "heading": "Les services pour votre entreprise",
       "intro": [

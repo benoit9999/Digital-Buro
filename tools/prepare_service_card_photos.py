@@ -13,10 +13,10 @@ def main():
     photos = json.loads((ROOT / "src/data/site.json").read_text(encoding="utf-8"))["photos"]
     cache = ROOT / ".deps/service-photo-originals"
     cache.mkdir(parents=True, exist_ok=True)
-    for key in ("livraison", "logiciels"):
+    for key in ("livraison", "mac", "logiciels"):
         photo = photos[key]
         original = (ROOT / "tools/source-images/logiciels-client-edited.png" if key == "logiciels"
-                    else cache / "livraison.jpg")
+                    else cache / f"{photo['file']}.jpg")
         if not original.exists():
             request = urllib.request.Request(photo["download"], headers={"User-Agent": "DigitalBuro/1.0"})
             with urllib.request.urlopen(request, timeout=45) as response:

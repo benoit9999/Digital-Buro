@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-{% block content %}{% set s = services[page.nav] %}{% set c = site.service_content[page.nav] %}
+{% block content %}{% set s = services[page.nav] %}{% set c = site.service_content[page.nav] %}{% set photo_key = s.card_photo %}
 {{ ui.breadcrumb(page.breadcrumb) }}
 <section class="page-hero"><div class="container page-hero__grid"><div class="page-hero__copy"><span class="eyebrow">{{ c.tag }}</span><h1 class="h1">{{ c.h1 }}</h1><p class="lead">{{ c.lead }}</p>{{ fx.status() }}<div class="btn-row">{{ ui.call_btn(label='02 534 47 02',cls='btn--primary btn--lg') }}{{ ui.directions_btn(cls='btn--outline btn--lg') }}</div><a class="link-arrow" href="/contact/?appareil={{ c.device|urlencode }}#formulaire">Demander un devis {{ ui.icon('arrow-right') }}</a><p class="visit-address">{{ ui.icon("pin") }}<a href="/contact/#acces">{{ site.street }}, {{ site.city }}</a></p></div><div class="service-visual">
-{% if site.photos[c.photo].get('product') %}
-{{ fx.product_figure(c.photo, eager=True) }}
+{% if site.photos[photo_key].get('product') %}
+{{ fx.product_figure(photo_key, eager=True) }}
 {% else %}
-{{ fx.photo(c.photo,True) }}{% if not site.photos[c.photo].get('contain') %}<img class="mini-art" src="/assets/img/{{ s.art }}" alt="" width="320" height="200">{% endif %}
+{{ fx.photo(photo_key,True) }}
 {% endif %}
 </div></div></section>
 <section class="section section--fog"><div class="container"><div class="section-head"><span class="eyebrow">{{ c.eyebrow }}</span><h2 class="h2">{{ c.heading }}</h2></div><div class="service-intro">{% for p in c.intro %}<p>{{ p }}</p>{% endfor %}</div><div class="symptom-grid">{% for icon,label in c.symptoms %}<div class="symptom">{{ ui.icon(icon) }}<span>{{ label }}</span></div>{% endfor %}</div><div class="compact-brands">{% for brand in c.brands %}<span>{{ brand }}</span>{% endfor %}</div>{% if c.note %}<p class="service-note">{{ c.note }}</p>{% endif %}{% if site.prices.get(page.nav) %}<p class="service-note">{{ site.prices[page.nav]|e }}</p>{% endif %}</div></section>

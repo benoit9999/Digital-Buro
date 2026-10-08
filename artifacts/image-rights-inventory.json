@@ -195,41 +195,6 @@
       ]
     },
     {
-      "key": "mac",
-      "label": "MacBook sur un bureau",
-      "kind": "stock",
-      "author": "Aleksi Tappura",
-      "source": "https://unsplash.com/photos/turned-on-macbook-on-beige-wooden-desk-mCg0ZgD7BgU",
-      "licence": "https://unsplash.com/license",
-      "licence_name": "Unsplash",
-      "terms": null,
-      "status": "commercial_license",
-      "rights_note": null,
-      "displayed_image": "/assets/img/photos/mac-800.webp",
-      "displayed_on": [
-        "/",
-        "/reparation-mac/",
-        "/mentions-legales/",
-        "/404.html",
-        "/nl/",
-        "/en/"
-      ],
-      "variants": [
-        {
-          "file": "src/assets/img/photos/mac-400.webp",
-          "sha256": "7d1ef60c31586bd6c2b90e2ca15726921ab0adafcf0031b90d0bbd717f4706e0"
-        },
-        {
-          "file": "src/assets/img/photos/mac-800.webp",
-          "sha256": "c91d7e57a6bce46b4af7a495ffe3b47260ff2164b269d6406d1a8724fa38eac1"
-        },
-        {
-          "file": "src/assets/img/photos/mac-1600.webp",
-          "sha256": "dcdf9baed25c9686e1b9fde7e822caa6be54ab4449ccf87a8b6e8c74f8041bdb"
-        }
-      ]
-    },
-    {
       "key": "ordinateur",
       "label": "Réparation d’un ordinateur portable",
       "kind": "stock",
@@ -367,33 +332,69 @@
     },
     {
       "key": "livraison",
-      "label": "Livraison de colis dans un bureau",
+      "label": "Camionnette de livraison chargée de colis",
       "kind": "stock",
       "author": "Tima Miroshnichenko",
-      "source": "https://www.pexels.com/photo/man-in-jacket-holding-cardboard-box-6170396/",
+      "source": "https://www.pexels.com/photo/men-delivering-parcels-6169010/",
       "licence": "https://www.pexels.com/license/",
       "licence_name": "Pexels",
       "status": "commercial_license",
-      "rights_note": "Adaptations pour le site : recadrage, redimensionnement et compression WebP.",
-      "displayed_image": "/assets/img/photos/livraison-consommables-800.webp",
+      "rights_note": "Adaptations pour le site : recadrage 8:5, redimensionnement et compression WebP.",
+      "displayed_image": "/assets/img/photos/livraison-camionnette-800.webp",
       "verified_on": "2026-10-08",
       "displayed_on": [
         "/404.html",
         "/",
+        "/entreprises/",
         "/mentions-legales/"
       ],
       "variants": [
         {
-          "file": "src/assets/img/photos/livraison-consommables-400.webp",
-          "sha256": "7cfd5b7f992e863b8778967ea96b3db6ff45b6aecc3d0e92a7110583d380b5c0"
+          "file": "src/assets/img/photos/livraison-camionnette-400.webp",
+          "sha256": "83b8467d783b33e90e788d4c3b5f0fe0bc92e14fae3cb201b2b1392cecf9267f"
         },
         {
-          "file": "src/assets/img/photos/livraison-consommables-800.webp",
-          "sha256": "37d174a72589e1243396c195642a80a6836c16f53555548f5ad59e5c6be1fb2a"
+          "file": "src/assets/img/photos/livraison-camionnette-800.webp",
+          "sha256": "0e02dbc5310ffbcc33cf4c37b5a63737df33332640857a47fdba7c3861d1d18b"
         },
         {
-          "file": "src/assets/img/photos/livraison-consommables-1600.webp",
-          "sha256": "e3d45cb96d731f69c383f0629fdbf3aaaf59ac0c07cf77c766de4f26eca7cac8"
+          "file": "src/assets/img/photos/livraison-camionnette-1600.webp",
+          "sha256": "ed09f653853baeb907bf0fa6b625edd82bfcd61a616c8c73251f2a4390eb4248"
+        }
+      ]
+    },
+    {
+      "key": "mac",
+      "label": "MacBook Pro en gros plan",
+      "kind": "stock",
+      "author": "Aleksey Zemlyanoy",
+      "source": "https://www.pexels.com/photo/close-up-of-a-macbook-pro-laptop-10499853/",
+      "licence": "https://www.pexels.com/license/",
+      "licence_name": "Pexels",
+      "status": "commercial_license",
+      "rights_note": "Adaptations pour le site : recadrage 8:5, redimensionnement et compression WebP.",
+      "displayed_image": "/assets/img/photos/macbook-pro-800.webp",
+      "verified_on": "2026-10-08",
+      "displayed_on": [
+        "/404.html",
+        "/",
+        "/en/",
+        "/mentions-legales/",
+        "/nl/",
+        "/reparation-mac/"
+      ],
+      "variants": [
+        {
+          "file": "src/assets/img/photos/macbook-pro-400.webp",
+          "sha256": "f386386dc30b9d8700a108dca41b1db3a58597d9102bdc9ceb7566fa43f07c91"
+        },
+        {
+          "file": "src/assets/img/photos/macbook-pro-800.webp",
+          "sha256": "099cd8dd327dcafc7d74eec95d2c218fc762829db4422acde30e7548a71d9b5a"
+        },
+        {
+          "file": "src/assets/img/photos/macbook-pro-1600.webp",
+          "sha256": "d0b60e3f2d6369f4527609e0e55397ad737131aa85821c29d9eaadcd3c4de19d"
         }
       ]
     },
@@ -413,7 +414,8 @@
         "/404.html",
         "/",
         "/conseils/fonctionnement-imprimante-laser-jet-encre/",
-        "/mentions-legales/"
+        "/mentions-legales/",
+        "/vente-materiel/"
       ],
       "variants": [
         {

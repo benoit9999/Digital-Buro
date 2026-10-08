@@ -365,15 +365,15 @@
     },
     {
       "key": "mac",
-      "label": "MacBook Pro en gros plan",
+      "label": "iMac et MacBook sur un bureau blanc",
       "kind": "stock",
-      "author": "Aleksey Zemlyanoy",
-      "source": "https://www.pexels.com/photo/close-up-of-a-macbook-pro-laptop-10499853/",
-      "licence": "https://www.pexels.com/license/",
-      "licence_name": "Pexels",
+      "author": "Patryk Sobczak",
+      "source": "https://commons.wikimedia.org/wiki/File:IMac_and_MacBook.jpg",
+      "licence": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "licence_name": "CC0 1.0",
       "status": "commercial_license",
-      "rights_note": "Adaptations pour le site : recadrage 8:5, redimensionnement et compression WebP.",
-      "displayed_image": "/assets/img/photos/macbook-pro-800.webp",
+      "rights_note": "Retouche par IA : retrait de l’ours, de l’étagère et des livres en arrière-plan. Redimensionnement au format 8:5 avec conservation de la composition et compression WebP.",
+      "displayed_image": "/assets/img/photos/imac-macbook-clean-800.webp",
       "verified_on": "2026-10-08",
       "displayed_on": [
         "/404.html",
@@ -385,16 +385,16 @@
       ],
       "variants": [
         {
-          "file": "src/assets/img/photos/macbook-pro-400.webp",
-          "sha256": "f386386dc30b9d8700a108dca41b1db3a58597d9102bdc9ceb7566fa43f07c91"
+          "file": "src/assets/img/photos/imac-macbook-clean-400.webp",
+          "sha256": "e6f6329a94b569dd2cbdcc944c4f0bc0a5f9d77cc825f7dd0dae8e63d85f3e48"
         },
         {
-          "file": "src/assets/img/photos/macbook-pro-800.webp",
-          "sha256": "099cd8dd327dcafc7d74eec95d2c218fc762829db4422acde30e7548a71d9b5a"
+          "file": "src/assets/img/photos/imac-macbook-clean-800.webp",
+          "sha256": "e40daf16b957b406a6e035f038b1d42d05c08d3620e811e63b204727c67e8142"
         },
         {
-          "file": "src/assets/img/photos/macbook-pro-1600.webp",
-          "sha256": "d0b60e3f2d6369f4527609e0e55397ad737131aa85821c29d9eaadcd3c4de19d"
+          "file": "src/assets/img/photos/imac-macbook-clean-1600.webp",
+          "sha256": "a0ad5581f7ce6415254b6721a3277e479f91c73626c807052e015c8a58e9ebb1"
         }
       ]
     },

@@ -1,4 +1,4 @@
-"""Export the licensed courier photo and client software composition for cards."""
+"""Export the licensed delivery photo and edited Mac/software compositions."""
 import io
 import json
 import urllib.request
@@ -16,6 +16,7 @@ def main():
     for key in ("livraison", "mac", "logiciels"):
         photo = photos[key]
         original = (ROOT / "tools/source-images/logiciels-client-edited.png" if key == "logiciels"
+                    else ROOT / "tools/source-images/imac-macbook-clean.png" if key == "mac"
                     else cache / f"{photo['file']}.jpg")
         if not original.exists():
             request = urllib.request.Request(photo["download"], headers={"User-Agent": "DigitalBuro/1.0"})

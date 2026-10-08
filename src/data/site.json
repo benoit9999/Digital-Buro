@@ -373,28 +373,29 @@
       "rights": "© Brother. Visuel officiel ; droits réservés. Autorisation de republication commerciale à obtenir."
     },
     "mac": {
-      "credit_label": "MacBook Pro en gros plan",
+      "credit_label": "iMac et MacBook sur un bureau blanc",
       "credit_kind": "stock",
-      "license_name": "Pexels",
+      "license_name": "CC0 1.0",
       "usage_status": "commercial_license",
-      "file": "macbook-pro",
+      "file": "imac-macbook-clean",
       "widths": [
         400,
         800,
         1600
       ],
-      "alt": "Gros plan d’un MacBook Pro : écran coloré, clavier et châssis argenté",
-      "source": "https://www.pexels.com/photo/close-up-of-a-macbook-pro-laptop-10499853/",
-      "author": "Aleksey Zemlyanoy",
-      "license": "https://www.pexels.com/license/",
-      "source_name": "Pexels",
+      "alt": "iMac et MacBook ouverts côte à côte, avec clavier et souris sur un bureau blanc",
+      "source": "https://commons.wikimedia.org/wiki/File:IMac_and_MacBook.jpg",
+      "author": "Patryk Sobczak",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_name": "Wikimedia Commons",
       "verified_on": "2026-10-08",
       "aspect_ratio": [
         8,
         5
       ],
-      "download": "https://images.pexels.com/photos/10499853/pexels-photo-10499853.jpeg",
-      "modifications": "Adaptations pour le site : recadrage 8:5, redimensionnement et compression WebP."
+      "download": "https://upload.wikimedia.org/wikipedia/commons/a/a9/IMac_and_MacBook.jpg",
+      "contain": true,
+      "modifications": "Retouche par IA : retrait de l’ours, de l’étagère et des livres en arrière-plan. Redimensionnement au format 8:5 avec conservation de la composition et compression WebP."
     },
     "ordinateur": {
       "credit_label": "Réparation d’un ordinateur portable",

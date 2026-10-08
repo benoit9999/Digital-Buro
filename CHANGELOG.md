@@ -1,5 +1,6 @@
 # Livraison, logiciels et langues — 8 octobre 2026
 
+- Photo Mac validée par le client : iMac et MacBook côte à côte sur un bureau blanc, photo de Patryk Sobczak sous CC0, retouchée pour retirer l’ours et l’étagère. Même image sur la carte, les choix d’appareils et la page Mac ; version HTML synchronisée et crédits adaptés.
 - Les pages de détail reprennent désormais directement la photo de leur carte : une seule référence d’image par service. La vente affiche les quatre produits du client ; les entreprises affichent une camionnette chargée de colis ; la section Mac utilise un gros plan du MacBook Pro.
 - Nouvelles photos Pexels de Tima Miroshnichenko et Aleksey Zemlyanoy, sources et licences dans les crédits. Les liens de PC fixe et photocopieur conservent aussi leur photo dans la section ciblée.
 - Complément : disque dur portable WD Elements 2 To ajouté à la composition de la carte vente, avec le même style photographique ; description et crédits adaptés.

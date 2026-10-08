@@ -1,8 +1,8 @@
 {
-  "synced_at": "2026-10-08T18:27:11.729422+02:00",
+  "synced_at": "2026-10-08T18:34:23.926541+02:00",
   "pages": 16,
   "forms": "Contact and callback delivered through send_contact.php with server-side anti-spam",
-  "backup": "artifacts/digital-buro-site-html-before-sync-20261008-182711-420154.zip",
+  "backup": "artifacts/digital-buro-site-html-before-sync-20261008-183423-594461.zip",
   "source_hashes": {
     ".htaccess": "28d9221f780dd99e5d05bdf61782e749106d30ac3f0ec7925fff59304c580dfe",
     "404.html": "5ffe8424bb9538424fef2070d120972cd066ebd13203d1a406a425c731869be2",
@@ -90,7 +90,7 @@
     "conseils/fonctionnement-imprimante-laser-jet-encre/index.html": "9a3297f031953ce6b78427b19d0c016b6f30e631fbb1665045b40f87d1b75f2a",
     "contact/index.html": "295e6564a1a75b163b0808b044e17cf9d8a7838880a3a3f24b6d7791a7617131",
     "en/index.html": "f60c913328546669310401b0d8d891128c996523e277dc16c7c8b8f433bf064b",
-    "entreprises/index.html": "d8f42e0cb442a360e1ef311e7013f011b92575078f058eb43a9539ee62518d0f",
+    "entreprises/index.html": "c33e008a8886590d2495ee65a7769dbb96defa1a81b5256767552c3209a398c7",
     "favicon.ico": "45d145ba305f3815d3d9d89b2f8e0430e18cfba6cfd57a860dd93b76f900e614",
     "favicon.svg": "301d4e39e5878a0e07e53a37be443f49b8e133fd355a2295f7617f81b72497e8",
     "icon-192.png": "001a365c17c81fb1ea30987328d6d10601a8b13c73104f28b689fc7e3ab6591a",
@@ -189,7 +189,7 @@
     "confidentialite.html": "405e7810e75b96c6cfa9754a265f98edf675ad9cd641d4f8367cf25e6363733e",
     "contact.html": "913bc14f74d0c21df8dbfaf06487c54c2e9eecd0886459aa512e90af64e36dad",
     "en.html": "d901fa06eb9409ecbe568c00e3bc7a885fe99be4806591eab29f5bb128393a2b",
-    "entreprises.html": "06af61aec9fd4063d4df63d7c8939ca2f8f33d5eed1d75158bbdfb7b042196b2",
+    "entreprises.html": "f7fea641fb92e4fc37544eb2f4f8d62ad74d3401d7ca0e36d7f2797e4aed1b16",
     "favicon.ico": "45d145ba305f3815d3d9d89b2f8e0430e18cfba6cfd57a860dd93b76f900e614",
     "favicon.svg": "301d4e39e5878a0e07e53a37be443f49b8e133fd355a2295f7617f81b72497e8",
     "form-validation.php": "999a0732ebfa9ed0b7a5faf467766e2a1abd668b60f863410b4da83d2d01793b",

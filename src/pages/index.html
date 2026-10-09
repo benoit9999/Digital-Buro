@@ -10,7 +10,7 @@
 <a class="link-arrow" href="/contact/#formulaire">Demander un devis {{ ui.icon('arrow-right') }}</a>
 <div class="hero-rating">{{ fx.gmark() }}{{ ui.rating() }}</div>
 </div>
-<div class="hero-scene"><div class="scene-grid" aria-hidden="true"></div><figure class="shop-card">{{ fx.shop_photos() }}<figcaption><span>{{ ui.icon('pin') }} Bruxelles · Quartier Ma Campagne</span><strong>{{ site.street }}</strong></figcaption></figure>
+<div class="hero-scene"><div class="scene-grid" aria-hidden="true"></div><figure class="shop-card">{{ fx.shop_photos() }}<figcaption><span>{{ ui.icon('pin') }} Bruxelles · Quartier Ma Campagne</span><strong>{{ site.street }}, {{ site.postal }} {{ site.city }}</strong></figcaption></figure>
 <span class="floating-note floating-note--top">{{ fx.gmark() }}<span><strong>{{ site.google.rating }} / 5</strong><small>{{ t.reviews_label }}</small></span></span>
 <div class="scene-repair scene-repair--photo">{{ fx.photo('imprimante', sizes='100px', decorative=True) }}<span><strong>Vente & réparation</strong><small>Imprimantes toutes marques</small></span></div>
 {{ fx.seal() }}<span class="floating-note floating-note--bottom">{{ ui.icon('check') }} Toutes marques</span></div>
@@ -30,5 +30,5 @@
 ('Faut-il prendre rendez-vous ?', '<p>Appelez le 02 534 47 02 avant de venir : nous vous indiquons comment déposer votre appareil ou organiser une intervention dans vos locaux.</p>'),
 ('Vous avez la bonne cartouche ?', '<p>Apportez votre ancienne cartouche ou sa référence. Nous proposons des cartouches, toners et rubans toutes marques, y compris pour des modèles anciens. Appelez pour vérifier la disponibilité.</p>')]) }}</div></section>
 {{ fx.callback() }}
-{{ ui.cta_band('Une imprimante à acheter ou un appareil à réparer ?', 'Retrouvez-nous Chaussée de Charleroi 257, à Bruxelles.') }}
+{{ ui.cta_band('Une imprimante à acheter ou un appareil à réparer ?', 'Retrouvez-nous Chaussée de Charleroi 257, 1060 Bruxelles.') }}
 {% endblock %}

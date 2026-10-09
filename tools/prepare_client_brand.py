@@ -36,7 +36,7 @@ def prepare_share_image():
         ("Vente & réparation", 65, 255, 66, "#0b1f4d"),
         ("d’imprimantes", 65, 350, 72, "#0b1f4d"),
         ("PC · Mac · Consommables", 65, 435, 30, "#60646c"),
-        ("Quartier Ma Campagne · Saint-Gilles", 65, 500, 30, "#0b1f4d"),
+        ("Quartier Ma Campagne · Bruxelles", 65, 500, 30, "#0b1f4d"),
         ("À deux pas de l’avenue Louise", 65, 550, 28, "#0b1f4d"),
         (f"+{site['experience_years']}", 825, 285, 115, "#ffffff"),
         ("ans d’expérience", 820, 344, 31, "#ffffff"),

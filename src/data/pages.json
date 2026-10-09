@@ -5,9 +5,9 @@
     "lang": "fr",
     "type": "home",
     "nav": "home",
-    "title": "Imprimantes : vente & réparation à Saint-Gilles | Digital-Buro",
-    "og_title": "Digital-Buro — Vente et réparation d’imprimantes, PC & Mac à Saint-Gilles",
-    "description": "Vente et réparation d’imprimantes, PC et Mac à Saint-Gilles, quartier Ma Campagne, près de l’avenue Louise. +35 ans d’expérience. Cartouches et toners.",
+    "title": "Imprimantes : vente & réparation à Bruxelles | Digital-Buro",
+    "og_title": "Digital-Buro — Vente et réparation d’imprimantes, PC & Mac à Bruxelles",
+    "description": "Vente et réparation d’imprimantes, PC et Mac à Bruxelles, quartier Ma Campagne, près de l’avenue Louise. +35 ans d’expérience. Cartouches et toners.",
     "alternates": {
       "fr": "/",
       "nl": "/nl/",
@@ -21,8 +21,8 @@
     "type": "service",
     "nav": "imprimante",
     "service_name": "Réparation d’imprimantes et de photocopieurs",
-    "title": "Réparation imprimante à Saint-Gilles, Bruxelles | Digital-Buro",
-    "description": "Imprimante qui bourre, fait des traces ou affiche une erreur ? Réparation d’imprimantes et photocopieurs toutes marques à Saint-Gilles, en atelier ou sur site.",
+    "title": "Réparation imprimante à Bruxelles | Digital-Buro",
+    "description": "Imprimante qui bourre, fait des traces ou affiche une erreur ? Réparation d’imprimantes et photocopieurs toutes marques à Bruxelles, en atelier ou sur site.",
     "breadcrumb": [
       [
         "Accueil",
@@ -41,8 +41,8 @@
     "type": "service",
     "nav": "ordinateur",
     "service_name": "Réparation d’ordinateurs et de PC portables",
-    "title": "Réparation ordinateur et PC portable à Saint-Gilles | Digital-Buro",
-    "description": "Réparation de PC fixes et portables toutes marques à Saint-Gilles, Bruxelles. Diagnostic, entretien et dépannage informatique au magasin Digital-Buro.",
+    "title": "Réparation ordinateur et PC portable à Bruxelles | Digital-Buro",
+    "description": "Réparation de PC fixes et portables toutes marques à Bruxelles. Diagnostic, entretien et dépannage informatique au magasin Digital-Buro.",
     "breadcrumb": [
       [
         "Accueil",
@@ -61,8 +61,8 @@
     "type": "service",
     "nav": "mac",
     "service_name": "Réparation de Mac, MacBook et iMac",
-    "title": "Réparation Mac et MacBook à Saint-Gilles | Digital-Buro",
-    "description": "Réparation de MacBook, iMac et Mac mini à Saint-Gilles : écran, batterie, clavier, macOS, sauvegarde. Réparateur indépendant, +35 ans d’expérience.",
+    "title": "Réparation Mac et MacBook à Bruxelles | Digital-Buro",
+    "description": "Réparation de MacBook, iMac et Mac mini à Bruxelles : écran, batterie, clavier, macOS, sauvegarde. Réparateur indépendant, +35 ans d’expérience.",
     "breadcrumb": [
       [
         "Accueil",
@@ -81,8 +81,8 @@
     "type": "service",
     "nav": "cartouches",
     "service_name": "Vente de cartouches d’encre, toners et consommables",
-    "title": "Cartouches d’encre et toners à Saint-Gilles | Digital-Buro",
-    "description": "Grand stock de cartouches d’encre, toners, tambours et rubans toutes marques à Saint-Gilles : HP, Canon, Epson, Brother, OKI… Même pour les anciens modèles.",
+    "title": "Cartouches d’encre et toners à Bruxelles | Digital-Buro",
+    "description": "Grand stock de cartouches d’encre, toners, tambours et rubans toutes marques à Bruxelles : HP, Canon, Epson, Brother, OKI… Même pour les anciens modèles.",
     "breadcrumb": [
       [
         "Accueil",
@@ -101,8 +101,8 @@
     "type": "service",
     "nav": "vente",
     "service_name": "Vente et installation de matériel bureautique et informatique",
-    "title": "Vente imprimantes & photocopieurs Saint-Gilles | Digital-Buro",
-    "description": "Imprimantes, photocopieurs, scanners, PC et fournitures de bureau à Saint-Gilles. Conseil, livraison, installation et configuration de votre matériel.",
+    "title": "Vente imprimantes & photocopieurs Bruxelles | Digital-Buro",
+    "description": "Imprimantes, photocopieurs, scanners, PC et fournitures de bureau à Bruxelles. Conseil, livraison, installation et configuration de votre matériel.",
     "breadcrumb": [
       [
         "Accueil",
@@ -141,7 +141,7 @@
     "type": "about",
     "nav": "a-propos",
     "title": "À propos : +35 ans d’expérience en bureautique | Digital-Buro",
-    "description": "De la machine à écrire au MacBook : découvrez Digital-Buro, votre magasin de bureautique et d’informatique à Saint-Gilles, fort de +35 ans d’expérience.",
+    "description": "De la machine à écrire au MacBook : découvrez Digital-Buro, votre magasin de bureautique et d’informatique à Bruxelles, fort de +35 ans d’expérience.",
     "breadcrumb": [
       [
         "Accueil",
@@ -159,8 +159,8 @@
     "lang": "fr",
     "type": "contact",
     "nav": "contact",
-    "title": "Contact, horaires et accès | Digital-Buro Saint-Gilles",
-    "description": "Digital-Buro, Chaussée de Charleroi 257, 1060 Saint-Gilles. Ouvert du lundi au vendredi de 10h30 à 18h et le samedi de 11h à 17h. Tél. 02 534 47 02.",
+    "title": "Contact, horaires et accès | Digital-Buro Bruxelles",
+    "description": "Digital-Buro, Chaussée de Charleroi 257, 1060 Bruxelles. Ouvert du lundi au vendredi de 10h30 à 18h et le samedi de 11h à 17h. Tél. 02 534 47 02.",
     "breadcrumb": [
       [
         "Accueil",
@@ -203,7 +203,7 @@
     "type": "webpage",
     "nav": "",
     "title": "Mentions légales | Digital-Buro",
-    "description": "Mentions légales du site de Digital-Buro SRL, Chaussée de Charleroi 257, 1060 Saint-Gilles (Bruxelles). TVA BE 0874.004.642.",
+    "description": "Mentions légales et coordonnées de Digital-Buro SRL, Chaussée de Charleroi 257, 1060 Bruxelles. TVA BE 0874.004.642.",
     "breadcrumb": [
       [
         "Accueil",
@@ -261,9 +261,9 @@
     "lang": "nl",
     "type": "home",
     "nav": "home",
-    "title": "Printerverkoop & herstelling in Sint-Gillis | Digital-Buro",
-    "og_title": "Digital-Buro — Verkoop en herstelling van printers, pc’s en Macs in Sint-Gillis",
-    "description": "Verkoop en herstelling van printers, pc’s en Macs in Sint-Gillis, wijk Ma Campagne. Meer dan 35 jaar ervaring, inktpatronen en toners voor alle merken.",
+    "title": "Printerverkoop & herstelling in Brussel | Digital-Buro",
+    "og_title": "Digital-Buro — Verkoop en herstelling van printers, pc’s en Macs in Brussel",
+    "description": "Verkoop en herstelling van printers, pc’s en Macs in Brussel, wijk Ma Campagne. Meer dan 35 jaar ervaring, inktpatronen en toners voor alle merken.",
     "alternates": {
       "fr": "/",
       "nl": "/nl/",
@@ -276,9 +276,9 @@
     "lang": "en",
     "type": "home",
     "nav": "home",
-    "title": "Printer sales & repair in Saint-Gilles | Digital-Buro",
-    "og_title": "Digital-Buro — Printer sales and repair, PC & Mac in Saint-Gilles, Brussels",
-    "description": "Printer sales and repair, PC and Mac repairs in Saint-Gilles, Ma Campagne neighbourhood. Over 35 years of experience. Ink cartridges and toners.",
+    "title": "Printer sales & repair in Brussels | Digital-Buro",
+    "og_title": "Digital-Buro — Printer sales and repair, PC & Mac in Brussels",
+    "description": "Printer sales and repair, PC and Mac repairs in Brussels, Ma Campagne neighbourhood. Over 35 years of experience. Ink cartridges and toners.",
     "alternates": {
       "fr": "/",
       "nl": "/nl/",

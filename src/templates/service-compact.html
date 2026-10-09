@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}{% set s = services[page.nav] %}{% set c = site.service_content[page.nav] %}{% set photo_key = s.card_photo %}
 {{ ui.breadcrumb(page.breadcrumb) }}
-<section class="page-hero"><div class="container page-hero__grid"><div class="page-hero__copy"><span class="eyebrow">{{ c.tag }}</span><h1 class="h1">{{ c.h1 }}</h1><p class="lead">{{ c.lead }}</p>{{ fx.status() }}<div class="btn-row">{{ ui.call_btn(label='02 534 47 02',cls='btn--primary btn--lg') }}{{ ui.directions_btn(cls='btn--outline btn--lg') }}</div><a class="link-arrow" href="/contact/?appareil={{ c.device|urlencode }}#formulaire">Demander un devis {{ ui.icon('arrow-right') }}</a><p class="visit-address">{{ ui.icon("pin") }}<a href="/contact/#acces">{{ site.street }}, {{ site.city }}</a></p></div><div class="service-visual">
+<section class="page-hero"><div class="container page-hero__grid"><div class="page-hero__copy"><span class="eyebrow">{{ c.tag }}</span><h1 class="h1">{{ c.h1 }}</h1>{% if c.lead %}<p class="lead">{{ c.lead }}</p>{% endif %}{{ fx.status() }}<div class="btn-row">{{ ui.call_btn(label='02 534 47 02',cls='btn--primary btn--lg') }}{{ ui.directions_btn(cls='btn--outline btn--lg') }}</div><a class="link-arrow" href="/contact/?appareil={{ c.device|urlencode }}#formulaire">Demander un devis {{ ui.icon('arrow-right') }}</a><p class="visit-address">{{ ui.icon("pin") }}<a href="/contact/#acces">{{ site.street }}, {{ site.postal }} {{ site.city }}</a></p></div><div class="service-visual">
 {% if site.photos[photo_key].get('product') %}
 {{ fx.product_figure(photo_key, eager=True) }}
 {% else %}

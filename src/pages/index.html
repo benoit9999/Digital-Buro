@@ -5,7 +5,7 @@
 <h1 class="display">Vente &amp; réparation<br>d’imprimantes,<br>PC &amp; Mac<br>à <span class="draw-line">Bruxelles.</span></h1>
 {{ fx.home_location() }}
 <p class="lead">Une imprimante neuve ou un appareil à réparer ? On vous conseille et on s’en occupe. +{{ site.experience_years }} ans d’expérience.</p>
-<div class="hero-status">{{ fx.status() }}</div><p class="visit-address">{{ ui.icon("pin") }}<a href="#acces">{{ site.street }} · Quartier Ma Campagne</a></p>
+<div class="hero-status">{{ fx.status() }}</div><p class="visit-address">{{ ui.icon("pin") }}<a href="#acces">{{ site.street }}, {{ site.postal }} {{ site.city }} · Quartier Ma Campagne</a></p>
 <div class="btn-row">{{ ui.call_btn(label="02 534 47 02", cls="btn--primary btn--lg") }}{{ ui.directions_btn(cls="btn--outline btn--lg") }}</div>
 <a class="link-arrow" href="/contact/#formulaire">Demander un devis {{ ui.icon('arrow-right') }}</a>
 <div class="hero-rating">{{ fx.gmark() }}{{ ui.rating() }}</div>
